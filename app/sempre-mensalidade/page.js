@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import styles from './page.module.css';
+import { Card, Testimony } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
@@ -28,7 +30,7 @@ export default function SempreMensalidade() {
               width={570}
             />
           </div>
-          <div className="col-span-4">
+          <div className="col-span-4 flex flex-col justify-center">
             <Image
               alt="Sempre mensalidade"
               height={24}
@@ -36,16 +38,57 @@ export default function SempreMensalidade() {
               src="/title-sempre-mensalidade.svg"
               width={205}
             />
-            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+            <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
               Gestão de faturamento e financeiro
             </h1>
-            <p className="text-soft-gray">
+            <p className="mt-6 text-soft-gray">
               Emissão de boletos em lote, envio automático por e-mail e cobrança
               automatizada, otimizam o fluxo de trabalho de empresas com
               recebíveis recorrentes.
             </p>
-            <button type="button">Fale agora</button>
+            <button
+              className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-1/2`}
+            >
+              Fale agora
+            </button>
           </div>
+        </Container>
+        <Container newClasses="pb-24">
+          <Card
+            description="Tenha relatórios de faturamento e inadimplência com fácil acesso, também via app mobile e garanta para sua empresa mais organização e praticidade."
+            imageSource="/icon-otimize-2.svg"
+            title="Relatórios Gerenciais"
+          />
+          <Card
+            description="Alertas de cobrança enviados automaticamente, controle de entrega e leitura de e-mail e régua de cobrança personalizada."
+            imageSource="/icon-otimize-3.svg"
+            title="Alertas automáticos"
+          />
+          <Card
+            description="Atende às mais complexas regras tributárias de forma simplificada e automatizada para o usuário."
+            imageSource="/icon-otimize-4.svg"
+            title="Simplificado e automático"
+          />
+          <Card
+            description="Tenha tabelas de organização que separam e ordenam as mensalidades por cliente."
+            imageSource="/icon-otimize-5.svg"
+            title="Organização por cliente"
+          />
+          <Card
+            description="Exportação de arquivos para integração com a contabilidade na área fiscal e contábil."
+            imageSource="/icon-otimize-6.svg"
+            title="Integrado com a contabilidade"
+          />
+          <Card
+            description="Treinamentos e implantação assistidos por profissionais qualificados para que haja o melhor uso das funcionalidades disponíveis."
+            imageSource="/icon-otimize-7.svg"
+            title="Suporte na implantação"
+          />
+          <Card
+            description="Analista de conta responsável pelo seu projeto, que acompanha e sugere os recursos de acordo com a necessidade da empresa."
+            imageSource="/icon-otimize-8.svg"
+            title="Analista responsável"
+          />
         </Container>
         <BackgroundContainer uri="/bg-sempre-mensalidade-box1.jpg">
           <div className="col-span-5 col-end-13">
@@ -64,6 +107,26 @@ export default function SempreMensalidade() {
             <button type="button">Fale agora</button>
           </div>
         </BackgroundContainer>
+        <Container newClasses="py-24">
+          <h1 className="col-span-12 font-serif font-semibold mb-6 text-4xl text-dark-blue">
+            Quem usa aprova
+          </h1>
+          <Testimony
+            company="Proprietário da Finoplast"
+            description="A Sempre Tecnologia conseguiu solucionar problemas que tínhamos a bastante tempo. Além da interação entre as empresas do grupo, personalizaram o sistema conforme desejávamos. Hoje temos um sistema completo com toda as áreas da empresa interligadas (dep. Comercial, produção, financeiro, etc)."
+            name="Pedro Henrique"
+          />
+          <Testimony
+            company="Gigante dos filtros"
+            description="Estamos muito satisfeitos com a parceria da Sempre Tecnologia na nossa empresa. A gestão empresarial ficou muito mais simples e eficiente. Tivemos todo o suporte necessário dos funcionários, o treinamento foi totalmente presencial desde a alimentação do estoque até a emissão de notas e cupons fiscais."
+            name="Dayane e Sérgio"
+          />
+          <Testimony
+            company="Proprietária Comercial Xavier"
+            description="A Sempre Tecnologia tem um sistema moderno e eficaz! Os técnicos estão sempre a nossa disposição. Estamos bem cuidados com a Sempre Tecnologia, só tenho a agradecer!"
+            name="Flávia Xavier"
+          />
+        </Container>
         <BackgroundContainer uri="/bg-sempre-mensalidade-box2.jpg">
           <div className="col-span-5 col-end-13">
             <header className="flex items-center mb-6">

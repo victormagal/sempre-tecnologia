@@ -32,7 +32,7 @@ export default function Header() {
                 alt="Sempre Tecnologia"
                 height={43}
                 quality={100}
-                src="logo-sempre.svg"
+                src="logo-smart.svg"
                 width={162}
               />
             </Link>
