@@ -13,7 +13,8 @@ module.exports = {
       colors: {
         'navbar-gray': '#70738A',
         'dark-blue': '#1F3D8C',
-        'soft-gray': '#70738A'
+        'soft-gray': '#70738A',
+        'custom-black': '#23292E'
       },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
