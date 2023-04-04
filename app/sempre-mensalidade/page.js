@@ -6,7 +6,8 @@ import {
   Container,
   Footer,
   Header,
-  HeroPage
+  HeroPage,
+  Locations
 } from '../components/Foundation';
 
 export default function SempreMensalidade() {
@@ -168,6 +169,7 @@ export default function SempreMensalidade() {
             </footer>
           </div>
         </BackgroundContainer>
+        <Locations />
       </main>
       <Footer />
     </>
