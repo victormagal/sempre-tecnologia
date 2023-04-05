@@ -2,12 +2,15 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './styles.module.css';
 import Container from '../Container';
 import { faCaretUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Header() {
+  const [navbarStatus, setNavbarStatus] = useState(false);
+
   const toggleMenu = (e) => {
     const currentElement = e.currentTarget;
     const nextElement = currentElement.nextElementSibling;
@@ -19,13 +22,27 @@ export default function Header() {
     }
   };
 
+  const changeNavBarStyle = () => {
+    const element = document.querySelector('nav');
+
+    if (window.scrollY >= element.clientHeight) {
+      setNavbarStatus(true);
+    } else {
+      setNavbarStatus(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeNavBarStyle);
+
   return (
     <>
       <Head>
         <title>Sempre Tecnologia</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="fixed top-0 z-50 w-full">
+      <section
+        className={`fixed top-0 z-50 w-full ${navbarStatus && styles.active}`}
+      >
         <Container newClasses="py-6">
           <div className="lg:col-span-2 flex justify-center items-center">
             <Link href="/">
@@ -33,7 +50,7 @@ export default function Header() {
                 alt="Sempre Tecnologia"
                 height={43}
                 quality={100}
-                src="logo-smart.svg"
+                src={`${navbarStatus ? 'logo-smart.svg' : 'logo-sempre.svg'}`}
                 width={162}
               />
             </Link>
@@ -41,12 +58,19 @@ export default function Header() {
           <nav className="lg:col-span-8 flex justify-between items-center">
             <div className="relative">
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
                 onClick={toggleMenu}
               >
                 Quem Somos
-                <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
+                <FontAwesomeIcon
+                  className={`ml-2 ${
+                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                  }`}
+                  icon={faChevronDown}
+                />
               </button>
               <div className="hidden absolute">
                 <FontAwesomeIcon
@@ -83,12 +107,19 @@ export default function Header() {
             </div>
             <div className="relative">
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
                 onClick={toggleMenu}
               >
                 Soluções
-                <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
+                <FontAwesomeIcon
+                  className={`ml-2 ${
+                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                  }`}
+                  icon={faChevronDown}
+                />
               </button>
               <div className="hidden absolute">
                 <FontAwesomeIcon
@@ -149,12 +180,19 @@ export default function Header() {
             </div>
             <div className="relative">
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
                 onClick={toggleMenu}
               >
                 Segmentos
-                <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
+                <FontAwesomeIcon
+                  className={`ml-2 ${
+                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                  }`}
+                  icon={faChevronDown}
+                />
               </button>
               <div className="hidden absolute">
                 <FontAwesomeIcon
@@ -239,12 +277,19 @@ export default function Header() {
             </div>
             <div className="relative">
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
                 onClick={toggleMenu}
               >
                 Seja Parceiro
-                <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
+                <FontAwesomeIcon
+                  className={`ml-2 ${
+                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                  }`}
+                  icon={faChevronDown}
+                />
               </button>
               <div className="hidden absolute">
                 <FontAwesomeIcon
@@ -281,7 +326,9 @@ export default function Header() {
             </div>
             <div>
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
               >
                 Planos e Preços
@@ -289,7 +336,9 @@ export default function Header() {
             </div>
             <div>
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
               >
                 Unidades
@@ -297,23 +346,25 @@ export default function Header() {
             </div>
             <div>
               <button
-                className="flex items-center font-sans text-sm text-white"
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
                 type="button"
               >
                 Contato
               </button>
             </div>
           </nav>
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 flex justify-end">
             <button
-              className={`${styles.gradientGreen} h-full w-full font-bold text-sm text-white rounded`}
+              className={`${styles.gradientGreen} h-full w-3/4 font-bold text-sm text-white rounded`}
               type="button"
             >
               Fale agora
             </button>
           </div>
         </Container>
-      </div>
+      </section>
     </>
   );
 }
