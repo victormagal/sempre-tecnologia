@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import {
   Card,
   ColoredCard,
+  Doubts,
   PlayCard,
   Testimony,
   TransparentCard
@@ -15,6 +16,7 @@ import {
   HeroPage,
   Locations
 } from '../components/Foundation';
+import { doubts } from './data';
 
 export default function SempreMensalidade() {
   return (
@@ -164,6 +166,10 @@ export default function SempreMensalidade() {
             </footer>
           </div>
         </BackgroundContainer>
+        <Doubts
+          title="Tire suas dúvidas sobre Sempre Mensalidade"
+          doubts={doubts}
+        />
         <Locations />
       </main>
       <Footer />
