@@ -34,7 +34,7 @@ export default function HeroPage({ description, iconSource, title, uri }) {
         </main>
         <footer className="col-span-7">
           <button
-            className="font-semibold px-14 py-3 text-sm text-white rounded"
+            className={`${styles.gradientYellow} font-bold px-14 py-3 text-sm text-white rounded`}
             type="button"
           >
             Contrate Agora

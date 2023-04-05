@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from './styles.module.css';
 import Container from '../Container';
 import { faCaretUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -305,7 +306,7 @@ export default function Header() {
           </nav>
           <div className="lg:col-span-2">
             <button
-              className="h-full w-full font-semibold text-sm text-white rounded"
+              className={`${styles.gradientGreen} h-full w-full font-bold text-sm text-white rounded`}
               type="button"
             >
               Fale agora

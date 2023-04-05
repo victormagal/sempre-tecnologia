@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { Card, Testimony } from '../components/Elements';
+import {
+  Card,
+  ColoredCard,
+  PlayCard,
+  Testimony,
+  TransparentCard
+} from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
@@ -23,13 +29,7 @@ export default function SempreMensalidade() {
         />
         <Container newClasses="py-24">
           <div className="col-span-5">
-            <Image
-              alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
-              height={382}
-              quality={100}
-              src="/bg-play-sempre-mensalidade.svg"
-              width={570}
-            />
+            <PlayCard />
           </div>
           <div className="col-span-4 flex flex-col justify-center">
             <Image
@@ -55,6 +55,11 @@ export default function SempreMensalidade() {
           </div>
         </Container>
         <Container newClasses="pb-24">
+          <TransparentCard
+            description="Gerenciamento assistido por soluções preparadas para facilitar o dia a dia do seu empreendimento."
+            imageSource="/icon-otimize-1.svg"
+            title="Funcionalidades que agregam"
+          />
           <Card
             description="Tenha relatórios de faturamento e inadimplência com fácil acesso, também via app mobile e garanta para sua empresa mais organização e praticidade."
             imageSource="/icon-otimize-2.svg"
@@ -90,6 +95,10 @@ export default function SempreMensalidade() {
             imageSource="/icon-otimize-8.svg"
             title="Analista responsável"
           />
+          <ColoredCard
+            description="Agilizamos tarefas de empreendimentos com recebíveis recorrentes."
+            title="Saia na frente com nossas soluções"
+          />
         </Container>
         <BackgroundContainer uri="/bg-sempre-mensalidade-box1.jpg">
           <div className="col-span-5 col-end-13">
@@ -105,7 +114,12 @@ export default function SempreMensalidade() {
               tempo para pensar em estratégias de mercado que fazem toda a
               diferença.
             </p>
-            <button type="button">Fale agora</button>
+            <button
+              className={`${styles.gradientYellow} font-bold px-20 py-3 text-sm text-white rounded`}
+              type="button"
+            >
+              Fale agora
+            </button>
           </div>
         </BackgroundContainer>
         <Container newClasses="py-24">
