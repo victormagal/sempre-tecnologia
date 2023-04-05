@@ -1,17 +1,62 @@
+'use client';
 import Image from 'next/image';
 import styles from './styles.module.css';
 import { Container } from '../../Foundation';
 
 export default function Testimony() {
+  const outsider = document.getElementById('parentBox');
+  const distance = 450;
+
+  const goBack = () => {
+    outsider.scrollBy({
+      left: -distance,
+      behavior: 'smooth'
+    });
+  };
+
+  const goFoward = () => {
+    outsider.scrollBy({
+      left: distance,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <Container newClasses="py-24">
-      <h1 className="col-span-12 font-serif font-semibold mb-6 text-4xl text-dark-blue">
-        Quem usa aprova
-      </h1>
+      <div className="col-span-12 grid grid-cols-12 gap-6">
+        <h1 className="col-span-11 font-serif font-semibold mb-6 text-4xl text-dark-blue">
+          Quem usa aprova
+        </h1>
+        <ul className="col-span-1 flex justify-between">
+          <li>
+            <button onClick={goBack} type="button">
+              <Image
+                alt="Voltar"
+                height={47}
+                quality={100}
+                src="/icon-prev.svg"
+                width={47}
+              />
+            </button>
+          </li>
+          <li>
+            <button onClick={goFoward} type="button">
+              <Image
+                alt="Avançar"
+                height={47}
+                quality={100}
+                src="/icon-next.svg"
+                width={47}
+              />
+            </button>
+          </li>
+        </ul>
+      </div>
       <div className="col-span-12">
         <div className="flex flex-col m-auto p-auto">
           <div
-            className={`flex overflow-x-scroll pb-10 ${styles.hideScrollBar}`}
+            id="parentBox"
+            className={`flex overflow-x-scroll ${styles.hideScrollBar}`}
           >
             <div className="flex flex-nowrap space-x-6">
               <div className="inline-block">
