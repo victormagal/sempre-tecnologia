@@ -122,26 +122,7 @@ export default function SempreMensalidade() {
             </button>
           </div>
         </BackgroundContainer>
-        <Container newClasses="py-24">
-          <h1 className="col-span-12 font-serif font-semibold mb-6 text-4xl text-dark-blue">
-            Quem usa aprova
-          </h1>
-          <Testimony
-            company="Proprietário da Finoplast"
-            description="A Sempre Tecnologia conseguiu solucionar problemas que tínhamos a bastante tempo. Além da interação entre as empresas do grupo, personalizaram o sistema conforme desejávamos. Hoje temos um sistema completo com toda as áreas da empresa interligadas (dep. Comercial, produção, financeiro, etc)."
-            name="Pedro Henrique"
-          />
-          <Testimony
-            company="Gigante dos filtros"
-            description="Estamos muito satisfeitos com a parceria da Sempre Tecnologia na nossa empresa. A gestão empresarial ficou muito mais simples e eficiente. Tivemos todo o suporte necessário dos funcionários, o treinamento foi totalmente presencial desde a alimentação do estoque até a emissão de notas e cupons fiscais."
-            name="Dayane e Sérgio"
-          />
-          <Testimony
-            company="Proprietária Comercial Xavier"
-            description="A Sempre Tecnologia tem um sistema moderno e eficaz! Os técnicos estão sempre a nossa disposição. Estamos bem cuidados com a Sempre Tecnologia, só tenho a agradecer!"
-            name="Flávia Xavier"
-          />
-        </Container>
+        <Testimony />
         <BackgroundContainer uri="/bg-sempre-mensalidade-box2.jpg">
           <div className="col-span-5 col-end-13">
             <header className="flex items-center mb-6">

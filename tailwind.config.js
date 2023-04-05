@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
         serif: ['"Exo 2"', ...defaultTheme.fontFamily.serif]
+      },
+      spacing: {
+        108: '27rem'
       }
     }
   },
