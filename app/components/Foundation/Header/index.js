@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import Container from '../Container';
 import { faCaretUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -11,15 +11,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Header() {
   const [navbarStatus, setNavbarStatus] = useState(false);
 
-  const toggleMenu = (e) => {
-    const currentElement = e.currentTarget;
-    const nextElement = currentElement.nextElementSibling;
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBarStyle);
+  }, []);
 
-    if (nextElement.classList.contains('hidden')) {
-      nextElement.classList.remove('hidden');
-    } else {
-      nextElement.classList.add('hidden');
-    }
+  const toggleMenu = (e) => {
+    const nextElement = e.currentTarget.nextElementSibling;
+    const allElements = [...document.getElementsByClassName('dropDown')];
+
+    allElements.map((element) => {
+      if (element === nextElement && element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    });
   };
 
   const changeNavBarStyle = () => {
@@ -31,8 +37,6 @@ export default function Header() {
       setNavbarStatus(false);
     }
   };
-
-  window.addEventListener('scroll', changeNavBarStyle);
 
   return (
     <>
@@ -72,7 +76,7 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="hidden absolute">
+              <div className="absolute dropDown hidden">
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -121,7 +125,7 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="hidden absolute">
+              <div className="absolute dropDown hidden">
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -194,7 +198,7 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="hidden absolute">
+              <div className="absolute dropDown hidden">
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -291,7 +295,7 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="hidden absolute">
+              <div className="absolute dropDown hidden">
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}

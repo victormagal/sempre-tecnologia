@@ -1,11 +1,16 @@
 'use client';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import { Container } from '../../Foundation';
 
 export default function Testimony() {
-  const outsider = document.getElementById('parentBox');
+  const [outsider, setOutsider] = useState();
   const distance = 450;
+
+  useEffect(() => {
+    setOutsider(document.getElementById('parentBox'));
+  }, []);
 
   const goBack = () => {
     outsider.scrollBy({
