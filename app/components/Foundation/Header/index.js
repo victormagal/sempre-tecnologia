@@ -16,7 +16,7 @@ export default function Header() {
   }, []);
 
   const toggleMenu = (e) => {
-    const nextElement = e.currentTarget.nextElementSibling;
+    const nextElement = e.currentTarget.nextSibling;
     const allElements = [...document.getElementsByClassName('dropDown')];
 
     allElements.map((element) => {

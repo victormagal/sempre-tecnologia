@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import styles from './styles.module.css';
 import { Container } from '../../Foundation';
@@ -5,6 +6,18 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Doubts({ title, doubts }) {
+  const changeTitleColor = (e) => {
+    const element = [...e.currentTarget.getElementsByTagName('h2')];
+
+    if (element[0].classList.contains('text-soft-gray')) {
+      element[0].classList.remove('text-soft-gray');
+      element[0].classList.add('text-red-600');
+    } else {
+      element[0].classList.remove('text-red-600');
+      element[0].classList.add('text-soft-gray');
+    }
+  };
+
   return (
     <Container newClasses="py-24">
       <div className="col-span-5">
@@ -29,8 +42,9 @@ export default function Doubts({ title, doubts }) {
             >
               <summary
                 className={`cursor-pointer flex items-center justify-between ${styles.noMarker}`}
+                onClick={changeTitleColor}
               >
-                <h2 className="font-serif mr-10 text-red-600 text-xl">
+                <h2 className="font-serif mr-10 text-soft-gray text-xl">
                   {question}
                 </h2>
                 <FontAwesomeIcon
