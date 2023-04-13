@@ -31,7 +31,7 @@ export default function SempreMensalidade() {
         />
         <Container newClasses="py-24">
           <div className="col-span-5">
-            <PlayCard />
+            <PlayCard bgImage="/bg-play-sempre-mensalidade.svg" />
           </div>
           <div className="col-span-4 flex flex-col justify-center">
             <Image
@@ -99,6 +99,8 @@ export default function SempreMensalidade() {
           />
           <ColoredCard
             description="Agilizamos tarefas de empreendimentos com recebíveis recorrentes."
+            firstColor="#CF2932"
+            secondColor="#77335F"
             title="Saia na frente com nossas soluções"
           />
         </Container>
@@ -167,8 +169,10 @@ export default function SempreMensalidade() {
           </div>
         </BackgroundContainer>
         <Doubts
-          title="Tire suas dúvidas sobre Sempre Mensalidade"
           doubts={doubts}
+          image="/cellphone.svg"
+          theme="#DC272B"
+          title="Tire suas dúvidas sobre a emissão Sempre Mensalidade"
         />
         <Locations />
       </main>

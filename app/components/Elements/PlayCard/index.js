@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
 
-export default function PlayCard() {
+export default function PlayCard({ bgImage }) {
   return (
     <div className={styles.box}>
       <Image
@@ -9,7 +9,7 @@ export default function PlayCard() {
         className="absolute"
         height={382}
         quality={100}
-        src="/bg-play-sempre-mensalidade.svg"
+        src={bgImage}
         width={570}
       />
       <Image

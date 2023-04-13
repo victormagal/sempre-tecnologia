@@ -5,16 +5,14 @@ import { Container } from '../../Foundation';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Doubts({ title, doubts }) {
+export default function Doubts({ doubts, image, theme, title }) {
   const changeTitleColor = (e) => {
     const element = [...e.currentTarget.getElementsByTagName('h2')];
 
-    if (element[0].classList.contains('text-soft-gray')) {
-      element[0].classList.remove('text-soft-gray');
-      element[0].classList.add('text-red-600');
+    if (e.currentTarget.parentNode.hasAttribute('open')) {
+      element[0].setAttribute('style', 'color: #70738A;');
     } else {
-      element[0].classList.remove('text-red-600');
-      element[0].classList.add('text-soft-gray');
+      element[0].setAttribute('style', `color: ${theme};`);
     }
   };
 
@@ -26,7 +24,7 @@ export default function Doubts({ title, doubts }) {
           className="ml-4"
           height={748}
           quality={100}
-          src="/cellphone.svg"
+          src={image}
           width={635}
         />
       </div>
@@ -48,8 +46,9 @@ export default function Doubts({ title, doubts }) {
                   {question}
                 </h2>
                 <FontAwesomeIcon
-                  className="h-5 w-5 text-red-600"
+                  className="h-5 w-5"
                   icon={faChevronDown}
+                  style={{ color: `${theme}` }}
                 />
               </summary>
               <p className="font-sans mt-6 text-soft-gray">{answer}</p>
