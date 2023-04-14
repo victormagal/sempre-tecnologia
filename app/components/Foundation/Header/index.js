@@ -54,7 +54,7 @@ export default function Header() {
                 alt="Sempre Tecnologia"
                 height={43}
                 quality={100}
-                src={`${navbarStatus ? 'logo-smart.svg' : 'logo-sempre.svg'}`}
+                src={`${navbarStatus ? '/logo-smart.svg' : '/logo-sempre.svg'}`}
                 width={162}
               />
             </Link>
