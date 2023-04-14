@@ -2,7 +2,13 @@ import Image from 'next/image';
 import styles from './styles.module.css';
 import Container from '../Container';
 
-export default function HeroPage({ description, iconSource, title, uri }) {
+export default function HeroPage({
+  description,
+  iconSource,
+  theme,
+  title,
+  uri
+}) {
   return (
     <section
       className={`${styles.container} relative flex flex-col justify-center`}
@@ -34,7 +40,9 @@ export default function HeroPage({ description, iconSource, title, uri }) {
         </main>
         <footer className="col-span-7">
           <button
-            className={`${styles.gradientYellow} font-bold px-14 py-3 text-sm text-white rounded`}
+            className={`${
+              theme === 'blue' ? styles.gradientBlue : styles.gradientYellow
+            } font-bold px-14 py-3 text-sm text-white rounded`}
             type="button"
           >
             Contrate Agora
