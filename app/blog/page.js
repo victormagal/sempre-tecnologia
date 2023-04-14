@@ -52,7 +52,7 @@ export default function Blog() {
 
 async function getData() {
   const client = new ApolloClient({
-    uri: 'http://localhost:1337/graphql',
+    uri: 'https://afternoon-eyrie-12612.herokuapp.com/graphql',
     cache: new InMemoryCache()
   });
 
