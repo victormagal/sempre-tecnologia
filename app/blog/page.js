@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { use } from 'react';
 import { Testimony } from '../components/Elements';
 import {
   Container,
@@ -10,12 +9,11 @@ import {
   Locations
 } from '../components/Foundation';
 import { GET_ALL_POSTS } from '../graphql/queries';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
 export default function Blog() {
-  const {
-    blogPosts: { data: posts }
-  } = use(getData());
+  const { data } = useQuery(GET_ALL_POSTS);
+
   return (
     <>
       <Header />
@@ -27,7 +25,7 @@ export default function Blog() {
           uri="/bg-emissor-nota.jpg"
         />
         <Container newClasses="py-24">
-          {posts.map((post, i) => (
+          {data?.blogPosts?.data?.map((post, i) => (
             <Link
               className="col-span-4"
               key={i}
@@ -48,17 +46,4 @@ export default function Blog() {
       <Footer />
     </>
   );
-}
-
-async function getData() {
-  const client = new ApolloClient({
-    uri: 'https://afternoon-eyrie-12612.herokuapp.com/graphql',
-    cache: new InMemoryCache()
-  });
-
-  const { data } = await client.query({
-    query: GET_ALL_POSTS
-  });
-
-  return data;
 }

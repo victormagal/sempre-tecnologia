@@ -1,5 +1,5 @@
 'use client';
-import { use } from 'react';
+import { usePathname } from 'next/navigation';
 import { Testimony } from '../../components/Elements';
 import {
   Container,
@@ -8,25 +8,12 @@ import {
   HeroPage,
   Locations
 } from '../../components/Foundation';
-import { GET_ALL_SLUGS, GET_POST } from '../../graphql/queries';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { GET_POST } from '../../graphql/queries';
+import { useQuery } from '@apollo/client';
 
-const client = new ApolloClient({
-  uri: 'https://afternoon-eyrie-12612.herokuapp.com/graphql',
-  cache: new InMemoryCache()
-});
-
-export default function Post({ params }) {
-  const {
-    data: {
-      blogPosts: { data }
-    }
-  } = use(
-    client.query({
-      query: GET_POST,
-      variables: { slug: params.slug }
-    })
-  );
+export default function Post() {
+  const path = usePathname().slice(6);
+  const { data } = useQuery(GET_POST, { variables: { slug: path } });
 
   return (
     <>
@@ -39,8 +26,8 @@ export default function Post({ params }) {
           uri="/bg-emissor-nota.jpg"
         />
         <Container newClasses="py-24">
-          <h1>{data[0]?.attributes?.title}</h1>
-          <p>{data[0]?.attributes?.content}</p>
+          <h1>{data?.blogPosts?.data[0]?.attributes?.title}</h1>
+          <p>{data?.blogPosts?.data[0]?.attributes?.content}</p>
         </Container>
         <Testimony />
         <Locations />
@@ -48,20 +35,4 @@ export default function Post({ params }) {
       <Footer />
     </>
   );
-}
-
-export async function generateStaticParams() {
-  const {
-    data: {
-      blogPosts: { data }
-    }
-  } = await client.query({
-    query: GET_ALL_SLUGS
-  });
-
-  const paths = data.map((post) => {
-    return { params: { slug: post.attributes.slug } };
-  });
-
-  return paths;
 }
