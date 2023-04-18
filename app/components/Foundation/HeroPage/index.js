@@ -5,16 +5,19 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function HeroPage({
+  arrow,
   cta,
   description,
   iconSource,
+  mini,
   theme,
   title,
   uri
 }) {
   return (
     <section
-      className={`${styles.container} relative flex flex-col justify-center`}
+      style={mini ? { height: '90px' } : { height: '432px' }}
+      className="relative flex flex-col justify-center"
     >
       <div className="z-0">
         <Image
@@ -28,9 +31,11 @@ export default function HeroPage({
       <Container newClasses="relative z-10">
         <div className="col-span-7">
           {iconSource && <img src={iconSource} alt={title} />}
-          <h1 className="font-serif font-semibold text-white text-6xl">
-            {title}
-          </h1>
+          {title && (
+            <h1 className="font-serif font-semibold text-white text-6xl">
+              {title}
+            </h1>
+          )}
         </div>
         {description && (
           <main className="col-span-6">
@@ -38,7 +43,7 @@ export default function HeroPage({
           </main>
         )}
         <footer className="col-span-7">
-          {cta === true ? (
+          {cta && (
             <button
               className={`${
                 theme === 'blue' ? styles.gradientBlue : styles.gradientYellow
@@ -47,7 +52,8 @@ export default function HeroPage({
             >
               Contrate Agora
             </button>
-          ) : (
+          )}
+          {arrow && (
             <FontAwesomeIcon
               className="text-custom-orange"
               icon={faArrowDown}

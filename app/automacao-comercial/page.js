@@ -11,6 +11,7 @@ export default function AutomacaoComercial() {
   return (
     <main>
       <HeroPage
+        arrow={false}
         cta={true}
         description="Para ajudar a organizar sua empresa"
         iconSource="/icon-automacao-comercial.svg"

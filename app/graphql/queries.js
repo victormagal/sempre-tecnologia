@@ -48,7 +48,15 @@ const getPost = gql`
       data {
         attributes {
           title
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
           content
+          updatedAt
         }
       }
     }
@@ -60,8 +68,24 @@ const getPostsByCategory = gql`
     blogPosts(filters: { category: { slug: { eq: $category } } }) {
       data {
         attributes {
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          category {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
           title
-          content
+          updatedAt
+          description
+          slug
         }
       }
     }

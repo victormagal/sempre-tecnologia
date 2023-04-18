@@ -19,6 +19,7 @@ export default function SempreMensalidade() {
   return (
     <main>
       <HeroPage
+        arrow={false}
         cta={true}
         description="Empresário e gestor que tem recebíveis recorrentes, nós temos funcionalidades que agilizarão seu dia a dia."
         iconSource="/icon-sempre-mensalidade.svg"

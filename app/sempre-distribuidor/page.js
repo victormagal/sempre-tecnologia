@@ -19,6 +19,7 @@ export default function SempreMDistribuidor() {
   return (
     <main>
       <HeroPage
+        arrow={false}
         cta={true}
         description="Quer um Sistema de Gestão específico para você?"
         iconSource="/icon-sempre-distribuidor.svg"

@@ -11,6 +11,7 @@ export default function GestaoEmpresarial() {
   return (
     <main>
       <HeroPage
+        arrow={false}
         cta={true}
         description="Para você e seu negócio."
         iconSource="/icon-gestao-empresarial.svg"

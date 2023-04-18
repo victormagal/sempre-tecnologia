@@ -11,7 +11,12 @@ export default function Blog() {
 
   return (
     <main>
-      <HeroPage cta={false} title="Blog Sempre Tecnologia" uri="/bg-blog.svg" />
+      <HeroPage
+        arrow={true}
+        cta={false}
+        title="Blog Sempre Tecnologia"
+        uri="/bg-blog.svg"
+      />
       <Container newClasses="py-24">
         <div className="col-span-8 grid grid-cols-12 gap-8">
           {data?.blogPosts?.data?.map((post, i) => (

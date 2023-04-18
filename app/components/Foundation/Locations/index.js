@@ -61,7 +61,7 @@ export default function Locations() {
             alt="Sempre Tecnologia"
             height={17}
             quality={100}
-            src="icon-logo-white.svg"
+            src="/icon-logo-white.svg"
             width={41}
           />
           <h1 className="font-sans font-bold ml-4 text-white text-3xl">

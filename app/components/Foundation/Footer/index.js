@@ -11,7 +11,7 @@ export default function Footer() {
             alt="Sempre Tecnologia"
             height={36}
             quality={100}
-            src="logo-vermelha.svg"
+            src="/logo-vermelha.svg"
             width={135}
           />
         </Link>
@@ -22,7 +22,7 @@ export default function Footer() {
             alt="Sempre Tecnologia"
             height={22}
             quality={100}
-            src="icon-clock.svg"
+            src="/icon-clock.svg"
             width={22}
           />
           <span className="font-serif font-semibold ml-3 text-dark-blue">
@@ -37,7 +37,7 @@ export default function Footer() {
             className=" align-middle"
             height={26}
             quality={100}
-            src="icon-call.svg"
+            src="/icon-call.svg"
             width={26}
           />
           <span className="font-serif font-semibold ml-3 text-dark-blue">

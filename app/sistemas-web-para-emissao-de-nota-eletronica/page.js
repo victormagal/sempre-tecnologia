@@ -17,6 +17,7 @@ export default function EmissorNota() {
   return (
     <main>
       <HeroPage
+        arrow={false}
         cta={true}
         description="Do mais simples ao mais complexo fazemos todo o cálculo tributário para você."
         iconSource="/icon-emissor-nota.svg"
