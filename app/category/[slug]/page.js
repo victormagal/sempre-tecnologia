@@ -8,12 +8,14 @@ import {
   HeroPage,
   Locations
 } from '../../components/Foundation';
-import { getPost } from '../../graphql/queries';
+import { getPostsByCategory } from '../../graphql/queries';
 import { useQuery } from '@apollo/client';
 
-export default function Post() {
-  const path = usePathname().slice(6);
-  const { data } = useQuery(getPost, { variables: { slug: path } });
+export default function Category() {
+  const path = usePathname().slice(10);
+  const { data } = useQuery(getPostsByCategory, {
+    variables: { category: path }
+  });
 
   return (
     <>
@@ -26,8 +28,12 @@ export default function Post() {
           uri="/bg-emissor-nota.jpg"
         />
         <Container newClasses="py-24">
-          <h1>{data?.blogPosts?.data[0]?.attributes?.title}</h1>
-          <p>{data?.blogPosts?.data[0]?.attributes?.content}</p>
+          {data?.blogPosts?.data?.map((post, i) => (
+            <div key={i}>
+              <h1>{post.attributes.title}</h1>
+              <p>{post.attributes.content}</p>
+            </div>
+          ))}
         </Container>
         <Testimony />
         <Locations />

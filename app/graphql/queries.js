@@ -1,24 +1,40 @@
 import { gql } from '@apollo/client';
 
-const GET_ALL_POSTS = gql`
+const getAllPosts = gql`
   query {
     blogPosts {
       data {
         attributes {
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          category {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
           title
-          slug
+          updatedAt
           description
+          slug
         }
       }
     }
   }
 `;
 
-const GET_ALL_SLUGS = gql`
+const getAllCategories = gql`
   query {
-    blogPosts {
+    categories {
       data {
         attributes {
+          name
           slug
         }
       }
@@ -26,7 +42,7 @@ const GET_ALL_SLUGS = gql`
   }
 `;
 
-const GET_POST = gql`
+const getPost = gql`
   query ($slug: String!) {
     blogPosts(filters: { slug: { eq: $slug } }) {
       data {
@@ -39,4 +55,17 @@ const GET_POST = gql`
   }
 `;
 
-export { GET_ALL_POSTS, GET_ALL_SLUGS, GET_POST };
+const getPostsByCategory = gql`
+  query ($category: String!) {
+    blogPosts(filters: { category: { slug: { eq: $category } } }) {
+      data {
+        attributes {
+          title
+          content
+        }
+      }
+    }
+  }
+`;
+
+export { getAllPosts, getAllCategories, getPost, getPostsByCategory };
