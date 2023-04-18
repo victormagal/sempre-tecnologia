@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
 import Container from '../Container';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function HeroPage({
+  cta,
   description,
   iconSource,
   theme,
@@ -24,29 +27,32 @@ export default function HeroPage({
       </div>
       <Container newClasses="relative z-10">
         <div className="col-span-7">
-          <Image
-            alt="Solução"
-            height={23}
-            quality={100}
-            src={iconSource}
-            width={163}
-          />
+          {iconSource && <img src={iconSource} alt={title} />}
           <h1 className="font-serif font-semibold text-white text-6xl">
             {title}
           </h1>
         </div>
-        <main className="col-span-6">
-          <h2 className="font-serif text-white text-xl">{description}</h2>
-        </main>
+        {description && (
+          <main className="col-span-6">
+            <h2 className="font-serif text-white text-xl">{description}</h2>
+          </main>
+        )}
         <footer className="col-span-7">
-          <button
-            className={`${
-              theme === 'blue' ? styles.gradientBlue : styles.gradientYellow
-            } font-bold px-14 py-3 text-sm text-white rounded`}
-            type="button"
-          >
-            Contrate Agora
-          </button>
+          {cta === true ? (
+            <button
+              className={`${
+                theme === 'blue' ? styles.gradientBlue : styles.gradientYellow
+              } font-bold px-14 py-3 text-sm text-white rounded`}
+              type="button"
+            >
+              Contrate Agora
+            </button>
+          ) : (
+            <FontAwesomeIcon
+              className="text-custom-orange"
+              icon={faArrowDown}
+            />
+          )}
         </footer>
       </Container>
     </section>

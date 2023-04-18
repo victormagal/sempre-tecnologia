@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="350px" viewBox="0 0 1920 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>shutterstock_654406453</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-5.75655449%" y1="51.9009161%" x2="97.8144846%" y2="48.5036875%" id="linearGradient-1">
+            <stop stop-color="#472683" offset="0%"></stop>
+            <stop stop-color="#C51A1A" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1920" height="350"></rect>
+        <polygon id="path-4" points="1 0 1981 0 1981 1402 1 1402"></polygon>
+        <linearGradient x1="94.8500898%" y1="81.8016114%" x2="-1.83313508%" y2="13.2470424%" id="linearGradient-6">
+            <stop stop-color="#C61F1C" offset="0%"></stop>
+            <stop stop-color="#1F3D8D" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-7" points="1 0 1979 0 1979 1402 1 1402"></polygon>
+        <linearGradient x1="3.19981809%" y1="16.6103402%" x2="118.874842%" y2="99.1388938%" id="linearGradient-9">
+            <stop stop-color="#C61F1C" offset="0%"></stop>
+            <stop stop-color="#1F3D8D" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 L0,1269.24443 L0,1402 L1536,1402 L1536,661.174496 L1103.01073,378.66084 C981.933261,296.035056 902.438371,157.759665 902.438371,0 L902.438371,0 L0,0 Z" id="path-10"></path>
+        <linearGradient x1="66.1164171%" y1="80.393918%" x2="21.7236668%" y2="39.8292048%" id="linearGradient-12">
+            <stop stop-color="#C61F1C" offset="0%"></stop>
+            <stop stop-color="#1F3D8D" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1,0 L1,1402 L1568,1402 L1568,1268.72127 C1568,1096.40399 1471.21146,944.250583 1331.02728,865.752081 L1331.02728,865.752081 L585.019849,378.659624 C464.028776,296.033742 384.587858,157.759853 384.587858,0 L384.587858,0 L1,0 Z" id="path-13"></path>
+        <linearGradient x1="69.3474729%" y1="102.275677%" x2="-22.9962861%" y2="19.5061084%" id="linearGradient-15">
+            <stop stop-color="#C61F1C" offset="0%"></stop>
+            <stop stop-color="#1F3D8D" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1,0 L1,1067 C18.299729,1050.81974 36.8519044,1035.95581 56.5051683,1022.5513 L56.5051683,1022.5513 L802.90506,535.835595 C943.162434,457.39721 1040,305.361372 1040,133.174681 L1040,133.174681 L1040,0 L1,0 Z" id="path-16"></path>
+        <linearGradient x1="81.5948627%" y1="-28.9341303%" x2="-85.7995315%" y2="142.132493%" id="linearGradient-18">
+            <stop stop-color="#C61F1C" offset="0%"></stop>
+            <stop stop-color="#1F3D8D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="site-sempretec-blog" transform="translate(0.000000, 0.000000)">
+            <g id="shutterstock_654406453">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+                <g id="Group-16" mask="url(#mask-3)">
+                    <g transform="translate(0.000000, -489.000000)">
+                        <g id="Group-3" transform="translate(0.000000, 0.000000)">
+                            <mask id="mask-5" fill="white">
+                                <use xlink:href="#path-4"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <polygon id="Fill-1" fill="url(#linearGradient-6)" mask="url(#mask-5)" points="1 1402 1981 1402 1981 0 1 0"></polygon>
+                        </g>
+                        <g id="Group-6" transform="translate(0.000000, 0.000000)">
+                            <mask id="mask-8" fill="white">
+                                <use xlink:href="#path-7"></use>
+                            </mask>
+                            <g id="Clip-5"></g>
+                            <polygon id="Fill-4" fill="url(#linearGradient-9)" mask="url(#mask-8)" points="1 1402 1979 1402 1979 0 1 0"></polygon>
+                        </g>
+                        <g id="Group-9" transform="translate(443.000000, 0.000000)">
+                            <mask id="mask-11" fill="white">
+                                <use xlink:href="#path-10"></use>
+                            </mask>
+                            <g id="Clip-8"></g>
+                            <path d="M0,0 L0,1269.24443 L0,1402 L1536,1402 L1536,661.174496 L1103.01073,378.66084 C981.933261,296.035056 902.438371,157.759665 902.438371,0 L902.438371,0 L0,0 Z" id="Fill-7" fill="url(#linearGradient-12)" mask="url(#mask-11)"></path>
+                        </g>
+                        <g id="Group-12" transform="translate(0.000000, 0.000000)">
+                            <mask id="mask-14" fill="white">
+                                <use xlink:href="#path-13"></use>
+                            </mask>
+                            <g id="Clip-11"></g>
+                            <path d="M1,0 L1,1402 L1568,1402 L1568,1268.72127 C1568,1096.40399 1471.21146,944.250583 1331.02728,865.752081 L1331.02728,865.752081 L585.019849,378.659624 C464.028776,296.033742 384.587858,157.759853 384.587858,0 L384.587858,0 L1,0 Z" id="Fill-10" fill="url(#linearGradient-15)" mask="url(#mask-14)"></path>
+                        </g>
+                        <g id="Group-15">
+                            <mask id="mask-17" fill="white">
+                                <use xlink:href="#path-16"></use>
+                            </mask>
+                            <g id="Clip-14"></g>
+                            <path d="M1,0 L1,1067 C18.299729,1050.81974 36.8519044,1035.95581 56.5051683,1022.5513 L56.5051683,1022.5513 L802.90506,535.835595 C943.162434,457.39721 1040,305.361372 1040,133.174681 L1040,133.174681 L1040,0 L1,0 Z" id="Fill-13" fill="url(#linearGradient-18)" mask="url(#mask-17)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

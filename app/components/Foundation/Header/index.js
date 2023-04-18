@@ -134,7 +134,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sistemas-web-para-gestao-empresarial"
                     >
                       Sistemas Web para Gestão Empresarial
                     </Link>
@@ -142,7 +142,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sistemas-web-para-emissao-de-nota-eletronica"
                     >
                       Sistemas Web para Emissão de Nota Eletrônica
                     </Link>
@@ -150,7 +150,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/automacao-comercial"
                     >
                       Sistemas para Pequenos Varejos
                     </Link>
@@ -166,7 +166,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-distribuidor"
                     >
                       Sistemas Web para Distribuidores
                     </Link>
@@ -174,7 +174,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-mensalidade"
                     >
                       Sistemas Web para Gestão de Recorrência
                     </Link>
@@ -207,7 +207,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-distribuidor"
                     >
                       Distribuidores
                     </Link>
@@ -215,7 +215,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-distribuidor"
                     >
                       Atacadistas
                     </Link>
@@ -223,7 +223,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/automacao-comercial"
                     >
                       Pequenos Varejos
                     </Link>
@@ -231,7 +231,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-mensalidade"
                     >
                       Contabilidade
                     </Link>
@@ -239,7 +239,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-mensalidade"
                     >
                       Escolas e Faculdades
                     </Link>
@@ -247,7 +247,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sistemas-web-para-gestao-empresarial"
                     >
                       Prestadores de Serviços
                     </Link>
@@ -255,7 +255,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-mensalidade"
                     >
                       Vendas Recorrentes
                     </Link>
@@ -263,7 +263,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sempre-mensalidade"
                     >
                       Cobrança de Mensalidade
                     </Link>
@@ -271,7 +271,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sistemas-web-para-emissao-de-nota-eletronica"
                     >
                       MEI
                     </Link>
