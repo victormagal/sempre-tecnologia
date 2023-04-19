@@ -15,7 +15,8 @@ module.exports = {
         'dark-blue': '#1F3D8C',
         'soft-gray': '#70738A',
         'custom-black': '#23292E',
-        'custom-orange': '#FF6900'
+        'custom-orange': '#FF6900',
+        'custom-red': '#A92321'
       },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
