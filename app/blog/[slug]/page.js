@@ -7,6 +7,7 @@ import { useState } from 'react';
 import styles from './page.module.css';
 import { Container, HeroPage } from '../../components/Foundation';
 import { getPost } from '../../graphql/queries';
+import { LastPosts } from '@/app/components/Elements';
 import { useQuery } from '@apollo/client';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -69,6 +70,11 @@ export default function Post() {
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </Container>
+      <section style={{ backgroundColor: '#F8F8F8' }}>
+        <Container newClasses="py-24">
+          <LastPosts />
+        </Container>
+      </section>
     </main>
   );
 }

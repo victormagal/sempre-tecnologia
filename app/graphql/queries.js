@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 const getAllPosts = gql`
-  query {
-    blogPosts {
+  query ($page: Int!, $pageSize: Int!) {
+    blogPosts(pagination: { page: $page, pageSize: $pageSize }) {
       data {
         attributes {
           image {
@@ -23,6 +23,14 @@ const getAllPosts = gql`
           updatedAt
           description
           slug
+        }
+      }
+      meta {
+        pagination {
+          page
+          pageSize
+          pageCount
+          total
         }
       }
     }
@@ -64,8 +72,11 @@ const getPost = gql`
 `;
 
 const getPostsByCategory = gql`
-  query ($category: String!) {
-    blogPosts(filters: { category: { slug: { eq: $category } } }) {
+  query ($category: String!, $page: Int!, $pageSize: Int!) {
+    blogPosts(
+      filters: { category: { slug: { eq: $category } } }
+      pagination: { page: $page, pageSize: $pageSize }
+    ) {
       data {
         attributes {
           image {
@@ -86,6 +97,14 @@ const getPostsByCategory = gql`
           updatedAt
           description
           slug
+        }
+      }
+      meta {
+        pagination {
+          page
+          pageSize
+          pageCount
+          total
         }
       }
     }

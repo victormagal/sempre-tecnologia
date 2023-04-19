@@ -2,16 +2,84 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { SideBar } from '../../components/Elements';
 import { Container, HeroPage } from '../../components/Foundation';
 import { getPostsByCategory } from '../../graphql/queries';
-import { useQuery } from '@apollo/client';
+import { useLazyQuery } from '@apollo/client';
+import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Category() {
   const path = usePathname().slice(10);
-  const { data } = useQuery(getPostsByCategory, {
-    variables: { category: path }
-  });
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 6;
+  const listPages = [];
+
+  const [getPosts, { data }] = useLazyQuery(getPostsByCategory);
+
+  useEffect(() => {
+    getPosts({
+      variables: {
+        category: path,
+        page: currentPage,
+        pageSize: pageSize
+      }
+    });
+  }, []);
+
+  const previousPosts = () => {
+    const newValue = currentPage - 1;
+
+    if (newValue <= 0) {
+      setCurrentPage(1);
+    } else {
+      getPosts({
+        variables: {
+          category: path,
+          page: newValue,
+          pageSize: pageSize
+        }
+      });
+      setCurrentPage(newValue);
+    }
+  };
+
+  const nextPosts = () => {
+    const newValue = currentPage + 1;
+
+    if (newValue > data?.blogPosts?.meta?.pagination?.pageCount) {
+      setCurrentPage(data?.blogPosts?.meta?.pagination?.pageCount);
+    } else {
+      getPosts({
+        variables: {
+          category: path,
+          page: newValue,
+          pageSize: pageSize
+        }
+      });
+      setCurrentPage(newValue);
+    }
+  };
+
+  const goToPage = (e) => {
+    const value = Number(e.target.innerHTML);
+
+    if (currentPage !== value) {
+      getPosts({
+        variables: {
+          category: path,
+          page: value,
+          pageSize: pageSize
+        }
+      });
+      setCurrentPage(value);
+    }
+  };
+
+  for (let i = 1; i <= data?.blogPosts?.meta?.pagination?.pageCount; i++) {
+    listPages.push(i);
+  }
 
   return (
     <main>
@@ -46,6 +114,43 @@ export default function Category() {
               </div>
             </Link>
           ))}
+          {data?.blogPosts?.meta?.pagination?.pageCount > 1 && (
+            <div className="col-span-12">
+              <ul className="flex items-center justify-center space-x-2">
+                <li
+                  className="cursor-pointer flex items-center font-sans text-sm text-dark-blue"
+                  onClick={previousPosts}
+                >
+                  <FontAwesomeIcon
+                    className="text-dark-blue h-2 w-2 mr-1"
+                    icon={faAnglesLeft}
+                  />
+                  Anterior
+                </li>
+                {listPages.map((page) => (
+                  <li
+                    key={page}
+                    className={`cursor-pointer font-sans font-semibold px-2 py-1 text-sm text-dark-blue ${
+                      currentPage === page && 'border border-dark-blue rounded'
+                    }`}
+                    onClick={goToPage}
+                  >
+                    {page}
+                  </li>
+                ))}
+                <li
+                  className="cursor-pointer flex items-center font-sans text-sm text-dark-blue"
+                  onClick={nextPosts}
+                >
+                  Próximo
+                  <FontAwesomeIcon
+                    className="text-dark-blue h-2 w-2 ml-1"
+                    icon={faAnglesRight}
+                  />
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
         <div className="col-span-3 col-end-13">
           <SideBar />
