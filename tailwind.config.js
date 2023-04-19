@@ -16,7 +16,10 @@ module.exports = {
         'soft-gray': '#70738A',
         'custom-black': '#23292E',
         'custom-orange': '#FF6900',
-        'custom-red': '#A92321'
+        'custom-red': '#A92321',
+        'custom-green': '#35B6B4',
+        'custom-purple': '#6E3784',
+        'dark-yellow': '#C48E39'
       },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
