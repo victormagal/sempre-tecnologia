@@ -4,20 +4,13 @@ import { LastPosts, Testimony } from './components/Elements';
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  Slideshow
 } from './components/Foundation';
 
 export default function Home() {
   return (
     <>
-      <HeroPage
-        arrow={false}
-        cta={true}
-        description="Empresário e gestor que tem recebíveis recorrentes, nós temos funcionalidades que agilizarão seu dia a dia."
-        iconSource="/icon-sempre-mensalidade.svg"
-        title="Gestão de mensalidades"
-        uri="/bg-sempre-mensalidade.jpg"
-      />
+      <Slideshow />
       <section style={{ backgroundColor: '#F8F8F8' }} className="py-6">
         <Container>
           <div className="col-span-4 flex flex-col items-center">
