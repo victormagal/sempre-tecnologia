@@ -1,6 +1,7 @@
 import Button from './Button';
 import Card from './Card';
 import ColoredCard from './ColoredCard';
+import ContactForm from './ContactForm';
 import Doubts from './Doubts';
 import LastPosts from './LastPosts';
 import MicroCard from './MicroCard';
@@ -13,6 +14,7 @@ export {
   Button,
   Card,
   ColoredCard,
+  ContactForm,
   Doubts,
   LastPosts,
   MicroCard,

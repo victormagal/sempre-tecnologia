@@ -1,21 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
-import {
-  Card,
-  ColoredCard,
-  Doubts,
-  MicroCard,
-  PlayCard,
-  Testimony,
-  TransparentCard
-} from '../components/Elements';
+import { ContactForm, MicroCard } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
   HeroPage
 } from '../components/Foundation';
-import { doubts } from './data';
 import {
   faFacebookSquare,
   faInstagram,
@@ -126,7 +117,7 @@ export default function Contador() {
         </div>
       </BackgroundContainer>
       <Container newClasses="py-24">
-        <div className="col-span-6">
+        <div className="col-span-5">
           <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
             Seja um sempre parceiro
           </h2>
@@ -166,6 +157,9 @@ export default function Contador() {
               </Link>
             </li>
           </ul>
+        </div>
+        <div className="col-span-6 col-end-13">
+          <ContactForm />
         </div>
       </Container>
     </main>
