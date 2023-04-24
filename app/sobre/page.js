@@ -12,84 +12,143 @@ import {
   faInstagram,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
+import { faClock, faUser } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Sobre() {
   return (
     <main>
-      <HeroPage
-        arrow={false}
-        cta={false}
-        description="Conheça nosso programa de parceria para Contadores e aproveite as vantagens exclusivas."
-        title="Programa de parceria para Contadores"
-        uri="/bg-contador.jpg"
-      />
-      <Container newClasses="py-24">
-        <div className="col-span-5 flex flex-col justify-center">
+      <section style={{ height: '700px' }} className="relative flex flex-col">
+        <div className="z-0">
+          <Image
+            alt="Background Image"
+            className="object-cover object-center"
+            fill
+            quality={100}
+            src="/bg-sobre.png"
+          />
+        </div>
+        <Container newClasses="relative z-10 pt-36">
+          <div className="col-span-8 col-start-3">
+            <h1 className="font-serif font-semibold text-white text-6xl text-center">
+              Olá! Somos a Sempre Tecnologia
+            </h1>
+          </div>
+          <div className="col-span-6 col-start-4 my-8">
+            <h2 className="font-serif text-white text-xl text-center">
+              Uma empresa especializada em desenvolver sistemas de gestão
+              empresarial utilizando tecnologia própria em plataforma web.
+            </h2>
+          </div>
+          <div className="col-span-4 col-start-5">
+            <ul className="flex space-x-4">
+              <li className="border border-white rounded py-4 text-center w-1/2">
+                <Link href="">
+                  <FontAwesomeIcon
+                    className="h-4 mr-2 text-white"
+                    icon={faClock}
+                  />
+                  <span className="font-sans font-bold text-sm text-white">
+                    Agende uma visita
+                  </span>
+                </Link>
+              </li>
+              <li className="border border-white rounded py-4 text-center w-1/2">
+                <Link href="">
+                  <FontAwesomeIcon
+                    className="h-4 mr-2 text-white"
+                    icon={faUser}
+                  />
+                  <span className="font-sans font-bold text-sm text-white">
+                    Trabalhe conosco
+                  </span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </Container>
+      </section>
+      <Container newClasses="pb-24 relative -mt-48 z-20">
+        <div className="col-span-12 flex justify-center mb-24">
+          <img alt="Sobre nós" src="/image-sobre-nos.png" />
+        </div>
+        <div className="col-span-5 col-start-2 flex flex-col justify-center">
           <h1 className="font-serif font-bold text-4xl text-dark-blue">
-            Simplifique sua rotina e ganhe tempo e produtividade
+            Sobre nós
           </h1>
           <p className="font-sans mt-6 text-soft-gray">
-            Nosso programa de parceria para contadores oferece recursos que vão
-            otimizar a rotina do seu escritório. Assim você terá mais tempo para
-            se dedicar aos seus clientes.
+            Aqui na Sempre Tecnologia temos uma equipe treinada para implantação
+            e suporte em nossos sistemas para micro, pequenas e médias empresas.
+          </p>
+          <p className="font-sans mt-6 text-soft-gray">
+            Credenciados pelo Governo Federal, emitimos certificado digital
+            padrão ICP Brasil com atendimento diferenciado e suporte técnico
+            especializado.
+          </p>
+          <p className="font-sans mt-6 text-soft-gray">
+            Para estar perto de você nossa matriz fica no SIA, em Brasília,
+            filiais no DF, GO, TO, sedes em Goiânia, Palmas e distribuidores no
+            Brasil.
           </p>
         </div>
-        <div
-          className={`${styles.gradientBlue} col-span-6 col-end-13 flex flex-col justify-center p-16`}
-        >
-          <Image
-            alt="Sempre mensalidade"
-            height={18}
-            quality={100}
-            src="/icon-white.svg"
-            width={45}
-          />
-          <h1 className="font-serif font-bold mt-6 text-white text-3xl">
-            Ficou interessado?
-          </h1>
-          <p className="font-sans mt-6 text-white">
-            Temos vários benefícios exclusivos para contadores parceiros. Venha
-            ser um Contador Sempre Tecnologia.
-          </p>
-          <button
-            className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-1/3`}
-          >
-            QUERO SER PARCEIRO
-          </button>
+        <div className="col-span-5 grid grid-cols-12 gap-8">
+          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+            <Image
+              alt="Sempre mensalidade"
+              height={32}
+              quality={100}
+              src="/icon-filiais.svg"
+              width={32}
+            />
+            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+              +28
+            </h1>
+            <p className="font-sans text-soft-gray">filiais no Brasil</p>
+          </div>
+          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+            <Image
+              alt="Sempre mensalidade"
+              height={32}
+              quality={100}
+              src="/icon-mercado.svg"
+              width={32}
+            />
+            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+              +10
+            </h1>
+            <p className="font-sans text-soft-gray">anos no mercado</p>
+          </div>
+          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+            <Image
+              alt="Sempre mensalidade"
+              height={32}
+              quality={100}
+              src="/icon-satisfacao.svg"
+              width={32}
+            />
+            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+              99%
+            </h1>
+            <p className="font-sans text-soft-gray">
+              de satisfação no atendimento
+            </p>
+          </div>
+          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+            <Image
+              alt="Sempre mensalidade"
+              height={32}
+              quality={100}
+              src="/icon-pos-venda.svg"
+              width={32}
+            />
+            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+              99%
+            </h1>
+            <p className="font-sans text-soft-gray">
+              de satisfação no pós-venda
+            </p>
+          </div>
         </div>
-      </Container>
-      <Container newClasses="pb-24">
-        <MicroCard
-          description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
-          imageSource="/icon-contador-1.svg"
-          title="Integração contábil"
-        />
-        <MicroCard
-          description="Conte com nosso apoio tanto para seu escritório quanto para seus clientes. Estamos #SemprePresente"
-          imageSource="/icon-contador-2.svg"
-          title="Atendimento diferenciado"
-        />
-        <MicroCard
-          description="Plataforma para administrar as indicações de certificados digitais."
-          imageSource="/icon-contador-3.svg"
-          title="Portal Sempre Contador"
-        />
-        <MicroCard
-          description="Emita notas fiscais eletrônicas para seus clientes e gere renda adicional para seu escritório."
-          imageSource="/icon-contador-4.svg"
-          title="Solução Multiempresas"
-        />
-        <MicroCard
-          description="Gerencie a validade dos certificados digitais de seus clientes por meio do Portal Sempre Contador."
-          imageSource="/icon-contador-5.svg"
-          title="Certificados digitais em dia"
-        />
-        <MicroCard
-          description="Conte com nossas soluções web e facilite a vida do seu cliente e também da sua contabilidade."
-          imageSource="/icon-contador-6.svg"
-          title="Soluções web"
-        />
       </Container>
       <BackgroundContainer uri="/bg-contador-1.svg">
         <div className="col-span-6 col-start-4 flex flex-col items-center">
