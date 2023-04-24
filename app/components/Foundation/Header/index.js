@@ -312,7 +312,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/parceria"
                     >
                       Certificado Digital
                     </Link>
@@ -320,7 +320,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/parceria"
                     >
                       Sistemas Web
                     </Link>

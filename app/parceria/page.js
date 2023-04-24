@@ -2,11 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import { ContactForm, MicroCard } from '../components/Elements';
-import {
-  BackgroundContainer,
-  Container,
-  HeroPage
-} from '../components/Foundation';
+import { Container, HeroPage } from '../components/Foundation';
 import {
   faFacebookSquare,
   faInstagram,
@@ -14,25 +10,26 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Contador() {
+export default function Parceria() {
   return (
     <main>
       <HeroPage
         arrow={false}
         cta={false}
-        description="Conheça nosso programa de parceria para Contadores e aproveite as vantagens exclusivas."
-        title="Programa de parceria para Contadores"
+        description="Conheça nosso programa de parceria para venda de sistemas e certificado digital.​"
+        title="Programa de parceria"
         uri="/bg-contador.jpg"
       />
       <Container newClasses="py-24">
         <div className="col-span-5 flex flex-col justify-center">
           <h1 className="font-serif font-bold text-4xl text-dark-blue">
-            Simplifique sua rotina e ganhe tempo e produtividade
+            Sistemas
           </h1>
           <p className="font-sans mt-6 text-soft-gray">
-            Nosso programa de parceria para contadores oferece recursos que vão
-            otimizar a rotina do seu escritório. Assim você terá mais tempo para
-            se dedicar aos seus clientes.
+            Seja um parceiro para vendas de sistemas em plataforma web para
+            atender a vários segmentos, aplicativos mobile para gerar
+            atratividade e fidelização de clientes além de um frente de caixa
+            totalmente integrado a uma retaguarda web.
           </p>
         </div>
         <div
@@ -49,8 +46,8 @@ export default function Contador() {
             Ficou interessado?
           </h1>
           <p className="font-sans mt-6 text-white">
-            Temos vários benefícios exclusivos para contadores parceiros. Venha
-            ser um Contador Sempre Tecnologia.
+            Temos vários benefícios exclusivos para você. Venha ser um Parceiro
+            Sempre Tecnologia.
           </p>
           <button
             className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-1/3`}
@@ -61,62 +58,37 @@ export default function Contador() {
       </Container>
       <Container newClasses="pb-24">
         <MicroCard
-          description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
-          imageSource="/icon-contador-1.svg"
-          title="Integração contábil"
+          description="Você pode optar por fazer o atendimento de primeiro nível ao seu cliente e quando precisar de ajuda pode contar conosco.​"
+          imageSource="/icon-parceria-1.svg"
+          title="Atendimento Personalizado​"
         />
         <MicroCard
-          description="Conte com nosso apoio tanto para seu escritório quanto para seus clientes. Estamos #SemprePresente"
-          imageSource="/icon-contador-2.svg"
-          title="Atendimento diferenciado"
+          description="Otimize nossa estrutura de marketing para anunciar os produtos e serviços, da nossa parceria, na sua região para potencializar suas vendas."
+          imageSource="/icon-parceria-2.svg"
+          title="Marketing Digital"
         />
         <MicroCard
           description="Plataforma para administrar as indicações de certificados digitais."
-          imageSource="/icon-contador-3.svg"
-          title="Portal Sempre Contador"
+          imageSource="/icon-parceria-3.svg"
+          title="Receita Recorrente em Sistemas"
         />
         <MicroCard
-          description="Emita notas fiscais eletrônicas para seus clientes e gere renda adicional para seu escritório."
-          imageSource="/icon-contador-4.svg"
-          title="Solução Multiempresas"
+          description="Nossa parceria privilegia sua competência comercial, pois, sabemos que essa relação tem que ser boa para ambas as partes"
+          imageSource="/icon-parceria-4.svg"
+          title="Remuneração diferenciada"
         />
         <MicroCard
-          description="Gerencie a validade dos certificados digitais de seus clientes por meio do Portal Sempre Contador."
-          imageSource="/icon-contador-5.svg"
-          title="Certificados digitais em dia"
+          description="Com as soluções em sistemas e certificado digital você tem a possibilidade de fazer parcerias com entidades de classe, gerando maior prestígio do seu negócio.​"
+          imageSource="/icon-parceria-5.svg"
+          title="Aumente sua rede de relacionamento"
         />
         <MicroCard
-          description="Conte com nossas soluções web e facilite a vida do seu cliente e também da sua contabilidade."
-          imageSource="/icon-contador-6.svg"
-          title="Soluções web"
+          description="Trabalhamos com transparência, respeito e profissionalismo dando segurança para que você concentre seus esforços nas vendas.​"
+          imageSource="/icon-parceria-6.svg"
+          title="Respeito e Profissionalismo​"
         />
       </Container>
-      <BackgroundContainer uri="/bg-contador-1.svg">
-        <div className="col-span-6 col-start-4 flex flex-col items-center">
-          <Image
-            alt="Portal Sempre Contador"
-            height={99}
-            quality={100}
-            src="/icon-portal-contador-ballon.svg"
-            width={93}
-          />
-          <h1 className="font-serif font-semibold text-white text-4xl my-8">
-            Portal Sempre Contador
-          </h1>
-          <p className="font-sans text-white mb-8">
-            O Portal Sempre Contador é uma plataforma exclusiva para contadores,
-            feita para administrar indicações de soluções Sempre e gerenciar a
-            validade dos certificados digitais de clientes.
-          </p>
-          <button
-            className="bg-transparent border border-white font-bold px-20 py-5 text-white rounded"
-            type="button"
-          >
-            Cadastre-se no portal
-          </button>
-        </div>
-      </BackgroundContainer>
-      <Container newClasses="py-24">
+      <Container newClasses="border-t py-24">
         <div className="col-span-5">
           <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
             Seja um sempre parceiro
