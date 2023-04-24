@@ -3,6 +3,7 @@ import Card from './Card';
 import ColoredCard from './ColoredCard';
 import Doubts from './Doubts';
 import LastPosts from './LastPosts';
+import MicroCard from './MicroCard';
 import PlayCard from './PlayCard';
 import SideBar from './SideBar';
 import Testimony from './Testimony';
@@ -14,6 +15,7 @@ export {
   ColoredCard,
   Doubts,
   LastPosts,
+  MicroCard,
   PlayCard,
   SideBar,
   Testimony,

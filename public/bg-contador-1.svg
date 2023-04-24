@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="530" viewBox="0 0 1920 530">
+    <defs>
+        <path id="a" d="M0 0h1920v530H0z"/>
+        <linearGradient id="b" x1="50%" x2="2.265%" y1="38.705%" y2="62.496%">
+            <stop offset="0%" stop-color="#2D3F89" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#3E257A"/>
+        </linearGradient>
+        <linearGradient id="e" x1="56.1%" x2="92.739%" y1="-17.341%" y2="79.776%">
+            <stop offset="0%" stop-color="#A92321"/>
+            <stop offset="100%" stop-color="#2D3F89"/>
+        </linearGradient>
+        <path id="d" d="M275.372 254.83l983.87-33.999c12.142-.42 22.326 9.085 22.746 21.228a22.01 22.01 0 0 1 0 1.52l-34 983.868c-.399 11.554-9.672 20.828-21.226 21.227l-983.87 34c-12.143.42-22.327-9.085-22.746-21.228a22 22 0 0 1 0-1.52l33.999-983.868c.4-11.554 9.673-20.828 21.227-21.227z"/>
+        <linearGradient id="f" x1="56.1%" x2="92.739%" y1="-17.341%" y2="79.776%">
+            <stop offset="0%" stop-color="#A92321"/>
+            <stop offset="100%" stop-color="#2D3F89"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#A92321" fill-rule="nonzero" xlink:href="#a"/>
+        <path fill="url(#b)" fill-rule="nonzero" d="M-79-60.651h1920v912.57H-79z" mask="url(#c)"/>
+        <g mask="url(#c)" opacity=".5">
+            <g fill-rule="nonzero" transform="translate(-642 -342.993)">
+                <use fill="url(#e)" transform="rotate(45 751.067 751.752)" xlink:href="#d"/>
+                <path fill="url(#f)" d="M994.372 425.588l983.87-34c12.142-.42 22.326 9.085 22.746 21.228.017.506.017 1.013 0 1.52l-34 983.868c-.399 11.554-9.672 20.828-21.226 21.227l-983.87 34c-12.143.42-22.327-9.084-22.746-21.228a22 22 0 0 1 0-1.52l33.999-983.868c.4-11.554 9.673-20.828 21.227-21.227z" opacity=".696" transform="rotate(45 1470.067 922.51)"/>
+            </g>
+        </g>
+    </g>
+</svg>

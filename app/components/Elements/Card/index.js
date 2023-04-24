@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Card({ description, imageSource, title }) {
   return (
-    <div className="col-span-4 bg-white px-8 py-20 rounded">
+    <div className="bg-white col-span-4 drop-shadow px-8 py-20 rounded">
       <div className="bg-white drop-shadow-xl filter flex justify-center items-center h-20 rounded-full w-20">
         <Image
           alt="Sempre mensalidade"
