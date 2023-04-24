@@ -93,7 +93,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sobre"
                     >
                       Trabalhe Conosco
                     </Link>
@@ -101,7 +101,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="/sobre"
                     >
                       Nossa História
                     </Link>
@@ -349,14 +349,16 @@ export default function Header() {
               </button>
             </div>
             <div>
-              <button
-                className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
-                }`}
-                type="button"
-              >
-                Contato
-              </button>
+              <Link href="/contato">
+                <button
+                  className={`flex items-center font-sans text-sm ${
+                    navbarStatus ? 'text-dark-blue' : 'text-white'
+                  }`}
+                  type="button"
+                >
+                  Contato
+                </button>
+              </Link>
             </div>
           </nav>
           <div className="lg:col-span-2 flex justify-end">
