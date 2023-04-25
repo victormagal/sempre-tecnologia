@@ -13,6 +13,7 @@ import {
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 import { faClock, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Sobre() {
@@ -150,31 +151,114 @@ export default function Sobre() {
           </div>
         </div>
       </Container>
-      <BackgroundContainer uri="/bg-contador-1.svg">
-        <div className="col-span-6 col-start-4 flex flex-col items-center">
-          <Image
-            alt="Portal Sempre Contador"
-            height={99}
-            quality={100}
-            src="/icon-portal-contador-ballon.svg"
-            width={93}
-          />
-          <h1 className="font-serif font-semibold text-white text-4xl my-8">
-            Portal Sempre Contador
+      <Container>
+        <div className="col-span-6">
+          <h1 className="font-serif font-bold text-5xl text-dark-blue">
+            A solução perfeita para a sua empresa
           </h1>
-          <p className="font-sans text-white mb-8">
-            O Portal Sempre Contador é uma plataforma exclusiva para contadores,
-            feita para administrar indicações de soluções Sempre e gerenciar a
-            validade dos certificados digitais de clientes.
-          </p>
-          <button
-            className="bg-transparent border border-white font-bold px-20 py-5 text-white rounded"
-            type="button"
-          >
-            Cadastre-se no portal
-          </button>
         </div>
-      </BackgroundContainer>
+        <div className="col-span-4 col-end-13 flex justify-end items-center">
+          <p className="font-sans text-soft-gray">
+            Soluções com tecnologia própria e atendimento diferenciado perto de
+            você.
+          </p>
+        </div>
+      </Container>
+      <Container newClasses="pt-24">
+        <div className="bg-white col-span-3 drop-shadow p-8">
+          <Image
+            alt="Sempre mensalidade"
+            height={39}
+            quality={100}
+            src="/icon-proposito.svg"
+            width={39}
+          />
+          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
+            Missão
+          </h1>
+          <p className="font-sans text-soft-gray">
+            Facilitar a vida dos empresários e contadores com soluções em
+            tecnologia e atendimento diferenciado.
+          </p>
+        </div>
+        <div className="bg-white col-span-3 drop-shadow p-8">
+          <Image
+            alt="Sempre mensalidade"
+            height={39}
+            quality={100}
+            src="/icon-visao.svg"
+            width={39}
+          />
+          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
+            Visão
+          </h1>
+          <p className="font-sans text-soft-gray">
+            Ser referência em sistemas de gestão e certificado digital no Brasil
+            de forma sustentável
+          </p>
+        </div>
+        <div className="bg-white col-span-3 drop-shadow p-8">
+          <Image
+            alt="Sempre mensalidade"
+            height={39}
+            quality={100}
+            src="/icon-proposito-box.svg"
+            width={39}
+          />
+          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
+            Propósito
+          </h1>
+          <p className="font-sans text-soft-gray">
+            Sempre juntos para apoiar as empresas e gerar prosperidade.
+          </p>
+        </div>
+        <div className="bg-white col-span-3 drop-shadow p-8">
+          <Image
+            alt="Sempre mensalidade"
+            height={39}
+            quality={100}
+            src="/icon-valores.svg"
+            width={39}
+          />
+          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
+            Valores
+          </h1>
+          <ul className="flex flex-col space-y-4">
+            <li className="flex items-center space-x-2">
+              <FontAwesomeIcon className="h-4 text-red-600" icon={faCheck} />
+              <span className="font-sans text-soft-gray">
+                Superação e Simplicidade
+              </span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FontAwesomeIcon className="h-4 text-red-600" icon={faCheck} />
+              <span className="font-sans text-soft-gray">
+                Espírito de Equipe
+              </span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FontAwesomeIcon className="h-4 text-red-600" icon={faCheck} />
+              <span className="font-sans text-soft-gray">
+                Melhoria contínua
+              </span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FontAwesomeIcon className="h-4 text-red-600" icon={faCheck} />
+              <span className="font-sans text-soft-gray">Profissionalismo</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FontAwesomeIcon className="h-4 text-red-600" icon={faCheck} />
+              <span className="font-sans text-soft-gray">
+                Respeito e Reconhecimento
+              </span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <FontAwesomeIcon className="h-4 text-red-600" icon={faCheck} />
+              <span className="font-sans text-soft-gray">Entusiasmo</span>
+            </li>
+          </ul>
+        </div>
+      </Container>
       <Container newClasses="py-24">
         <div className="col-span-5">
           <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
