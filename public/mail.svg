@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="53px" viewBox="0 0 64 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="46.1715482%" x2="25.7371664%" y2="52.5298425%" id="linearGradient-1">
+            <stop stop-color="#BDC4E4" offset="0%"></stop>
+            <stop stop-color="#F2F4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="site-sempretec-blog" transform="translate(-1379.000000, -981.000000)">
+            <g id="Group-7" transform="translate(1277.000000, 938.000000)">
+                <g id="Group-2" transform="translate(102.000000, 43.000000)">
+                    <path d="M-9.02389274e-13,17.7944888 L-9.02833364e-13,50.6367138 C-8.98773874e-13,51.7412833 0.8954305,52.6367138 2,52.6367138 L61.411458,52.6367138 C62.5160275,52.6367138 63.411458,51.7412833 63.411458,50.6367138 L63.411458,17.7944888 L32.6845802,0.549369396 C32.076616,0.208156195 31.3348421,0.208156195 30.7268778,0.549369396 L-9.02389274e-13,17.7944888 Z" id="Path-4" fill="#FFFFFF"></path>
+                    <polygon id="Path-5" fill="url(#linearGradient-1)" opacity="0.560000002" points="0 17.7944888 31.705729 35.3411435 63.411458 17.7944888"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

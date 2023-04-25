@@ -158,7 +158,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/"
+                      href="https://semprecertificadodigital.com.br"
                     >
                       Certificado Digital
                     </Link>
@@ -329,24 +329,16 @@ export default function Header() {
               </div>
             </div>
             <div>
-              <button
-                className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
-                }`}
-                type="button"
-              >
-                Planos e Preços
-              </button>
-            </div>
-            <div>
-              <button
-                className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
-                }`}
-                type="button"
-              >
-                Unidades
-              </button>
+              <Link href="https://loja.sempretecnologia.com.br">
+                <button
+                  className={`flex items-center font-sans text-sm ${
+                    navbarStatus ? 'text-dark-blue' : 'text-white'
+                  }`}
+                  type="button"
+                >
+                  Planos e Preços
+                </button>
+              </Link>
             </div>
             <div>
               <Link href="/contato">

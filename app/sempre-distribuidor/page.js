@@ -5,6 +5,7 @@ import {
   ColoredCard,
   Doubts,
   PlayCard,
+  TabsDistribuidor,
   Testimony,
   TransparentCard
 } from '../components/Elements';
@@ -102,47 +103,7 @@ export default function SempreMDistribuidor() {
           title="Saia na frente com nossas soluções"
         />
       </Container>
-      <BackgroundContainer uri="/bg-sempre-distribuidor-box-1.jpg">
-        <div className="col-span-5 col-end-13">
-          <header className="flex items-center mb-6">
-            <Image
-              alt="App Sempre Distribuidor"
-              height={52}
-              quality={100}
-              src="/icon-app-distribuidor.svg"
-              width={54}
-            />
-            <span className="font-serif font-bold ml-4 text-white text-lg">
-              APP Sempre Distribuidor
-            </span>
-          </header>
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
-            O seu negócio, onde você estiver, na palma da sua mão.
-          </h1>
-          <p className="text-white mb-6">
-            Acesse o valor de vendas, saiba qual vendedor está vendendo mais,
-            qual cliente está comprando mais e qual produto é o mais vendido.
-          </p>
-          <footer className="flex">
-            <Image
-              alt="Google play"
-              height={59}
-              quality={100}
-              src="/google-play.svg"
-              width={203}
-            />
-            <Image
-              alt="Apple story"
-              className="ml-4"
-              height={59}
-              quality={100}
-              src="/apple-store.svg"
-              width={203}
-            />
-          </footer>
-        </div>
-      </BackgroundContainer>
-      <Container newClasses="py-24">
+      <Container newClasses="pb-24">
         <div className="col-span-5 flex flex-col justify-center">
           <Image
             alt="Sempre mensalidade"
@@ -169,46 +130,7 @@ export default function SempreMDistribuidor() {
         </div>
       </Container>
       <BackgroundContainer uri="/bg-sempre-distribuidor-box-1.jpg">
-        <div className="col-span-5 col-end-13">
-          <header className="flex items-center mb-6">
-            <Image
-              alt="App Sempre Força de Vendas"
-              height={52}
-              quality={100}
-              src="/icon-app-forca.svg"
-              width={54}
-            />
-            <span className="font-serif font-bold ml-4 text-white text-lg">
-              APP Sempre Força de Vendas
-            </span>
-          </header>
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
-            É mais praticidade em vendas externas.
-          </h1>
-          <p className="text-white mb-6">
-            Visualize o cadastro de produto e de cliente. Mais praticidade para
-            os registros e anotações de venda no próprio aplicativo, que ainda
-            poderá fazer a transmissão direto para a retaguarda web e adiantar
-            processos, como o de faturamento.
-          </p>
-          <footer className="flex">
-            <Image
-              alt="Google play"
-              height={59}
-              quality={100}
-              src="/google-play.svg"
-              width={203}
-            />
-            <Image
-              alt="Apple story"
-              className="ml-4"
-              height={59}
-              quality={100}
-              src="/apple-store.svg"
-              width={203}
-            />
-          </footer>
-        </div>
+        <TabsDistribuidor />
       </BackgroundContainer>
       <Testimony />
       <Doubts

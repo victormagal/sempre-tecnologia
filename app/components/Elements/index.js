@@ -8,6 +8,7 @@ import MicroCard from './MicroCard';
 import PlayCard from './PlayCard';
 import SideBar from './SideBar';
 import Tabs from './Tabs';
+import TabsDistribuidor from './TabsDistribuidor';
 import TabsGestao from './TabsGestao';
 import Testimony from './Testimony';
 import TransparentCard from './TransparentCard';
@@ -23,6 +24,7 @@ export {
   PlayCard,
   SideBar,
   Tabs,
+  TabsDistribuidor,
   TabsGestao,
   Testimony,
   TransparentCard
