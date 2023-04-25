@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './page.module.css';
 import { ContactForm, Tabs } from '../components/Elements';
 import { Container } from '../components/Foundation';
 import {
