@@ -1,11 +1,13 @@
 import Image from 'next/image';
-import { Card, Doubts } from '../components/Elements';
+import { Card, Doubts, TabsGestao } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
   HeroPage
 } from '../components/Foundation';
 import { doubts } from './data';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function GestaoEmpresarial() {
   return (
@@ -18,6 +20,56 @@ export default function GestaoEmpresarial() {
         title="Um Sistema de Gestão"
         uri="/bg-gestao-empresarial.jpg"
       />
+      <Container newClasses="pt-24">
+        <div className="border border-gray-200 col-span-5 col-start-2 flex items-start px-16 py-8 rounded space-x-8">
+          <Image
+            alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+            height={24}
+            quality={100}
+            src="/title-sempre-gestor.svg"
+            width={159}
+          />
+          <div>
+            <p className="font-sans text-soft-gray">
+              Um sistema de gestão completo para sua empresa, onde você se
+              organiza e assume o controle.
+            </p>
+            <button className="flex space-x-2 items-center mt-3" type="button">
+              <span className="font-sans font-bold text-sm text-custom-orange">
+                Quero saber mais
+              </span>
+              <FontAwesomeIcon
+                className="h-3 text-custom-orange"
+                icon={faArrowRight}
+              />
+            </button>
+          </div>
+        </div>
+        <div className="border border-gray-200 col-span-5 flex items-start px-16 py-8 rounded space-x-8">
+          <Image
+            alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+            height={24}
+            quality={100}
+            src="/title-sempre-lite.svg"
+            width={133}
+          />
+          <div>
+            <p className="font-sans text-soft-gray">
+              Para quem tem equipe enxuta e precisa de uma sistema para
+              facilitar a vida...
+            </p>
+            <button className="flex space-x-2 items-center mt-3" type="button">
+              <span className="font-sans font-bold text-sm text-custom-orange">
+                Quero saber mais
+              </span>
+              <FontAwesomeIcon
+                className="h-3 text-custom-orange"
+                icon={faArrowRight}
+              />
+            </button>
+          </div>
+        </div>
+      </Container>
       <Container newClasses="py-24">
         <div className="col-span-6">
           <Image
@@ -127,6 +179,9 @@ export default function GestaoEmpresarial() {
           </footer>
         </div>
       </BackgroundContainer>
+      <Container newClasses="pt-24">
+        <TabsGestao />
+      </Container>
       <Doubts
         doubts={doubts}
         image="/cellphone-gestao.svg"
