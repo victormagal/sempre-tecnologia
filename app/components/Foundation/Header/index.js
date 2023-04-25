@@ -1,5 +1,4 @@
 'use client';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -40,10 +39,6 @@ export default function Header() {
 
   return (
     <>
-      <Head>
-        <title>Sempre Tecnologia</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <section
         className={`fixed top-0 z-50 w-full ${navbarStatus && styles.active}`}
       >
