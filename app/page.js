@@ -188,10 +188,10 @@ export default function Home() {
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
-                height={240}
+                height={441}
                 quality={100}
                 src="/icon-service-01.svg"
-                width={236}
+                width={435}
               />
               <Link
                 style={{

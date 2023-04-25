@@ -1,12 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
-import { ContactForm, MicroCard } from '../components/Elements';
-import {
-  BackgroundContainer,
-  Container,
-  HeroPage
-} from '../components/Foundation';
+import { ContactForm, Tabs } from '../components/Elements';
+import { Container } from '../components/Foundation';
 import {
   faFacebookSquare,
   faInstagram,
@@ -258,6 +254,25 @@ export default function Sobre() {
             </li>
           </ul>
         </div>
+      </Container>
+      <Container newClasses="pt-24">
+        <div className="col-span-6">
+          <h2 className="font-serif font-semibold mt-2 text-gray-600 text-2xl uppercase">
+            Entenda como podemos te ajudar
+          </h2>
+          <h1 className="font-serif font-bold text-5xl text-dark-blue">
+            Tecnologia que facilita
+          </h1>
+        </div>
+        <div className="col-span-4 col-end-13 flex justify-end items-center">
+          <p className="font-sans text-soft-gray">
+            Temos o que sua empresa precisa para fazer a gestão financeira e
+            comercial, com mais agilidade, controle e redução de custos.
+          </p>
+        </div>
+      </Container>
+      <Container newClasses="pt-24">
+        <Tabs />
       </Container>
       <Container newClasses="py-24">
         <div className="col-span-5">
