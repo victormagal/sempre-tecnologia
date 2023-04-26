@@ -793,7 +793,7 @@ export default function Home() {
           <div className="col-span-2 flex justify-end mb-6">
             <Link
               className="bg-custom-red font-sans font-bold py-4 rounded text-center text-xs text-white uppercase w-2/3"
-              href="/blog"
+              href="/noticias"
             >
               Ver mais
             </Link>

@@ -83,7 +83,7 @@ export default function Header() {
                   <li>
                     <Link
                       className="block font-semibold text-xs text-navbar-gray py-1"
-                      href="/blog"
+                      href="/noticias"
                     >
                       Blog
                     </Link>

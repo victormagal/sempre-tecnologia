@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import styles from './page.module.css';
-import { Container, HeroPage } from '../../components/Foundation';
-import { getPost } from '../../graphql/queries';
+import { Container, HeroPage } from '../components/Foundation';
+import { getPost } from '../graphql/queries';
 import { LastPosts } from '@/app/components/Elements';
 import { useQuery } from '@apollo/client';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,8 @@ export default function Post() {
   const md = new MarkdownIt();
   const [content, setContent] = useState();
   const [data, setData] = useState({});
-  const path = usePathname().slice(6);
+  const path = usePathname().slice(1);
+  console.log(path);
   useQuery(getPost, {
     variables: { slug: path },
     onCompleted: (data) => {

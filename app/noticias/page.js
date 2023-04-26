@@ -89,7 +89,7 @@ export default function Blog() {
             <Link
               className="bg-white col-span-6 drop-shadow"
               key={i}
-              href={`blog/${post.attributes.slug}`}
+              href={`/${post.attributes.slug}`}
             >
               <img
                 alt={post.attributes.title}
