@@ -13,6 +13,14 @@
 	margin-bottom: 1rem;
 }
 
+.content ol li {
+	color: #535568;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	list-style-type: decimal;
+	margin-left: 1rem;
+}
+
 .content ul li {
 	color: #535568;
 	font-family: 'Open Sans', sans-serif;
