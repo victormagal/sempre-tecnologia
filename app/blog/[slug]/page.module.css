@@ -1,7 +1,15 @@
 .content h1 {
-	color: #535568;
+	color: #2D3F89;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.content h2 {
+	color: #2D3F89;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
 	font-weight: 600;
 	margin-bottom: 1rem;
 }
