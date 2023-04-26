@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import Container from '../Container';
+import ModalForm from '../ModalForm';
 import { faCaretUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Header() {
   const [navbarStatus, setNavbarStatus] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavBarStyle);
@@ -39,6 +41,7 @@ export default function Header() {
 
   return (
     <>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <section
         className={`fixed top-0 z-50 w-full ${navbarStatus && styles.active}`}
       >
@@ -351,6 +354,7 @@ export default function Header() {
           <div className="lg:col-span-2 flex justify-end">
             <button
               className={`${styles.gradientGreen} h-full w-3/4 font-bold text-sm text-white rounded`}
+              onClick={() => setOpenModal(true)}
               type="button"
             >
               Fale agora

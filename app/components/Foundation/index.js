@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import HeroPage from './HeroPage';
 import Locations from './Locations';
+import ModalForm from './ModalForm';
 import Slideshow from './Slideshow';
 
 export {
@@ -13,5 +14,6 @@ export {
   Header,
   HeroPage,
   Locations,
+  ModalForm,
   Slideshow
 };

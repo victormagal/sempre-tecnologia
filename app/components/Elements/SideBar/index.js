@@ -94,8 +94,7 @@ export default function SideBar() {
                 </li>
                 <li>
                   <button
-                    className="bg-white font-sans font-semibold py-4 rounded w-full"
-                    style={{ color: '#782E4A' }}
+                    className="bg-white font-sans font-semibold py-4 text-custom-purple rounded w-full"
                     type="submit"
                   >
                     Cadastrar e-mail

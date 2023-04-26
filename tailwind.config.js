@@ -19,7 +19,8 @@ module.exports = {
         'custom-red': '#A92321',
         'custom-green': '#35B6B4',
         'custom-purple': '#6E3784',
-        'dark-yellow': '#C48E39'
+        'dark-yellow': '#C48E39',
+        'overlay-black': '#00000080'
       },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
@@ -27,6 +28,9 @@ module.exports = {
       },
       spacing: {
         108: '27rem'
+      },
+      zIndex: {
+        60: 60
       }
     }
   },
