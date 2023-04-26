@@ -2,7 +2,10 @@ import { gql } from '@apollo/client';
 
 const getAllPosts = gql`
   query ($page: Int!, $pageSize: Int!) {
-    blogPosts(pagination: { page: $page, pageSize: $pageSize }) {
+    blogPosts(
+      pagination: { page: $page, pageSize: $pageSize }
+      sort: "updatedAt:desc"
+    ) {
       data {
         attributes {
           image {
@@ -76,6 +79,7 @@ const getPostsByCategory = gql`
     blogPosts(
       filters: { category: { slug: { eq: $category } } }
       pagination: { page: $page, pageSize: $pageSize }
+      sort: "updatedAt:desc"
     ) {
       data {
         attributes {
