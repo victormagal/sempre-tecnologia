@@ -116,12 +116,13 @@ export default function Contador() {
             feita para administrar indicações de soluções Sempre e gerenciar a
             validade dos certificados digitais de clientes.
           </p>
-          <button
+          <Link
             className="bg-transparent border border-white font-bold px-20 py-5 text-white rounded"
-            type="button"
+            href="https://scd.semprecertificadora.com.br/app_login/"
+            target="_blank"
           >
             Cadastre-se no portal
-          </button>
+          </Link>
         </div>
       </BackgroundContainer>
       <Container newClasses="py-24">

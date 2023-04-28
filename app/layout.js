@@ -1,10 +1,14 @@
 'use client';
-import { Footer, Header, Locations } from './components/Foundation';
+import Image from 'next/image';
+import { useState } from 'react';
+import { Footer, Header, Locations, ModalForm } from './components/Foundation';
 import { client } from './graphql/config';
 import { ApolloProvider } from '@apollo/client';
 import './globals.css';
 
 export default function RootLayout({ children }) {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <html lang="en">
       <head>
@@ -37,10 +41,27 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ApolloProvider client={client}>
+          <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
           <Header />
           {children}
           <Locations />
-          <Footer />
+          <Footer>
+            <div
+              className="cursor-pointer flex items-center"
+              onClick={() => setOpenModal(true)}
+            >
+              <Image
+                alt="Sempre Tecnologia"
+                height={22}
+                quality={100}
+                src="/icon-clock.svg"
+                width={22}
+              />
+              <span className="font-serif font-semibold ml-3 text-dark-blue">
+                Podemos ir até você, agende um horário.
+              </span>
+            </div>
+          </Footer>
         </ApolloProvider>
       </body>
     </html>

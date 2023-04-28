@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { LastPosts, Testimony } from './components/Elements';
+import { LastPosts, ModalVimeo, Testimony } from './components/Elements';
 import {
   BackgroundContainer,
   Container,
@@ -12,10 +12,16 @@ import {
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
+  const [openModalVimeo, setOpenModalVimeo] = useState(false);
 
   return (
     <>
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalVimeo
+        open={openModalVimeo}
+        onClose={() => setOpenModalVimeo(false)}
+        link="https://player.vimeo.com/video/554410663?h=75a44195db&title=0&byline=0&portrait=0"
+      />
       <Slideshow />
       <section style={{ backgroundColor: '#F8F8F8' }} className="py-6">
         <Container>
@@ -60,6 +66,7 @@ export default function Home() {
             alt="Sempre mensalidade"
             className="cursor-pointer"
             height={81}
+            onClick={() => setOpenModalVimeo(true)}
             quality={100}
             src="/play-circle.svg"
             width={81}

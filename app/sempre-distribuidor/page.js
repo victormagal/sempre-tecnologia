@@ -6,6 +6,7 @@ import {
   Card,
   ColoredCard,
   Doubts,
+  ModalVimeo,
   PlayCard,
   TabsDistribuidor,
   Testimony,
@@ -21,10 +22,16 @@ import { doubts } from './data';
 
 export default function SempreMDistribuidor() {
   const [openModal, setOpenModal] = useState(false);
+  const [openModalVimeo, setOpenModalVimeo] = useState(false);
 
   return (
     <main>
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalVimeo
+        open={openModalVimeo}
+        onClose={() => setOpenModalVimeo(false)}
+        link="https://player.vimeo.com/video/527463835?h=b5b0b8df18&title=0&byline=0&portrait=0"
+      />
       <HeroPage
         arrow={false}
         cta={true}
@@ -35,7 +42,10 @@ export default function SempreMDistribuidor() {
         uri="/bg-sempre-distribuidor.jpg"
       />
       <Container newClasses="py-24">
-        <div className="col-span-5">
+        <div
+          className="col-span-5 cursor-pointer"
+          onClick={() => setOpenModalVimeo(true)}
+        >
           <PlayCard bgImage="/bg-play-sempre-distribuidor.svg" />
         </div>
         <div className="col-span-4 flex flex-col justify-center">
@@ -143,7 +153,10 @@ export default function SempreMDistribuidor() {
             Fale agora
           </button>
         </div>
-        <div className="col-span-5 col-end-13">
+        <div
+          className="col-span-5 col-end-13 cursor-pointer"
+          onClick={() => setOpenModalVimeo(true)}
+        >
           <PlayCard bgImage="/bg-play-sempre-distribuidor-light.svg" />
         </div>
       </Container>

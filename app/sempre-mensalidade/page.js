@@ -1,11 +1,13 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './page.module.css';
 import {
   Card,
   ColoredCard,
   Doubts,
+  ModalVimeo,
   PlayCard,
   Testimony,
   TransparentCard
@@ -20,10 +22,16 @@ import { doubts } from './data';
 
 export default function SempreMensalidade() {
   const [openModal, setOpenModal] = useState(false);
+  const [openModalVimeo, setOpenModalVimeo] = useState(false);
 
   return (
     <main>
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalVimeo
+        open={openModalVimeo}
+        onClose={() => setOpenModalVimeo(false)}
+        link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
+      />
       <HeroPage
         arrow={false}
         cta={true}
@@ -33,7 +41,10 @@ export default function SempreMensalidade() {
         uri="/bg-sempre-mensalidade.jpg"
       />
       <Container newClasses="py-24">
-        <div className="col-span-5">
+        <div
+          className="col-span-5 cursor-pointer"
+          onClick={() => setOpenModalVimeo(true)}
+        >
           <PlayCard bgImage="/bg-play-sempre-mensalidade.svg" />
         </div>
         <div className="col-span-4 flex flex-col justify-center">
@@ -162,21 +173,31 @@ export default function SempreMensalidade() {
             qual cliente está comprando mais e qual serviço é o mais realizado.
           </p>
           <footer className="flex">
-            <Image
-              alt="Google play"
-              height={59}
-              quality={100}
-              src="/google-play.svg"
-              width={203}
-            />
-            <Image
-              alt="Apple story"
-              className="ml-4"
-              height={59}
-              quality={100}
-              src="/apple-store.svg"
-              width={203}
-            />
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.sempremensalidade"
+              target="_blank"
+            >
+              <Image
+                alt="Google play"
+                height={59}
+                quality={100}
+                src="/google-play.svg"
+                width={203}
+              />
+            </Link>
+            <Link
+              href="https://apps.apple.com/br/app/sempre-mensalidae/id1504666709"
+              target="_blank"
+            >
+              <Image
+                alt="Apple story"
+                className="ml-4"
+                height={59}
+                quality={100}
+                src="/apple-store.svg"
+                width={203}
+              />
+            </Link>
           </footer>
         </div>
       </BackgroundContainer>

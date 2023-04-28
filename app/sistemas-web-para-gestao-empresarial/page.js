@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Card, Doubts, TabsGestao } from '../components/Elements';
 import {
@@ -168,21 +169,31 @@ export default function GestaoEmpresarial() {
             qual cliente está comprando mais e qual produto é o mais vendido.
           </p>
           <footer className="flex">
-            <Image
-              alt="Google play"
-              height={59}
-              quality={100}
-              src="/google-play.svg"
-              width={203}
-            />
-            <Image
-              alt="Apple story"
-              className="ml-4"
-              height={59}
-              quality={100}
-              src="/apple-store.svg"
-              width={203}
-            />
+            <Link
+              href="https://play.google.com/store/apps/details?id=br.com.sempregestor&pli=1"
+              target="_blank"
+            >
+              <Image
+                alt="Google play"
+                height={59}
+                quality={100}
+                src="/google-play.svg"
+                width={203}
+              />
+            </Link>
+            <Link
+              href="https://apps.apple.com/br/app/sempre-gestor/id1485919970"
+              target="_blank"
+            >
+              <Image
+                alt="Apple story"
+                className="ml-4"
+                height={59}
+                quality={100}
+                src="/apple-store.svg"
+                width={203}
+              />
+            </Link>
           </footer>
         </div>
       </BackgroundContainer>

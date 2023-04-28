@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function TabsDistribuidor() {
@@ -60,21 +61,31 @@ export default function TabsDistribuidor() {
           cliente está comprando mais e qual produto é o mais vendido.
         </p>
         <div className="flex">
-          <Image
-            alt="Google play"
-            height={59}
-            quality={100}
-            src="/google-play.svg"
-            width={203}
-          />
-          <Image
-            alt="Apple story"
-            className="ml-4"
-            height={59}
-            quality={100}
-            src="/apple-store.svg"
-            width={203}
-          />
+          <Link
+            href="https://play.google.com/store/apps/details?id=br.com.sempredistribuidor&hl=es_HN"
+            target="_blank"
+          >
+            <Image
+              alt="Google play"
+              height={59}
+              quality={100}
+              src="/google-play.svg"
+              width={203}
+            />
+          </Link>
+          <Link
+            href="https://apps.apple.com/br/app/sempre-distribuidor/id1489449251"
+            target="_blank"
+          >
+            <Image
+              alt="Apple story"
+              className="ml-4"
+              height={59}
+              quality={100}
+              src="/apple-store.svg"
+              width={203}
+            />
+          </Link>
         </div>
       </div>
       <div className={`${toggle === 2 ? 'block' : 'hidden'}`}>
@@ -88,21 +99,31 @@ export default function TabsDistribuidor() {
           como o de faturamento.
         </p>
         <div className="flex">
-          <Image
-            alt="Google play"
-            height={59}
-            quality={100}
-            src="/google-play.svg"
-            width={203}
-          />
-          <Image
-            alt="Apple story"
-            className="ml-4"
-            height={59}
-            quality={100}
-            src="/apple-store.svg"
-            width={203}
-          />
+          <Link
+            href="https://play.google.com/store/apps/details?id=br.com.sempreforcadevenda"
+            target="_blank"
+          >
+            <Image
+              alt="Google play"
+              height={59}
+              quality={100}
+              src="/google-play.svg"
+              width={203}
+            />
+          </Link>
+          <Link
+            href="https://apps.apple.com/br/app/sempre-força-de-venda/id1514410856"
+            target="_blank"
+          >
+            <Image
+              alt="Apple story"
+              className="ml-4"
+              height={59}
+              quality={100}
+              src="/apple-store.svg"
+              width={203}
+            />
+          </Link>
         </div>
       </div>
     </div>

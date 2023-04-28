@@ -36,6 +36,13 @@ export default function Parceria() {
             atratividade e fidelização de clientes além de um frente de caixa
             totalmente integrado a uma retaguarda web.
           </p>
+          <h1 className="font-serif font-bold mt-12 text-4xl text-dark-blue">
+            Certificado digital
+          </h1>
+          <p className="font-sans mt-6 text-soft-gray">
+            Emita certificados digitais na sua região e atraia mais clientes
+            para o seu negócio.
+          </p>
         </div>
         <div
           className={`${styles.gradientBlue} col-span-6 col-end-13 flex flex-col justify-center p-16`}

@@ -68,7 +68,10 @@ export default function Contato() {
               Um pouco mais sobre a Sempre
             </h1>
           </div>
-          <div className="col-span-2 col-start-4 flex flex-col items-center space-y-4">
+          <Link
+            href="/sobre"
+            className="col-span-2 col-start-4 flex flex-col items-center space-y-4"
+          >
             <Image
               alt="Background Image"
               className="object-cover object-center"
@@ -92,7 +95,7 @@ export default function Contato() {
                 />
               </span>
             </p>
-          </div>
+          </Link>
           <div className="col-span-2 flex flex-col items-center space-y-4">
             <Image
               alt="Background Image"

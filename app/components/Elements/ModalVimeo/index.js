@@ -1,6 +1,6 @@
 'use client';
 
-export default function ModalVimeo({ open, onClose }) {
+export default function ModalVimeo({ open, onClose, link }) {
   if (!open) return null;
 
   return (
@@ -15,7 +15,7 @@ export default function ModalVimeo({ open, onClose }) {
         }}
       >
         <iframe
-          src="https://player.vimeo.com/video/527463835?h=b5b0b8df18&title=0&byline=0&portrait=0"
+          src={link}
           width="940"
           height="529"
           allow="autoplay; fullscreen; picture-in-picture"
