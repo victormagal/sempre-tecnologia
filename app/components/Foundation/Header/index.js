@@ -14,9 +14,12 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavBarStyle);
+    window.addEventListener('click', closeDropdownItens);
   }, []);
 
   const toggleMenu = (e) => {
+    e.stopPropagation();
+
     const nextElement = e.currentTarget.nextSibling;
     const allElements = [...document.getElementsByClassName('dropDown')];
 
@@ -37,6 +40,16 @@ export default function Header() {
     } else {
       setNavbarStatus(false);
     }
+  };
+
+  const closeDropdownItens = () => {
+    const elements = [...document.getElementsByClassName('dropDown')];
+
+    elements.map((element) => {
+      if (!element.classList.contains('hidden')) {
+        element.classList.add('hidden');
+      }
+    });
   };
 
   return (
@@ -60,7 +73,7 @@ export default function Header() {
           <nav className="lg:col-span-8 flex justify-between items-center">
             <div className="relative">
               <button
-                className={`flex items-center font-sans text-sm ${
+                className={`flex items-center font-sans text-base ${
                   navbarStatus ? 'text-dark-blue' : 'text-white'
                 }`}
                 type="button"
@@ -74,7 +87,12 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="absolute dropDown hidden">
+              <div
+                className="absolute dropDown drop-shadow hidden"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -82,7 +100,7 @@ export default function Header() {
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/noticias"
                     >
                       Blog
@@ -90,7 +108,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sobre"
                     >
                       Trabalhe Conosco
@@ -98,7 +116,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sobre"
                     >
                       Nossa História
@@ -109,7 +127,7 @@ export default function Header() {
             </div>
             <div className="relative">
               <button
-                className={`flex items-center font-sans text-sm ${
+                className={`flex items-center font-sans text-base ${
                   navbarStatus ? 'text-dark-blue' : 'text-white'
                 }`}
                 type="button"
@@ -123,7 +141,12 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="absolute dropDown hidden">
+              <div
+                className="absolute dropDown drop-shadow hidden"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -131,7 +154,7 @@ export default function Header() {
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sistemas-web-para-gestao-empresarial"
                     >
                       Sistemas Web para Gestão Empresarial
@@ -139,7 +162,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sistemas-web-para-emissao-de-nota-eletronica"
                     >
                       Sistemas Web para Emissão de Nota Eletrônica
@@ -147,7 +170,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/automacao-comercial"
                     >
                       Sistemas para Pequenos Varejos
@@ -155,7 +178,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="https://semprecertificadodigital.com.br"
                     >
                       Certificado Digital
@@ -163,7 +186,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-distribuidor"
                     >
                       Sistemas Web para Distribuidores
@@ -171,7 +194,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-mensalidade"
                     >
                       Sistemas Web para Gestão de Recorrência
@@ -182,7 +205,7 @@ export default function Header() {
             </div>
             <div className="relative">
               <button
-                className={`flex items-center font-sans text-sm ${
+                className={`flex items-center font-sans text-base ${
                   navbarStatus ? 'text-dark-blue' : 'text-white'
                 }`}
                 type="button"
@@ -196,7 +219,12 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="absolute dropDown hidden">
+              <div
+                className="absolute dropDown drop-shadow hidden"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -204,7 +232,7 @@ export default function Header() {
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-distribuidor"
                     >
                       Distribuidores
@@ -212,7 +240,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-distribuidor"
                     >
                       Atacadistas
@@ -220,7 +248,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/automacao-comercial"
                     >
                       Pequenos Varejos
@@ -228,7 +256,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-mensalidade"
                     >
                       Contabilidade
@@ -236,7 +264,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-mensalidade"
                     >
                       Escolas e Faculdades
@@ -244,7 +272,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sistemas-web-para-gestao-empresarial"
                     >
                       Prestadores de Serviços
@@ -252,7 +280,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-mensalidade"
                     >
                       Vendas Recorrentes
@@ -260,7 +288,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sempre-mensalidade"
                     >
                       Cobrança de Mensalidade
@@ -268,7 +296,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/sistemas-web-para-emissao-de-nota-eletronica"
                     >
                       MEI
@@ -279,7 +307,7 @@ export default function Header() {
             </div>
             <div className="relative">
               <button
-                className={`flex items-center font-sans text-sm ${
+                className={`flex items-center font-sans text-base ${
                   navbarStatus ? 'text-dark-blue' : 'text-white'
                 }`}
                 type="button"
@@ -293,7 +321,12 @@ export default function Header() {
                   icon={faChevronDown}
                 />
               </button>
-              <div className="absolute dropDown hidden">
+              <div
+                className="absolute dropDown drop-shadow hidden"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <FontAwesomeIcon
                   className="text-white ml-6 h-8 w-8"
                   icon={faCaretUp}
@@ -301,7 +334,7 @@ export default function Header() {
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/contador"
                     >
                       Contadores
@@ -309,7 +342,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/parceria"
                     >
                       Certificado Digital
@@ -317,7 +350,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="/parceria"
                     >
                       Sistemas Web
@@ -325,7 +358,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      className="block font-semibold text-base text-navbar-gray py-1"
                       href="https://scd.semprecertificadora.com.br/app_login/"
                       target="_blank"
                     >
@@ -338,7 +371,7 @@ export default function Header() {
             <div>
               <Link href="https://loja.sempretecnologia.com.br">
                 <button
-                  className={`flex items-center font-sans text-sm ${
+                  className={`flex items-center font-sans text-base ${
                     navbarStatus ? 'text-dark-blue' : 'text-white'
                   }`}
                   type="button"
@@ -350,7 +383,7 @@ export default function Header() {
             <div>
               <Link href="/contato">
                 <button
-                  className={`flex items-center font-sans text-sm ${
+                  className={`flex items-center font-sans text-base ${
                     navbarStatus ? 'text-dark-blue' : 'text-white'
                   }`}
                   type="button"
@@ -362,7 +395,7 @@ export default function Header() {
           </nav>
           <div className="lg:col-span-2 flex justify-end">
             <button
-              className={`${styles.gradientGreen} h-full w-3/4 font-bold text-sm text-white rounded`}
+              className={`${styles.gradientGreen} h-full w-3/4 font-bold text-base text-white rounded`}
               onClick={() => setOpenModal(true)}
               type="button"
             >
