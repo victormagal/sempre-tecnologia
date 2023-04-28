@@ -1,4 +1,5 @@
 export default function ColoredCard({
+  children,
   description,
   firstColor,
   secondColor,
@@ -15,12 +16,7 @@ export default function ColoredCard({
         {title}
       </h1>
       <p className="text-white text-center">{description}</p>
-      <button
-        className="bg-white font-bold mt-6 py-3 text-sm text-dark-blue rounded w-2/3"
-        type="button"
-      >
-        Contrate Agora
-      </button>
+      {children}
     </div>
   );
 }

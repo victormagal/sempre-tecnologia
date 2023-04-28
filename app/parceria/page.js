@@ -1,8 +1,10 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './page.module.css';
 import { ContactForm, MicroCard } from '../components/Elements';
-import { Container, HeroPage } from '../components/Foundation';
+import { Container, HeroPage, ModalForm } from '../components/Foundation';
 import {
   faFacebookSquare,
   faInstagram,
@@ -11,8 +13,11 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Parceria() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
         cta={false}
@@ -51,6 +56,8 @@ export default function Parceria() {
           </p>
           <button
             className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-1/3`}
+            onClick={() => setOpenModal(true)}
+            type="button"
           >
             QUERO SER PARCEIRO
           </button>

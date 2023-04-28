@@ -5,6 +5,7 @@ import ContactForm from './ContactForm';
 import Doubts from './Doubts';
 import LastPosts from './LastPosts';
 import MicroCard from './MicroCard';
+import ModalVimeo from './ModalVimeo';
 import PlayCard from './PlayCard';
 import SideBar from './SideBar';
 import Tabs from './Tabs';
@@ -21,6 +22,7 @@ export {
   Doubts,
   LastPosts,
   MicroCard,
+  ModalVimeo,
   PlayCard,
   SideBar,
   Tabs,

@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import styles from './page.module.css';
 import {
   Card,
@@ -11,13 +13,17 @@ import {
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  HeroPage,
+  ModalForm
 } from '../components/Foundation';
 import { doubts } from './data';
 
 export default function SempreMensalidade() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
         cta={true}
@@ -48,6 +54,8 @@ export default function SempreMensalidade() {
           </p>
           <button
             className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-1/2`}
+            onClick={() => setOpenModal(true)}
+            type="button"
           >
             Fale agora
           </button>
@@ -99,7 +107,15 @@ export default function SempreMensalidade() {
           firstColor="#CF2932"
           secondColor="#77335F"
           title="Saia na frente com nossas soluções"
-        />
+        >
+          <button
+            className="bg-white font-bold mt-6 py-3 text-sm text-dark-blue rounded w-2/3"
+            onClick={() => setOpenModal(true)}
+            type="button"
+          >
+            Contrate Agora
+          </button>
+        </ColoredCard>
       </Container>
       <BackgroundContainer uri="/bg-sempre-mensalidade-box1.jpg">
         <div className="col-span-5 col-end-13">
@@ -116,6 +132,7 @@ export default function SempreMensalidade() {
           </p>
           <button
             className={`${styles.gradientYellow} font-bold px-20 py-3 text-sm text-white rounded`}
+            onClick={() => setOpenModal(true)}
             type="button"
           >
             Fale agora

@@ -323,6 +323,15 @@ export default function Header() {
                       Sistemas Web
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      className="block font-semibold text-xs text-navbar-gray py-1"
+                      href="https://scd.semprecertificadora.com.br/app_login/"
+                      target="_blank"
+                    >
+                      Portal do Contador
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

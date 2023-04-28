@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import styles from './page.module.css';
 import {
   Card,
@@ -12,13 +14,17 @@ import {
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  HeroPage,
+  ModalForm
 } from '../components/Foundation';
 import { doubts } from './data';
 
 export default function SempreMDistribuidor() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
         cta={true}
@@ -50,6 +56,8 @@ export default function SempreMDistribuidor() {
           </p>
           <button
             className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-1/2`}
+            onClick={() => setOpenModal(true)}
+            type="button"
           >
             Fale agora
           </button>
@@ -101,7 +109,15 @@ export default function SempreMDistribuidor() {
           firstColor="#E57B2D"
           secondColor="#1F408A"
           title="Saia na frente com nossas soluções"
-        />
+        >
+          <button
+            className="bg-white font-bold mt-6 py-3 text-sm text-dark-blue rounded w-2/3"
+            onClick={() => setOpenModal(true)}
+            type="button"
+          >
+            Contrate Agora
+          </button>
+        </ColoredCard>
       </Container>
       <Container newClasses="pb-24">
         <div className="col-span-5 flex flex-col justify-center">
@@ -121,6 +137,8 @@ export default function SempreMDistribuidor() {
           </p>
           <button
             className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-2/5`}
+            onClick={() => setOpenModal(true)}
+            type="button"
           >
             Fale agora
           </button>

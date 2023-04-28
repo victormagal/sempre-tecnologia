@@ -1,11 +1,14 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './page.module.css';
 import { ContactForm, MicroCard } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  HeroPage,
+  ModalForm
 } from '../components/Foundation';
 import {
   faFacebookSquare,
@@ -15,8 +18,11 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Contador() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
         cta={false}
@@ -54,6 +60,8 @@ export default function Contador() {
           </p>
           <button
             className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-1/3`}
+            onClick={() => setOpenModal(true)}
+            type="button"
           >
             QUERO SER PARCEIRO
           </button>

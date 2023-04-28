@@ -1,15 +1,21 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { LastPosts, Testimony } from './components/Elements';
 import {
   BackgroundContainer,
   Container,
-  Slideshow
+  Slideshow,
+  ModalForm
 } from './components/Foundation';
 
 export default function Home() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <Slideshow />
       <section style={{ backgroundColor: '#F8F8F8' }} className="py-6">
         <Container>
@@ -777,9 +783,10 @@ export default function Home() {
           </p>
           <button
             className="border border-white font-sans font-bold py-4 text-sm text-white rounded w-2/4"
+            onClick={() => setOpenModal(true)}
             type="button"
           >
-            Agenda um horário
+            Agende um horário
           </button>
         </div>
       </BackgroundContainer>

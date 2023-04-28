@@ -1,17 +1,23 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Card, Doubts, TabsGestao } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  HeroPage,
+  ModalForm
 } from '../components/Foundation';
 import { doubts } from './data';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function GestaoEmpresarial() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
         cta={true}
@@ -133,6 +139,7 @@ export default function GestaoEmpresarial() {
             style={{
               background: 'linear-gradient(190deg, #F8B44C 14%, #F07E26 89%)'
             }}
+            onClick={() => setOpenModal(true)}
             type="button"
           >
             Agendar uma visita com nosso consultor!

@@ -1,15 +1,21 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Card, ColoredCard, Doubts, Testimony } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  HeroPage,
+  ModalForm
 } from '../components/Foundation';
 import { doubts } from './data';
 
 export default function AutomacaoComercial() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
         cta={true}
@@ -83,7 +89,15 @@ export default function AutomacaoComercial() {
           firstColor="#1C6B8F"
           secondColor="#1B9096"
           title="Praticidade que agiliza processos"
-        />
+        >
+          <button
+            className="bg-white font-bold mt-6 py-3 text-sm text-dark-blue rounded w-2/3"
+            onClick={() => setOpenModal(true)}
+            type="button"
+          >
+            Contrate Agora
+          </button>
+        </ColoredCard>
       </Container>
       <BackgroundContainer uri="/bg-automacao.svg">
         <div className="col-span-6 flex justify-center items-center">
@@ -117,6 +131,7 @@ export default function AutomacaoComercial() {
             style={{
               background: 'linear-gradient(190deg, #F8B44C 14%, #F07E26 89%)'
             }}
+            onClick={() => setOpenModal(true)}
             type="button"
           >
             Contrate Agora

@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { ContactForm } from '../components/Elements';
-import { Container, HeroPage } from '../components/Foundation';
+import { Container, HeroPage, ModalForm } from '../components/Foundation';
 import {
   faEnvelope,
   faPhone,
@@ -10,8 +12,11 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Contato() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage arrow={false} cta={false} mini={true} uri="/bg-blog.svg" />
       <Container newClasses="py-24">
         <div className="col-span-5">
@@ -113,7 +118,10 @@ export default function Contato() {
               </span>
             </p>
           </div>
-          <div className="col-span-2 flex flex-col items-center space-y-4">
+          <div
+            className="col-span-2 cursor-pointer flex flex-col items-center space-y-4"
+            onClick={() => setOpenModal(true)}
+          >
             <Image
               alt="Background Image"
               className="object-cover object-center"

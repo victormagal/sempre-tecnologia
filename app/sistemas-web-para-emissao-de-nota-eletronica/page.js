@@ -1,21 +1,33 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import {
   Card,
   ColoredCard,
   Doubts,
+  ModalVimeo,
   PlayCard,
   Testimony
 } from '../components/Elements';
 import {
   BackgroundContainer,
   Container,
-  HeroPage
+  HeroPage,
+  ModalForm
 } from '../components/Foundation';
 import { doubts } from './data';
 
 export default function EmissorNota() {
+  const [openModal, setOpenModal] = useState(false);
+  const [openModalVimeo, setOpenModalVimeo] = useState(false);
+
   return (
     <main>
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalVimeo
+        open={openModalVimeo}
+        onClose={() => setOpenModalVimeo(false)}
+      />
       <HeroPage
         arrow={false}
         cta={true}
@@ -25,7 +37,10 @@ export default function EmissorNota() {
         uri="/bg-emissor-nota.jpg"
       />
       <Container newClasses="py-24">
-        <div className="col-span-5">
+        <div
+          className="col-span-5 cursor-pointer"
+          onClick={() => setOpenModalVimeo(true)}
+        >
           <PlayCard bgImage="/bg-play-notas.svg" />
         </div>
         <div className="col-span-5 flex flex-col justify-center">
@@ -95,7 +110,15 @@ export default function EmissorNota() {
           firstColor="#E57B2D"
           secondColor="#1F408A"
           title="Praticidade que agiliza processos"
-        />
+        >
+          <button
+            className="bg-white font-bold mt-6 py-3 text-sm text-dark-blue rounded w-2/3"
+            onClick={() => setOpenModal(true)}
+            type="button"
+          >
+            Contrate Agora
+          </button>
+        </ColoredCard>
       </Container>
       <BackgroundContainer uri="/bg-sempre-emissor.jpg">
         <div className="col-span-5 col-end-13">
