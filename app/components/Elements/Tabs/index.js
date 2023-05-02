@@ -14,7 +14,7 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="col-span-5">
+      <div className="col-span-4 lg:col-span-5">
         <ul>
           <li
             className={`border-l-4 ${
@@ -25,7 +25,7 @@ export default function Tabs() {
             <button
               className={`${
                 toggle === 1 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg`}
+              } font-sans font-bold text-lg text-left`}
               type="button"
             >
               Sistema Web para Gestão Comercial
@@ -40,7 +40,7 @@ export default function Tabs() {
             <button
               className={`${
                 toggle === 2 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg`}
+              } font-sans font-bold text-lg text-left`}
               type="button"
             >
               Sistema Web para Emissão de Nota Eletrônica
@@ -55,7 +55,7 @@ export default function Tabs() {
             <button
               className={`${
                 toggle === 3 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg`}
+              } font-sans font-bold text-lg text-left`}
               type="button"
             >
               Sistema para Pequenos Varejos
@@ -70,7 +70,7 @@ export default function Tabs() {
             <button
               className={`${
                 toggle === 4 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg`}
+              } font-sans font-bold text-lg text-left`}
               type="button"
             >
               Certificado Digital
@@ -85,7 +85,7 @@ export default function Tabs() {
             <button
               className={`${
                 toggle === 5 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg`}
+              } font-sans font-bold text-lg text-left`}
               type="button"
             >
               Sistemas Web para Distribuidores
@@ -100,7 +100,7 @@ export default function Tabs() {
             <button
               className={`${
                 toggle === 6 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg`}
+              } font-sans font-bold text-lg text-left`}
               type="button"
             >
               Sistemas Web para Gestão de Recorrência
@@ -108,7 +108,7 @@ export default function Tabs() {
           </li>
         </ul>
       </div>
-      <div className="col-span-7 flex-grow">
+      <div className="col-span-4 lg:col-span-7 flex-grow">
         <div
           className={`${
             toggle === 1 ? 'block' : 'hidden'

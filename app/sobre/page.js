@@ -25,20 +25,20 @@ export default function Sobre() {
           />
         </div>
         <Container newClasses="relative z-10 pt-36">
-          <div className="col-span-8 col-start-3">
-            <h1 className="font-serif font-semibold text-white text-6xl text-center">
+          <div className="col-span-4 lg:col-span-8 lg:col-start-3">
+            <h1 className="font-serif font-semibold text-white text-4xl lg:text-6xl text-center">
               Olá! Somos a Sempre Tecnologia
             </h1>
           </div>
-          <div className="col-span-6 col-start-4 my-8">
+          <div className="col-span-4 lg:col-span-6 lg:col-start-4 my-8">
             <h2 className="font-serif text-white text-xl text-center">
               Uma empresa especializada em desenvolver sistemas de gestão
               empresarial utilizando tecnologia própria em plataforma web.
             </h2>
           </div>
-          <div className="col-span-4 col-start-5">
-            <ul className="flex space-x-4">
-              <li className="border border-white rounded py-4 text-center w-1/2">
+          <div className="col-span-4 lg:col-start-5">
+            <ul className="flex flex-col lg:flex-row space-y-4 lg:space-x-4 items-center">
+              <li className="border border-white rounded py-4 text-center w-3/4 lg:w-1/2">
                 <Link href="">
                   <FontAwesomeIcon
                     className="h-4 mr-2 text-white"
@@ -49,7 +49,7 @@ export default function Sobre() {
                   </span>
                 </Link>
               </li>
-              <li className="border border-white rounded py-4 text-center w-1/2">
+              <li className="border border-white rounded py-4 text-center w-3/4 lg:w-1/2">
                 <Link href="">
                   <FontAwesomeIcon
                     className="h-4 mr-2 text-white"
@@ -64,11 +64,11 @@ export default function Sobre() {
           </div>
         </Container>
       </section>
-      <Container newClasses="pb-24 relative -mt-48 z-20">
-        <div className="col-span-12 flex justify-center mb-24">
+      <Container newClasses="pb-24 relative -mt-24 lg:-mt-48 z-20">
+        <div className="col-span-4 lg:col-span-12 flex justify-center mb-12 lg:mb-24">
           <img alt="Sobre nós" src="/image-sobre-nos.png" />
         </div>
-        <div className="col-span-5 col-start-2 flex flex-col justify-center">
+        <div className="col-span-4 lg:col-span-5 lg:col-start-2 flex flex-col justify-center">
           <h1 className="font-serif font-bold text-4xl text-dark-blue">
             Sobre nós
           </h1>
@@ -87,7 +87,7 @@ export default function Sobre() {
             Brasil.
           </p>
         </div>
-        <div className="col-span-5 grid grid-cols-12 gap-8">
+        <div className="col-span-4 lg:col-span-5 grid grid-cols-12 gap-8">
           <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
             <Image
               alt="Sempre mensalidade"
@@ -147,20 +147,20 @@ export default function Sobre() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-6">
+        <div className="col-span-4 lg:col-span-6">
           <h1 className="font-serif font-bold text-5xl text-dark-blue">
             A solução perfeita para a sua empresa
           </h1>
         </div>
-        <div className="col-span-4 col-end-13 flex justify-end items-center">
+        <div className="col-span-4 lg:col-end-13 flex justify-end items-center">
           <p className="font-sans text-soft-gray">
             Soluções com tecnologia própria e atendimento diferenciado perto de
             você.
           </p>
         </div>
       </Container>
-      <Container newClasses="pt-24">
-        <div className="bg-white col-span-3 drop-shadow p-8">
+      <Container newClasses="pt-12 lg:pt-24">
+        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
           <Image
             alt="Sempre mensalidade"
             height={39}
@@ -176,7 +176,7 @@ export default function Sobre() {
             tecnologia e atendimento diferenciado.
           </p>
         </div>
-        <div className="bg-white col-span-3 drop-shadow p-8">
+        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
           <Image
             alt="Sempre mensalidade"
             height={39}
@@ -192,7 +192,7 @@ export default function Sobre() {
             de forma sustentável
           </p>
         </div>
-        <div className="bg-white col-span-3 drop-shadow p-8">
+        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
           <Image
             alt="Sempre mensalidade"
             height={39}
@@ -207,7 +207,7 @@ export default function Sobre() {
             Sempre juntos para apoiar as empresas e gerar prosperidade.
           </p>
         </div>
-        <div className="bg-white col-span-3 drop-shadow p-8">
+        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
           <Image
             alt="Sempre mensalidade"
             height={39}
@@ -254,16 +254,16 @@ export default function Sobre() {
           </ul>
         </div>
       </Container>
-      <Container newClasses="pt-24">
-        <div className="col-span-6">
-          <h2 className="font-serif font-semibold mt-2 text-gray-600 text-2xl uppercase">
+      <Container newClasses="pt-12 lg:pt-24">
+        <div className="col-span-4 lg:col-span-6">
+          <h2 className="font-serif font-semibold mt-2 text-gray-600 text-xl lg:text-2xl uppercase">
             Entenda como podemos te ajudar
           </h2>
-          <h1 className="font-serif font-bold text-5xl text-dark-blue">
+          <h1 className="font-serif font-bold mt-6 lg:mt-0 text-4xl lg:text-5xl text-dark-blue">
             Tecnologia que facilita
           </h1>
         </div>
-        <div className="col-span-4 col-end-13 flex justify-end items-center">
+        <div className="col-span-4 lg:col-end-13 flex justify-end items-center">
           <p className="font-sans text-soft-gray">
             Temos o que sua empresa precisa para fazer a gestão financeira e
             comercial, com mais agilidade, controle e redução de custos.
@@ -273,8 +273,8 @@ export default function Sobre() {
       <Container newClasses="pt-24">
         <Tabs />
       </Container>
-      <Container newClasses="py-24">
-        <div className="col-span-5">
+      <Container newClasses="py-16 lg:py-24">
+        <div className="col-span-4 lg:col-span-5">
           <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
             Seja um sempre parceiro
           </h2>
@@ -324,7 +324,7 @@ export default function Sobre() {
             </li>
           </ul>
         </div>
-        <div className="col-span-6 col-end-13">
+        <div className="col-span-4 lg:col-span-6 lg:col-end-13">
           <ContactForm />
         </div>
       </Container>
