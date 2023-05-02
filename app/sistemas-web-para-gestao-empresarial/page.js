@@ -27,8 +27,8 @@ export default function GestaoEmpresarial() {
         title="Um Sistema de Gestão"
         uri="/bg-gestao-empresarial.jpg"
       />
-      <Container newClasses="pt-24">
-        <div className="border border-gray-200 col-span-5 col-start-2 flex items-start px-16 py-8 rounded space-x-8">
+      <Container newClasses="pt-12 lg:pt-24">
+        <div className="border border-gray-200 col-span-4 lg:col-span-5 lg:col-start-2 flex flex-col xl:flex-row items-start px-16 py-8 rounded space-y-8 xl:space-y-0 xl:space-x-8">
           <Image
             alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
             height={24}
@@ -52,7 +52,7 @@ export default function GestaoEmpresarial() {
             </button>
           </div>
         </div>
-        <div className="border border-gray-200 col-span-5 flex items-start px-16 py-8 rounded space-x-8">
+        <div className="border border-gray-200 col-span-4 lg:col-span-5 flex flex-col xl:flex-row items-start px-16 py-8 rounded space-y-8 xl:space-y-0 xl:space-x-8">
           <Image
             alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
             height={24}
@@ -77,8 +77,8 @@ export default function GestaoEmpresarial() {
           </div>
         </div>
       </Container>
-      <Container newClasses="py-24">
-        <div className="col-span-6">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-6">
           <Image
             alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
             height={562}
@@ -87,11 +87,11 @@ export default function GestaoEmpresarial() {
             width={758}
           />
         </div>
-        <div className="col-span-5 flex flex-col justify-center">
-          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center lg:justify-start">
+          <h1 className="font-serif font-bold lg:mt-6 text-dark-blue text-4xl text-center lg:text-left">
             Descomplique a gestão da sua empresa.
           </h1>
-          <p className="mt-6 text-soft-gray">
+          <p className="mt-6 text-soft-gray text-center lg:text-left">
             Com o nosso sistema web para gestão empresarial, o controle da sua
             empresa fica em suas mãos. Desenvolvemos soluções simples que
             descomplicam a gestão de negócios e organizam melhor o seu
@@ -99,8 +99,8 @@ export default function GestaoEmpresarial() {
           </p>
         </div>
       </Container>
-      <Container newClasses="pb-24">
-        <h1 className="col-span-12 font-sans my-6 text-dark-blue text-3xl text-center">
+      <Container newClasses="pb-12 lg:pb-24">
+        <h1 className="col-span-4 lg:col-span-12 font-sans mb-6 lg:my-6 text-dark-blue text-3xl text-center">
           Um sistema de gestão empresarial{' '}
           <span className="font-bold">exclusivo</span> para cada cliente.
         </h1>
@@ -134,7 +134,7 @@ export default function GestaoEmpresarial() {
           imageSource="/icon-gestao-6.svg"
           title="Chega de Planilhas"
         />
-        <div className="col-span-12 flex justify-center mt-6">
+        <div className="col-span-4 lg:col-span-12 flex justify-center mt-6">
           <button
             className="font-bold px-14 py-5 text-lg text-white rounded"
             style={{
@@ -148,8 +148,8 @@ export default function GestaoEmpresarial() {
         </div>
       </Container>
       <BackgroundContainer uri="/banner-gestao-empresarial.jpg">
-        <div className="col-span-5 col-end-13">
-          <header className="flex items-center mb-6">
+        <div className="col-span-4 lg:col-span-5 lg:col-end-13">
+          <header className="flex space-x-4 justify-center items-center mb-6">
             <Image
               alt="App sempre gestor"
               height={52}
@@ -157,18 +157,18 @@ export default function GestaoEmpresarial() {
               src="/icon-app-sempre-gestor.svg"
               width={54}
             />
-            <span className="font-serif font-bold ml-4 text-white text-lg">
+            <span className="font-serif font-bold text-white text-lg">
               APP Sempre Gestor
             </span>
           </header>
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
+          <h1 className="font-serif font-semibold text-white text-4xl mb-6 text-center lg:text-left">
             O seu negócio, de onde você estiver, na palma da sua mão
           </h1>
-          <p className="text-white mb-6">
+          <p className="text-white mb-6 text-center lg:text-left">
             Acesse o valor de vendas, saiba qual vendedor está vendendo mais,
             qual cliente está comprando mais e qual produto é o mais vendido.
           </p>
-          <footer className="flex">
+          <footer className="flex justify-center space-x-4">
             <Link
               href="https://play.google.com/store/apps/details?id=br.com.sempregestor&pli=1"
               target="_blank"
@@ -187,7 +187,6 @@ export default function GestaoEmpresarial() {
             >
               <Image
                 alt="Apple story"
-                className="ml-4"
                 height={59}
                 quality={100}
                 src="/apple-store.svg"

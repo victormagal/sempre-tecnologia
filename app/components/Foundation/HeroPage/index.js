@@ -36,20 +36,30 @@ export default function HeroPage({
           />
         </div>
         <Container newClasses="relative z-10">
-          <div className="col-span-7">
-            {iconSource && <img src={iconSource} alt={title} />}
+          <div className="col-span-4 lg:col-span-7 flex flex-col space-y-8 items-center lg:items-start mt-16">
+            {iconSource && (
+              <Image
+                alt="Sistema"
+                height={35}
+                quality={100}
+                src={iconSource}
+                width={196}
+              />
+            )}
             {title && (
-              <h1 className="font-serif font-semibold text-white text-6xl">
+              <h1 className="font-serif font-semibold text-white text-4xl lg:text-6xl text-center lg:text-left">
                 {title}
               </h1>
             )}
           </div>
           {description && (
-            <main className="col-span-6">
-              <h2 className="font-serif text-white text-xl">{description}</h2>
+            <main className="col-span-4 lg:col-span-6">
+              <h2 className="font-serif text-white text-xl text-center lg:text-left">
+                {description}
+              </h2>
             </main>
           )}
-          <footer className="col-span-7">
+          <footer className="col-span-4 flex justify-center lg:justify-start lg:col-span-7">
             {cta && (
               <button
                 className={`${

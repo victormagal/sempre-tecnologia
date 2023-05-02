@@ -29,7 +29,7 @@ export default function TabsGestao() {
 
   return (
     <>
-      <div className="col-span-3">
+      <div className="col-span-4 lg:col-span-3">
         <ul className="flex flex-col space-y-4">
           <li
             className={`${
@@ -85,7 +85,7 @@ export default function TabsGestao() {
           </li>
         </ul>
       </div>
-      <div className="col-span-8 col-end-13 flex-grow">
+      <div className="col-span-4 lg:col-span-8 lg:col-end-13 flex-grow">
         <div
           className={`${
             toggle === 1 ? 'block' : 'hidden'
@@ -103,7 +103,7 @@ export default function TabsGestao() {
                 icon={faUser}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleGestor === 1 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -121,7 +121,7 @@ export default function TabsGestao() {
                 icon={faArrowTrendUp}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleGestor === 2 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -139,7 +139,7 @@ export default function TabsGestao() {
                 icon={faDollar}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleGestor === 3 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -157,7 +157,7 @@ export default function TabsGestao() {
                 icon={faBox}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleGestor === 4 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -372,7 +372,7 @@ export default function TabsGestao() {
                 icon={faUser}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleLite === 1 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -390,7 +390,7 @@ export default function TabsGestao() {
                 icon={faArrowTrendUp}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleLite === 2 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -408,7 +408,7 @@ export default function TabsGestao() {
                 icon={faDollar}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleLite === 3 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >
@@ -426,7 +426,7 @@ export default function TabsGestao() {
                 icon={faBox}
               />
               <span
-                className={`font-sans font-bold ${
+                className={`hidden lg:block font-sans font-bold ${
                   toggleLite === 4 ? 'text-dark-blue' : 'text-gray-400'
                 } text-sm`}
               >

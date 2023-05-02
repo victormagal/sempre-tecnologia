@@ -17,8 +17,8 @@ export default function Doubts({ doubts, image, theme, title }) {
   };
 
   return (
-    <Container newClasses="py-24">
-      <div className="col-span-5">
+    <Container newClasses="py-12 lg:py-24">
+      <div className="hidden lg:block lg:col-span-5">
         <Image
           alt="Apple story"
           className="ml-4"
@@ -28,8 +28,8 @@ export default function Doubts({ doubts, image, theme, title }) {
           width={635}
         />
       </div>
-      <div className="col-span-7">
-        <h1 className="font-serif font-semibold mb-12 pr-48 text-5xl text-dark-blue">
+      <div className="col-span-4 lg:col-span-7">
+        <h1 className="font-serif font-semibold mb-12 lg:pr-48 text-2xl lg:text-5xl text-dark-blue text-center lg:text-left">
           {title}
         </h1>
         <div>
@@ -42,7 +42,7 @@ export default function Doubts({ doubts, image, theme, title }) {
                 className={`cursor-pointer flex items-center justify-between ${styles.noMarker}`}
                 onClick={changeTitleColor}
               >
-                <h2 className="font-serif mr-10 text-soft-gray text-xl">
+                <h2 className="font-serif mr-10 text-soft-gray text-base lg:text-xl">
                   {question}
                 </h2>
                 <FontAwesomeIcon
@@ -51,7 +51,9 @@ export default function Doubts({ doubts, image, theme, title }) {
                   style={{ color: `${theme}` }}
                 />
               </summary>
-              <p className="font-sans mt-6 text-soft-gray">{answer}</p>
+              <p className="font-sans mt-6 text-soft-gray text-sm lg:text-base">
+                {answer}
+              </p>
             </details>
           ))}
         </div>
