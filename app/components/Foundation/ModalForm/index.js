@@ -14,13 +14,13 @@ export default function ModalForm({ open, onClose }) {
       className="bg-overlay-black fixed h-screen w-screen z-60"
     >
       <div
-        className="absolute flex left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] h-auto w-1/2"
+        className="absolute flex left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] h-auto w-10/12 lg:w-8/12"
         onClick={(e) => {
           e.stopPropagation();
         }}
       >
         <div
-          className="flex flex-col space-y-8 p-10 w-1/2"
+          className="hidden lg:flex flex-col space-y-8 p-10 w-1/2"
           style={{
             background: 'linear-gradient(265deg, #CF2932 0%, #77335F 100%)'
           }}
@@ -45,7 +45,7 @@ export default function ModalForm({ open, onClose }) {
             comercial.
           </p>
         </div>
-        <div className="bg-white p-6 w-1/2">
+        <div className="bg-white p-6 w-full lg:w-1/2">
           <div className="flex justify-end">
             <FontAwesomeIcon
               className="cursor-pointer h-8 w-8 text-custom-orange"

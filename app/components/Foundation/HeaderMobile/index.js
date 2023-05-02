@@ -56,7 +56,7 @@ export default function HeaderMobile() {
         }}
       >
         <Container newClasses="py-6">
-          <div className="col-span-2 flex justify-center items-center">
+          <div className="col-span-2 flex justify-start items-center">
             <Link href="/">
               <Image
                 alt="Sempre Tecnologia"
