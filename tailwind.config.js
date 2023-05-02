@@ -20,7 +20,8 @@ module.exports = {
         'custom-green': '#35B6B4',
         'custom-purple': '#6E3784',
         'dark-yellow': '#C48E39',
-        'overlay-black': '#00000080'
+        'overlay-black': '#00000080',
+        'overlay-gray': '#1F3D8C08'
       },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],

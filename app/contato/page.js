@@ -19,30 +19,36 @@ export default function Contato() {
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage arrow={false} cta={false} mini={true} uri="/bg-blog.svg" />
       <Container newClasses="py-24">
-        <div className="col-span-5">
-          <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
+        <div className="col-span-4 lg:col-span-6 flex flex-col">
+          <h2 className="font-serif font-semibold mb-2 text-gray-600 uppercase text-center lg:text-left">
             Fale conosco
           </h2>
-          <h1 className="font-sans font-bold mb-10 text-dark-blue text-5xl">
+          <h1 className="font-serif font-bold mb-6 text-dark-blue text-4xl text-center lg:text-left">
             Sempre disponível para você
           </h1>
-          <p className="font-sans mb-10 text-gray-600 text-lg">
+          <p className="font-sans mb-10 text-gray-600 text-lg text-center lg:text-left">
             Envie para nós suas críticas, dúvidas ou sugestões.
           </p>
-          <ul className="flex space-x-4">
-            <li className="bg-gray-200 rounded p-6">
-              <Link href="">
+          <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+            <li className="bg-overlay-gray rounded p-6 lg:w-5/12">
+              <Link
+                className="flex flex-col items-center lg:items-start"
+                href=""
+              >
                 <FontAwesomeIcon className="h-5 text-red-600" icon={faPhone} />
                 <h1 className="font-serif font-semibold mt-2 text-gray-600 uppercase">
                   Central de atendimento
                 </h1>
-                <h2 className="font-serif font-semibold text-gray-900 uppercase">
+                <h2 className="font-serif font-semibold text-gray-900">
                   0800 941 6260
                 </h2>
               </Link>
             </li>
-            <li className="bg-gray-200 rounded p-6">
-              <Link href="">
+            <li className="bg-overlay-gray rounded p-6 lg:w-7/12">
+              <Link
+                className="flex flex-col items-center lg:items-start"
+                href=""
+              >
                 <FontAwesomeIcon
                   className="h-5 text-red-600"
                   icon={faEnvelope}
@@ -50,31 +56,31 @@ export default function Contato() {
                 <h1 className="font-serif font-semibold mt-2 text-gray-600 uppercase">
                   E-mail
                 </h1>
-                <h2 className="font-serif font-semibold text-gray-900 uppercase">
+                <h2 className="break-all font-serif font-semibold text-gray-900 uppercase">
                   contato@sempretecnologia.com.br
                 </h2>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="col-span-6 col-end-13">
+        <div className="col-span-4 lg:col-span-6">
           <ContactForm />
         </div>
       </Container>
-      <section className="bg-gray-200 py-24">
+      <section className="bg-overlay-gray py-24">
         <Container>
-          <div className="col-span-12 flex justify-center mb-8">
-            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+          <div className="col-span-4 lg:col-span-12 flex justify-center mb-8">
+            <h1 className="font-serif font-semibold text-dark-blue text-4xl text-center lg:text-left">
               Um pouco mais sobre a Sempre
             </h1>
           </div>
           <Link
             href="/sobre"
-            className="col-span-2 col-start-4 flex flex-col items-center space-y-4"
+            className="col-span-4 flex flex-col items-center space-y-4"
           >
             <Image
               alt="Background Image"
-              className="object-cover object-center"
+              className="cursor-pointer object-cover object-center"
               height={20}
               quality={100}
               src="/icon-quem-somos.svg"
@@ -96,7 +102,7 @@ export default function Contato() {
               </span>
             </p>
           </Link>
-          <div className="col-span-2 flex flex-col items-center space-y-4">
+          <div className="col-span-4 cursor-pointer flex flex-col items-center my-6 lg:my-0 space-y-4">
             <Image
               alt="Background Image"
               className="object-cover object-center"
@@ -122,7 +128,7 @@ export default function Contato() {
             </p>
           </div>
           <div
-            className="col-span-2 cursor-pointer flex flex-col items-center space-y-4"
+            className="col-span-4 cursor-pointer flex flex-col items-center space-y-4"
             onClick={() => setOpenModal(true)}
           >
             <Image

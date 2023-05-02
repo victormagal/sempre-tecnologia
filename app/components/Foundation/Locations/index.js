@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './styles.module.css';
 import Container from '../Container';
@@ -55,23 +56,24 @@ export default function Locations() {
 
   return (
     <div className={styles.container}>
-      <Container newClasses="py-24">
-        <div className="col-span-12 flex justify-center mb-12">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center justify-center lg:mb-12">
           <Image
             alt="Sempre Tecnologia"
+            className="mb-6 lg:mb-0"
             height={17}
             quality={100}
             src="/icon-logo-white.svg"
             width={41}
           />
-          <h1 className="font-sans font-bold ml-4 text-white text-3xl">
+          <h1 className="font-sans font-bold lg:ml-4 text-white text-xl lg:text-3xl text-center lg:text-left">
             Escolha uma unidade perto de você! São + de 28 unidades para
             atendimento
           </h1>
         </div>
-        <div className="col-span-2 col-start-5 flex items-center">
+        <div className="col-span-4 lg:col-span-3 lg:col-start-4 flex items-center">
           <select
-            className="bg-white appearance-none col-span-3 text-soft-gray rounded w-full p-3"
+            className="bg-white appearance-none text-soft-gray rounded w-full p-3"
             onClick={getCities}
           >
             <option defaultValue="default">Filtrar por estado</option>
@@ -86,9 +88,9 @@ export default function Locations() {
             icon={faChevronDown}
           />
         </div>
-        <div className="col-span-2 flex items-center">
+        <div className="col-span-4 lg:col-span-3 flex items-center">
           <select
-            className="bg-white appearance-none col-span-3 text-soft-gray rounded w-full p-3"
+            className="bg-white appearance-none text-soft-gray rounded w-full p-3"
             onChange={getDetails}
           >
             <option defaultValue="default">Filtrar por loja</option>
@@ -109,7 +111,7 @@ export default function Locations() {
             icon={faChevronDown}
           />
         </div>
-        <div className="border-4 border-white col-span-12 my-6 relative rounded">
+        <div className="border-4 border-white col-span-4 lg:col-span-12 my-6 relative rounded">
           <iframe className={`${styles.iframe} w-full`} src={location} />
           <div className="absolute bg-white px-6 py-4 right-3 rounded shadow-lg space-y-2 top-3">
             <header>
@@ -152,46 +154,43 @@ export default function Locations() {
             </footer>
           </div>
         </div>
-        <div className="col-span-12 flex justify-between items-baseline">
+        <div className="col-span-4 lg:col-span-12 flex justify-between items-center">
           <ul className="flex space-x-4">
             <li>
-              <a
+              <Link
                 href="https://www.facebook.com/sempretecnologia/"
                 target="_blank"
                 title="Facebook"
-                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   className="h-6 text-white"
                   icon={faFacebookF}
                 />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://www.linkedin.com/company/sempre-tecnologia/"
                 target="_blank"
                 title="LinkedIn"
-                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   className="h-6 text-white"
                   icon={faLinkedinIn}
                 />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://www.instagram.com/sempretecnologia/"
                 target="_blank"
                 title="Instagram"
-                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   className="h-6 text-white"
                   icon={faInstagram}
                 />
-              </a>
+              </Link>
             </li>
           </ul>
           <Image
