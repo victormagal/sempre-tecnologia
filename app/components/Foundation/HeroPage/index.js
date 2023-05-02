@@ -36,7 +36,7 @@ export default function HeroPage({
           />
         </div>
         <Container newClasses="relative z-10">
-          <div className="col-span-4 lg:col-span-7 flex flex-col space-y-8 items-center lg:items-start mt-16">
+          <div className="col-span-4 lg:col-span-7 flex flex-col space-y-6 items-center lg:items-start mt-20">
             {iconSource && (
               <Image
                 alt="Sistema"
@@ -47,7 +47,7 @@ export default function HeroPage({
               />
             )}
             {title && (
-              <h1 className="font-serif font-semibold text-white text-4xl lg:text-6xl text-center lg:text-left">
+              <h1 className="font-serif font-semibold text-white text-3xl lg:text-6xl text-center lg:text-left">
                 {title}
               </h1>
             )}

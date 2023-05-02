@@ -28,12 +28,12 @@ export default function Testimony() {
 
   return (
     <div className={styles.container}>
-      <Container newClasses="py-24">
-        <div className="col-span-12 grid grid-cols-12 gap-6">
-          <h1 className="col-span-11 font-serif font-semibold mb-6 text-4xl text-dark-blue">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-12 grid lg:grid-cols-12 grid-cols-4 gap-6">
+          <h1 className="col-span-4 lg:col-span-11 font-serif font-semibold mb-6 text-4xl text-dark-blue">
             Quem usa aprova
           </h1>
-          <ul className="col-span-1 flex justify-between">
+          <ul className="hidden lg:col-span-1 lg:flex justify-between">
             <li>
               <button onClick={goBack} type="button">
                 <Image
@@ -58,7 +58,7 @@ export default function Testimony() {
             </li>
           </ul>
         </div>
-        <div className="col-span-12">
+        <div className="col-span-4 lg:col-span-12">
           <div className="flex flex-col m-auto p-auto">
             <div
               id="parentBox"
@@ -124,7 +124,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       A Sempre Tecnologia tem um sistema moderno e eficaz! Os
                       técnicos estão sempre a nossa disposição. Estamos bem
@@ -150,7 +150,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       Recentemente contratei o sistema da Sempre Tecnologia e
                       estou muito satisfeita. Atendimento e treinamento foram
@@ -176,7 +176,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       A Sempre Tecnologia é uma empresa séria que tem
                       compromisso com o cliente e busca solucionar todos os
@@ -205,7 +205,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       Muito fácil e prático a emissão de notas fiscais. Além
                       disso, o atendimento do suporte é rápido e ajuda muito no
@@ -233,7 +233,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       Olá pessoal! Meu nome é Mayara Polinário, sou consultora
                       de empresas, na área de controladoria e gostaria de
@@ -261,7 +261,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       Fico muito feliz em ver um case de sucesso do Sebrae no
                       DF, gerando emprego, renda e ajudando a desenvolver o
@@ -287,7 +287,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       É muito legal você chegar numa empresa e encontrar as
                       pessoas com o sorriso no rosto, atendendo bem e sendo
@@ -314,7 +314,7 @@ export default function Testimony() {
                   </div>
                 </div>
                 <div className="inline-block">
-                  <div className="bg-white flex flex-col h-80 justify-between p-8 rounded w-108">
+                  <div className="bg-white flex flex-col h-80 w-108 justify-between p-8 rounded">
                     <p className="text-soft-gray">
                       Somos parceiros da Sempre tecnologia há dois anos e
                       estamos muito satisfeitos com os serviços prestados. A

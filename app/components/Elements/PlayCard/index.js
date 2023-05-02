@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import styles from './styles.module.css';
 
 export default function PlayCard({ bgImage }) {
   return (
-    <div className={styles.box}>
+    <div className="relative flex items-center justify-center h-80 lg:h-96">
       <Image
         alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
         className="absolute"

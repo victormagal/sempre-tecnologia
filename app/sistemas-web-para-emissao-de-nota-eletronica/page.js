@@ -38,14 +38,14 @@ export default function EmissorNota() {
         title="Emita Notas Eletrônicas"
         uri="/bg-emissor-nota.jpg"
       />
-      <Container newClasses="py-24">
+      <Container newClasses="py-12 lg:py-24">
         <div
-          className="col-span-5 cursor-pointer"
+          className="col-span-4 lg:col-span-5 cursor-pointer lg:my-auto"
           onClick={() => setOpenModalVimeo(true)}
         >
           <PlayCard bgImage="/bg-play-notas.svg" />
         </div>
-        <div className="col-span-5 flex flex-col justify-center">
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center items-center">
           <Image
             alt="Sempre emissor de notas"
             height={20}
@@ -53,10 +53,10 @@ export default function EmissorNota() {
             src="/title-sempre-emissor.svg"
             width={139}
           />
-          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
+          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl text-center lg:text-left">
             Simplifique a emissão de Notas Eletrônicas da sua empresa
           </h1>
-          <p className="mt-6 text-soft-gray">
+          <p className="mt-6 text-soft-gray text-center lg:text-left">
             Muito mais que uma solução online de emissão de notas eletrônicas!
             Com o SempreEmissor você realiza cadastro de clientes
             automaticamente a partir do CNPJ, mantém o cadastro de produtos e
@@ -71,14 +71,14 @@ export default function EmissorNota() {
             src="/title-sempre-emissor-contador.svg"
             width={300}
           />
-          <h2 className="font-serif font-bold mt-6 text-dark-blue text-2xl">
+          <h2 className="font-serif font-bold mt-6 text-dark-blue text-2xl text-center lg:text-left">
             Emita notas eletrônicas para os clientes da sua contabilidade de
             forma simples e rápida.
           </h2>
         </div>
       </Container>
-      <Container newClasses="pb-24">
-        <h1 className="col-span-12 font-sans my-6 text-dark-blue text-3xl text-center">
+      <Container newClasses="pb-12 lg:pb-24">
+        <h1 className="col-span-4 lg:col-span-12 font-sans my-6 text-dark-blue text-3xl text-center">
           O que você só encontra na{' '}
           <span className="font-bold">Sempre Tecnologia</span>
         </h1>
@@ -123,8 +123,8 @@ export default function EmissorNota() {
         </ColoredCard>
       </Container>
       <BackgroundContainer uri="/bg-sempre-emissor.jpg">
-        <div className="col-span-5 col-end-13">
-          <header className="flex items-center mb-6">
+        <div className="col-span-4 lg:col-span-5 lg:col-end-13">
+          <header className="flex space-x-4 justify-center lg:justify-start items-center mb-6">
             <Image
               alt="App sempre mensalidade"
               height={52}
@@ -132,18 +132,18 @@ export default function EmissorNota() {
               src="/icon-app-emissor.svg"
               width={54}
             />
-            <span className="font-serif font-bold ml-4 text-white text-lg">
+            <span className="font-serif font-bold text-white text-lg">
               APP Sempre Emissor
             </span>
           </header>
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
+          <h1 className="font-serif font-semibold text-white text-4xl mb-6 text-center lg:text-left">
             Operações facilitadas, de onde você estiver.
           </h1>
-          <p className="text-white mb-6">
+          <p className="text-white mb-6 text-center lg:text-left">
             Visualize cadastro de cliente, cadastro de produto e faça emissão de
             nota fiscal, que pode ser compartilhada direto do Smartphone.
           </p>
-          <footer className="flex">
+          <footer className="flex justify-center space-x-4">
             <Link
               href="https://play.google.com/store/apps/details?id=br.com.sempreemissor&hl=pt_BR"
               target="_blank"
@@ -162,7 +162,6 @@ export default function EmissorNota() {
             >
               <Image
                 alt="Apple story"
-                className="ml-4"
                 height={59}
                 quality={100}
                 src="/apple-store.svg"

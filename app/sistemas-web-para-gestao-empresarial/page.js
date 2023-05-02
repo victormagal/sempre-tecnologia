@@ -149,7 +149,7 @@ export default function GestaoEmpresarial() {
       </Container>
       <BackgroundContainer uri="/banner-gestao-empresarial.jpg">
         <div className="col-span-4 lg:col-span-5 lg:col-end-13">
-          <header className="flex space-x-4 justify-center items-center mb-6">
+          <header className="flex space-x-4 justify-center lg:justify-start items-center mb-6">
             <Image
               alt="App sempre gestor"
               height={52}
