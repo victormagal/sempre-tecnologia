@@ -16,7 +16,7 @@ export default function LastPosts() {
     <>
       {data?.blogPosts?.data.map((post, i) => (
         <Link
-          className="bg-white col-span-3 drop-shadow"
+          className="bg-white col-span-4 lg:col-span-3 drop-shadow"
           key={i}
           href={`blog/${post.attributes.slug}`}
         >

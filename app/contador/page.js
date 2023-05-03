@@ -30,19 +30,19 @@ export default function Contador() {
         title="Programa de parceria para Contadores"
         uri="/bg-contador.jpg"
       />
-      <Container newClasses="py-24">
-        <div className="col-span-5 flex flex-col justify-center">
-          <h1 className="font-serif font-bold text-4xl text-dark-blue">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center">
+          <h1 className="font-serif font-bold text-4xl text-dark-blue text-center lg:text-left">
             Simplifique sua rotina e ganhe tempo e produtividade
           </h1>
-          <p className="font-sans mt-6 text-soft-gray">
+          <p className="font-sans mt-6 text-soft-gray text-center lg:text-left">
             Nosso programa de parceria para contadores oferece recursos que vão
             otimizar a rotina do seu escritório. Assim você terá mais tempo para
             se dedicar aos seus clientes.
           </p>
         </div>
         <div
-          className={`${styles.gradientBlue} col-span-6 col-end-13 flex flex-col justify-center p-16`}
+          className={`${styles.gradientBlue} col-span-4 lg:col-span-6 lg:col-end-13 flex flex-col items-center lg:items-start justify-center p-12 lg:p-16`}
         >
           <Image
             alt="Sempre mensalidade"
@@ -51,15 +51,15 @@ export default function Contador() {
             src="/icon-white.svg"
             width={45}
           />
-          <h1 className="font-serif font-bold mt-6 text-white text-3xl">
+          <h1 className="font-serif font-bold mt-6 text-white text-3xl text-center lg:text-left">
             Ficou interessado?
           </h1>
-          <p className="font-sans mt-6 text-white">
+          <p className="font-sans mt-6 text-white text-center lg:text-left">
             Temos vários benefícios exclusivos para contadores parceiros. Venha
             ser um Contador Sempre Tecnologia.
           </p>
           <button
-            className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-1/3`}
+            className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-4/5`}
             onClick={() => setOpenModal(true)}
             type="button"
           >
@@ -67,7 +67,7 @@ export default function Contador() {
           </button>
         </div>
       </Container>
-      <Container newClasses="pb-24">
+      <Container newClasses="pb-12 lg:pb-24">
         <MicroCard
           description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
           imageSource="/icon-contador-1.svg"
@@ -100,7 +100,7 @@ export default function Contador() {
         />
       </Container>
       <BackgroundContainer uri="/bg-contador-1.svg">
-        <div className="col-span-6 col-start-4 flex flex-col items-center">
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center">
           <Image
             alt="Portal Sempre Contador"
             height={99}
@@ -108,10 +108,10 @@ export default function Contador() {
             src="/icon-portal-contador-ballon.svg"
             width={93}
           />
-          <h1 className="font-serif font-semibold text-white text-4xl my-8">
+          <h1 className="font-serif font-semibold text-white text-4xl my-8 text-center lg:text-left">
             Portal Sempre Contador
           </h1>
-          <p className="font-sans text-white mb-8">
+          <p className="font-sans text-white mb-8 text-center lg:text-left">
             O Portal Sempre Contador é uma plataforma exclusiva para contadores,
             feita para administrar indicações de soluções Sempre e gerenciar a
             validade dos certificados digitais de clientes.
@@ -125,22 +125,22 @@ export default function Contador() {
           </Link>
         </div>
       </BackgroundContainer>
-      <Container newClasses="py-24">
-        <div className="col-span-5">
-          <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-5">
+          <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase text-center lg:text-left">
             Seja um sempre parceiro
           </h2>
-          <h1 className="font-sans font-bold mb-10 text-dark-blue text-5xl">
+          <h1 className="font-sans font-bold mb-10 text-dark-blue text-5xl text-center lg:text-left">
             Venha fazer parte da nossa equipe
           </h1>
-          <p className="font-sans mb-10 text-gray-600 text-lg">
+          <p className="font-sans mb-10 text-gray-600 text-lg text-center lg:text-left">
             Seja nosso parceiro e aproveite nossos benefícios. Deixe seus dados
             que entraremos em contato.
           </p>
-          <p className="font-sans font-bold mb-4 text-gray-600 text-lg">
+          <p className="font-sans font-bold mb-4 text-gray-600 text-lg text-center lg:text-left">
             Acompanhe nas redes sociais
           </p>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 justify-center lg:justify-start">
             <li>
               <Link
                 href="https://www.facebook.com/sempretecnologia/"
@@ -176,7 +176,7 @@ export default function Contador() {
             </li>
           </ul>
         </div>
-        <div className="col-span-6 col-end-13">
+        <div className="col-span-4 lg:col-span-6 lg:col-end-13">
           <ContactForm />
         </div>
       </Container>

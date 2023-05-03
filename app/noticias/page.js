@@ -84,10 +84,10 @@ export default function Blog() {
         uri="/bg-blog.svg"
       />
       <Container newClasses="py-24">
-        <div className="col-span-8 grid grid-cols-12 gap-8">
+        <div className="col-span-4 lg:col-span-8 grid lg:grid-cols-12 grid-cols-4 gap-8">
           {data?.blogPosts?.data?.map((post, i) => (
             <Link
-              className="bg-white col-span-6 drop-shadow"
+              className="bg-white col-span-4 lg:col-span-6 drop-shadow"
               key={i}
               href={`/${post.attributes.slug}`}
             >
@@ -151,7 +151,7 @@ export default function Blog() {
             </div>
           )}
         </div>
-        <div className="col-span-3 col-end-13">
+        <div className="col-span-4">
           <SideBar />
         </div>
       </Container>

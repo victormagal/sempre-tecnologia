@@ -62,7 +62,7 @@ export default function SideBar() {
           })}
         >
           {({ errors, values }) => (
-            <Form>
+            <Form className="w-full">
               <ul className="flex flex-col space-y-4">
                 <li>
                   <Field

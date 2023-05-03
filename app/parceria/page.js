@@ -25,27 +25,27 @@ export default function Parceria() {
         title="Programa de parceria"
         uri="/bg-contador.jpg"
       />
-      <Container newClasses="py-24">
-        <div className="col-span-5 flex flex-col justify-center">
-          <h1 className="font-serif font-bold text-4xl text-dark-blue">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center">
+          <h1 className="font-serif font-bold text-4xl text-dark-blue text-center lg:text-left">
             Sistemas
           </h1>
-          <p className="font-sans mt-6 text-soft-gray">
+          <p className="font-sans mt-6 text-soft-gray text-center lg:text-left">
             Seja um parceiro para vendas de sistemas em plataforma web para
             atender a vários segmentos, aplicativos mobile para gerar
             atratividade e fidelização de clientes além de um frente de caixa
             totalmente integrado a uma retaguarda web.
           </p>
-          <h1 className="font-serif font-bold mt-12 text-4xl text-dark-blue">
+          <h1 className="font-serif font-bold mt-12 text-4xl text-dark-blue text-center lg:text-left">
             Certificado digital
           </h1>
-          <p className="font-sans mt-6 text-soft-gray">
+          <p className="font-sans mt-6 text-soft-gray text-center lg:text-left">
             Emita certificados digitais na sua região e atraia mais clientes
             para o seu negócio.
           </p>
         </div>
         <div
-          className={`${styles.gradientBlue} col-span-6 col-end-13 flex flex-col justify-center p-16`}
+          className={`${styles.gradientBlue} col-span-4 lg:col-span-6 lg:col-end-13 flex flex-col items-center lg:items-start justify-center p-12 lg:p-16`}
         >
           <Image
             alt="Sempre mensalidade"
@@ -54,15 +54,15 @@ export default function Parceria() {
             src="/icon-white.svg"
             width={45}
           />
-          <h1 className="font-serif font-bold mt-6 text-white text-3xl">
+          <h1 className="font-serif font-bold mt-6 text-white text-3xl text-center lg:text-left">
             Ficou interessado?
           </h1>
-          <p className="font-sans mt-6 text-white">
+          <p className="font-sans mt-6 text-white text-center lg:text-left">
             Temos vários benefícios exclusivos para você. Venha ser um Parceiro
             Sempre Tecnologia.
           </p>
           <button
-            className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-1/3`}
+            className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-4/5`}
             onClick={() => setOpenModal(true)}
             type="button"
           >
@@ -70,7 +70,7 @@ export default function Parceria() {
           </button>
         </div>
       </Container>
-      <Container newClasses="pb-24">
+      <Container newClasses="pb-12 lg:pb-24">
         <MicroCard
           description="Você pode optar por fazer o atendimento de primeiro nível ao seu cliente e quando precisar de ajuda pode contar conosco.​"
           imageSource="/icon-parceria-1.svg"
@@ -102,22 +102,22 @@ export default function Parceria() {
           title="Respeito e Profissionalismo​"
         />
       </Container>
-      <Container newClasses="border-t py-24">
-        <div className="col-span-5">
-          <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase">
+      <Container newClasses="border-t py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-5">
+          <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase text-center lg:text-left">
             Seja um sempre parceiro
           </h2>
-          <h1 className="font-sans font-bold mb-10 text-dark-blue text-5xl">
+          <h1 className="font-sans font-bold mb-10 text-dark-blue text-5xl text-center lg:text-left">
             Venha fazer parte da nossa equipe
           </h1>
-          <p className="font-sans mb-10 text-gray-600 text-lg">
+          <p className="font-sans mb-10 text-gray-600 text-lg text-center lg:text-left">
             Seja nosso parceiro e aproveite nossos benefícios. Deixe seus dados
             que entraremos em contato.
           </p>
-          <p className="font-sans font-bold mb-4 text-gray-600 text-lg">
+          <p className="font-sans font-bold mb-4 text-gray-600 text-lg text-center lg:text-left">
             Acompanhe nas redes sociais
           </p>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 justify-center lg:justify-start">
             <li>
               <Link
                 href="https://www.facebook.com/sempretecnologia/"
@@ -153,7 +153,7 @@ export default function Parceria() {
             </li>
           </ul>
         </div>
-        <div className="col-span-6 col-end-13">
+        <div className="col-span-4 lg:col-span-6 lg:col-end-13">
           <ContactForm />
         </div>
       </Container>

@@ -31,22 +31,24 @@ export default function Post() {
   return (
     <main>
       <HeroPage arrow={false} cta={false} mini={true} uri="/bg-blog.svg" />
-      <Container newClasses="py-24">
-        <header className="border-b col-span-12 grid grid-cols-12 gap-6 pb-4">
+      <Container newClasses="py-12 lg:py-24">
+        <header className="border-b col-span-12 grid lg:grid-cols-12 grid-cols-4 gap-6 pb-4">
           <div className="col-span-2 flex items-center">
-            <FontAwesomeIcon
-              className="text-custom-orange"
-              icon={faChevronLeft}
-            />
-            <Link
-              className="font-sans ml-4 text-sm text-soft-gray"
-              href=""
-              onClick={() => router.back()}
-            >
-              voltar para o blog
+            <Link href="" onClick={() => router.back()}>
+              <FontAwesomeIcon
+                className="text-custom-orange"
+                icon={faChevronLeft}
+              />
+              <button
+                className="font-sans ml-4 text-sm text-soft-gray"
+                href=""
+                onClick={() => router.back()}
+              >
+                voltar para o blog
+              </button>
             </Link>
           </div>
-          <div className="col-span-10 flex justify-end">
+          <div className="col-span-2 lg:col-span-10 flex justify-end">
             <p className="font-sans text-sm text-soft-gray">
               Escrito por Sempre Tecnologia,{' '}
               {new Date(data?.updatedAt).toLocaleDateString('pt-BR', {
@@ -57,22 +59,24 @@ export default function Post() {
             </p>
           </div>
         </header>
-        <h1 className="col-span-8 col-start-3 font-serif font-bold my-8 text-center text-dark-blue text-5xl">
-          {data?.title}
-        </h1>
-        <div className="col-span-8 col-start-3 flex justify-center mb-8">
-          <img
-            alt={data?.title}
-            src={`${process.env.NEXT_PUBLIC_UPLOADS_URL}${data?.image?.data?.attributes?.url}`}
+        <div className="col-span-12 grid lg:grid-cols-12 grid-cols-4 gap-6">
+          <h1 className="col-span-4 lg:col-span-8 lg:col-start-3 font-serif font-bold my-8 text-center text-dark-blue text-5xl">
+            {data?.title}
+          </h1>
+          <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex justify-center mb-8">
+            <img
+              alt={data?.title}
+              src={`${process.env.NEXT_PUBLIC_UPLOADS_URL}${data?.image?.data?.attributes?.url}`}
+            />
+          </div>
+          <div
+            className={`${styles.content} col-span-4 lg:col-span-8 lg:col-start-3`}
+            dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>
-        <div
-          className={`${styles.content} col-span-8 col-start-3`}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
       </Container>
       <section style={{ backgroundColor: '#F8F8F8' }}>
-        <Container newClasses="py-24">
+        <Container newClasses="pb-12 lg:pb-24">
           <LastPosts />
         </Container>
       </section>
