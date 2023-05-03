@@ -53,13 +53,13 @@ export default function Slideshow() {
       <Link href={slides[currentIndex]?.link || ``}>
         <div
           style={{
-            backgroundImage: `url(${process.env.NEXT_PUBLIC_UPLOADS_URL}${slides[currentIndex]?.desktop})`
+            backgroundImage: `url(${slides[currentIndex]?.desktop})`
           }}
           className="hidden lg:block w-full h-full bg-center bg-cover duration-500"
         ></div>
         <div
           style={{
-            backgroundImage: `url(${process.env.NEXT_PUBLIC_UPLOADS_URL}${slides[currentIndex]?.mobile})`
+            backgroundImage: `url(${slides[currentIndex]?.mobile})`
           }}
           className="block lg:hidden w-full h-full bg-center bg-cover duration-500"
         ></div>
