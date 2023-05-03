@@ -41,14 +41,14 @@ export default function SempreMDistribuidor() {
         title="Olá distribuidor"
         uri="/bg-sempre-distribuidor.jpg"
       />
-      <Container newClasses="py-24">
+      <Container newClasses="py-12 lg:py-24">
         <div
-          className="col-span-5 cursor-pointer"
+          className="col-span-4 lg:col-span-5 md:my-12 lg:mb-0 cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
           <PlayCard bgImage="/bg-play-sempre-distribuidor.svg" />
         </div>
-        <div className="col-span-4 flex flex-col justify-center">
+        <div className="col-span-4 lg:col-span-7 flex flex-col items-center lg:items-start justify-center space-y-6">
           <Image
             alt="Sempre mensalidade"
             height={24}
@@ -56,16 +56,16 @@ export default function SempreMDistribuidor() {
             src="/title-sempre-distribuidor.svg"
             width={202}
           />
-          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
+          <h1 className="font-serif font-bold text-dark-blue text-4xl text-center lg:text-left">
             Otimize seus processos
           </h1>
-          <p className="mt-6 text-soft-gray">
+          <p className="text-soft-gray text-center lg:text-left">
             Automatize tarefas e agilize processos internos da sua empresa com
             uma solução prática e fácil de usar. Simplificamos o controle do
             faturamento e logística de transporte da sua distribuição.
           </p>
           <button
-            className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-1/2`}
+            className={`${styles.orange} font-sans font-bold py-2 rounded text-sm w-1/2`}
             onClick={() => setOpenModal(true)}
             type="button"
           >
@@ -73,7 +73,7 @@ export default function SempreMDistribuidor() {
           </button>
         </div>
       </Container>
-      <Container newClasses="pb-24">
+      <Container newClasses="pb-12 lg:pb-24">
         <TransparentCard
           description="Gerencie tarefas cotidianas com soluções que foram pensadas para empreendedores que querem crescer seu negócio."
           imageSource="/icon-distribuidor-1.svg"
@@ -129,8 +129,8 @@ export default function SempreMDistribuidor() {
           </button>
         </ColoredCard>
       </Container>
-      <Container newClasses="pb-24">
-        <div className="col-span-5 flex flex-col justify-center">
+      <Container newClasses="pb-12 lg:pb-24">
+        <div className="col-span-4 lg:col-span-5 flex flex-col items-center lg:items-start justify-center space-y-6">
           <Image
             alt="Sempre mensalidade"
             height={33}
@@ -138,15 +138,15 @@ export default function SempreMDistribuidor() {
             src="/title-sempre-distribuidor-light.svg"
             width={238}
           />
-          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
+          <h1 className="font-serif font-bold text-dark-blue text-4xl text-center lg:text-left">
             Sempre Distribuidor Lite
           </h1>
-          <p className="mt-6 text-soft-gray">
+          <p className="text-soft-gray text-center lg:text-left">
             A simplicidade de um sistema para empresas de distribuição, para
             otimizar suas operações e emitir notas com facilidade.
           </p>
           <button
-            className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-2/5`}
+            className={`${styles.orange} font-sans font-bold py-2 rounded text-sm w-2/5`}
             onClick={() => setOpenModal(true)}
             type="button"
           >
@@ -154,7 +154,7 @@ export default function SempreMDistribuidor() {
           </button>
         </div>
         <div
-          className="col-span-5 col-end-13 cursor-pointer"
+          className="col-span-4 lg:col-span-5 lg:col-end-13 md:my-12 lg:mb-0 cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
           <PlayCard bgImage="/bg-play-sempre-distribuidor-light.svg" />
