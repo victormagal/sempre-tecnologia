@@ -19,7 +19,6 @@ export default function Post() {
   const [content, setContent] = useState();
   const [data, setData] = useState({});
   const path = usePathname().slice(1);
-  console.log(path);
   useQuery(getPost, {
     variables: { slug: path },
     onCompleted: (data) => {

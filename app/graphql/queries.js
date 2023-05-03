@@ -53,6 +53,32 @@ const getAllCategories = gql`
   }
 `;
 
+const getAllSlides = gql`
+  query {
+    slideshows {
+      data {
+        attributes {
+          banner_desktop {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          banner_mobile {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          link
+        }
+      }
+    }
+  }
+`;
+
 const getPost = gql`
   query ($slug: String!) {
     blogPosts(filters: { slug: { eq: $slug } }) {
@@ -115,4 +141,10 @@ const getPostsByCategory = gql`
   }
 `;
 
-export { getAllPosts, getAllCategories, getPost, getPostsByCategory };
+export {
+  getAllPosts,
+  getAllCategories,
+  getAllSlides,
+  getPost,
+  getPostsByCategory
+};
