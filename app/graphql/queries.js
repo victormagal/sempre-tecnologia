@@ -4,7 +4,7 @@ const getAllPosts = gql`
   query ($page: Int!, $pageSize: Int!) {
     blogPosts(
       pagination: { page: $page, pageSize: $pageSize }
-      sort: "updatedAt:desc"
+      sort: "publishedAt:desc"
     ) {
       data {
         attributes {
@@ -23,7 +23,7 @@ const getAllPosts = gql`
             }
           }
           title
-          updatedAt
+          publishedAt
           description
           slug
         }
@@ -93,7 +93,7 @@ const getPost = gql`
             }
           }
           content
-          updatedAt
+          publishedAt
         }
       }
     }
@@ -105,7 +105,7 @@ const getPostsByCategory = gql`
     blogPosts(
       filters: { category: { slug: { eq: $category } } }
       pagination: { page: $page, pageSize: $pageSize }
-      sort: "updatedAt:desc"
+      sort: "publishedAt:desc"
     ) {
       data {
         attributes {
@@ -124,7 +124,7 @@ const getPostsByCategory = gql`
             }
           }
           title
-          updatedAt
+          publishedAt
           description
           slug
         }
