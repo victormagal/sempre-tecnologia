@@ -40,14 +40,14 @@ export default function SempreMensalidade() {
         title="Gestão de mensalidades"
         uri="/bg-sempre-mensalidade.jpg"
       />
-      <Container newClasses="py-24">
+      <Container newClasses="py-12 lg:py-24">
         <div
-          className="col-span-5 cursor-pointer"
+          className="col-span-4 lg:col-span-5 md:my-12 lg:mb-0 cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
           <PlayCard bgImage="/bg-play-sempre-mensalidade.svg" />
         </div>
-        <div className="col-span-4 flex flex-col justify-center">
+        <div className="col-span-4 lg:col-span-7 flex flex-col items-center lg:items-start justify-center space-y-6">
           <Image
             alt="Sempre mensalidade"
             height={24}
@@ -55,16 +55,16 @@ export default function SempreMensalidade() {
             src="/title-sempre-mensalidade.svg"
             width={205}
           />
-          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
+          <h1 className="font-serif font-bold text-dark-blue text-4xl text-center lg:text-left">
             Gestão de faturamento e financeiro
           </h1>
-          <p className="mt-6 text-soft-gray">
+          <p className="text-soft-gray  text-center lg:text-left">
             Emissão de boletos em lote, envio automático por e-mail e cobrança
             automatizada, otimizam o fluxo de trabalho de empresas com
             recebíveis recorrentes.
           </p>
           <button
-            className={`${styles.orange} font-sans font-bold mt-6 py-2 rounded text-sm w-1/2`}
+            className={`${styles.orange} font-sans font-bold py-2 rounded text-sm w-1/2`}
             onClick={() => setOpenModal(true)}
             type="button"
           >
@@ -72,7 +72,7 @@ export default function SempreMensalidade() {
           </button>
         </div>
       </Container>
-      <Container newClasses="pb-24">
+      <Container newClasses="pb-12 lg:pb-24">
         <TransparentCard
           description="Gerenciamento assistido por soluções preparadas para facilitar o dia a dia do seu empreendimento."
           imageSource="/icon-otimize-1.svg"
@@ -129,15 +129,15 @@ export default function SempreMensalidade() {
         </ColoredCard>
       </Container>
       <BackgroundContainer uri="/bg-sempre-mensalidade-box1.jpg">
-        <div className="col-span-5 col-end-13">
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
+        <div className="col-span-4 lg:col-span-5 lg:col-end-13 flex flex-col items-center lg:items-start space-y-6">
+          <h1 className="font-serif font-semibold text-white text-4xl text-center lg:text-left">
             Soluções específicas para agilizar o seu dia a dia
           </h1>
-          <p className="text-white mb-6">
+          <p className="text-white text-center lg:text-left">
             Empresas com recebimentos recorrentes merecem soluções que tornem o
             processo de emissão e envio de boletos um processo mais prático.
           </p>
-          <p className="text-white mb-6">
+          <p className="text-white text-center lg:text-left">
             Ao automatizar processos recorrentes, seu empreendimento ganha tempo
             para pensar em estratégias de mercado que fazem toda a diferença.
           </p>
@@ -152,8 +152,8 @@ export default function SempreMensalidade() {
       </BackgroundContainer>
       <Testimony />
       <BackgroundContainer uri="/bg-sempre-mensalidade-box2.jpg">
-        <div className="col-span-5 col-end-13">
-          <header className="flex items-center mb-6">
+        <div className="col-span-4 lg:col-span-5 lg:col-end-13 flex flex-col space-y-6">
+          <header className="flex items-center justify-center lg:justify-start space-x-4">
             <Image
               alt="App sempre mensalidade"
               height={52}
@@ -161,18 +161,18 @@ export default function SempreMensalidade() {
               src="/icon-app-sempre.svg"
               width={54}
             />
-            <span className="font-serif font-bold ml-4 text-white text-lg">
+            <span className="font-serif font-bold text-white text-lg text-center lg:text-left">
               APP Sempre Mensalidade
             </span>
           </header>
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
+          <h1 className="font-serif font-semibold text-white text-4xl text-center lg:text-left">
             O seu negócio, de onde você estiver, na palma da sua mão.
           </h1>
-          <p className="text-white mb-6">
+          <p className="text-white text-center lg:text-left">
             Acesse o valor de vendas, saiba qual vendedor está vendendo mais,
             qual cliente está comprando mais e qual serviço é o mais realizado.
           </p>
-          <footer className="flex">
+          <footer className="flex space-x-4 justify-center lg:justify-start">
             <Link
               href="https://play.google.com/store/apps/details?id=com.sempremensalidade"
               target="_blank"
@@ -191,7 +191,6 @@ export default function SempreMensalidade() {
             >
               <Image
                 alt="Apple story"
-                className="ml-4"
                 height={59}
                 quality={100}
                 src="/apple-store.svg"
