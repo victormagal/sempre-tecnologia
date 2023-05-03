@@ -30,10 +30,10 @@ export default function Testimony() {
     <div className={styles.container}>
       <Container newClasses="py-12 lg:py-24">
         <div className="col-span-4 lg:col-span-12 grid lg:grid-cols-12 grid-cols-4 gap-6">
-          <h1 className="col-span-4 lg:col-span-11 font-serif font-semibold mb-6 text-4xl text-dark-blue">
+          <h1 className="col-span-4 lg:col-span-10 font-serif font-semibold text-4xl text-dark-blue text-center lg:text-left">
             Quem usa aprova
           </h1>
-          <ul className="hidden lg:col-span-1 lg:flex justify-between">
+          <ul className="col-span-4 lg:col-span-2 flex space-x-4 justify-center lg:justify-end">
             <li>
               <button onClick={goBack} type="button">
                 <Image

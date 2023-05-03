@@ -25,8 +25,8 @@ export default function AutomacaoComercial() {
         title="Soluções práticas"
         uri="/bg-automacao-comercial.jpg"
       />
-      <Container newClasses="py-24">
-        <div className="col-span-6">
+      <Container newClasses="py-12 lg:py-24">
+        <div className="col-span-4 lg:col-span-6">
           <Image
             alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
             height={562}
@@ -35,7 +35,7 @@ export default function AutomacaoComercial() {
             width={758}
           />
         </div>
-        <div className="col-span-5 flex flex-col justify-center">
+        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center items-center">
           <Image
             alt="Sempre emissor de notas"
             height={20}
@@ -43,10 +43,10 @@ export default function AutomacaoComercial() {
             src="/title-automacao-comercial.svg"
             width={159}
           />
-          <h1 className="font-serif font-bold mt-6 text-dark-blue text-4xl">
+          <h1 className="font-serif font-bold mt-6 text-dark-blue text-2xl lg:text-4xl text-center lg:text-left">
             A automação pode ser o diferencial que sua empresa precisa
           </h1>
-          <p className="mt-6 text-soft-gray">
+          <p className="mt-6 text-soft-gray text-center lg:text-left">
             Um sistema para o seu pequeno varejo para cadastrar clientes,
             fornecedores e produtos, além de conseguir emitir cupons
             eletrônicos, notas fiscais, controlar estoque, fluxo de caixa e
@@ -56,7 +56,7 @@ export default function AutomacaoComercial() {
         </div>
       </Container>
       <Container newClasses="pb-24">
-        <h1 className="col-span-12 font-sans my-6 text-dark-blue text-3xl text-center">
+        <h1 className="col-span-4 lg:col-span-12 font-sans my-6 text-dark-blue text-3xl text-center">
           <span className="font-bold">Funcionalidades exclusivas</span> que são
           ideais para o seu negócio:
         </h1>
@@ -101,7 +101,7 @@ export default function AutomacaoComercial() {
         </ColoredCard>
       </Container>
       <BackgroundContainer uri="/bg-automacao.svg">
-        <div className="col-span-6 flex justify-center items-center">
+        <div className="hidden lg:col-span-6 lg:flex justify-center items-center">
           <Image
             alt="Sempre PDV"
             height={480}
@@ -110,7 +110,7 @@ export default function AutomacaoComercial() {
             width={693}
           />
         </div>
-        <div className="col-span-5 flex flex-col justify-center">
+        <div className="col-span-4 lg:col-span-6 flex flex-col space-y-4 items-center lg:items-start justify-center">
           <Image
             alt="Sempre PDV"
             height={20}
@@ -118,17 +118,17 @@ export default function AutomacaoComercial() {
             src="/logo-pdv.svg"
             width={111}
           />
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
+          <h1 className="font-serif font-semibold text-white text-4xl text-center lg:text-left">
             Sistema para Pequenos Varejos
           </h1>
-          <p className="text-white mb-6">
+          <p className="text-white text-center lg:text-left">
             Adeque sua empresa às exigências da legislação vigente. O SemprePDV
             é de fácil utilização, cadastra clientes e produtos, emite cupons
             eletrônicos, gera relatórios de faturamento, vendas diárias e
             totais.
           </p>
           <button
-            className="font-bold px-14 py-3 text-sm text-white rounded w-2/5"
+            className="font-bold py-3 text-sm text-white rounded w-3/5"
             style={{
               background: 'linear-gradient(190deg, #F8B44C 14%, #F07E26 89%)'
             }}
@@ -141,8 +141,8 @@ export default function AutomacaoComercial() {
       </BackgroundContainer>
       <Testimony />
       <BackgroundContainer uri="/bg-automacao-comercial-2.jpg">
-        <div className="col-span-5 col-end-13">
-          <header className="flex items-center mb-6">
+        <div className="col-span-4 lg:col-span-5 lg:col-end-13 flex flex-col space-y-6">
+          <header className="flex space-x-4 justify-center lg:justify-start items-center">
             <Image
               alt="App sempre mensalidade"
               height={52}
@@ -150,18 +150,18 @@ export default function AutomacaoComercial() {
               src="/icon-app-automacao.svg"
               width={54}
             />
-            <span className="font-serif font-bold ml-4 text-white text-lg">
+            <span className="font-serif font-bold text-white text-lg">
               APP Sempre Comanda Eletrônica
             </span>
           </header>
-          <h1 className="font-serif font-semibold text-white text-4xl mb-6">
+          <h1 className="font-serif font-semibold text-white text-4xl text-center lg:text-left">
             Simples, prático e moderno.
           </h1>
-          <p className="text-white mb-6">
+          <p className="text-white  text-center lg:text-left">
             Anote o pedido, faça o controle de consumo e, ao final, a conta
             estará toda lançada no caixa.
           </p>
-          <footer className="flex">
+          <footer className="flex space-x-4 justify-center lg:justify-start">
             <Link
               href="https://play.google.com/store/apps/details?id=br.com.semprecomanda"
               target="_blank"
@@ -180,7 +180,6 @@ export default function AutomacaoComercial() {
             >
               <Image
                 alt="Apple story"
-                className="ml-4"
                 height={59}
                 quality={100}
                 src="/apple-store.svg"
