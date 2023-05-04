@@ -168,7 +168,7 @@ export default function GestaoEmpresarial() {
             Acesse o valor de vendas, saiba qual vendedor está vendendo mais,
             qual cliente está comprando mais e qual produto é o mais vendido.
           </p>
-          <footer className="flex justify-center space-x-4">
+          <footer className="flex justify-center lg:justify-start space-x-4">
             <Link
               href="https://play.google.com/store/apps/details?id=br.com.sempregestor&pli=1"
               target="_blank"

@@ -143,7 +143,7 @@ export default function EmissorNota() {
             Visualize cadastro de cliente, cadastro de produto e faça emissão de
             nota fiscal, que pode ser compartilhada direto do Smartphone.
           </p>
-          <footer className="flex justify-center space-x-4">
+          <footer className="flex justify-center lg:justify-start space-x-4">
             <Link
               href="https://play.google.com/store/apps/details?id=br.com.sempreemissor&hl=pt_BR"
               target="_blank"
