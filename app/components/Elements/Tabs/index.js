@@ -127,7 +127,10 @@ export default function Tabs() {
             src="/icon-service-01.svg"
             width={435}
           />
-          <Link className="flex space-x-3 items-center" href="">
+          <Link
+            className="flex space-x-3 items-center"
+            href="/sistemas-web-para-gestao-empresarial"
+          >
             <span className="font-sans font-bold text-sm text-red-600">
               Veja mais sobre essa solução
             </span>
@@ -152,7 +155,10 @@ export default function Tabs() {
             src="/icon-service-02.svg"
             width={435}
           />
-          <Link className="flex space-x-3 items-center" href="">
+          <Link
+            className="flex space-x-3 items-center"
+            href="/sistemas-web-para-emissao-de-nota-eletronica"
+          >
             <span className="font-sans font-bold text-sm text-red-600">
               Veja mais sobre essa solução
             </span>
@@ -176,7 +182,10 @@ export default function Tabs() {
             src="/icon-service-04.svg"
             width={435}
           />
-          <Link className="flex space-x-3 items-center" href="">
+          <Link
+            className="flex space-x-3 items-center"
+            href="/automacao-comercial"
+          >
             <span className="font-sans font-bold text-sm text-red-600">
               Veja mais sobre essa solução
             </span>
@@ -201,7 +210,11 @@ export default function Tabs() {
             src="/icon-service-05.svg"
             width={435}
           />
-          <Link className="flex space-x-3 items-center" href="">
+          <Link
+            className="flex space-x-3 items-center"
+            href="https://semprecertificadodigital.com.br/"
+            target="_blank"
+          >
             <span className="font-sans font-bold text-sm text-red-600">
               Veja mais sobre essa solução
             </span>
@@ -226,7 +239,10 @@ export default function Tabs() {
             src="/icon-service-07.svg"
             width={435}
           />
-          <Link className="flex space-x-3 items-center" href="">
+          <Link
+            className="flex space-x-3 items-center"
+            href="/sempre-distribuidor"
+          >
             <span className="font-sans font-bold text-sm text-red-600">
               Veja mais sobre essa solução
             </span>
@@ -251,7 +267,10 @@ export default function Tabs() {
             src="/ilustra-sempre-mensalidade.svg"
             width={435}
           />
-          <Link className="flex space-x-3 items-center" href="">
+          <Link
+            className="flex space-x-3 items-center"
+            href="/sempre-mensalidade"
+          >
             <span className="font-sans font-bold text-sm text-red-600">
               Veja mais sobre essa solução
             </span>
