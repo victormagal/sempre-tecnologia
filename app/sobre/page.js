@@ -37,7 +37,7 @@ export default function Sobre() {
             </h2>
           </div>
           <div className="col-span-4 lg:col-start-5">
-            <ul className="flex flex-col lg:flex-row space-y-4 lg:space-x-4 items-center">
+            <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
               <li className="border border-white rounded py-4 text-center w-3/4 lg:w-1/2">
                 <Link href="">
                   <FontAwesomeIcon
