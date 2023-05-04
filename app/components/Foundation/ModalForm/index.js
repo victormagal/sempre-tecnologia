@@ -1,11 +1,16 @@
 'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 
 export default function ModalForm({ open, onClose }) {
+  const [loading, setLoading] = useState(false);
+  const [messageMail, setMessageMail] = useState('');
+
   if (!open) return null;
 
   return (
@@ -55,15 +60,48 @@ export default function ModalForm({ open, onClose }) {
           </div>
           <div className="p-10">
             <Formik
-              initialValues={{ mail: '', message: '', name: '', phone: '' }}
-              onSubmit={() => {
-                console.log('submitou');
+              initialValues={{ mail: '', name: '', phone: '' }}
+              onSubmit={(values) => {
+                setLoading(true);
+                const config = {
+                  headers: {
+                    'mz-integration': 'sempre',
+                    'Content-Type': 'application/json'
+                  }
+                };
+
+                const body = JSON.stringify({
+                  contato_nome: values.name,
+                  contato_email: values.mail,
+                  contato_telefone: values.phone,
+                  contato_origem: 'site_st'
+                });
+
+                axios
+                  .post(
+                    'https://bot.sempretecnologia.com.br/index.php/fila/criaMensagem',
+                    body,
+                    config
+                  )
+                  .then(({ status }) => {
+                    setLoading(false);
+                    if (status === 200) {
+                      setMessageMail(
+                        'Enviado com sucesso! Em breve entraremos em contato.'
+                      );
+                    } else {
+                      setMessageMail(
+                        'Não foi possível no momento. Tente novamente mais tarde.'
+                      );
+                    }
+                  });
               }}
               validationSchema={Yup.object({
                 mail: Yup.string()
                   .email('E-mail inválido')
                   .required('Obrigatório'),
-                name: Yup.string().required('Obrigatório')
+                name: Yup.string().required('Obrigatório'),
+                phone: Yup.string().required('Obrigatório')
               })}
             >
               {({ errors, values }) => (
@@ -129,6 +167,20 @@ export default function ModalForm({ open, onClose }) {
                         </span>
                       )}
                     </li>
+                    {loading && (
+                      <Image
+                        alt="Sempre Tecnologia"
+                        height={50}
+                        quality={100}
+                        src="/loading.svg"
+                        width={50}
+                      />
+                    )}
+                    {messageMail && (
+                      <p className="font-serif font-bold text-2xl text-gray-600">
+                        {messageMail}
+                      </p>
+                    )}
                     <li>
                       <button
                         className="bg-white font-sans font-bold py-4 text-white rounded w-2/3"
