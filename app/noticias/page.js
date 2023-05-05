@@ -105,7 +105,7 @@ export default function Blog() {
                   {post.attributes.title}
                 </h1>
                 <h2 className="font-sans font-semibold mt-2 text-sm text-custom-orange">
-                  {new Date(post?.attributes?.updatedAt).toLocaleDateString(
+                  {new Date(post?.attributes?.publishedAt).toLocaleDateString(
                     'pt-BR'
                   )}
                 </h2>
