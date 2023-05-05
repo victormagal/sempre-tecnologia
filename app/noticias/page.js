@@ -118,7 +118,7 @@ export default function Blog() {
             </Link>
           ))}
           {data?.blogPosts?.meta?.pagination?.pageCount > 1 && (
-            <div className="col-span-12">
+            <div className="hidden lg:block lg:col-span-12">
               <ul className="flex items-center justify-center space-x-2">
                 <li
                   className="cursor-pointer flex items-center font-sans text-sm text-dark-blue"
