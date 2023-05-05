@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import {
   Footer,
@@ -10,6 +11,8 @@ import {
 } from './components/Foundation';
 import { client } from './graphql/config';
 import { ApolloProvider } from '@apollo/client';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './globals.css';
 
 export default function RootLayout({ children }) {
@@ -69,6 +72,16 @@ export default function RootLayout({ children }) {
               </span>
             </div>
           </Footer>
+          <Link
+            href="https://api.whatsapp.com/send?phone=556130839390"
+            target="_blank"
+            className="fixed bg-[#25D366] bottom-4 drop-shadow-xl h-16 right-4 rounded-full w-16"
+          >
+            <FontAwesomeIcon
+              className="text-white h-10 w-10 mt-3 ml-3"
+              icon={faWhatsapp}
+            />
+          </Link>
         </ApolloProvider>
       </body>
     </html>
