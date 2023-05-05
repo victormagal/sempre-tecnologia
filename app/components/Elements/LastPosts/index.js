@@ -22,7 +22,7 @@ export default function LastPosts() {
         >
           <img
             alt={post.attributes.title}
-            src={`${process.env.NEXT_PUBLIC_UPLOADS_URL}${post?.attributes?.image?.data?.attributes?.url}`}
+            src={`${post?.attributes?.image?.data?.attributes?.url}`}
           />
           <div className="p-10">
             <h1

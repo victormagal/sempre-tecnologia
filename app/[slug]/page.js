@@ -50,7 +50,7 @@ export default function Post() {
           <div className="col-span-2 lg:col-span-10 flex justify-end">
             <p className="font-sans text-sm text-soft-gray">
               Escrito por Sempre Tecnologia,{' '}
-              {new Date(data?.updatedAt).toLocaleDateString('pt-BR', {
+              {new Date(data?.publishedAt).toLocaleDateString('pt-BR', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric'
@@ -65,7 +65,7 @@ export default function Post() {
           <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex justify-center mb-8">
             <img
               alt={data?.title}
-              src={`${process.env.NEXT_PUBLIC_UPLOADS_URL}${data?.image?.data?.attributes?.url}`}
+              src={`${data?.image?.data?.attributes?.url}`}
             />
           </div>
           <div

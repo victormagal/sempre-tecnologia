@@ -94,7 +94,7 @@ export default function Category() {
             >
               <img
                 alt={post.attributes.title}
-                src={`${process.env.NEXT_PUBLIC_UPLOADS_URL}${post?.attributes?.image?.data?.attributes?.url}`}
+                src={`${post?.attributes?.image?.data?.attributes?.url}`}
               />
               <div className="-mt-3 px-10 pb-10">
                 <span className="bg-dark-blue font-sans -mt-8 px-6 py-1 rounded-full text-sm text-white uppercase">
@@ -104,7 +104,7 @@ export default function Category() {
                   {post.attributes.title}
                 </h1>
                 <h2 className="font-sans font-semibold mt-2 text-sm text-custom-orange">
-                  {new Date(post?.attributes?.updatedAt).toLocaleDateString(
+                  {new Date(post?.attributes?.publishedAt).toLocaleDateString(
                     'pt-BR'
                   )}
                 </h2>
