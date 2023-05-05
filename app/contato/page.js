@@ -103,6 +103,10 @@ export default function Contato() {
             </p>
           </Link>
           <div className="col-span-4 cursor-pointer flex flex-col items-center my-6 lg:my-0 space-y-4">
+            <Link
+              href="https://api.whatsapp.com/send?phone=556130839390"
+              target="_blank"
+            ></Link>
             <Image
               alt="Background Image"
               className="object-cover object-center"
