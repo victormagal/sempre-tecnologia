@@ -35,7 +35,7 @@ export default function AutomacaoComercial() {
             width={758}
           />
         </div>
-        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center items-center">
+        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center items-center lg:items-start">
           <Image
             alt="Sempre emissor de notas"
             height={20}

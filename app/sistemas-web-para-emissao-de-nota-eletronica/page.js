@@ -45,7 +45,7 @@ export default function EmissorNota() {
         >
           <PlayCard bgImage="/bg-play-notas.svg" />
         </div>
-        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center items-center">
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center items-center lg:items-start">
           <Image
             alt="Sempre emissor de notas"
             height={20}
