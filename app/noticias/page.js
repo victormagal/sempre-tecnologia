@@ -119,7 +119,7 @@ export default function Blog() {
           ))}
           {data?.blogPosts?.meta?.pagination?.pageCount > 1 && (
             <div className="col-span-4 lg:col-span-12">
-              <ul className="flex items-center justify-start space-x-2">
+              <ul className="flex items-center justify-center space-x-2">
                 <li
                   className="cursor-pointer flex items-center font-sans text-sm text-dark-blue"
                   onClick={previousPosts}
