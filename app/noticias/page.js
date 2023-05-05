@@ -93,7 +93,7 @@ export default function Blog() {
             >
               <img
                 alt={post.attributes.title}
-                src={`${process.env.NEXT_PUBLIC_UPLOADS_URL}${post?.attributes?.image?.data?.attributes?.url}`}
+                src={`${post?.attributes?.image?.data?.attributes?.url}`}
               />
               <div className="-mt-3 px-10 pb-10">
                 <span className="bg-dark-blue font-sans -mt-8 px-6 py-1 rounded-full text-sm text-white uppercase">
