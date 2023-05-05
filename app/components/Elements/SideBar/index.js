@@ -105,7 +105,7 @@ export default function SideBar() {
           )}
         </Formik>
       </div> */}
-      <div className="bg-dark-blue rounded-xl p-10 flex flex-col items-center">
+      <div className="bg-dark-blue rounded-xl p-10 flex flex-col items-center mt-8">
         <h1 className="font-serif font-bold text-xl text-white">
           Siga nas redes sociais
         </h1>
