@@ -18,7 +18,7 @@ export default function LastPosts() {
         <Link
           className="bg-white col-span-4 lg:col-span-3 drop-shadow"
           key={i}
-          href={`blog/${post.attributes.slug}`}
+          href={`/${post.attributes.slug}`}
         >
           {post?.attributes?.image?.data?.attributes?.url && (
             <div className="overflow-hidden h-36">
