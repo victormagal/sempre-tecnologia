@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { getAllCategories } from '@/app/graphql/queries';
 import { useQuery } from '@apollo/client';
@@ -9,8 +9,8 @@ import {
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Field, Form, Formik } from 'formik';
-import * as Yup from 'yup';
+// import { Field, Form, Formik } from 'formik';
+// import * as Yup from 'yup';
 
 export default function SideBar() {
   const { data } = useQuery(getAllCategories);
@@ -31,7 +31,7 @@ export default function SideBar() {
           ))}
         </ul>
       </div>
-      <div
+      {/* <div
         style={{
           background: 'linear-gradient(265deg, #CF2932 0%, #77335F 100%)'
         }}
@@ -104,7 +104,7 @@ export default function SideBar() {
             </Form>
           )}
         </Formik>
-      </div>
+      </div> */}
       <div className="bg-dark-blue rounded-xl p-10 flex flex-col items-center">
         <h1 className="font-serif font-bold text-xl text-white">
           Siga nas redes sociais
