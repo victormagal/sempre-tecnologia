@@ -118,8 +118,8 @@ export default function Blog() {
             </Link>
           ))}
           {data?.blogPosts?.meta?.pagination?.pageCount > 1 && (
-            <div className="hidden lg:block lg:col-span-12">
-              <ul className="flex items-center justify-center space-x-2">
+            <div className="col-span-4 lg:col-span-12">
+              <ul className="flex items-center justify-start space-x-2">
                 <li
                   className="cursor-pointer flex items-center font-sans text-sm text-dark-blue"
                   onClick={previousPosts}
@@ -133,7 +133,7 @@ export default function Blog() {
                 {listPages.map((page) => (
                   <li
                     key={page}
-                    className={`cursor-pointer font-sans font-semibold px-2 py-1 text-sm text-dark-blue ${
+                    className={`hidden lg:block cursor-pointer font-sans font-semibold px-2 py-1 text-sm text-dark-blue ${
                       currentPage === page && 'border border-dark-blue rounded'
                     }`}
                     onClick={goToPage}
