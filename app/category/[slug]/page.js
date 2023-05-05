@@ -92,10 +92,12 @@ export default function Category() {
               key={i}
               href={`/${post.attributes.slug}`}
             >
-              <img
-                alt={post.attributes.title}
-                src={`${post?.attributes?.image?.data?.attributes?.url}`}
-              />
+              <div className="overflow-hidden h-48">
+                <img
+                  alt={post.attributes.title}
+                  src={`${post?.attributes?.image?.data?.attributes?.url}`}
+                />
+              </div>
               <div className="-mt-3 px-10 pb-10">
                 <span className="bg-dark-blue font-sans -mt-8 px-6 py-1 rounded-full text-sm text-white uppercase">
                   {post?.attributes?.category?.data?.attributes?.name}

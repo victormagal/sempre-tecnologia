@@ -20,10 +20,14 @@ export default function LastPosts() {
           key={i}
           href={`blog/${post.attributes.slug}`}
         >
-          <img
-            alt={post.attributes.title}
-            src={`${post?.attributes?.image?.data?.attributes?.url}`}
-          />
+          {post?.attributes?.image?.data?.attributes?.url && (
+            <div className="overflow-hidden h-36">
+              <img
+                alt={post.attributes.title}
+                src={`${post?.attributes?.image?.data?.attributes?.url}`}
+              />
+            </div>
+          )}
           <div className="p-10">
             <h1
               style={{ color: '#A92321' }}
