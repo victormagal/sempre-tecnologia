@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 'use client';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -32,20 +31,20 @@ export default function Post() {
       <HeroPage arrow={false} cta={false} mini={true} uri="/bg-blog.svg" />
       <Container newClasses="py-12 lg:py-24">
         <header className="border-b col-span-12 grid lg:grid-cols-12 grid-cols-4 gap-6 pb-4">
-          <div className="col-span-2 flex items-center">
-            <Link href="" onClick={() => router.back()}>
-              <FontAwesomeIcon
-                className="text-custom-orange"
-                icon={faChevronLeft}
-              />
-              <button
-                className="font-sans ml-4 text-sm text-soft-gray"
-                href=""
-                onClick={() => router.back()}
-              >
-                voltar para o blog
-              </button>
-            </Link>
+          <div
+            className="col-span-2 flex items-center"
+            onClick={() => router.back()}
+          >
+            <FontAwesomeIcon
+              className="text-custom-orange"
+              icon={faChevronLeft}
+            />
+            <button
+              className="font-sans ml-4 text-sm text-soft-gray"
+              type="button"
+            >
+              voltar para o blog
+            </button>
           </div>
           <div className="col-span-2 lg:col-span-10 flex justify-end">
             <p className="font-sans text-sm text-soft-gray">
