@@ -32,8 +32,14 @@ export default function Sobre() {
           </div>
           <div className="col-span-4 lg:col-span-6 lg:col-start-4 my-8">
             <h2 className="font-serif text-white text-xl text-center">
-              Uma empresa especializada em desenvolver sistemas de gestão
-              empresarial utilizando tecnologia própria em plataforma web.
+              Uma empresa especializada em desenvolver sistema de gestão
+              empresarial com tecnologia própria e atendimento diferenciado
+              perto de você.
+            </h2>
+            <h2 className="font-serif text-white text-xl text-center">
+              Credenciados pelo Governo Federal, emitimos certificado digital
+              padrão ICP Brasil com atendimento de excelência e suporte técnico
+              especializado.
             </h2>
           </div>
           <div className="col-span-4 lg:col-start-5">
