@@ -699,18 +699,18 @@ export default function Home() {
           </div>
         </Container>
         <Container newClasses="pt-12 lg:pt-24">
-          <ul className="col-span-4 lg:col-span-6 flex space-x-8 justify-between lg:mr-4">
-            <li>
+          <ul className="col-span-4 lg:col-span-12 flex flex-wrap lg:flex-nowrap lg:space-x-8 space-y-8 lg:space-y-0 justify-around lg:justify-between">
+            <li className="flex items-center justify-center">
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
-                height={64}
+                height={53}
                 quality={100}
-                src="/logo-gelo.png"
-                width={103}
+                src="/brasgelo-pb.png"
+                width={128}
               />
             </li>
-            <li>
+            <li className="flex items-center justify-center">
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
@@ -720,19 +720,27 @@ export default function Home() {
                 width={124}
               />
             </li>
-            <li>
+            <li className="flex items-center justify-center">
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
-                height={43}
+                height={64}
                 quality={100}
-                src="/sesi.png"
-                width={133}
+                src="/valor-ambiental-pb.png"
+                width={75}
               />
             </li>
-          </ul>
-          <ul className="col-span-4 lg:col-span-6 flex space-x-8 justify-between mt-8 lg:mt-0 lg:ml-4">
-            <li>
+            <li className="flex items-center justify-center">
+              <Image
+                alt="Sempre mensalidade"
+                className="cursor-pointer"
+                height={62}
+                quality={100}
+                src="/magic-color-pb.png"
+                width={96}
+              />
+            </li>
+            <li className="flex items-center justify-center">
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
@@ -742,7 +750,7 @@ export default function Home() {
                 width={92}
               />
             </li>
-            <li>
+            <li className="flex items-center justify-center">
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
@@ -752,7 +760,7 @@ export default function Home() {
                 width={113}
               />
             </li>
-            <li>
+            <li className="flex items-center justify-center">
               <Image
                 alt="Sempre mensalidade"
                 className="cursor-pointer"
