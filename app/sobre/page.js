@@ -70,7 +70,7 @@ export default function Sobre() {
           </div>
         </Container>
       </section>
-      <Container newClasses="pb-24 relative -mt-24 lg:-mt-48 z-20">
+      <Container newClasses="pb-24 relative -mt-24 lg:-mt-40 z-20">
         <div className="col-span-4 lg:col-span-12 flex justify-center mb-12 lg:mb-24">
           <img alt="Sobre nós" src="/image-sobre-nos.png" />
         </div>
