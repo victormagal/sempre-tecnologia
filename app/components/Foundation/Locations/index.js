@@ -55,7 +55,7 @@ export default function Locations() {
   };
 
   return (
-    <div className={styles.container}>
+    <div id="mapLocations" className={styles.container}>
       <Container newClasses="py-12 lg:py-24">
         <div className="col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center justify-center lg:mb-12">
           <Image

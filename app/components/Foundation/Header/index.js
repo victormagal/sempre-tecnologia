@@ -52,6 +52,14 @@ export default function Header() {
     });
   };
 
+  const scrollTo = (element) => {
+    document.getElementById(element).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  };
+
   return (
     <div className="hidden lg:block">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
@@ -379,6 +387,17 @@ export default function Header() {
                   Planos e Preços
                 </button>
               </Link>
+            </div>
+            <div>
+              <button
+                className={`flex items-center font-sans text-sm ${
+                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                }`}
+                onClick={() => scrollTo('mapLocations')}
+                type="button"
+              >
+                Unidades
+              </button>
             </div>
             <div>
               <Link href="/contato">
