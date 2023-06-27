@@ -1,3 +1,4 @@
+import Analytics from './Analytics';
 import BackgroundContainer from './BackgroundContainer';
 import Container from './Container';
 import Footer from './Footer';
@@ -9,6 +10,7 @@ import ModalForm from './ModalForm';
 import Slideshow from './Slideshow';
 
 export {
+  Analytics,
   BackgroundContainer,
   Container,
   Footer,
