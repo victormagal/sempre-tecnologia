@@ -23,7 +23,7 @@ export default function AutomacaoComercial() {
         description="Para ajudar a organizar sua empresa"
         iconSource="/icon-automacao-comercial.svg"
         title="Soluções práticas"
-        uri="/bg-automacao-comercial.jpg"
+        uri="/bg-automacao-comercial.png"
       />
       <Container newClasses="py-12 lg:py-24">
         <div className="col-span-4 lg:col-span-6">

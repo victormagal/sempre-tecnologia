@@ -39,7 +39,7 @@ export default function SempreMDistribuidor() {
         iconSource="/icon-sempre-distribuidor.svg"
         theme="blue"
         title="Olá distribuidor"
-        uri="/bg-sempre-distribuidor.jpg"
+        uri="/bg-sempre-distribuidor.png"
       />
       <Container newClasses="py-12 lg:py-24">
         <div

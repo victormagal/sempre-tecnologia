@@ -36,7 +36,7 @@ export default function EmissorNota() {
         description="Do mais simples ao mais complexo fazemos todo o cálculo tributário para você."
         iconSource="/icon-emissor-nota.svg"
         title="Emita Notas Eletrônicas"
-        uri="/bg-emissor-nota.jpg"
+        uri="/bg-emissor-nota.png"
       />
       <Container newClasses="py-12 lg:py-24">
         <div

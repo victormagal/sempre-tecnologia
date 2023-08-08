@@ -25,7 +25,7 @@ export default function GestaoEmpresarial() {
         description="Para você e seu negócio."
         iconSource="/icon-gestao-empresarial.svg"
         title="Um Sistema de Gestão"
-        uri="/bg-gestao-empresarial.jpg"
+        uri="/bg-gestao-empresarial.png"
       />
       <Container newClasses="pt-12 lg:pt-24">
         <div className="border border-gray-200 col-span-4 lg:col-span-5 lg:col-start-2 flex flex-col xl:flex-row items-start px-16 py-8 rounded space-y-8 xl:space-y-0 xl:space-x-8">
