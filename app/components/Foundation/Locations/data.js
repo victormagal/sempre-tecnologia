@@ -196,7 +196,7 @@ const cities = [
         id: 2,
         map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14107.620530412652!2d-48.327566255967575!3d-10.186077551438514!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65341f69544e4777!2sSempre%20Tecnologia%20e%20Certificado%20Digital!5e0!3m2!1spt-BR!2sbr!4v1640266690908!5m2!1spt-BR!2sbr',
         name: 'Palmas',
-        phones: ['(63)3026-6168', '(63)99256-7147'],
+        phones: ['(63)3026-6861', '(63)99256-7147'],
         whatsapp: '(63)98116-1949'
       },
       {
