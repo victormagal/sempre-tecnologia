@@ -67,7 +67,7 @@ export default function Locations() {
             width={41}
           />
           <h1 className="font-sans font-bold lg:ml-4 text-white text-xl lg:text-3xl text-center lg:text-left">
-            Escolha uma unidade perto de você! São + de 28 unidades para
+            Escolha uma unidade perto de você! São + de 25 unidades para
             atendimento
           </h1>
         </div>
