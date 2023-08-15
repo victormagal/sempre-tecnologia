@@ -1,76 +1,50 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ContactForm, Tabs } from '../components/Elements';
 import { Container } from '../components/Foundation';
+import { Display, Overline, Text, Title } from '../components/Typography';
 import {
   faFacebookSquare,
   faInstagram,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-import { faClock, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Sobre() {
   return (
     <main>
-      <section style={{ height: '700px' }} className="relative flex flex-col">
-        <div className="z-0">
-          <Image
-            alt="Background Image"
-            className="object-cover object-center"
-            fill
-            quality={100}
-            src="/bg-sobre.png"
-          />
-        </div>
-        <Container newClasses="relative z-10 pt-36">
-          <div className="col-span-4 lg:col-span-8 lg:col-start-3">
-            <h1 className="font-serif font-semibold text-white text-4xl lg:text-6xl text-center">
+      <section className="flex">
+        <Container newClasses="pt-36">
+          <div className="col-span-6">
+            <h1 className="font-serif font-semibold text-4xl lg:text-6xl text-center">
+              Quem somos
+            </h1>
+            <h1 className="font-serif font-semibold text-4xl lg:text-6xl text-center">
               Olá! Somos a Sempre Tecnologia
             </h1>
+            <Display appearance="d1">Display</Display>
+            <Overline appearance="o1">Overline</Overline>
+            <Text appearance="p1">Text</Text>
+            <Title appearance="h1" extra>
+              Title
+            </Title>
           </div>
-          <div className="col-span-4 lg:col-span-6 lg:col-start-4 my-8">
-            <h2 className="font-serif text-white text-xl text-center">
+          <div className="col-span-6">
+            <p className="font-serif text-xl text-center">
               Uma empresa especializada em desenvolver sistema de gestão
               empresarial com tecnologia própria e atendimento diferenciado
               perto de você.
-            </h2>
-            <h2 className="font-serif text-white text-xl text-center">
+              <br />
               Credenciados pelo Governo Federal, emitimos certificado digital
               padrão ICP Brasil com atendimento de excelência e suporte técnico
               especializado.
-            </h2>
-          </div>
-          <div className="col-span-4 lg:col-start-5">
-            <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
-              <li className="border border-white rounded py-4 text-center w-3/4 lg:w-1/2">
-                <Link href="">
-                  <FontAwesomeIcon
-                    className="h-4 mr-2 text-white"
-                    icon={faClock}
-                  />
-                  <span className="font-sans font-bold text-sm text-white">
-                    Agende uma visita
-                  </span>
-                </Link>
-              </li>
-              <li className="border border-white rounded py-4 text-center w-3/4 lg:w-1/2">
-                <Link href="">
-                  <FontAwesomeIcon
-                    className="h-4 mr-2 text-white"
-                    icon={faUser}
-                  />
-                  <span className="font-sans font-bold text-sm text-white">
-                    Trabalhe conosco
-                  </span>
-                </Link>
-              </li>
-            </ul>
+            </p>
           </div>
         </Container>
       </section>
-      <Container newClasses="pb-24 relative -mt-24 lg:-mt-40 z-20">
+      {/* <Container newClasses="pb-24 relative -mt-24 lg:-mt-40 z-20">
         <div className="col-span-4 lg:col-span-12 flex justify-center mb-12 lg:mb-24">
           <img alt="Sobre nós" src="/image-sobre-nos.png" />
         </div>
@@ -151,7 +125,7 @@ export default function Sobre() {
             </p>
           </div>
         </div>
-      </Container>
+      </Container> */}
       <Container>
         <div className="col-span-4 lg:col-span-6">
           <h1 className="font-serif font-bold text-5xl text-dark-blue">
