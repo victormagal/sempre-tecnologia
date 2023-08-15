@@ -71,10 +71,12 @@ export default function Header() {
             <Link href="/">
               <Image
                 alt="Sempre Tecnologia"
-                height={43}
+                height={46}
                 quality={100}
-                src={`${navbarStatus ? '/logo-smart.svg' : '/logo-sempre.svg'}`}
-                width={162}
+                src={`${
+                  navbarStatus ? '/logo-smart.svg' : '/logo-colored.svg'
+                }`}
+                width={172}
               />
             </Link>
           </div>
@@ -82,7 +84,7 @@ export default function Header() {
             <div className="relative">
               <button
                 className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                  navbarStatus ? 'text-dark-blue' : 'text-gray'
                 }`}
                 type="button"
                 onClick={toggleMenu}
@@ -90,7 +92,7 @@ export default function Header() {
                 Quem Somos
                 <FontAwesomeIcon
                   className={`ml-2 ${
-                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                    navbarStatus ? 'text-custom-orange' : 'text-gray'
                   }`}
                   icon={faChevronDown}
                 />
@@ -102,7 +104,7 @@ export default function Header() {
                 }}
               >
                 <FontAwesomeIcon
-                  className="text-white ml-6 h-8 w-8"
+                  className="text-gray ml-6 h-8 w-8"
                   icon={faCaretUp}
                 />
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
@@ -136,7 +138,7 @@ export default function Header() {
             <div className="relative">
               <button
                 className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                  navbarStatus ? 'text-dark-blue' : 'text-gray'
                 }`}
                 type="button"
                 onClick={toggleMenu}
@@ -144,7 +146,7 @@ export default function Header() {
                 Soluções
                 <FontAwesomeIcon
                   className={`ml-2 ${
-                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                    navbarStatus ? 'text-custom-orange' : 'text-gray'
                   }`}
                   icon={faChevronDown}
                 />
@@ -156,7 +158,7 @@ export default function Header() {
                 }}
               >
                 <FontAwesomeIcon
-                  className="text-white ml-6 h-8 w-8"
+                  className="text-gray ml-6 h-8 w-8"
                   icon={faCaretUp}
                 />
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
@@ -214,7 +216,7 @@ export default function Header() {
             <div className="relative">
               <button
                 className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                  navbarStatus ? 'text-dark-blue' : 'text-gray'
                 }`}
                 type="button"
                 onClick={toggleMenu}
@@ -222,7 +224,7 @@ export default function Header() {
                 Segmentos
                 <FontAwesomeIcon
                   className={`ml-2 ${
-                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                    navbarStatus ? 'text-custom-orange' : 'text-gray'
                   }`}
                   icon={faChevronDown}
                 />
@@ -234,7 +236,7 @@ export default function Header() {
                 }}
               >
                 <FontAwesomeIcon
-                  className="text-white ml-6 h-8 w-8"
+                  className="text-gray ml-6 h-8 w-8"
                   icon={faCaretUp}
                 />
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
@@ -316,7 +318,7 @@ export default function Header() {
             <div className="relative">
               <button
                 className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                  navbarStatus ? 'text-dark-blue' : 'text-gray'
                 }`}
                 type="button"
                 onClick={toggleMenu}
@@ -324,7 +326,7 @@ export default function Header() {
                 Seja Parceiro
                 <FontAwesomeIcon
                   className={`ml-2 ${
-                    navbarStatus ? 'text-custom-orange' : 'text-white'
+                    navbarStatus ? 'text-custom-orange' : 'text-gray'
                   }`}
                   icon={faChevronDown}
                 />
@@ -336,7 +338,7 @@ export default function Header() {
                 }}
               >
                 <FontAwesomeIcon
-                  className="text-white ml-6 h-8 w-8"
+                  className="text-gray ml-6 h-8 w-8"
                   icon={faCaretUp}
                 />
                 <ul className="bg-white -mt-5 p-5 rounded-lg w-60">
@@ -380,7 +382,7 @@ export default function Header() {
               <Link href="https://loja.sempretecnologia.com.br">
                 <button
                   className={`flex items-center font-sans text-sm ${
-                    navbarStatus ? 'text-dark-blue' : 'text-white'
+                    navbarStatus ? 'text-dark-blue' : 'text-gray'
                   }`}
                   type="button"
                 >
@@ -391,7 +393,7 @@ export default function Header() {
             <div>
               <button
                 className={`flex items-center font-sans text-sm ${
-                  navbarStatus ? 'text-dark-blue' : 'text-white'
+                  navbarStatus ? 'text-dark-blue' : 'text-gray'
                 }`}
                 onClick={() => scrollTo('mapLocations')}
                 type="button"
@@ -403,7 +405,7 @@ export default function Header() {
               <Link href="/contato">
                 <button
                   className={`flex items-center font-sans text-sm ${
-                    navbarStatus ? 'text-dark-blue' : 'text-white'
+                    navbarStatus ? 'text-dark-blue' : 'text-gray'
                   }`}
                   type="button"
                 >
@@ -413,7 +415,7 @@ export default function Header() {
             </div>
             <div>
               <button
-                className={`${styles.gradientGreen} font-bold px-8 py-3 text-sm text-white rounded`}
+                className={`${styles.gradientGreen} font-bold px-8 py-3 text-sm text-gray rounded`}
                 onClick={() => setOpenModal(true)}
                 type="button"
               >

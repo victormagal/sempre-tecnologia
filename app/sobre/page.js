@@ -1,9 +1,10 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from './page.module.css';
 import { ContactForm, Tabs } from '../components/Elements';
 import { Container } from '../components/Foundation';
-import { Display, Overline, Text, Title } from '../components/Typography';
+import { Overline, Text, Title } from '../components/Typography';
 import {
   faFacebookSquare,
   faInstagram,
@@ -15,130 +16,88 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Sobre() {
   return (
     <main>
-      <section className="flex">
-        <Container newClasses="pt-36">
-          <div className="col-span-6">
-            <h1 className="font-serif font-semibold text-4xl lg:text-6xl text-center">
-              Quem somos
-            </h1>
-            <h1 className="font-serif font-semibold text-4xl lg:text-6xl text-center">
-              Olá! Somos a Sempre Tecnologia
-            </h1>
-            <Display appearance="d1">Display</Display>
-            <Overline appearance="o1">Overline</Overline>
-            <Text appearance="p1">Text</Text>
-            <Title appearance="h1" extra>
-              Title
-            </Title>
+      <Container newClasses="pt-36">
+        <div className="col-span-6">
+          <Overline appearance="o1">Quem somos</Overline>
+          <Title appearance="h2" extra>
+            Olá! Somos a Sempre Tecnologia
+          </Title>
+        </div>
+        <div className="col-span-6">
+          <Text appearance="p3">
+            Uma empresa especializada em desenvolver sistema de gestão
+            empresarial com tecnologia própria e atendimento diferenciado perto
+            de você. Credenciados pelo Governo Federal, emitimos certificado
+            digital padrão ICP Brasil com atendimento de excelência e suporte
+            técnico especializado.
+          </Text>
+        </div>
+      </Container>
+      <section className={styles.azul}>
+        <Container>
+          <div className="col-span-4 lg:col-span-12 flex justify-center mb-12 lg:mb-24">
+            <img alt="Sobre nós" src="/image-sobre-nos.png" />
           </div>
-          <div className="col-span-6">
-            <p className="font-serif text-xl text-center">
-              Uma empresa especializada em desenvolver sistema de gestão
-              empresarial com tecnologia própria e atendimento diferenciado
-              perto de você.
-              <br />
-              Credenciados pelo Governo Federal, emitimos certificado digital
-              padrão ICP Brasil com atendimento de excelência e suporte técnico
-              especializado.
-            </p>
+          <div className="col-span-4 lg:col-span-12 grid grid-cols-12 gap-8">
+            <div className="bg-white col-span-3 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+              <Image
+                alt="Sempre mensalidade"
+                height={32}
+                quality={100}
+                src="/icon-filiais.svg"
+                width={32}
+              />
+              <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+                +28
+              </h1>
+              <p className="font-sans text-soft-gray">filiais no Brasil</p>
+            </div>
+            <div className="bg-white col-span-3 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+              <Image
+                alt="Sempre mensalidade"
+                height={32}
+                quality={100}
+                src="/icon-mercado.svg"
+                width={32}
+              />
+              <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+                +10
+              </h1>
+              <p className="font-sans text-soft-gray">anos no mercado</p>
+            </div>
+            <div className="bg-white col-span-3 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+              <Image
+                alt="Sempre mensalidade"
+                height={32}
+                quality={100}
+                src="/icon-satisfacao.svg"
+                width={32}
+              />
+              <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+                99%
+              </h1>
+              <p className="font-sans text-soft-gray">
+                de satisfação no atendimento
+              </p>
+            </div>
+            <div className="bg-white col-span-3 drop-shadow flex flex-col justify-center items-center p-6 text-center">
+              <Image
+                alt="Sempre mensalidade"
+                height={32}
+                quality={100}
+                src="/icon-pos-venda.svg"
+                width={32}
+              />
+              <h1 className="font-serif font-semibold text-dark-blue text-4xl">
+                99%
+              </h1>
+              <p className="font-sans text-soft-gray">
+                de satisfação no pós-venda
+              </p>
+            </div>
           </div>
         </Container>
       </section>
-      {/* <Container newClasses="pb-24 relative -mt-24 lg:-mt-40 z-20">
-        <div className="col-span-4 lg:col-span-12 flex justify-center mb-12 lg:mb-24">
-          <img alt="Sobre nós" src="/image-sobre-nos.png" />
-        </div>
-        <div className="col-span-4 lg:col-span-5 lg:col-start-2 flex flex-col justify-center">
-          <h1 className="font-serif font-bold text-4xl text-dark-blue">
-            Sobre nós
-          </h1>
-          <p className="font-sans mt-6 text-soft-gray">
-            Aqui na Sempre Tecnologia temos uma equipe treinada para implantação
-            e suporte em nossos sistemas para micro, pequenas e médias empresas.
-          </p>
-          <p className="font-sans mt-6 text-soft-gray">
-            Credenciados pelo Governo Federal, emitimos certificado digital
-            padrão ICP Brasil com atendimento diferenciado e suporte técnico
-            especializado.
-          </p>
-          <p className="font-sans mt-6 text-soft-gray">
-            Para estar perto de você nossa matriz fica no SIA, em Brasília,
-            filiais no DF, GO, TO, sedes em Goiânia, Palmas e distribuidores no
-            Brasil.
-          </p>
-        </div>
-        <div className="col-span-4 lg:col-span-5 grid grid-cols-12 gap-8">
-          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
-            <Image
-              alt="Sempre mensalidade"
-              height={32}
-              quality={100}
-              src="/icon-filiais.svg"
-              width={32}
-            />
-            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
-              +28
-            </h1>
-            <p className="font-sans text-soft-gray">filiais no Brasil</p>
-          </div>
-          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
-            <Image
-              alt="Sempre mensalidade"
-              height={32}
-              quality={100}
-              src="/icon-mercado.svg"
-              width={32}
-            />
-            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
-              +10
-            </h1>
-            <p className="font-sans text-soft-gray">anos no mercado</p>
-          </div>
-          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
-            <Image
-              alt="Sempre mensalidade"
-              height={32}
-              quality={100}
-              src="/icon-satisfacao.svg"
-              width={32}
-            />
-            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
-              99%
-            </h1>
-            <p className="font-sans text-soft-gray">
-              de satisfação no atendimento
-            </p>
-          </div>
-          <div className="bg-white col-span-6 drop-shadow flex flex-col justify-center items-center p-6 text-center">
-            <Image
-              alt="Sempre mensalidade"
-              height={32}
-              quality={100}
-              src="/icon-pos-venda.svg"
-              width={32}
-            />
-            <h1 className="font-serif font-semibold text-dark-blue text-4xl">
-              99%
-            </h1>
-            <p className="font-sans text-soft-gray">
-              de satisfação no pós-venda
-            </p>
-          </div>
-        </div>
-      </Container> */}
-      <Container>
-        <div className="col-span-4 lg:col-span-6">
-          <h1 className="font-serif font-bold text-5xl text-dark-blue">
-            A solução perfeita para a sua empresa
-          </h1>
-        </div>
-        <div className="col-span-4 lg:col-end-13 flex justify-end items-center">
-          <p className="font-sans text-soft-gray">
-            Soluções com tecnologia própria e atendimento diferenciado perto de
-            você.
-          </p>
-        </div>
-      </Container>
       <Container newClasses="pt-12 lg:pt-24">
         <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
           <Image
