@@ -10,7 +10,7 @@ export default function Sobre() {
       <Container newClasses="pt-36">
         <div className="col-span-6">
           <Overline appearance="o1">Quem somos</Overline>
-          <Title appearance="h2" extra>
+          <Title appearance="h2" extra={true}>
             Olá! Somos a Sempre Tecnologia
           </Title>
         </div>
