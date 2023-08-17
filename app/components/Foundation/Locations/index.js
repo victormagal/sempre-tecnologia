@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './styles.module.css';
-import { red } from '../../Colors';
-import { Text, Title } from '../../Typography';
+import { neutralDark, neutralMid, red } from '../../../base/Colors';
+import { Overline, Text, Title } from '../../../base/Typography';
 import Container from '../Container';
 import { cities, states } from './data';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -46,13 +46,20 @@ export default function Locations() {
     <div id="mapLocations" className={styles.container}>
       <Container newClasses="py-12 lg:py-24">
         <div className="col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center justify-center lg:mb-12">
-          <p>Unidades</p>
-          <h1>Temos uma unidade perto de você.</h1>
-          <h2 className="font-sans font-bold lg:ml-4 text-white text-xl lg:text-3xl text-center lg:text-left">
+          <Overline appearance="o1" color={red[700]}>
+            Unidades
+          </Overline>
+          <Title appearance="h2" color={neutralDark[500]} extra={true}>
+            Temos uma unidade perto de você.
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
             São + de 25 unidades para atendimento.
-          </h2>
+          </Text>
         </div>
         <div className="col-span-4 lg:col-span-3 lg:col-start-4 flex items-center">
+          <Text appearance="p4" color={neutralDark[500]}>
+            Estado
+          </Text>
           <select
             className="bg-white appearance-none text-soft-gray rounded w-full p-3"
             onClick={getCities}
@@ -70,6 +77,9 @@ export default function Locations() {
           />
         </div>
         <div className="col-span-4 lg:col-span-3 flex items-center">
+          <Text appearance="p4" color={neutralDark[500]}>
+            Unidade
+          </Text>
           <select
             className="bg-white appearance-none text-soft-gray rounded w-full p-3"
             onChange={getDetails}

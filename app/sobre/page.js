@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
 import styles from './page.module.css';
+import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
-import { Overline, Text, Title } from '../components/Typography';
 
 export default function Sobre() {
   return (
