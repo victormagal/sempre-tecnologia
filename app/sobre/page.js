@@ -31,7 +31,7 @@ export default function Sobre() {
       <section className={styles.azul}>
         <Container>
           <div
-            className="col-span-4 lg:col-span-12 flex justify-center mb-12 lg:mb-24 relative"
+            className="col-span-4 lg:col-span-12 flex justify-center relative"
             style={{ height: '539px' }}
           >
             <Image
@@ -42,32 +42,38 @@ export default function Sobre() {
               style={{ objectFit: 'contain' }}
             />
           </div>
-          <div className="col-span-4 lg:col-span-10 lg:col-start-2 flex justify-between">
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <h1 className="font-serif font-semibold text-white text-4xl">
-                +28
-              </h1>
-              <p className="font-sans text-white">filiais no Brasil</p>
+          <div className="col-span-8 col-start-3 flex justify-between mb-16 mt-12">
+            <div className="flex flex-col justify-center items-center">
+              <Title appearance="h1" color="white">
+                +25
+              </Title>
+              <Title appearance="h6" color="#B3BAC5">
+                filiais no Brasil
+              </Title>
             </div>
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <h1 className="font-serif font-semibold text-white text-4xl">
+            <div className="flex flex-col justify-center items-center">
+              <Title appearance="h1" color="white">
                 +10
-              </h1>
-              <p className="font-sans text-white">anos no mercado</p>
+              </Title>
+              <Title appearance="h6" color="#B3BAC5">
+                anos no mercado
+              </Title>
             </div>
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <h1 className="font-serif font-semibold text-white text-4xl">
+            <div className="flex flex-col justify-center items-center">
+              <Title appearance="h1" color="white">
                 99%
-              </h1>
-              <p className="font-sans text-white">
+              </Title>
+              <Title appearance="h6" color="#B3BAC5">
                 de satisfação no atendimento
-              </p>
+              </Title>
             </div>
-            <div className="flex flex-col justify-center items-center p-6 text-center">
-              <h1 className="font-serif font-semibold text-white text-4xl">
+            <div className="flex flex-col justify-center items-center">
+              <Title appearance="h1" color="white">
                 99%
-              </h1>
-              <p className="font-sans text-white">de satisfação no pós-venda</p>
+              </Title>
+              <Title appearance="h6" color="#B3BAC5">
+                de satisfação no pós-venda
+              </Title>
             </div>
           </div>
         </Container>

@@ -61,90 +61,92 @@ export default function Locations() {
             São + de 25 unidades para atendimento.
           </Text>
         </div>
-        <div className="col-span-4 lg:col-span-3 lg:col-start-4 flex items-center">
+        <div className="col-span-4 lg:col-span-3 lg:col-start-4 flex flex-col">
           <Text appearance="p4" color={neutralDark[500]}>
             Estado
           </Text>
-          <select
-            className="bg-white appearance-none text-soft-gray rounded w-full p-3"
-            onClick={getCities}
-          >
-            <option defaultValue="default">Filtrar por estado</option>
-            {states.map(({ label, value }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-          <FontAwesomeIcon
-            className="-ml-6 text-soft-gray"
-            icon={faChevronDown}
-          />
+          <div className="flex items-center">
+            <select
+              className="bg-gray-200 appearance-none text-soft-gray rounded w-full p-3"
+              onClick={getCities}
+            >
+              <option defaultValue="default">Filtrar por estado</option>
+              {states.map(({ label, value }) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+            <FontAwesomeIcon
+              className="-ml-10 text-soft-gray"
+              icon={faChevronDown}
+            />
+          </div>
         </div>
-        <div className="col-span-4 lg:col-span-3 flex items-center">
+        <div className="col-span-4 lg:col-span-3 flex flex-col">
           <Text appearance="p4" color={neutralDark[500]}>
             Unidade
           </Text>
-          <select
-            className="bg-white appearance-none text-soft-gray rounded w-full p-3"
-            onChange={getDetails}
-          >
-            <option defaultValue="default">Filtrar por loja</option>
-            {stores.map(({ id, map, name, phones, whatsapp }) => (
-              <option
-                data-location={map}
-                data-phones={phones}
-                data-whatsapp={whatsapp}
-                key={id}
-                value={name}
-              >
-                {name}
-              </option>
-            ))}
-          </select>
-          <FontAwesomeIcon
-            className="-ml-6 text-soft-gray"
-            icon={faChevronDown}
-          />
-        </div>
-        <div className="border-4 border-white col-span-4 lg:col-span-12 my-6 relative rounded">
-          <div>
-            <Image
-              alt="Endereço - venha nos fazer uma visita"
-              height={40}
-              src="/pin-location.svg"
-              width={40}
-            />
-            <Title appearance="h5">Endereço</Title>
-            <Text appearance="p4">Venha nos fazer uma visita</Text>
-            <Title appearance="h7" color={red[1000]}>
-              Endereço aqui
-            </Title>
-          </div>
-          <div>
-            <Image
-              alt="Telefone - nosso time está aqui para te ajudar"
-              height={40}
-              src="/pin-phone.svg"
-              width={40}
-            />
-            <Title appearance="h5">Telefone</Title>
-            <Text appearance="p4">Nosso time está aqui para te ajudar</Text>
-            <ul>
-              {phones.map((phone) => (
-                <li key={phone}>
-                  <Title appearance="h7" color={red[1000]}>
-                    {phone}
-                  </Title>
-                </li>
+          <div className="flex items-center">
+            <select
+              className="bg-gray-200 appearance-none text-soft-gray rounded w-full p-3"
+              onChange={getDetails}
+            >
+              <option defaultValue="default">Filtrar por loja</option>
+              {stores.map(({ id, map, name, phones, whatsapp }) => (
+                <option
+                  data-location={map}
+                  data-phones={phones}
+                  data-whatsapp={whatsapp}
+                  key={id}
+                  value={name}
+                >
+                  {name}
+                </option>
               ))}
-              <li>
+            </select>
+            <FontAwesomeIcon
+              className="-ml-6 text-soft-gray"
+              icon={faChevronDown}
+            />
+          </div>
+        </div>
+        <div className="col-span-3 col-start-4 flex flex-col items-center">
+          <Image
+            alt="Endereço - venha nos fazer uma visita"
+            height={40}
+            src="/pin-location.svg"
+            width={40}
+          />
+          <Title appearance="h5">Endereço</Title>
+          <Text appearance="p4">Venha nos fazer uma visita</Text>
+          <Title appearance="h7" color={red[1000]}>
+            Endereço aqui
+          </Title>
+        </div>
+        <div className="col-span-3 flex flex-col items-center">
+          <Image
+            alt="Telefone - nosso time está aqui para te ajudar"
+            height={40}
+            src="/pin-phone.svg"
+            width={40}
+          />
+          <Title appearance="h5">Telefone</Title>
+          <Text appearance="p4">Nosso time está aqui para te ajudar</Text>
+          <ul>
+            {phones.map((phone) => (
+              <li key={phone}>
                 <Title appearance="h7" color={red[1000]}>
-                  {whatsapp}
+                  {phone}
                 </Title>
               </li>
-            </ul>
-          </div>
+            ))}
+            <li>
+              <Title appearance="h7" color={red[1000]}>
+                {whatsapp}
+              </Title>
+            </li>
+          </ul>
         </div>
       </Container>
     </div>
