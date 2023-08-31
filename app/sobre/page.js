@@ -1,7 +1,9 @@
 'use client';
 import Image from 'next/image';
 import styles from './page.module.css';
+import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
+import { CardFeature } from '../components/Elements';
 import { Container } from '../components/Foundation';
 
 export default function Sobre() {
@@ -68,22 +70,21 @@ export default function Sobre() {
           </div>
         </Container>
       </section>
+      <Container>
+        <Title appearance="h2" color={neutralDark[500]}>
+          Temos a solução perfeita para a sua empresa.
+        </Title>
+        <Text appearance="p1" color={neutralMid[500]}>
+          Tecnologia própria e atendimento diferenciado perto de você.
+        </Text>
+      </Container>
       <Container newClasses="pt-12 lg:pt-24">
-        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
-          <Image
-            alt="Propósito"
-            height={48}
-            quality={100}
-            src="/icon-proposito.svg"
-            width={48}
-          />
-          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
-            Propósito
-          </h1>
-          <p className="font-sans text-soft-gray">
-            Sempre juntos para apoiar as empresas e gerar prosperidade.
-          </p>
-        </div>
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Sempre juntos para apoiar as empresas e gerar prosperidade."
+          iconColor={red[600]}
+          title="Propósito"
+        />
         <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
           <Image
             alt="Missão"
