@@ -9,20 +9,22 @@ import { Container } from '../components/Foundation';
 export default function Sobre() {
   return (
     <main>
-      <Container newClasses="pt-36">
-        <div className="col-span-6">
-          <Overline appearance="o1">Quem somos</Overline>
-          <Title appearance="h2" extra={true}>
-            Olá! Somos a Sempre Tecnologia
+      <Container newClasses="mb-16 mt-36">
+        <div className="col-span-4">
+          <Overline appearance="o1" color={red[700]}>
+            Quem somos
+          </Overline>
+          <Title appearance="h2" color={neutralDark[500]} extra={true}>
+            Oi, somos a Sempre Tecnologia.
           </Title>
         </div>
-        <div className="col-span-6">
-          <Text appearance="p3">
-            Uma empresa especializada em desenvolver sistema de gestão
-            empresarial com tecnologia própria e atendimento diferenciado perto
-            de você. Credenciados pelo Governo Federal, emitimos certificado
-            digital padrão ICP Brasil com atendimento de excelência e suporte
-            técnico especializado.
+        <div className="col-end-13 col-span-6">
+          <Text appearance="p3" color={neutralMid[600]}>
+            Nós somos especializados em desenvolver sistemas de gestão
+            empresarial com tecnologia própria e atendimento super capacitado
+            para você. Temos credenciamento autorizado pelo Governo Federal,
+            emitimos certificado digital padrão ICP-Brasil com atendimento de
+            excelência e suporte técnico especializado.
           </Text>
         </div>
       </Container>
@@ -71,14 +73,21 @@ export default function Sobre() {
         </Container>
       </section>
       <Container>
-        <Title appearance="h2" color={neutralDark[500]}>
-          Temos a solução perfeita para a sua empresa.
-        </Title>
-        <Text appearance="p1" color={neutralMid[500]}>
-          Tecnologia própria e atendimento diferenciado perto de você.
-        </Text>
+        <div className="col-span-6 col-start-4 my-16 text-center">
+          <Title
+            appearance="h2"
+            className="mb-4"
+            color={neutralDark[500]}
+            extra
+          >
+            Temos a solução perfeita para a sua empresa.
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
+            Tecnologia própria e atendimento diferenciado perto de você.
+          </Text>
+        </div>
       </Container>
-      <Container newClasses="pt-12 lg:pt-24">
+      <Container newClasses="border-b pb-16">
         <CardFeature
           bgColor={neutralLight[200]}
           description="Sempre juntos para apoiar as empresas e gerar prosperidade."

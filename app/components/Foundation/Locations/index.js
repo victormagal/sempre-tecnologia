@@ -45,11 +45,16 @@ export default function Locations() {
   return (
     <div id="mapLocations" className={styles.container}>
       <Container newClasses="py-12 lg:py-24">
-        <div className="col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center justify-center lg:mb-12">
+        <div className="col-span-6 col-start-4 text-center">
           <Overline appearance="o1" color={red[700]}>
             Unidades
           </Overline>
-          <Title appearance="h2" color={neutralDark[500]} extra={true}>
+          <Title
+            appearance="h2"
+            className="my-4"
+            color={neutralDark[500]}
+            extra={true}
+          >
             Temos uma unidade perto de você.
           </Title>
           <Text appearance="p1" color={neutralMid[500]}>
