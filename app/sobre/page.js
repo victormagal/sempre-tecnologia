@@ -82,57 +82,31 @@ export default function Sobre() {
         <CardFeature
           bgColor={neutralLight[200]}
           description="Sempre juntos para apoiar as empresas e gerar prosperidade."
+          icon="faBuilding"
           iconColor={red[600]}
           title="Propósito"
         />
-        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
-          <Image
-            alt="Missão"
-            height={48}
-            quality={100}
-            src="/icon-missao.svg"
-            width={48}
-          />
-          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
-            Missão
-          </h1>
-          <p className="font-sans text-soft-gray">
-            Facilitar a vida dos empresários e contadores com soluções em
-            tecnologia e atendimento diferenciado.
-          </p>
-        </div>
-        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
-          <Image
-            alt="Valores"
-            height={48}
-            quality={100}
-            src="/icon-valores.svg"
-            width={48}
-          />
-          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
-            Valores
-          </h1>
-          <p className="font-sans text-soft-gray">
-            Superação, simplicidade, espírito de equipe, melhoria contínua,
-            profissionalismo, respeito e entusiasmo.
-          </p>
-        </div>
-        <div className="bg-white col-span-4 lg:col-span-3 drop-shadow p-8">
-          <Image
-            alt="Visão"
-            height={48}
-            quality={100}
-            src="/icon-visao.svg"
-            width={48}
-          />
-          <h1 className="font-sans font-semibold my-6 text-4xl text-dark-blue">
-            Visão
-          </h1>
-          <p className="font-sans text-soft-gray">
-            Ser referência em sistemas de gestão e certificado digital no Brasil
-            de forma sustentável
-          </p>
-        </div>
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Facilitar a vida dos empresários e contadores com soluções em tecnologia e atendimento diferenciado."
+          icon="faCircleDot"
+          iconColor={red[600]}
+          title="Missão"
+        />
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Superação, simplicidade, espírito de equipe, melhoria contínua, profissionalismo, respeito e entusiasmo."
+          icon="faGem"
+          iconColor={red[600]}
+          title="Valores"
+        />
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Ser referência em sistemas de gestão e certificado digital no Brasil de forma sustentável."
+          icon="faLightbulb"
+          iconColor={red[600]}
+          title="Visão"
+        />
       </Container>
     </main>
   );
