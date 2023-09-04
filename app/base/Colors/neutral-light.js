@@ -1,5 +1,5 @@
 const neutralLight = {
-  100: '##FFFFFF',
+  100: '#FFFFFF',
   200: '#F9FAFB',
   300: '#F4F5F7',
   400: '#EBECF0',

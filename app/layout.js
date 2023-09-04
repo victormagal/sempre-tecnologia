@@ -4,7 +4,6 @@ import {
   Analytics,
   Footer,
   Header,
-  HeaderMobile,
   Locations,
   ModalForm
 } from './components/Foundation';
@@ -50,12 +49,13 @@ export default function RootLayout({ children }) {
         <ApolloProvider client={client}>
           <StyledComponentsRegistry>
             <Analytics />
-            <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-            <HeaderMobile />
-            <Header />
-            {children}
-            <Locations />
-            <Footer />
+            <div className="flex flex-col h-screen">
+              <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
+              <Header />
+              {children}
+              <Locations />
+              <Footer />
+            </div>
           </StyledComponentsRegistry>
         </ApolloProvider>
       </body>

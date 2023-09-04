@@ -65,7 +65,7 @@ export default function Locations() {
           </Text>
         </div>
       </Container>
-      <Container>
+      <Container newClasses="pb-24">
         <div className="col-span-4 lg:col-span-3 lg:col-start-4 flex flex-col mb-12">
           <Text appearance="p4" className="mb-2" color={neutralDark[500]}>
             Estado
