@@ -8,6 +8,7 @@ export default function CardFeature({
   description,
   icon,
   iconColor,
+  iconSize,
   third,
   title
 }) {
@@ -16,7 +17,7 @@ export default function CardFeature({
       background={bgColor}
       className={`${third ? 'col-span-4' : 'col-span-3'} p-6`}
     >
-      <RegularIcon icon={icon} iconColor={iconColor} />
+      <RegularIcon icon={icon} iconColor={iconColor} newClasses={iconSize} />
       <Title appearance="h5" className="mb-2 mt-8" color={neutralDark[500]}>
         {title}
       </Title>

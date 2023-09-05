@@ -141,10 +141,26 @@ const getPostsByCategory = gql`
   }
 `;
 
+const getTestimonies = gql`
+  query {
+    depoimentos {
+      data {
+        id
+        attributes {
+          name
+          rule
+          description
+        }
+      }
+    }
+  }
+`;
+
 export {
   getAllPosts,
   getAllCategories,
   getAllSlides,
   getPost,
-  getPostsByCategory
+  getPostsByCategory,
+  getTestimonies
 };

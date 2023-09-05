@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function RegularIcon({ icon, iconColor, newClasses }) {
   const { [icon]: fontIcon } = {
     faBuilding: Icon.faBuilding,
-    faChevronDown: Icon.faChevronDown,
     faCircleDot: Icon.faCircleDot,
     faFaceSmileWink: Icon.faFaceSmileWink,
     faFile: Icon.faFile,

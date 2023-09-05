@@ -1,19 +1,18 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-// import styles from './page.module.css';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import RegularIcon from '../base/RegularIcon';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { CardFeature } from '../components/Elements';
-import { Container } from '../components/Foundation';
+import { Container, Testimonies } from '../components/Foundation';
 
 export default function Certificadora() {
   return (
     <main>
       <Container newClasses="mb-16 mt-36">
-        <div className="col-span-6 col-start-4">
+        <div className="col-span-6 col-start-4 flex flex-col items-center space-y-4">
           <Image
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={33}
@@ -28,64 +27,58 @@ export default function Certificadora() {
           </Title>
         </div>
       </Container>
-      {/* <section className={styles.azul}>
-        <Container>
-          <div
-            className="col-span-4 lg:col-span-12 flex justify-center relative"
-            style={{ height: '539px' }}
-          >
-            <Image
-              alt="Sempre mensalidade"
-              fill
-              sizes="100vw"
-              src="/about.png"
-              style={{ objectFit: 'contain' }}
-            />
+      <Container newClasses="border-b border-t py-12">
+        <div className="col-span-12 flex justify-between px-16">
+          <div className="flex flex-col justify-center items-center">
+            <Title appearance="h3" color={neutralDark[500]}>
+              +200 mil
+            </Title>
+            <Title appearance="h6" color={neutralMid[600]}>
+              certificados emitidos
+            </Title>
           </div>
-          <div className="col-span-8 col-start-3 flex justify-between mb-16 mt-12">
-            <div className="flex flex-col justify-center items-center">
-              <Title appearance="h1" color="white">
-                +25
-              </Title>
-              <Title appearance="h6" color="#B3BAC5">
-                filiais no Brasil
-              </Title>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <Title appearance="h1" color="white">
-                +10
-              </Title>
-              <Title appearance="h6" color="#B3BAC5">
-                anos no mercado
-              </Title>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <Title appearance="h1" color="white">
-                99%
-              </Title>
-              <Title appearance="h6" color="#B3BAC5">
-                de satisfação no atendimento
-              </Title>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <Title appearance="h1" color="white">
-                99%
-              </Title>
-              <Title appearance="h6" color="#B3BAC5">
-                de satisfação no pós-venda
-              </Title>
-            </div>
+          <div className="flex flex-col justify-center items-center">
+            <Title appearance="h3" color={neutralDark[500]}>
+              +25
+            </Title>
+            <Title appearance="h6" color={neutralMid[600]}>
+              filiais abertas pelo país
+            </Title>
           </div>
-        </Container>
-      </section> */}
-      <Container>
-        <div className="col-span-6 col-start-4 my-16 text-center">
+          <div className="flex flex-col justify-center items-center">
+            <Title appearance="h3" color={neutralDark[500]}>
+              +10
+            </Title>
+            <Title appearance="h6" color={neutralMid[600]}>
+              anos de mercado
+            </Title>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <Title appearance="h3" color={neutralDark[500]}>
+              85%
+            </Title>
+            <Title appearance="h6" color={neutralMid[600]}>
+              de satisfação no atendimento
+            </Title>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <Title appearance="h3" color={neutralDark[500]}>
+              95%
+            </Title>
+            <Title appearance="h6" color={neutralMid[600]}>
+              de satisfação pós-venda
+            </Title>
+          </div>
+        </div>
+      </Container>
+      <Container newClasses="py-16">
+        <div className="col-span-6 col-start-4 flex flex-col items-center space-y-4">
           <Overline appearance="o1" color={red[700]}>
             Nossas Vantagens
           </Overline>
           <Title
             appearance="h2"
-            className="mb-4"
+            className="text-center"
             color={neutralDark[500]}
             extra
           >
@@ -96,6 +89,40 @@ export default function Certificadora() {
             você.
           </Text>
         </div>
+      </Container>
+      <Container newClasses="border-b pb-16">
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Um ambiente pensado para tornar o atendimento ágil e confortável"
+          icon="faFaceSmileWink"
+          iconColor={red[600]}
+          iconSize="h-10"
+          title="Ambiente moderno"
+        />
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Temos mais de 25 filiais para garantir que tenha uma mais próxima a você"
+          icon="faBuilding"
+          iconColor={red[600]}
+          iconSize="h-10"
+          title="Filiais de atendimento"
+        />
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Nossa equipe trabalha para garantir um processo rápido e seguro do Certificado Digital"
+          icon="faFile"
+          iconColor={red[600]}
+          iconSize="h-10"
+          title="Agilidade de emissão"
+        />
+        <CardFeature
+          bgColor={neutralLight[200]}
+          description="Equipe disponível e preparada para te auxiliar no que você precisar"
+          icon="faUser"
+          iconColor={red[600]}
+          iconSize="h-10"
+          title="Suporte ao cliente"
+        />
       </Container>
       <Container
         bgContainer={neutralDark[600]}
@@ -154,35 +181,58 @@ export default function Certificadora() {
           />
         </div>
       </Container>
-      <Container newClasses="border-b pb-16">
-        <CardFeature
-          bgColor={neutralLight[200]}
-          description="Um ambiente pensado para tornar o atendimento ágil e confortável"
-          icon="faFaceSmileWink"
-          iconColor={red[600]}
-          title="Ambiente moderno"
-        />
-        <CardFeature
-          bgColor={neutralLight[200]}
-          description="Temos mais de 25 filiais para garantir que tenha uma mais próxima a você"
-          icon="faBuilding"
-          iconColor={red[600]}
-          title="Filiais de atendimento"
-        />
-        <CardFeature
-          bgColor={neutralLight[200]}
-          description="Nossa equipe trabalha para garantir um processo rápido e seguro do Certificado Digital"
-          icon="faFile"
-          iconColor={red[600]}
-          title="Agilidade de emissão"
-        />
-        <CardFeature
-          bgColor={neutralLight[200]}
-          description="Equipe disponível e preparada para te auxiliar no que você precisar"
-          icon="faUser"
-          iconColor={red[600]}
-          title="Suporte ao cliente"
-        />
+      <Testimonies />
+      <Container newClasses="py-8">
+        <ul className="col-span-12 flex justify-between">
+          <li>
+            <Image
+              alt="Litoral"
+              height={35}
+              src="/parceiros/litoral.png"
+              width={88}
+            />
+          </li>
+          <li>
+            <Image
+              alt="SmartFit"
+              height={35}
+              src="/parceiros/smart-fit.png"
+              width={98}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Coco Bambu"
+              height={28}
+              src="/parceiros/coco-bambu.png"
+              width={134}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Sebrae"
+              height={30}
+              src="/parceiros/sebrae.png"
+              width={56}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Magic Color"
+              height={35}
+              src="/parceiros/magic-color.png"
+              width={56}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Valor Ambiental"
+              height={38}
+              src="/parceiros/valor-ambiental.png"
+              width={37}
+            />
+          </li>
+        </ul>
       </Container>
     </main>
   );

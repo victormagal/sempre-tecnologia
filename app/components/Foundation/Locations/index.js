@@ -47,7 +47,7 @@ export default function Locations() {
 
   return (
     <div id="mapLocations" className={styles.container}>
-      <Container newClasses="mb-12 py-12 lg:py-24">
+      <Container newClasses="pb-12 pt-24">
         <div className="col-span-6 col-start-4 text-center">
           <Overline appearance="o1" color={red[700]}>
             Unidades
