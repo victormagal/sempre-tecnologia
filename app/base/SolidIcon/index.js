@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function SolidIcon({ icon, iconColor, newClasses }) {
   const { [icon]: fontIcon } = {
     faChevronDown: Icon.faChevronDown,
+    faDownload: Icon.faDownload,
     faLocationDot: Icon.faLocationDot,
     faPhone: Icon.faPhone
   };

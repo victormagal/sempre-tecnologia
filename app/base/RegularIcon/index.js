@@ -1,18 +1,22 @@
 import * as Icon from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function RegularIcon({ icon, iconColor }) {
+export default function RegularIcon({ icon, iconColor, newClasses }) {
   const { [icon]: fontIcon } = {
     faBuilding: Icon.faBuilding,
     faChevronDown: Icon.faChevronDown,
     faCircleDot: Icon.faCircleDot,
+    faFaceSmileWink: Icon.faFaceSmileWink,
+    faFile: Icon.faFile,
     faGem: Icon.faGem,
-    faLightbulb: Icon.faLightbulb
+    faLightbulb: Icon.faLightbulb,
+    faComments: Icon.faComments,
+    faUser: Icon.faUser
   };
 
   return (
     <FontAwesomeIcon
-      className="h-8"
+      className={`${newClasses && newClasses}`}
       icon={fontIcon}
       style={{ color: iconColor }}
     />
