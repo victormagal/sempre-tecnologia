@@ -15,7 +15,8 @@ export default function HeroPage({
   mini,
   theme,
   title,
-  uri
+  uri,
+  heroImage
 }) {
   const [openModal, setOpenModal] = useState(false);
 
@@ -23,7 +24,7 @@ export default function HeroPage({
     <>
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <section
-        style={mini ? { height: '90px' } : { height: '432px' }}
+        style={mini ? { height: '90px' } : { height: 'auto' }}
         className="relative flex flex-col justify-center"
       >
         <div className="z-0">
@@ -36,7 +37,7 @@ export default function HeroPage({
           />
         </div>
         <Container newClasses="relative z-10">
-          <div className="col-span-4 lg:col-span-7 flex flex-col space-y-6 items-center lg:items-start mt-20">
+          <div className="col-span-4 lg:col-span-7 flex flex-col space-y-6 items-center lg:items-start mt-36">
             {iconSource && (
               <Image
                 alt="Sistema"
@@ -51,14 +52,26 @@ export default function HeroPage({
                 {title}
               </h1>
             )}
+            {description && (
+              <main className="col-span-4 lg:col-span-6">
+                <h2 className="font-serif text-white text-xl text-center lg:text-left">
+                  {description}
+                </h2>
+              </main>
+            )}
           </div>
-          {description && (
-            <main className="col-span-4 lg:col-span-6">
-              <h2 className="font-serif text-white text-xl text-center lg:text-left">
-                {description}
-              </h2>
-            </main>
-          )}
+
+          <div className="col-span-4 lg:col-span-36 flex flex-col items-center mt-36">
+            {heroImage && (
+              <Image
+                alt="Sistema"
+                height={35}
+                width={560}
+                quality={100}
+                src={heroImage}
+              />
+            )}
+          </div>
           <footer className="col-span-4 flex justify-center lg:justify-start lg:col-span-7">
             {cta && (
               <button

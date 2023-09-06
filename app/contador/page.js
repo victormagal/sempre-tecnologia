@@ -1,21 +1,11 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import styles from './page.module.css';
-import { ContactForm, MicroCard } from '../components/Elements';
-import {
-  BackgroundContainer,
-  Container,
-  HeroPage,
-  ModalForm
-} from '../components/Foundation';
-import {
-  faFacebookSquare,
-  faInstagram,
-  faLinkedin
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
+import { Overline, Text, Title } from '../base/Typography';
+import { CardFeature, ContactForm } from '../components/Elements';
+import { Container, HeroPage, ModalForm } from '../components/Foundation';
 
 export default function Contador() {
   const [openModal, setOpenModal] = useState(false);
@@ -26,22 +16,31 @@ export default function Contador() {
       <HeroPage
         arrow={false}
         cta={false}
-        description="Conheça nosso programa de parceria para Contadores e aproveite as vantagens exclusivas."
         title="Programa de parceria para Contadores"
-        uri="/bg-contador.jpg"
+        description="Conheça nosso programa de parceria para Contadores e aproveite as vantagens exclusivas."
+        uri="/bg-hero-contadores.png"
+        heroImage="/contador-subheader.png"
       />
-      <Container newClasses="py-12 lg:py-24">
-        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center">
-          <h1 className="font-serif font-bold text-4xl text-dark-blue text-center lg:text-left">
+      <Container>
+        <div className="col-span-6 col-start-4 my-16 text-center">
+          <Overline appearance="o1" color={red[700]}>
+            Parceria para contadores
+          </Overline>
+          <Title
+            appearance="h2"
+            className="mb-4"
+            color={neutralDark[500]}
+            extra
+          >
             Simplifique sua rotina e ganhe tempo e produtividade
-          </h1>
-          <p className="font-sans mt-6 text-soft-gray text-center lg:text-left">
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
             Nosso programa de parceria para contadores oferece recursos que vão
-            otimizar a rotina do seu escritório. Assim você terá mais tempo para
-            se dedicar aos seus clientes.
-          </p>
+            otimizar a rotina do seu escritório. Assim, você terá mais tempo
+            para se dedicar aos seus clientes.
+          </Text>
         </div>
-        <div
+        {/* <div
           className={`${styles.gradientBlue} col-span-4 lg:col-span-6 lg:col-end-13 flex flex-col items-center lg:items-start justify-center p-12 lg:p-16`}
         >
           <Image
@@ -65,120 +64,124 @@ export default function Contador() {
           >
             QUERO SER PARCEIRO
           </button>
-        </div>
+        </div> */}
       </Container>
-      <Container newClasses="pb-12 lg:pb-24">
-        <MicroCard
+
+      <Container newClasses="border-b pb-16">
+        <CardFeature
+          third={true}
+          bgColor={neutralLight[100]}
           description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
-          imageSource="/icon-contador-1.svg"
+          icon="faBuilding"
+          iconColor={red[600]}
+          iconSize="h-10"
           title="Integração contábil"
         />
-        <MicroCard
+        <CardFeature
+          third={true}
+          bgColor={neutralLight[100]}
           description="Conte com nosso apoio tanto para seu escritório quanto para seus clientes. Estamos #SemprePresente"
-          imageSource="/icon-contador-2.svg"
+          icon="faComments"
+          iconColor={red[600]}
+          iconSize="h-10"
           title="Atendimento diferenciado"
         />
-        <MicroCard
+        <CardFeature
+          third={true}
+          bgColor={neutralLight[100]}
           description="Plataforma para administrar as indicações de certificados digitais."
-          imageSource="/icon-contador-3.svg"
+          icon="faGem"
+          iconColor={red[600]}
+          iconSize="h-10"
           title="Portal Sempre Contador"
         />
-        <MicroCard
+        <CardFeature
+          third={true}
+          bgColor={neutralLight[100]}
           description="Emita notas fiscais eletrônicas para seus clientes e gere renda adicional para seu escritório."
-          imageSource="/icon-contador-4.svg"
+          icon="faLightbulb"
+          iconColor={red[600]}
+          iconSize="h-10"
           title="Solução Multiempresas"
         />
-        <MicroCard
+        <CardFeature
+          third={true}
+          bgColor={neutralLight[100]}
           description="Gerencie a validade dos certificados digitais de seus clientes por meio do Portal Sempre Contador."
-          imageSource="/icon-contador-5.svg"
+          icon="faLightbulb"
+          iconColor={red[600]}
+          iconSize="h-10"
           title="Certificados digitais em dia"
         />
-        <MicroCard
+        <CardFeature
+          third={true}
+          bgColor={neutralLight[100]}
           description="Conte com nossas soluções web e facilite a vida do seu cliente e também da sua contabilidade."
-          imageSource="/icon-contador-6.svg"
+          icon="faLightbulb"
+          iconColor={red[600]}
+          iconSize="h-10"
           title="Soluções web"
         />
       </Container>
-      <BackgroundContainer uri="/bg-contador-1.svg">
-        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center">
+      <Container>
+        <button
+          className={`${styles.red} font-sans mt-6 py-4 text-white`}
+          onClick={() => setOpenModal(true)}
+          type="button"
+        >
+          QUERO SER UM PARCEIRO
+        </button>
+      </Container>
+
+      <Container newClasses="py-12 lg:py-24 col-span-12">
+        {/* <div className="col-span-12 bg-[#EEECE6]"> */}
+        <div className="col-span-4 lg:col-span-5">
           <Image
             alt="Portal Sempre Contador"
-            height={99}
+            height={85}
+            width={288}
             quality={100}
-            src="/icon-portal-contador-ballon.svg"
-            width={93}
+            src="/logo-portal-sempre-contador.png"
           />
-          <h1 className="font-serif font-semibold text-white text-4xl my-8 text-center lg:text-left">
-            Portal Sempre Contador
-          </h1>
-          <p className="font-sans text-white mb-8 text-center lg:text-left">
-            O Portal Sempre Contador é uma plataforma exclusiva para contadores,
-            feita para administrar indicações de soluções Sempre e gerenciar a
-            validade dos certificados digitais de clientes.
-          </p>
-          <Link
-            className="bg-transparent border border-white font-bold px-20 py-5 text-white rounded"
-            href="https://scd.semprecertificadora.com.br/app_login/"
-            target="_blank"
-          >
-            Cadastre-se no portal
-          </Link>
-        </div>
-      </BackgroundContainer>
-      <Container newClasses="py-12 lg:py-24">
-        <div className="col-span-4 lg:col-span-5">
-          <h2 className="font-sans font-semibold mb-2 text-gray-600 uppercase text-center lg:text-left">
-            Seja um sempre parceiro
-          </h2>
-          <h1 className="font-sans font-bold mb-10 text-dark-blue text-5xl text-center lg:text-left">
-            Venha fazer parte da nossa equipe
-          </h1>
-          <p className="font-sans mb-10 text-gray-600 text-lg text-center lg:text-left">
+          <p className="font-sans mb-10 mt-6 text-gray-600 text-lg text-center lg:text-left">
             Seja nosso parceiro e aproveite nossos benefícios. Deixe seus dados
             que entraremos em contato.
           </p>
-          <p className="font-sans font-bold mb-4 text-gray-600 text-lg text-center lg:text-left">
-            Acompanhe nas redes sociais
-          </p>
-          <ul className="flex space-x-4 justify-center lg:justify-start">
-            <li>
-              <Link
-                href="https://www.facebook.com/sempretecnologia/"
-                target="_blank"
-              >
-                <FontAwesomeIcon
-                  className="h-6 text-custom-orange"
-                  icon={faFacebookSquare}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.linkedin.com/company/sempre-tecnologia/"
-                target="_blank"
-              >
-                <FontAwesomeIcon
-                  className="h-6 text-custom-orange"
-                  icon={faLinkedin}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.instagram.com/sempretecnologia/"
-                target="_blank"
-              >
-                <FontAwesomeIcon
-                  className="h-6 text-custom-orange"
-                  icon={faInstagram}
-                />
-              </Link>
-            </li>
-          </ul>
+        </div>
+        <div className="col-span-4 lg:col-span-6">
+          <Image
+            alt="Portal Sempre Contador"
+            height={155}
+            width={470}
+            quality={100}
+            src="/img-ficou-interessado-top.png"
+          />
+        </div>
+        <div className="col-span-4 lg:col-span-6">
+          <Image
+            alt="Portal Sempre Contador"
+            height={674}
+            width={466}
+            quality={100}
+            src="/img-ficou-interessado-esq.png"
+          />
         </div>
         <div className="col-span-4 lg:col-span-6 lg:col-end-13">
+          <Title
+            appearance="h1"
+            className="mb-4"
+            color={neutralDark[600]}
+            extra
+          >
+            Ficou interessado?
+          </Title>
+          <Text appearance="p3" className="mb-8" color={neutralDark[100]}>
+            Temos vários benefícios exclusivos especialmente para a sua
+            necessidade. Venha ser um parceiro!
+          </Text>
           <ContactForm />
         </div>
+        {/* </div> */}
       </Container>
     </main>
   );
