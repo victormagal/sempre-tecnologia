@@ -2,7 +2,13 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './page.module.css';
-import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
+import {
+  creamAssistant,
+  neutralDark,
+  neutralLight,
+  neutralMid,
+  red
+} from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
 import { CardFeature, ContactForm } from '../components/Elements';
 import { Container, HeroPage, ModalForm } from '../components/Foundation';
@@ -21,7 +27,7 @@ export default function Contador() {
         uri="/bg-hero-contadores.png"
         heroImage="/contador-subheader.png"
       />
-      <Container>
+      <Container bgColor={neutralLight[200]}>
         <div className="col-span-6 col-start-4 my-16 text-center">
           <Overline appearance="o1" color={red[700]}>
             Parceria para contadores
@@ -66,8 +72,7 @@ export default function Contador() {
           </button>
         </div> */}
       </Container>
-
-      <Container newClasses="border-b pb-16">
+      <Container bgColor={neutralLight[200]} newClasses="border-b pb-16">
         <CardFeature
           third={true}
           bgColor={neutralLight[100]}
@@ -132,41 +137,42 @@ export default function Contador() {
           QUERO SER UM PARCEIRO
         </button>
       </Container>
-
-      <Container newClasses="py-12 lg:py-24 col-span-12">
-        {/* <div className="col-span-12 bg-[#EEECE6]"> */}
-        <div className="col-span-4 lg:col-span-5">
+      <Container
+        bgContainer={creamAssistant[200]}
+        newClasses="flex items-center rounded-2xl"
+      >
+        <div className="col-span-6 col-start-2">
           <Image
             alt="Portal Sempre Contador"
             height={85}
             width={288}
-            quality={100}
             src="/logo-portal-sempre-contador.png"
           />
-          <p className="font-sans mb-10 mt-6 text-gray-600 text-lg text-center lg:text-left">
+          <Text appearance="p1" color={neutralDark[100]}>
             Seja nosso parceiro e aproveite nossos benefícios. Deixe seus dados
             que entraremos em contato.
-          </p>
+          </Text>
         </div>
-        <div className="col-span-4 lg:col-span-6">
+        <div className="col-end-12 col-span-4">
           <Image
             alt="Portal Sempre Contador"
-            height={155}
+            height={373}
             width={470}
             quality={100}
-            src="/img-ficou-interessado-top.png"
+            src="/avatar-portal-sempre-contador.png"
           />
         </div>
-        <div className="col-span-4 lg:col-span-6">
+      </Container>
+      <Container>
+        <div className="col-span-5 col-start-2">
           <Image
             alt="Portal Sempre Contador"
             height={674}
             width={466}
-            quality={100}
             src="/img-ficou-interessado-esq.png"
           />
         </div>
-        <div className="col-span-4 lg:col-span-6 lg:col-end-13">
+        <div className="col-span-5 col-end-12">
           <Title
             appearance="h1"
             className="mb-4"
@@ -181,7 +187,6 @@ export default function Contador() {
           </Text>
           <ContactForm />
         </div>
-        {/* </div> */}
       </Container>
     </main>
   );
