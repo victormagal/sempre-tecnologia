@@ -187,16 +187,16 @@ export default function Contador() {
             src="/img-ficou-interessado-esq.png"
           />
         </div>
-        <div className="col-span-5 col-end-12 mt-24">
+        <div className="col-span-5 mt-24">
           <Title
-            appearance="h1"
+            appearance="h2"
             className="mb-4"
             color={neutralDark[600]}
             extra
           >
             Ficou interessado?
           </Title>
-          <Text appearance="p3" className="mb-8" color={neutralDark[100]}>
+          <Text appearance="p4" className="mb-8" color={neutralDark[100]}>
             Temos vários benefícios exclusivos especialmente para a sua
             necessidade. Venha ser um parceiro!
           </Text>
