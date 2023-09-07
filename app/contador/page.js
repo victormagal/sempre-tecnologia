@@ -1,14 +1,17 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './page.module.css';
 import {
   creamAssistant,
+  emissor,
   neutralDark,
   neutralLight,
   neutralMid,
   red
 } from '../base/Colors';
+import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { CardFeature, ContactForm } from '../components/Elements';
 import { Container, HeroPage, ModalForm } from '../components/Foundation';
@@ -143,15 +146,31 @@ export default function Contador() {
       >
         <div className="col-span-6 col-start-2">
           <Image
+            className="mb-6"
             alt="Portal Sempre Contador"
             height={85}
             width={288}
             src="/logo-portal-sempre-contador.png"
           />
-          <Text appearance="p1" color={neutralDark[100]}>
-            Seja nosso parceiro e aproveite nossos benefícios. Deixe seus dados
-            que entraremos em contato.
+          <Text className="mb-6" appearance="p1" color={neutralDark[100]}>
+            Você já é um parceiro? Acesse o Portal Sempre Contador e cadastre-se
+            par receber vantagens exclusivas.
           </Text>
+          <Link href="/">
+            <button
+              className="flex p-4 rounded-md space-x-3"
+              style={{ background: emissor[500] }}
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Acessar plataforma
+              </Text>
+              <SolidIcon
+                icon="faChevronRight"
+                iconColor={neutralLight[100]}
+                newClasses="h-4 mt-0.5"
+              />
+            </button>
+          </Link>
         </div>
         <div className="col-end-12 col-span-4">
           <Image
@@ -164,7 +183,7 @@ export default function Contador() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-5 col-start-2">
+        <div className="col-span-5 col-start-2 mt-24">
           <Image
             alt="Portal Sempre Contador"
             height={674}
@@ -172,7 +191,7 @@ export default function Contador() {
             src="/img-ficou-interessado-esq.png"
           />
         </div>
-        <div className="col-span-5 col-end-12">
+        <div className="col-span-5 col-end-12 mt-24">
           <Title
             appearance="h1"
             className="mb-4"
