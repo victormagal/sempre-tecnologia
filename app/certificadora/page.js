@@ -1,14 +1,21 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import RegularIcon from '../base/RegularIcon';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { CardFeature } from '../components/Elements';
 import { Container, HeroPage, Testimonies } from '../components/Foundation';
+import CertificadoPF from './CertificadoPF';
+import CertificadoPJ from './CertificadoPJ';
+import { doubts } from './data';
+import Doubts from './Doubts';
 
 export default function Certificadora() {
+  const [showPF, setShowPF] = useState(true);
+
   return (
     <main className="pt-24">
       <HeroPage
@@ -45,7 +52,7 @@ export default function Certificadora() {
           />
         </div>
       </HeroPage>
-      <Container newClasses="mb-16 mt-36">
+      <Container newClasses="my-16">
         <div className="col-span-6 col-start-4 flex flex-col items-center space-y-4">
           <Image
             alt="Certificado Digital - Emita o seu de onde estiver"
@@ -61,6 +68,49 @@ export default function Certificadora() {
           </Title>
         </div>
       </Container>
+      <Container newClasses="pb-16">
+        <nav className="col-span-4 col-start-5 flex justify-center">
+          <ul
+            className="border flex p-2 rounded space-x-4"
+            style={{
+              background: neutralLight[200],
+              borderColor: neutralLight[400]
+            }}
+          >
+            <li
+              className={`cursor-pointer ${
+                showPF && 'drop-shadow'
+              } py-4 px-8 rounded`}
+              onClick={() => setShowPF(true)}
+              style={{ background: showPF ? neutralLight[100] : 'transparent' }}
+            >
+              <Title
+                appearance="h7"
+                color={showPF ? neutralDark[500] : neutralMid[400]}
+              >
+                Para você
+              </Title>
+            </li>
+            <li
+              className={`cursor-pointer ${
+                !showPF && 'drop-shadow'
+              } py-4 px-8 rounded`}
+              onClick={() => setShowPF(false)}
+              style={{
+                background: !showPF ? neutralLight[100] : 'transparent'
+              }}
+            >
+              <Title
+                appearance="h7"
+                color={!showPF ? neutralDark[500] : neutralMid[400]}
+              >
+                Para sua empresa
+              </Title>
+            </li>
+          </ul>
+        </nav>
+      </Container>
+      {showPF ? <CertificadoPF /> : <CertificadoPJ />}
       <Container newClasses="border-b border-t py-12">
         <div className="col-span-12 flex justify-between px-16">
           <div className="flex flex-col justify-center items-center">
@@ -268,6 +318,11 @@ export default function Certificadora() {
           </li>
         </ul>
       </Container>
+      <Doubts
+        doubts={doubts}
+        theme="#C48E39"
+        title="Tire suas dúvidas sobre Sempre Distribuidor"
+      />
     </main>
   );
 }
