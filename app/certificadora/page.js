@@ -6,11 +6,45 @@ import RegularIcon from '../base/RegularIcon';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { CardFeature } from '../components/Elements';
-import { Container, Testimonies } from '../components/Foundation';
+import { Container, HeroPage, Testimonies } from '../components/Foundation';
 
 export default function Certificadora() {
   return (
-    <main>
+    <main className="pt-24">
+      <HeroPage
+        endGradient="#1D3E89"
+        gradient={true}
+        initGradient="#3A1078"
+        newClasses="items-center"
+      >
+        <div className="col-span-5 flex flex-col space-y-10">
+          <Title appearance="h1" color={neutralLight[100]} extra>
+            Certificado Digital: adquira um perfeito para você.
+          </Title>
+          <Text appearance="p3" color={neutralLight[100]}>
+            Com a comodidade e segurança que você merece sem sair de casa.
+          </Text>
+          <Link href="/">
+            <button
+              className="py-4 px-8 rounded"
+              style={{ background: red[1000] }}
+              type="button"
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Adquirir o meu
+              </Text>
+            </button>
+          </Link>
+        </div>
+        <div className="col-end-13 col-span-6 flex justify-end">
+          <Image
+            alt="Certificado Digital - Emita o seu de onde estiver"
+            height={606}
+            src="/avatar-certificadora.png"
+            width={539}
+          />
+        </div>
+      </HeroPage>
       <Container newClasses="mb-16 mt-36">
         <div className="col-span-6 col-start-4 flex flex-col items-center space-y-4">
           <Image

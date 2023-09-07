@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import styles from './page.module.css';
 import {
   creamAssistant,
   emissor,
@@ -20,27 +19,44 @@ export default function Contador() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <main>
+    <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      <HeroPage
-        arrow={false}
-        cta={false}
-        title="Programa de parceria para Contadores"
-        description="Conheça nosso programa de parceria para Contadores e aproveite as vantagens exclusivas."
-        uri="/bg-hero-contadores.png"
-        heroImage="/contador-subheader.png"
-      />
-      <Container bgColor={neutralLight[200]}>
-        <div className="col-span-6 col-start-4 my-16 text-center">
+      <HeroPage bgColor={red[1100]} gradient={false}>
+        <div className="col-span-5 flex flex-col space-y-10">
+          <Title appearance="h1" color={neutralLight[100]} extra>
+            Programa de parceria com contadores
+          </Title>
+          <Text appearance="p3" color={neutralLight[100]}>
+            Conheça nosso programa de parceria para Contadores e tenha vantagens
+            exclusivas com a Sempre Tecnologia!
+          </Text>
+          <Link href="/">
+            <button
+              className="py-4 px-8 rounded"
+              style={{ background: neutralLight[100] }}
+              type="button"
+            >
+              <Text appearance="p4" color={neutralDark[500]}>
+                Quero ser um parceiro
+              </Text>
+            </button>
+          </Link>
+        </div>
+        <div className="col-end-13 col-span-6 flex justify-end py-16">
+          <Image
+            alt="Certificado Digital - Emita o seu de onde estiver"
+            height={352}
+            src="/hero-contadores.png"
+            width={560}
+          />
+        </div>
+      </HeroPage>
+      <Container bgColor={neutralLight[200]} newClasses="py-16">
+        <div className="col-span-6 col-start-4 flex flex-col space-y-6 text-center">
           <Overline appearance="o1" color={red[700]}>
             Parceria para contadores
           </Overline>
-          <Title
-            appearance="h2"
-            className="mb-4"
-            color={neutralDark[500]}
-            extra
-          >
+          <Title appearance="h2" color={neutralDark[500]} extra>
             Simplifique sua rotina e ganhe tempo e produtividade
           </Title>
           <Text appearance="p1" color={neutralMid[500]}>
@@ -49,33 +65,8 @@ export default function Contador() {
             para se dedicar aos seus clientes.
           </Text>
         </div>
-        {/* <div
-          className={`${styles.gradientBlue} col-span-4 lg:col-span-6 lg:col-end-13 flex flex-col items-center lg:items-start justify-center p-12 lg:p-16`}
-        >
-          <Image
-            alt="Sempre mensalidade"
-            height={18}
-            quality={100}
-            src="/icon-white.svg"
-            width={45}
-          />
-          <h1 className="font-serif font-bold mt-6 text-white text-3xl text-center lg:text-left">
-            Ficou interessado?
-          </h1>
-          <p className="font-sans mt-6 text-white text-center lg:text-left">
-            Temos vários benefícios exclusivos para contadores parceiros. Venha
-            ser um Contador Sempre Tecnologia.
-          </p>
-          <button
-            className={`${styles.gradientYellow} font-sans font-bold mt-6 py-4 rounded text-sm text-white w-4/5`}
-            onClick={() => setOpenModal(true)}
-            type="button"
-          >
-            QUERO SER PARCEIRO
-          </button>
-        </div> */}
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="border-b pb-16">
+      <Container bgColor={neutralLight[200]} newClasses="pb-16">
         <CardFeature
           third={true}
           bgColor={neutralLight[100]}
@@ -130,15 +121,20 @@ export default function Contador() {
           iconSize="h-10"
           title="Soluções web"
         />
-      </Container>
-      <Container>
-        <button
-          className={`${styles.red} font-sans mt-6 py-4 text-white`}
-          onClick={() => setOpenModal(true)}
-          type="button"
-        >
-          QUERO SER UM PARCEIRO
-        </button>
+        <div className="col-span-2 col-start-6">
+          <Link href="/">
+            <button
+              className="py-4 rounded w-full"
+              onClick={() => setOpenModal(true)}
+              style={{ background: red[1000] }}
+              type="button"
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Quero ser um parceiro
+              </Text>
+            </button>
+          </Link>
+        </div>
       </Container>
       <Container
         bgContainer={creamAssistant[200]}

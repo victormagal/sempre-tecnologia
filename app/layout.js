@@ -49,13 +49,13 @@ export default function RootLayout({ children }) {
         <ApolloProvider client={client}>
           <StyledComponentsRegistry>
             <Analytics />
-            <div className="flex flex-col h-screen">
+            <main>
               <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
               <Header />
               {children}
               <Locations />
               <Footer />
-            </div>
+            </main>
           </StyledComponentsRegistry>
         </ApolloProvider>
       </body>
