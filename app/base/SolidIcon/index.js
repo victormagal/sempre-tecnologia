@@ -7,7 +7,9 @@ export default function SolidIcon({ icon, iconColor, newClasses }) {
     faChevronLeft: Icon.faChevronLeft,
     faChevronRight: Icon.faChevronRight,
     faDownload: Icon.faDownload,
+    faFaceSmile: Icon.faFaceSmile,
     faLocationDot: Icon.faLocationDot,
+    faMinus: Icon.faMinus,
     faPhone: Icon.faPhone,
     faStar: Icon.faStar
   };
