@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
       <Container bgColor={neutralLight[200]} newClasses="border-b mt-12 py-12">
-        <div className="col-span-4">
+        <div className="lg:col-span-4 col-span-12">
           <Link href="/">
             <Image
               alt="Sempre Tecnologia"
@@ -52,7 +52,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-2">
+        <div className=" col-span-6 lg:col-span-2">
           <ul className="flex flex-col space-y-2">
             <li>
               <Title appearance="h8" color={neutralMid[500]}>
@@ -89,7 +89,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-2">
+        <div className=" col-span-6 lg:col-span-2">
           <ul className="flex flex-col space-y-2">
             <li>
               <Title appearance="h8" color={neutralMid[500]}>
@@ -140,7 +140,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-2">
+        <div className=" col-span-6 lg:col-span-2">
           <ul className="flex flex-col space-y-2">
             <li>
               <Title appearance="h8" color={neutralMid[500]}>
@@ -163,7 +163,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-2">
+        <div className=" col-span-6 lg:col-span-2">
           <ul className="flex flex-col space-y-2">
             <li>
               <Title appearance="h8" color={neutralMid[500]}>
@@ -202,12 +202,12 @@ export default function Footer() {
         </div>
       </Container>
       <Container bgColor={neutralLight[200]} newClasses="py-8">
-        <div className="col-span-5">
+        <div className="col-span-12 lg:col-span-5 order-last lg:order-none text-left">
           <Text appearance="p3" color={neutralMid[500]}>
             © 2023 Sempre Tecnologia. Todos os direitos reservados.
           </Text>
         </div>
-        <ul className="col-end-13 col-span-3 flex justify-end space-x-4">
+        <ul className="col-span-12 lg:col-end-13 lg:col-span-3 flex justify-start lg:justify-end space-x-4">
           <li>
             <Link href="/">
               <Text appearance="p3" color={neutralMid[500]}>
