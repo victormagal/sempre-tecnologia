@@ -21,8 +21,8 @@ export default function Contador() {
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      <HeroPage bgColor={red[1100]} gradient={false}>
-        <div className="col-span-5 flex flex-col space-y-10">
+      <HeroPage bgColor={red[1100]} gradient={false} className="py-10">
+        <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10">
           <Title appearance="h1" color={neutralLight[100]} extra>
             Programa de parceria com contadores
           </Title>
@@ -32,7 +32,7 @@ export default function Contador() {
           </Text>
           <Link href="/">
             <button
-              className="py-4 px-8 rounded"
+              className="w-full lg:w-auto py-4 px-8 rounded"
               style={{ background: neutralLight[100] }}
               type="button"
             >
@@ -42,8 +42,9 @@ export default function Contador() {
             </button>
           </Link>
         </div>
-        <div className="col-end-13 col-span-6 flex justify-end py-16">
+        <div className="flex lg:col-end-13 lg:col-span-6 lg:justify-end md:py-16">
           <Image
+            className="h-screen-sm max-w-screen-lg  "
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={352}
             src="/hero-contadores.png"
@@ -52,7 +53,7 @@ export default function Contador() {
         </div>
       </HeroPage>
       <Container bgColor={neutralLight[200]} newClasses="py-16">
-        <div className="col-span-6 col-start-4 flex flex-col space-y-6 text-center">
+        <div className="col-span-12 lg:col-span-6 lg:col-start-4 flex flex-col md:space-y-6 text-center">
           <Overline appearance="o1" color={red[700]}>
             Parceria para contadores
           </Overline>
@@ -66,8 +67,9 @@ export default function Contador() {
           </Text>
         </div>
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="pb-16">
+      <Container bgColor={neutralLight[200]} newClasses="pb-16 col-span-12">
         <CardFeature
+          className="col-span-12"
           third={true}
           bgColor={neutralLight[100]}
           description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
@@ -121,10 +123,10 @@ export default function Contador() {
           iconSize="h-10"
           title="Soluções web"
         />
-        <div className="col-span-2 col-start-6">
+        <div className="col-span-12 lg:col-span-2 lg:col-start-6">
           <Link href="/">
             <button
-              className="py-4 rounded w-full"
+              className="py-4 rounded-md w-full"
               onClick={() => setOpenModal(true)}
               style={{ background: red[1000] }}
               type="button"
@@ -138,11 +140,11 @@ export default function Contador() {
       </Container>
       <Container
         bgContainer={creamAssistant[200]}
-        newClasses="flex items-center rounded-2xl"
+        newClasses="flex rounded-2xl w-full lg:py-auto py-8 pb-0 w-auto"
       >
-        <div className="col-span-6 col-start-2">
+        <div className="col-span-12 lg:col-span-6 lg:col-start-2">
           <Image
-            className="mb-6"
+            className="mb-6 w-48 lg:w-auto"
             alt="Portal Sempre Contador"
             height={85}
             width={288}
@@ -154,7 +156,7 @@ export default function Contador() {
           </Text>
           <Link href="/">
             <button
-              className="flex p-4 rounded-md space-x-3"
+              className="flex p-4 rounded-md space-x-3 w-full lg:w-auto justify-center"
               style={{ background: emissor[500] }}
             >
               <Text appearance="p4" color={neutralLight[100]}>
@@ -168,7 +170,7 @@ export default function Contador() {
             </button>
           </Link>
         </div>
-        <div className="col-end-12 col-span-4">
+        <div className="col-span-12 lg:col-end-12 lg:col-span-4">
           <Image
             alt="Portal Sempre Contador"
             height={373}
@@ -179,15 +181,16 @@ export default function Contador() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-5 col-start-2 mt-24">
+        <div className="col-span-12  lg:col-span-5 lg:col-start-2 mt-24 lg:order-first order-last">
           <Image
+            className=""
             alt="Portal Sempre Contador"
             height={674}
             width={466}
             src="/img-ficou-interessado-esq.png"
           />
         </div>
-        <div className="col-span-5 mt-24">
+        <div className="lg:col-span-5 col-span-12 mt-24">
           <Title
             appearance="h2"
             className="mb-4"
