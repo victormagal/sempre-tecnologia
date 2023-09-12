@@ -43,7 +43,7 @@ export default function HeroPage({
                 height={35}
                 quality={100}
                 src={iconSource}
-                width={196}
+                width={300}
               />
             )}
             {title && (
