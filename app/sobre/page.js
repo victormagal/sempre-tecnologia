@@ -8,8 +8,8 @@ import { Container } from '../components/Foundation';
 
 export default function Sobre() {
   return (
-    <main>
-      <Container newClasses="mb-16 mt-36">
+    <main className="pt-36">
+      <Container newClasses="mb-16">
         <div className="col-span-4">
           <Overline appearance="o1" color={red[700]}>
             Quem somos
