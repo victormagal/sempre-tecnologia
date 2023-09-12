@@ -2,6 +2,7 @@
 import { neutralDark, neutralLight, neutralMid } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
+import FormSteps from './FormSteps';
 
 export default function Checkout() {
   return (
@@ -68,6 +69,7 @@ export default function Checkout() {
           <Title appearance="h3" color={neutralDark[500]} extra>
             Dados do Contato
           </Title>
+          <FormSteps />
         </div>
       </Container>
     </main>
