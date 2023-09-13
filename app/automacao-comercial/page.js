@@ -19,11 +19,11 @@ export default function AutomacaoComercial() {
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage
         arrow={false}
-        cta={true}
-        description="Para ajudar a organizar sua empresa"
+        cta={false}
         iconSource="/icon-automacao-comercial.svg"
-        title="Soluções práticas"
+        title="Aproveite desconto inicial de 30% OFF"
         uri="/bg-automacao-comercial.png"
+        whatsapp={true}
       />
       <Container newClasses="py-12 lg:py-24">
         <div className="col-span-4 lg:col-span-6">

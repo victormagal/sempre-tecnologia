@@ -34,11 +34,11 @@ export default function SempreMensalidade() {
       />
       <HeroPage
         arrow={false}
-        cta={true}
-        description="Empresário e gestor que tem recebíveis recorrentes, nós temos funcionalidades que agilizarão seu dia a dia."
+        cta={false}
         iconSource="/icon-sempre-mensalidade.svg"
-        title="Gestão de mensalidades"
+        title="Aproveite desconto inicial de 30% OFF"
         uri="/bg-sempre-mensalidade.png"
+        whatsapp={true}
       />
       <Container newClasses="py-12 lg:py-24">
         <div

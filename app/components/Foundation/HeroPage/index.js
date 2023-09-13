@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './styles.module.css';
 import Container from '../Container';
@@ -15,7 +16,8 @@ export default function HeroPage({
   mini,
   theme,
   title,
-  uri
+  uri,
+  whatsapp
 }) {
   const [openModal, setOpenModal] = useState(false);
 
@@ -36,7 +38,7 @@ export default function HeroPage({
           />
         </div>
         <Container newClasses="relative z-10">
-          <div className="col-span-4 lg:col-span-7 flex flex-col space-y-6 items-center lg:items-start mt-20">
+          <div className="col-span-4 lg:col-span-6 flex flex-col space-y-6 items-center lg:items-start mt-20">
             {iconSource && (
               <Image
                 alt="Sistema"
@@ -47,18 +49,16 @@ export default function HeroPage({
               />
             )}
             {title && (
-              <h1 className="font-serif font-semibold text-white text-3xl lg:text-6xl text-center lg:text-left">
+              <h1 className="drop-shadow font-serif font-semibold text-white text-3xl lg:text-6xl text-center lg:text-left">
                 {title}
               </h1>
             )}
-          </div>
-          {description && (
-            <main className="col-span-4 lg:col-span-6">
+            {description && (
               <h2 className="font-serif text-white text-xl text-center lg:text-left">
                 {description}
               </h2>
-            </main>
-          )}
+            )}
+          </div>
           <footer className="col-span-4 flex justify-center lg:justify-start lg:col-span-7">
             {cta && (
               <button
@@ -70,6 +70,20 @@ export default function HeroPage({
               >
                 Contrate Agora
               </button>
+            )}
+            {whatsapp && (
+              <Link href="https://api.whatsapp.com/send?phone=556132462673&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20os%20sistemas%20e%20a%20promo%C3%A7%C3%A3o%20do%20M%C3%AAs%20do%20Cliente!%20">
+                <button
+                  className={`${
+                    theme === 'blue'
+                      ? styles.gradientBlue
+                      : styles.gradientYellow
+                  } font-bold px-14 py-3 text-sm text-white rounded`}
+                  type="button"
+                >
+                  Contrate Agora
+                </button>
+              </Link>
             )}
             {arrow && (
               <FontAwesomeIcon
