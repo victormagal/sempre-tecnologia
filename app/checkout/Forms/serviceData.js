@@ -1,0 +1,290 @@
+import { useState } from 'react';
+import { neutralDark, neutralLight, neutralMid, red } from '@/app/base/Colors';
+import RegularIcon from '@/app/base/RegularIcon';
+import SolidIcon from '@/app/base/SolidIcon';
+import { Text, Title } from '@/app/base/Typography';
+import { Container } from '@/app/components/Foundation';
+
+export default function ServiceData() {
+  const [service, setService] = useState(0);
+
+  return (
+    <Container>
+      <div className="border col-span-10 col-start-2 flex flex-col my-6 py-8 px-12 rounded space-y-6">
+        <Title appearance="h3" color={neutralDark[500]} extra>
+          Modelo de atendimento
+        </Title>
+        <div className="flex space-x-16 w-full">
+          <ul className="flex flex-col space-y-4 w-2/5">
+            <li
+              className="border cursor-pointer flex space-x-6 p-6 rounded"
+              onClick={() => setService(1)}
+              style={{
+                borderColor: service === 1 ? red[600] : neutralLight[400]
+              }}
+            >
+              <div
+                className="h-8 flex items-center justify-center rounded-full w-10"
+                style={{ background: red[100] }}
+              >
+                <RegularIcon
+                  icon="faCirclePlay"
+                  iconColor={red[900]}
+                  newClasses="h-4"
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <Title appearance="h6" color={neutralDark[500]}>
+                  Videoconferência
+                </Title>
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Fale com a nossa equipe por video com toda a comodidade.
+                </Text>
+              </div>
+              <RegularIcon
+                icon={`${service === 1 ? 'faCircleDot' : 'faCircle'}`}
+                iconColor={service === 1 ? red[600] : neutralLight[500]}
+                newClasses="h-6"
+              />
+            </li>
+            <li
+              className="border cursor-pointer flex space-x-6 p-6 rounded"
+              onClick={() => setService(2)}
+              style={{
+                borderColor: service === 2 ? red[600] : neutralLight[400]
+              }}
+            >
+              <div
+                className="h-8 flex items-center justify-center rounded-full w-10"
+                style={{ background: red[100] }}
+              >
+                <RegularIcon
+                  icon="faUser"
+                  iconColor={red[900]}
+                  newClasses="h-4"
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <Title appearance="h6" color={neutralDark[500]}>
+                  Presencial
+                </Title>
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Seja atendido em uma de nossas filiais de atendimento.
+                </Text>
+              </div>
+              <RegularIcon
+                icon={`${service === 2 ? 'faCircleDot' : 'faCircle'}`}
+                iconColor={service === 2 ? red[600] : neutralLight[500]}
+                newClasses="h-6"
+              />
+            </li>
+            <li
+              className="border cursor-pointer flex space-x-6 p-6 rounded"
+              onClick={() => setService(3)}
+              style={{
+                borderColor: service === 3 ? red[600] : neutralLight[400]
+              }}
+            >
+              <div
+                className="h-8 flex items-center justify-center rounded-full w-10"
+                style={{ background: red[100] }}
+              >
+                <RegularIcon
+                  icon="faUser"
+                  iconColor={red[900]}
+                  newClasses="h-4"
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <Title appearance="h6" color={neutralDark[500]}>
+                  Express
+                </Title>
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Não se preocupe! Para sua comodidade, nós vamos até você.
+                </Text>
+              </div>
+              <RegularIcon
+                icon={`${service === 3 ? 'faCircleDot' : 'faCircle'}`}
+                iconColor={service === 3 ? red[600] : neutralLight[500]}
+                newClasses="h-6"
+              />
+            </li>
+          </ul>
+          <div className="w-3/5">
+            {service === 1 && (
+              <ul className="flex flex-col space-y-4 list-disc">
+                <li>
+                  <Text appearance="p3" color={neutralMid[500]}>
+                    <b>Observação:</b> Para atendimento via videoconferência é
+                    necessário ter computador, câmera e conexão com internet de
+                    boa qualidade.
+                  </Text>
+                </li>
+                <li>
+                  <Text appearance="p3" color={neutralMid[500]}>
+                    <b>Atenção:</b> Um de nossos especialistas entrará em
+                    contato após a confirmação de pagamento.
+                  </Text>
+                </li>
+              </ul>
+            )}
+            {service === 2 && (
+              <ul className="flex mb-6 space-x-6">
+                <li className="flex-1">
+                  <Text
+                    appearance="p4"
+                    className="mb-2"
+                    color={neutralDark[500]}
+                  >
+                    Estado
+                  </Text>
+                  <div className="flex items-center">
+                    <select
+                      className="appearance-none text-sm p-3 rounded w-full"
+                      // onClick={getCities}
+                      style={{
+                        background: neutralLight[200],
+                        border: `1px solid ${neutralLight[400]}`,
+                        color: neutralMid[500]
+                      }}
+                    >
+                      <option defaultValue="default">Selecione</option>
+                      {/* {states.map(({ label, value }) => (
+                                <option key={value} value={value}>
+                                  {label}
+                                </option>
+                              ))} */}
+                    </select>
+                    <SolidIcon
+                      icon="faChevronDown"
+                      iconColor={neutralMid[500]}
+                      newClasses="h-4 -ml-10"
+                    />
+                  </div>
+                </li>
+                <li className="flex-1">
+                  <Text
+                    appearance="p4"
+                    className="mb-2"
+                    color={neutralDark[500]}
+                  >
+                    Unidade
+                  </Text>
+                  <div className="flex items-center">
+                    <select
+                      className="appearance-none text-sm p-3 rounded w-full"
+                      // onChange={getDetails}
+                      style={{
+                        background: neutralLight[200],
+                        border: `1px solid ${neutralLight[400]}`,
+                        color: neutralMid[500]
+                      }}
+                    >
+                      <option defaultValue="default">Selecione</option>
+                      {/* {stores.map(({ id, map, name, phones, whatsapp }) => (
+                              <option
+                                data-location={map}
+                                data-phones={phones}
+                                data-whatsapp={whatsapp}
+                                key={id}
+                                value={name}
+                              >
+                                {name}
+                              </option>
+                            ))} */}
+                    </select>
+                    <SolidIcon
+                      icon="faChevronDown"
+                      iconColor={neutralMid[500]}
+                      newClasses="h-4 -ml-10"
+                    />
+                  </div>
+                </li>
+              </ul>
+            )}
+            {service === 3 && (
+              <>
+                <ul className="flex mb-6 space-x-6">
+                  <li className="flex-1">
+                    <Text
+                      appearance="p4"
+                      className="mb-2"
+                      color={neutralDark[500]}
+                    >
+                      Estado
+                    </Text>
+                    <div className="flex items-center">
+                      <select
+                        className="appearance-none text-sm p-3 rounded w-full"
+                        // onClick={getCities}
+                        style={{
+                          background: neutralLight[200],
+                          border: `1px solid ${neutralLight[400]}`,
+                          color: neutralMid[500]
+                        }}
+                      >
+                        <option defaultValue="default">Selecione</option>
+                        {/* {states.map(({ label, value }) => (
+                                    <option key={value} value={value}>
+                                      {label}
+                                    </option>
+                                  ))} */}
+                      </select>
+                      <SolidIcon
+                        icon="faChevronDown"
+                        iconColor={neutralMid[500]}
+                        newClasses="h-4 -ml-10"
+                      />
+                    </div>
+                  </li>
+                  <li className="flex-1">
+                    <Text
+                      appearance="p4"
+                      className="mb-2"
+                      color={neutralDark[500]}
+                    >
+                      Unidade
+                    </Text>
+                    <div className="flex items-center">
+                      <select
+                        className="appearance-none text-sm p-3 rounded w-full"
+                        // onChange={getDetails}
+                        style={{
+                          background: neutralLight[200],
+                          border: `1px solid ${neutralLight[400]}`,
+                          color: neutralMid[500]
+                        }}
+                      >
+                        <option defaultValue="default">Selecione</option>
+                        {/* {stores.map(({ id, map, name, phones, whatsapp }) => (
+                                  <option
+                                    data-location={map}
+                                    data-phones={phones}
+                                    data-whatsapp={whatsapp}
+                                    key={id}
+                                    value={name}
+                                  >
+                                    {name}
+                                  </option>
+                                ))} */}
+                      </select>
+                      <SolidIcon
+                        icon="faChevronDown"
+                        iconColor={neutralMid[500]}
+                        newClasses="h-4 -ml-10"
+                      />
+                    </div>
+                  </li>
+                </ul>
+                <Text appearance="p3" color={neutralMid[500]}>
+                  <b>Atenção:</b> Um de nossos especialistas entrará em contato
+                  após a confirmação de pagamento.
+                </Text>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </Container>
+  );
+}
