@@ -79,6 +79,20 @@ const getAllSlides = gql`
   }
 `;
 
+const getAllStates = gql`
+  query {
+    estados {
+      data {
+        id
+        attributes {
+          uf
+          label
+        }
+      }
+    }
+  }
+`;
+
 const getPost = gql`
   query ($slug: String!) {
     blogPosts(filters: { slug: { eq: $slug } }) {
@@ -141,6 +155,34 @@ const getPostsByCategory = gql`
   }
 `;
 
+const getStoriesByState = gql`
+  query ($state: String!) {
+    filiais(filters: { estado: { uf: { eq: $state } } }) {
+      data {
+        id
+        attributes {
+          label
+        }
+      }
+    }
+  }
+`;
+
+const getStoryDetails = gql`
+  query ($story: String!) {
+    filiais(filters: { label: { eq: $story } }) {
+      data {
+        attributes {
+          label
+          telefones
+          endereco
+          mapa
+        }
+      }
+    }
+  }
+`;
+
 const getTestimonies = gql`
   query {
     depoimentos {
@@ -160,7 +202,10 @@ export {
   getAllPosts,
   getAllCategories,
   getAllSlides,
+  getAllStates,
   getPost,
   getPostsByCategory,
+  getStoriesByState,
+  getStoryDetails,
   getTestimonies
 };
