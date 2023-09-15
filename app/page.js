@@ -43,28 +43,31 @@ export default function Home() {
         </div>
       </HeroPage>
 
-      <Container newClasses="py-16">
+      <Container
+        bgContainer={neutralDark[500]}
+        newClasses="flex rounded-2xl w-full lg:py-auto py-8 w-auto"
+      >
         <div className="col-span-4 flex flex-col items-center">
-          <h1 className="font-serif font-bold my-4 text-dark-blue text-7xl">
+          <h1 className="font-serif font-normal my-4 text-white text-5xl">
             97%
           </h1>
-          <h2 className="font-sans font-semibold text-soft-gray text-lg text-center w-1/2">
+          <h2 className="font-sans font-semibold text-soft-gray text-sm text-center w-1/2">
             Atendimento Pós-Venda
           </h2>
         </div>
         <div className="col-span-4 flex flex-col items-center">
-          <h1 className="font-serif font-bold my-4 text-dark-blue text-7xl">
+          <h1 className="font-serif font-normal my-4 text-white text-5xl">
             98%
           </h1>
-          <h2 className="font-sans font-semibold text-soft-gray text-lg text-center w-1/2">
+          <h2 className="font-sans font-semibold text-soft-gray text-sm text-center w-1/2">
             Atendimento Suporte Técnico a Sistemas
           </h2>
         </div>
         <div className="col-span-4 flex flex-col items-center">
-          <h1 className="font-serif font-bold my-4 text-dark-blue text-7xl">
+          <h1 className="font-serif font-normal my-4 text-white text-5xl">
             85%
           </h1>
-          <h2 className="font-sans font-semibold text-soft-gray text-lg text-center w-1/2">
+          <h2 className="font-sans font-semibold text-soft-gray text-sm text-center w-1/2">
             Atendimento Certificado Digital
           </h2>
         </div>
@@ -85,33 +88,37 @@ export default function Home() {
       </Container>
       <Container>{/* tabs */}</Container>
       <Container bgColor={neutralLight[100]}>
-        <div className="col-span-12 lg:col-span-5 lg:col-start-2 lg:mt-24 lg:mb-32 lg:order-first">
+        <div className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last">
           <video
-            className="rounded-xl"
+            className="rounded-xl flex-shrink overflow-auto h-[388px]"
             src="/sempre-exemplo.mp4"
-            height={324}
-            width={568}
+            height={388}
+            width={1283}
           />
         </div>
-        <div className="lg:col-span-5 col-span-12 lg:mt-24">
-          <Overline appearance="o1" className="my-6" color={red[700]}>
-            Quem somos
-          </Overline>
-          <Title
-            appearance="h3"
-            className="mb-6"
-            color={neutralDark[500]}
-            extra
-          >
-            Você conhece a Sempre Tecnologia?
-          </Title>
-          <Text appearance="p3" className="mb-6" color={neutralMid[500]}>
-            Somos uma empresa especializada em desenvolver sistemas com
-            tecnologia própria em plataforma web para nossos clientes. Já
-            estamos há mais de 12 anos no mercado. Possuímos uma estrutura ampla
-            e atendimento diferenciado para atender e dar suporte para micro,
-            pequenas e médias empresas.
-          </Text>
+        <div className="flex flex-col lg:flex-row items-center col-span-12 lg:mt-24">
+          <div className="lg:basis-1/2">
+            <Overline appearance="o1" className="mb-6" color={red[700]}>
+              Quem somos
+            </Overline>
+            <Title
+              appearance="h1"
+              newclassName="mb-6"
+              color={neutralDark[500]}
+              extra
+            >
+              Você conhece a Sempre Tecnologia?
+            </Title>
+          </div>
+          <div className="lg:basis-1/2 ">
+            <Text appearance="p3" className="mt-8 " color={neutralMid[500]}>
+              Somos uma empresa especializada em desenvolver sistemas com
+              tecnologia própria em plataforma web para nossos clientes. Já
+              estamos há mais de 12 anos no mercado. Possuímos uma estrutura
+              ampla e atendimento diferenciado para atender e dar suporte para
+              micro, pequenas e médias empresas.
+            </Text>
+          </div>
         </div>
       </Container>
 
@@ -187,10 +194,15 @@ export default function Home() {
       </Container>
       <Container
         bgContainer={neutralDark[500]}
-        newClasses="flex rounded-2xl w-full lg:py-auto py-8 pb-0 w-auto"
+        newClasses="flex rounded-2xl w-full lg:py-auto py-24 w-auto col-span-12"
       >
-        <div className="col-span-12 lg:col-span-6 lg:col-start-2">
-          <Title appearance="h2" color={neutralLight[100]} extra>
+        <div className="lg:col-start-4 col-span-6 text-center ">
+          <Title
+            appearance="h2"
+            className="mb-6"
+            color={neutralLight[100]}
+            extra
+          >
             Seja Sempre!
           </Title>
           <Text className="mb-6" appearance="p1" color={neutralMid[100]}>
@@ -199,7 +211,7 @@ export default function Home() {
           </Text>
           <Link href="/">
             <button
-              className="flex p-4 rounded-md space-x-3 w-full lg:w-auto justify-center"
+              className="flex p-4 rounded-md space-x-3 mx-auto w-full lg:w-auto justify-center mt-12"
               style={{ background: red[1000] }}
             >
               <Text appearance="p4" color={neutralLight[100]}>
