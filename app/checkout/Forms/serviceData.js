@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import {
   blue,
@@ -10,11 +11,21 @@ import RegularIcon from '@/app/base/RegularIcon';
 import SolidIcon from '@/app/base/SolidIcon';
 import { Text, Title } from '@/app/base/Typography';
 import { Container } from '@/app/components/Foundation';
+import {
+  getAllStates,
+  getStoriesByState,
+  getStoryDetails
+} from '@/app/graphql/queries';
+import { useLazyQuery } from '@apollo/client';
 import { Field, useFormikContext } from 'formik';
 
 export default function ServiceData() {
   const { errors, setFieldValue, values } = useFormikContext();
   const [service, setService] = useState(0);
+
+  const [getStates, { data: states }] = useLazyQuery(getAllStates);
+  const [getStories, { data: stories }] = useLazyQuery(getStoriesByState);
+  const [getDetails, { data: storyDetails }] = useLazyQuery(getStoryDetails);
 
   return (
     <Container>
@@ -86,6 +97,7 @@ export default function ServiceData() {
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
               onClick={() => {
+                getStates();
                 setService(2);
                 setFieldValue('tipo_atendimento', 'Presencial');
               }}
@@ -171,79 +183,137 @@ export default function ServiceData() {
               </ul>
             )}
             {service === 2 && (
-              <ul className="flex mb-6 space-x-6">
-                <li className="flex-1">
-                  <Text
-                    appearance="p4"
-                    className="mb-2"
-                    color={neutralDark[500]}
-                  >
-                    Estado
-                  </Text>
-                  <div className="flex items-center">
-                    <Field
-                      as="select"
-                      className="appearance-none border p-3 rounded text-sm w-full"
-                      // onClick={getCities}
-                      style={{
-                        background: neutralLight[200],
-                        borderColor: neutralLight[400],
-                        color: neutralMid[500]
-                      }}
+              <>
+                <ul className="flex mb-6 space-x-6">
+                  <li className="flex-1">
+                    <Text
+                      appearance="p4"
+                      className="mb-2"
+                      color={neutralDark[500]}
                     >
-                      <option defaultValue="default">Selecione</option>
-                      {/* {states.map(({ label, value }) => (
-                                <option key={value} value={value}>
-                                  {label}
-                                </option>
-                              ))} */}
-                    </Field>
-                    <SolidIcon
-                      icon="faChevronDown"
-                      iconColor={neutralMid[500]}
-                      newClasses="h-4 -ml-10"
-                    />
-                  </div>
-                </li>
-                <li className="flex-1">
-                  <Text
-                    appearance="p4"
-                    className="mb-2"
-                    color={neutralDark[500]}
-                  >
-                    Unidade
-                  </Text>
-                  <div className="flex items-center">
-                    <select
-                      className="appearance-none text-sm p-3 rounded w-full"
-                      // onChange={getDetails}
-                      style={{
-                        background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
-                        color: neutralMid[500]
-                      }}
+                      Estado
+                    </Text>
+                    <div className="flex items-center">
+                      <Field
+                        as="select"
+                        className="appearance-none border p-3 rounded text-sm w-full"
+                        onChange={(e) =>
+                          getStories({
+                            variables: {
+                              state: e.target.value
+                            }
+                          })
+                        }
+                        style={{
+                          background: neutralLight[200],
+                          borderColor: neutralLight[400],
+                          color: neutralMid[500]
+                        }}
+                      >
+                        <option defaultValue="default">Selecione</option>
+                        {states?.estados?.data?.map((estado) => (
+                          <option
+                            key={estado?.id}
+                            value={estado?.attributes?.uf}
+                          >
+                            {estado?.attributes?.label}
+                          </option>
+                        ))}
+                      </Field>
+                      <SolidIcon
+                        icon="faChevronDown"
+                        iconColor={neutralMid[500]}
+                        newClasses="h-4 -ml-10"
+                      />
+                    </div>
+                  </li>
+                  <li className="flex-1">
+                    <Text
+                      appearance="p4"
+                      className="mb-2"
+                      color={neutralDark[500]}
                     >
-                      <option defaultValue="default">Selecione</option>
-                      {/* {stores.map(({ id, map, name, phones, whatsapp }) => (
-                              <option
-                                data-location={map}
-                                data-phones={phones}
-                                data-whatsapp={whatsapp}
-                                key={id}
-                                value={name}
-                              >
-                                {name}
-                              </option>
-                            ))} */}
-                    </select>
-                    <SolidIcon
-                      icon="faChevronDown"
-                      iconColor={neutralMid[500]}
-                      newClasses="h-4 -ml-10"
-                    />
+                      Unidade
+                    </Text>
+                    <div className="flex items-center">
+                      <select
+                        className="appearance-none text-sm p-3 rounded w-full"
+                        onChange={(e) =>
+                          getDetails({
+                            variables: {
+                              story: e.target.value
+                            }
+                          })
+                        }
+                        style={{
+                          background: neutralLight[200],
+                          border: `1px solid ${neutralLight[400]}`,
+                          color: neutralMid[500]
+                        }}
+                      >
+                        <option defaultValue="default">Selecione</option>
+                        {stories?.filiais?.data?.map((filial) => (
+                          <option
+                            key={filial?.id}
+                            value={filial?.attributes?.label}
+                          >
+                            {filial?.attributes?.label}
+                          </option>
+                        ))}
+                      </select>
+                      <SolidIcon
+                        icon="faChevronDown"
+                        iconColor={neutralMid[500]}
+                        newClasses="h-4 -ml-10"
+                      />
+                    </div>
+                  </li>
+                </ul>
+                {storyDetails && (
+                  <div
+                    className="flex p-8 rounded space-x-6"
+                    style={{ backgroundColor: neutralLight[200] }}
+                  >
+                    <div className="flex flex-col space-y-4">
+                      <Title appearance="h5" color={neutralDark[500]}>
+                        Loja Sempre Tecnologia{' '}
+                        {storyDetails?.filiais?.data[0]?.attributes?.label}
+                      </Title>
+                      <Text appearance="p4" color={neutralDark[500]}>
+                        {storyDetails?.filiais?.data[0]?.attributes?.telefones}
+                      </Text>
+                      <Text appearance="p3" color={neutralMid[500]}>
+                        {storyDetails?.filiais?.data[0]?.attributes?.endereco}
+                      </Text>
+                      <Link
+                        href={storyDetails?.filiais?.data[0]?.attributes?.mapa}
+                        target="_blank"
+                      >
+                        <button
+                          className="flex items-center space-x-3"
+                          type="button"
+                        >
+                          <Text appearance="p3" color={blue[800]}>
+                            Ver no mapa
+                          </Text>
+                          <SolidIcon
+                            icon="faChevronRight"
+                            iconColor={blue[800]}
+                            newClasses="h-3"
+                          />
+                        </button>
+                      </Link>
+                    </div>
+                    <div>
+                      <RegularIcon
+                        icon="faCircleDot"
+                        iconColor={red[600]}
+                        newClasses="h-6"
+                      />
+                    </div>
                   </div>
-                </li>
-              </ul>
+                )}
+              </>
             )}
             {service === 3 && (
               <>
