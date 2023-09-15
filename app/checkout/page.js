@@ -1,6 +1,8 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { neutralDark, neutralLight, neutralMid } from '../base/Colors';
+import { neutralDark, neutralLight, neutralMid, success } from '../base/Colors';
+import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
 import validationSchema from './FormModel/validationSchema';
@@ -9,6 +11,7 @@ import ServiceData from './Forms/serviceData';
 import { Form, Formik } from 'formik';
 
 export default function Checkout() {
+  const router = useRouter();
   const steps = ['Dados de contato', 'Forma de atendimento'];
 
   const [activeStep, setActiveStep] = useState(0);
@@ -27,6 +30,7 @@ export default function Checkout() {
   };
 
   const handleBack = () => {
+    console.log(activeStep);
     setActiveStep(activeStep - 1);
   };
 
@@ -111,22 +115,73 @@ export default function Checkout() {
           document: '',
           mail: '',
           name: '',
-          phone: ''
+          phone: '',
+          tipo_atendimento: ''
         }}
         onSubmit={handleSubmit}
         validationSchema={currentValidationSchema}
       >
         <Form>
           {renderStepContent(activeStep)}
-
-          <div>
-            {activeStep !== 0 && <button onClick={handleBack}>Back</button>}
-            <div>
-              <button type="submit" color="primary">
-                {isLastStep ? 'Place order' : 'Next'}
-              </button>
+          <Container>
+            <div className="col-span-10 col-start-2 flex justify-between py-6">
+              {activeStep !== 0 ? (
+                <button
+                  className="border flex items-center py-3 px-4 rounded space-x-2"
+                  onClick={() => handleBack()}
+                  style={{
+                    background: neutralLight[100],
+                    borderColor: neutralLight[500]
+                  }}
+                  type="button"
+                >
+                  <SolidIcon
+                    icon="faChevronLeft"
+                    iconColor={neutralDark[500]}
+                    newClasses="h-3"
+                  />
+                  <Text appearance="p4" color={neutralDark[500]}>
+                    Voltar
+                  </Text>
+                </button>
+              ) : (
+                <button
+                  className="border flex items-center py-3 px-4 rounded space-x-2"
+                  onClick={() => router.back()}
+                  style={{
+                    background: neutralLight[100],
+                    borderColor: neutralLight[500]
+                  }}
+                  type="button"
+                >
+                  <SolidIcon
+                    icon="faChevronLeft"
+                    iconColor={neutralDark[500]}
+                    newClasses="h-3"
+                  />
+                  <Text appearance="p4" color={neutralDark[500]}>
+                    Voltar
+                  </Text>
+                </button>
+              )}
+              <div>
+                <button
+                  className="flex items-center py-3 px-4 rounded space-x-2"
+                  style={{ background: success[900] }}
+                  type="submit"
+                >
+                  <Text appearance="p4" color={neutralLight[100]}>
+                    {isLastStep ? 'Ir para a home' : 'Continuar'}
+                  </Text>
+                  <SolidIcon
+                    icon="faChevronRight"
+                    iconColor={neutralLight[100]}
+                    newClasses="h-3"
+                  />
+                </button>
+              </div>
             </div>
-          </div>
+          </Container>
         </Form>
       </Formik>
     </main>

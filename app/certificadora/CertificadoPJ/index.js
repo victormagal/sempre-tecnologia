@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { neutralDark, neutralLight, neutralMid, red } from '../../base/Colors';
 import RegularIcon from '../../base/RegularIcon';
 import SolidIcon from '../../base/SolidIcon';
@@ -104,17 +105,22 @@ export default function CertificadoPJ() {
             Validade de 12 meses
           </Text>
           <button
-            className="flex items-center justify-center py-4 rounded-md space-x-3 w-full"
+            className="py-4 rounded-md w-full"
             style={{ background: red[1000] }}
           >
-            <Text appearance="p4" color={neutralLight[100]}>
-              Comprar agora
-            </Text>
-            <SolidIcon
-              icon="faChevronRight"
-              iconColor={neutralLight[100]}
-              newClasses="h-3"
-            />
+            <Link
+              className="flex items-center justify-center space-x-3"
+              href="/checkout"
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Comprar agora
+              </Text>
+              <SolidIcon
+                icon="faChevronRight"
+                iconColor={neutralLight[100]}
+                newClasses="h-3"
+              />
+            </Link>
           </button>
         </footer>
       </div>
@@ -163,17 +169,22 @@ export default function CertificadoPJ() {
             Validade de 36 meses
           </Text>
           <button
-            className="flex items-center justify-center py-4 rounded-md space-x-3 w-full"
+            className="py-4 rounded-md w-full"
             style={{ background: red[1000] }}
           >
-            <Text appearance="p4" color={neutralLight[100]}>
-              Comprar agora
-            </Text>
-            <SolidIcon
-              icon="faChevronRight"
-              iconColor={neutralLight[100]}
-              newClasses="h-3"
-            />
+            <Link
+              className="flex items-center justify-center space-x-3"
+              href="/checkout"
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Comprar agora
+              </Text>
+              <SolidIcon
+                icon="faChevronRight"
+                iconColor={neutralLight[100]}
+                newClasses="h-3"
+              />
+            </Link>
           </button>
         </footer>
       </div>

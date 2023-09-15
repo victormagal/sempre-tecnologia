@@ -79,6 +79,20 @@ const getAllSlides = gql`
   }
 `;
 
+const getAllStates = gql`
+  query {
+    estados {
+      data {
+        id
+        attributes {
+          uf
+          label
+        }
+      }
+    }
+  }
+`;
+
 const getPost = gql`
   query ($slug: String!) {
     blogPosts(filters: { slug: { eq: $slug } }) {
@@ -160,6 +174,7 @@ export {
   getAllPosts,
   getAllCategories,
   getAllSlides,
+  getAllStates,
   getPost,
   getPostsByCategory,
   getTestimonies

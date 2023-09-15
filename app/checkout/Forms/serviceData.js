@@ -1,11 +1,19 @@
 import { useState } from 'react';
-import { neutralDark, neutralLight, neutralMid, red } from '@/app/base/Colors';
+import {
+  blue,
+  neutralDark,
+  neutralLight,
+  neutralMid,
+  red
+} from '@/app/base/Colors';
 import RegularIcon from '@/app/base/RegularIcon';
 import SolidIcon from '@/app/base/SolidIcon';
 import { Text, Title } from '@/app/base/Typography';
 import { Container } from '@/app/components/Foundation';
+import { Field, useFormikContext } from 'formik';
 
 export default function ServiceData() {
+  const { errors, setFieldValue, values } = useFormikContext();
   const [service, setService] = useState(0);
 
   return (
@@ -14,11 +22,39 @@ export default function ServiceData() {
         <Title appearance="h3" color={neutralDark[500]} extra>
           Modelo de atendimento
         </Title>
+        <div
+          className="flex justify-center p-4 rounded w-full"
+          style={{ background: blue[200] }}
+        >
+          <Text appearance="p4" color={blue[900]}>
+            O valor do certificado pode varias de acordo com o modelo de
+            atendimento escolhido
+          </Text>
+        </div>
+        {errors.tipo_atendimento && (
+          <div
+            className="flex justify-center p-4 rounded w-full"
+            style={{ background: red[100] }}
+          >
+            <Field
+              className="hidden"
+              name="tipo_atendimento"
+              type="hidden"
+              value={values.tipo_atendimento}
+            />
+            <Text appearance="p4" color={red[1200]}>
+              Preencha todos os campos corretamente
+            </Text>
+          </div>
+        )}
         <div className="flex space-x-16 w-full">
           <ul className="flex flex-col space-y-4 w-2/5">
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
-              onClick={() => setService(1)}
+              onClick={() => {
+                setService(1);
+                setFieldValue('tipo_atendimento', 'Videoconferencia');
+              }}
               style={{
                 borderColor: service === 1 ? red[600] : neutralLight[400]
               }}
@@ -49,7 +85,10 @@ export default function ServiceData() {
             </li>
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
-              onClick={() => setService(2)}
+              onClick={() => {
+                setService(2);
+                setFieldValue('tipo_atendimento', 'Presencial');
+              }}
               style={{
                 borderColor: service === 2 ? red[600] : neutralLight[400]
               }}
@@ -80,7 +119,10 @@ export default function ServiceData() {
             </li>
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
-              onClick={() => setService(3)}
+              onClick={() => {
+                setService(3);
+                setFieldValue('tipo_atendimento', 'Express');
+              }}
               style={{
                 borderColor: service === 3 ? red[600] : neutralLight[400]
               }}
@@ -139,12 +181,13 @@ export default function ServiceData() {
                     Estado
                   </Text>
                   <div className="flex items-center">
-                    <select
-                      className="appearance-none text-sm p-3 rounded w-full"
+                    <Field
+                      as="select"
+                      className="appearance-none border p-3 rounded text-sm w-full"
                       // onClick={getCities}
                       style={{
                         background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
+                        borderColor: neutralLight[400],
                         color: neutralMid[500]
                       }}
                     >
@@ -154,7 +197,7 @@ export default function ServiceData() {
                                   {label}
                                 </option>
                               ))} */}
-                    </select>
+                    </Field>
                     <SolidIcon
                       icon="faChevronDown"
                       iconColor={neutralMid[500]}
