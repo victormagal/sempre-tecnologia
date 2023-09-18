@@ -8,6 +8,8 @@ export default [
     phone: Yup.string().required('Obrigatório')
   }),
   Yup.object({
-    tipo_atendimento: Yup.string().required('Obrigatório')
+    tipo_atendimento: Yup.string().required('Obrigatório'),
+    estado: Yup.string().required(),
+    cidade: Yup.string().required()
   })
 ];

@@ -19,7 +19,7 @@ import {
 import { useLazyQuery } from '@apollo/client';
 import { Field, useFormikContext } from 'formik';
 
-export default function ServiceData() {
+export default function PaymentData() {
   const { errors, setFieldValue, values } = useFormikContext();
   const [service, setService] = useState(0);
   const [serviceExpress, setServiceExpress] = useState(false);
@@ -32,17 +32,8 @@ export default function ServiceData() {
     <Container>
       <div className="border col-span-10 col-start-2 flex flex-col my-6 py-8 px-12 rounded space-y-6">
         <Title appearance="h3" color={neutralDark[500]} extra>
-          Modelo de atendimento
+          Formas de pagamento
         </Title>
-        <div
-          className="flex justify-center p-4 rounded w-full"
-          style={{ background: blue[200] }}
-        >
-          <Text appearance="p4" color={blue[900]}>
-            O valor do certificado pode varias de acordo com o modelo de
-            atendimento escolhido
-          </Text>
-        </div>
         {(errors.tipo_atendimento || errors.estado || errors.cidade) && (
           <div
             className="flex justify-center p-4 rounded w-full"
@@ -84,11 +75,8 @@ export default function ServiceData() {
               </div>
               <div className="flex flex-col space-y-2">
                 <Title appearance="h6" color={neutralDark[500]}>
-                  Videoconferência
+                  Cartão de crédito
                 </Title>
-                <Text appearance="p4" color={neutralDark[500]}>
-                  Fale com a nossa equipe por video com toda a comodidade.
-                </Text>
               </div>
               <RegularIcon
                 icon={`${service === 1 ? 'faCircleDot' : 'faCircle'}`}
@@ -125,9 +113,6 @@ export default function ServiceData() {
                 <Title appearance="h6" color={neutralDark[500]}>
                   Presencial
                 </Title>
-                <Text appearance="p4" color={neutralDark[500]}>
-                  Seja atendido em uma de nossas filiais de atendimento.
-                </Text>
               </div>
               <RegularIcon
                 icon={`${
@@ -165,11 +150,8 @@ export default function ServiceData() {
               </div>
               <div className="flex flex-col space-y-2">
                 <Title appearance="h6" color={neutralDark[500]}>
-                  Express
+                  Pix
                 </Title>
-                <Text appearance="p4" color={neutralDark[500]}>
-                  Não se preocupe! Para sua comodidade, nós vamos até você.
-                </Text>
               </div>
               <RegularIcon
                 icon={`${

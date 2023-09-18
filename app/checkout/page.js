@@ -7,12 +7,17 @@ import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
 import validationSchema from './FormModel/validationSchema';
 import ContactData from './Forms/contactData';
+import PaymentData from './Forms/paymentData';
 import ServiceData from './Forms/serviceData';
 import { Form, Formik } from 'formik';
 
 export default function Checkout() {
   const router = useRouter();
-  const steps = ['Dados de contato', 'Forma de atendimento'];
+  const steps = [
+    'Dados de contato',
+    'Forma de atendimento',
+    'Formas de pagamento'
+  ];
 
   const [activeStep, setActiveStep] = useState(0);
   const currentValidationSchema = validationSchema[activeStep];
@@ -24,13 +29,14 @@ export default function Checkout() {
         return <ContactData />;
       case 1:
         return <ServiceData />;
+      case 2:
+        return <PaymentData />;
       default:
         return <div>Not found</div>;
     }
   };
 
   const handleBack = () => {
-    console.log(activeStep);
     setActiveStep(activeStep - 1);
   };
 
@@ -112,7 +118,9 @@ export default function Checkout() {
       </Container>
       <Formik
         initialValues={{
+          cidade: '',
           document: '',
+          estado: '',
           mail: '',
           name: '',
           phone: '',

@@ -16,7 +16,6 @@ export default function Testimonies() {
 
   useQuery(getTestimonies, {
     onCompleted: (data) => {
-      console.log(data);
       const {
         depoimentos: { data: testimonies }
       } = data;
@@ -36,9 +35,6 @@ export default function Testimonies() {
           }
         ]);
       });
-    },
-    onError: (error) => {
-      console.log(error);
     }
   });
 
