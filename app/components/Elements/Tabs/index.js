@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { neutralDark, neutralMid } from '@/app/base/Colors';
+import { Text, Title } from '@/app/base/Typography';
 
 export default function Tabs() {
   const [toggle, setToggle] = useState(1);
@@ -14,10 +13,10 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="col-span-4 lg:col-span-5">
+      <div className="col-span-4 lg:col-span-12">
         <ul>
           <li
-            className={`border-l-4 ${
+            className={`border-b-2 inline ${
               toggle === 1 ? 'border-red-600' : 'border-soft-gray'
             } px-4 py-6 cursor-pointer`}
             onClick={() => toggleTab(1)}
@@ -28,11 +27,11 @@ export default function Tabs() {
               } font-sans font-bold text-lg text-left`}
               type="button"
             >
-              Sistema Web para Gestão Comercial
+              Distribuidores
             </button>
           </li>
           <li
-            className={`border-l-4 ${
+            className={`border-b-2 inline ${
               toggle === 2 ? 'border-red-600' : 'border-soft-gray'
             } px-4 py-6 cursor-pointer`}
             onClick={() => toggleTab(2)}
@@ -43,11 +42,11 @@ export default function Tabs() {
               } font-sans font-bold text-lg text-left`}
               type="button"
             >
-              Sistema Web para Emissão de Nota Eletrônica
+              Pequenos varejos
             </button>
           </li>
           <li
-            className={`border-l-4 ${
+            className={`border-b-2 inline ${
               toggle === 3 ? 'border-red-600' : 'border-soft-gray'
             } px-4 py-6 cursor-pointer`}
             onClick={() => toggleTab(3)}
@@ -58,11 +57,11 @@ export default function Tabs() {
               } font-sans font-bold text-lg text-left`}
               type="button"
             >
-              Sistema para Pequenos Varejos
+              Prestadores de serviços
             </button>
           </li>
           <li
-            className={`border-l-4 ${
+            className={`border-b-2 inline ${
               toggle === 4 ? 'border-red-600' : 'border-soft-gray'
             } px-4 py-6 cursor-pointer`}
             onClick={() => toggleTab(4)}
@@ -73,11 +72,11 @@ export default function Tabs() {
               } font-sans font-bold text-lg text-left`}
               type="button"
             >
-              Certificado Digital
+              Recorrentes
             </button>
           </li>
           <li
-            className={`border-l-4 ${
+            className={`border-b-2 inline ${
               toggle === 5 ? 'border-red-600' : 'border-soft-gray'
             } px-4 py-6 cursor-pointer`}
             onClick={() => toggleTab(5)}
@@ -88,22 +87,7 @@ export default function Tabs() {
               } font-sans font-bold text-lg text-left`}
               type="button"
             >
-              Sistemas Web para Distribuidores
-            </button>
-          </li>
-          <li
-            className={`border-l-4 ${
-              toggle === 6 ? 'border-red-600' : 'border-soft-gray'
-            } px-4 py-6 cursor-pointer`}
-            onClick={() => toggleTab(6)}
-          >
-            <button
-              className={`${
-                toggle === 6 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg text-left`}
-              type="button"
-            >
-              Sistemas Web para Gestão de Recorrência
+              Documentos fiscais
             </button>
           </li>
         </ul>
@@ -114,11 +98,13 @@ export default function Tabs() {
             toggle === 1 ? 'block' : 'hidden'
           } flex flex-col items-center`}
         >
-          <p className="font-sans font-semibold px-24 text-soft-gray text-center">
-            De empresas que precisam de um sistema de gestão completo, empresas
-            com pagamentos recorrentes, até empresas de pequeno porte que
-            trabalham com equipes enxutas.
-          </p>
+          <Title appearance="h2" color={neutralDark[500]} extra>
+            Distribuidores
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
+            Pescados, bovinos e suínos Pães e salgados Hortifruti Comésticos
+            Picolés e sorvetes
+          </Text>
           <Image
             alt="Sempre mensalidade"
             className="mt-6"
@@ -127,26 +113,19 @@ export default function Tabs() {
             src="/icon-service-01.svg"
             width={435}
           />
-          <Link
-            className="flex space-x-3 items-center"
-            href="/sistemas-web-para-gestao-empresarial"
-          >
-            <span className="font-sans font-bold text-sm text-red-600">
-              Veja mais sobre essa solução
-            </span>
-            <FontAwesomeIcon className="h-3 text-red-600" icon={faArrowRight} />
-          </Link>
         </div>
         <div
           className={`${
             toggle === 2 ? 'block' : 'hidden'
           } flex flex-col items-center`}
         >
-          <p className="font-sans font-semibold px-24 text-soft-gray text-center">
-            Esta solução é indicada para clientes que desejam focar seu tempo
-            encontrando estratégias comerciais, sem deixar de cumprir a
-            obrigatoriedade da emissão de nota fiscal
-          </p>
+          <Title appearance="h2" color={neutralDark[500]} extra>
+            Pequenos varejos
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
+            Essa solução é ideal para negócios que atendam majoritariamente
+            pessoa física e que não necessitem de um sistema específico.
+          </Text>
           <Image
             alt="Sempre mensalidade"
             className="mt-6"
@@ -155,25 +134,20 @@ export default function Tabs() {
             src="/icon-service-02.svg"
             width={435}
           />
-          <Link
-            className="flex space-x-3 items-center"
-            href="/sistemas-web-para-emissao-de-nota-eletronica"
-          >
-            <span className="font-sans font-bold text-sm text-red-600">
-              Veja mais sobre essa solução
-            </span>
-            <FontAwesomeIcon className="h-3 text-red-600" icon={faArrowRight} />
-          </Link>
         </div>
         <div
           className={`${
             toggle === 3 ? 'block' : 'hidden'
           } flex flex-col items-center`}
         >
-          <p className="font-sans font-semibold px-24 text-soft-gray text-center">
-            Essa solução é ideal para negócios que atendam majoritariamente
-            pessoa física e que não necessitem de um sistema específico.
-          </p>
+          <Title appearance="h2" color={neutralDark[500]} extra>
+            Prestadores de serviços
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
+            Esta solução é indicada para clientes que desejam focar seu tempo
+            encontrando estratégias comerciais, sem deixar de cumprir a
+            obrigatoriedade da emissão de nota fiscal
+          </Text>
           <Image
             alt="Sempre mensalidade"
             className="mt-6"
@@ -182,26 +156,20 @@ export default function Tabs() {
             src="/icon-service-04.svg"
             width={435}
           />
-          <Link
-            className="flex space-x-3 items-center"
-            href="/automacao-comercial"
-          >
-            <span className="font-sans font-bold text-sm text-red-600">
-              Veja mais sobre essa solução
-            </span>
-            <FontAwesomeIcon className="h-3 text-red-600" icon={faArrowRight} />
-          </Link>
         </div>
         <div
           className={`${
             toggle === 4 ? 'block' : 'hidden'
           } flex flex-col items-center`}
         >
-          <p className="font-sans font-semibold px-24 text-soft-gray text-center">
-            Contadores e empreendedores que cuidem de empresas de qualquer
-            porte, valorizam seu tempo e queiram emitir o certificado digital
-            ICP-BRasil.
-          </p>
+          <Title appearance="h2" color={neutralDark[500]} extra>
+            Recorrentes
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
+            O Sempre Mensalidade é um sistema de gestão e controle de
+            recorrência. Essa solução é ideal para empresas que cobram
+            mensalidade dos seus clientes.
+          </Text>
           <Image
             alt="Sempre mensalidade"
             className="mt-6"
@@ -210,27 +178,20 @@ export default function Tabs() {
             src="/icon-service-05.svg"
             width={435}
           />
-          <Link
-            className="flex space-x-3 items-center"
-            href="https://semprecertificadodigital.com.br/"
-            target="_blank"
-          >
-            <span className="font-sans font-bold text-sm text-red-600">
-              Veja mais sobre essa solução
-            </span>
-            <FontAwesomeIcon className="h-3 text-red-600" icon={faArrowRight} />
-          </Link>
         </div>
         <div
           className={`${
             toggle === 5 ? 'block' : 'hidden'
           } flex flex-col items-center`}
         >
-          <p className="font-sans font-semibold px-24 text-soft-gray text-center">
-            Automatize tarefas e agilize processos internos da sua empresa com
-            uma solução prática e fácil de usar. Simplificamos o controle da
-            logística de transporte da sua distribuição.
-          </p>
+          <Title appearance="h2" color={neutralDark[500]} extra>
+            Documentos fiscais
+          </Title>
+          <Text appearance="p1" color={neutralMid[500]}>
+            Esta solução é indicada para clientes que desejam focar seu tempo
+            encontrando estratégias comerciais, sem deixar de cumprir a
+            obrigatoriedade da emissão de nota fiscal
+          </Text>
           <Image
             alt="Sempre mensalidade"
             className="mt-6"
@@ -239,43 +200,6 @@ export default function Tabs() {
             src="/icon-service-07.svg"
             width={435}
           />
-          <Link
-            className="flex space-x-3 items-center"
-            href="/sempre-distribuidor"
-          >
-            <span className="font-sans font-bold text-sm text-red-600">
-              Veja mais sobre essa solução
-            </span>
-            <FontAwesomeIcon className="h-3 text-red-600" icon={faArrowRight} />
-          </Link>
-        </div>
-        <div
-          className={`${
-            toggle === 6 ? 'block' : 'hidden'
-          } flex flex-col items-center`}
-        >
-          <p className="font-sans font-semibold px-24 text-soft-gray text-center">
-            O Sempre Mensalidade é um sistema de gestão e controle de
-            recorrência. Essa solução é ideal para empresas que cobram
-            mensalidade dos seus clientes.
-          </p>
-          <Image
-            alt="Sempre mensalidade"
-            className="mt-6"
-            height={441}
-            quality={100}
-            src="/ilustra-sempre-mensalidade.svg"
-            width={435}
-          />
-          <Link
-            className="flex space-x-3 items-center"
-            href="/sempre-mensalidade"
-          >
-            <span className="font-sans font-bold text-sm text-red-600">
-              Veja mais sobre essa solução
-            </span>
-            <FontAwesomeIcon className="h-3 text-red-600" icon={faArrowRight} />
-          </Link>
         </div>
       </div>
     </>

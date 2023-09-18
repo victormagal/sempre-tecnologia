@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { neutralDark, neutralLight, neutralMid, red } from './base/Colors';
 import { Overline, Text, Title } from './base/Typography';
-import { LastPosts } from './components/Elements';
+import { LastPosts, Tabs } from './components/Elements';
 import { Container, HeroPage, Testimonies } from './components/Foundation';
 
 export default function Home() {
   return (
     <main className="pt-24">
       <HeroPage bgColor={neutralLight[1100]} gradient={false} className="py-10">
-        <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10">
+        <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10 ">
           <Title appearance="h1" color={neutralDark[500]} extra>
             Seja bem-vindo a Sempre Tecnologia
           </Title>
@@ -45,7 +45,7 @@ export default function Home() {
 
       <Container
         bgContainer={neutralDark[500]}
-        newClasses="flex rounded-2xl w-full lg:py-auto py-8 w-auto"
+        newClasses="flex rounded-2xl lg:w-full lg:py-auto py-8 w-auto mx-4"
       >
         <div className="col-span-4 flex flex-col items-center">
           <h1 className="font-serif font-normal my-4 text-white text-5xl">
@@ -86,7 +86,9 @@ export default function Home() {
           </Text>
         </div>
       </Container>
-      <Container>{/* tabs */}</Container>
+      <Container>
+        <Tabs />
+      </Container>
       <Container bgColor={neutralLight[100]}>
         <div className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last">
           <video
@@ -194,7 +196,7 @@ export default function Home() {
       </Container>
       <Container
         bgContainer={neutralDark[500]}
-        newClasses="flex rounded-2xl w-full lg:py-auto py-24 w-auto col-span-12"
+        newClasses="flex rounded-2xl lg:w-full lg:py-auto py-24 w-auto col-span-12 mx-4"
       >
         <div className="lg:col-start-4 col-span-6 text-center ">
           <Title
