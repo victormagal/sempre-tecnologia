@@ -1,5 +1,41 @@
 import { gql } from '@apollo/client';
 
+const getAllBranches = gql`
+  query {
+    filiais {
+      data {
+        attributes {
+          label
+          telefones
+          endereco
+          mapa
+          estado {
+            data {
+              attributes {
+                label
+                uf
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+const getAllCategories = gql`
+  query {
+    categories {
+      data {
+        attributes {
+          name
+          slug
+        }
+      }
+    }
+  }
+`;
+
 const getAllPosts = gql`
   query ($page: Int!, $pageSize: Int!) {
     blogPosts(
@@ -40,19 +76,6 @@ const getAllPosts = gql`
   }
 `;
 
-const getAllCategories = gql`
-  query {
-    categories {
-      data {
-        attributes {
-          name
-          slug
-        }
-      }
-    }
-  }
-`;
-
 const getAllSlides = gql`
   query {
     slideshows {
@@ -83,7 +106,6 @@ const getAllStates = gql`
   query {
     estados {
       data {
-        id
         attributes {
           uf
           label
@@ -155,34 +177,6 @@ const getPostsByCategory = gql`
   }
 `;
 
-const getStoriesByState = gql`
-  query ($state: String!) {
-    filiais(filters: { estado: { uf: { eq: $state } } }) {
-      data {
-        id
-        attributes {
-          label
-        }
-      }
-    }
-  }
-`;
-
-const getStoryDetails = gql`
-  query ($story: String!) {
-    filiais(filters: { label: { eq: $story } }) {
-      data {
-        attributes {
-          label
-          telefones
-          endereco
-          mapa
-        }
-      }
-    }
-  }
-`;
-
 const getTestimonies = gql`
   query {
     depoimentos {
@@ -199,13 +193,12 @@ const getTestimonies = gql`
 `;
 
 export {
-  getAllPosts,
+  getAllBranches,
   getAllCategories,
+  getAllPosts,
   getAllSlides,
   getAllStates,
   getPost,
   getPostsByCategory,
-  getStoriesByState,
-  getStoryDetails,
   getTestimonies
 };

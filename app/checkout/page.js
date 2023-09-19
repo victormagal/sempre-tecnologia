@@ -5,10 +5,8 @@ import { neutralDark, neutralLight, neutralMid, success } from '../base/Colors';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
-import validationSchema from './FormModel/validationSchema';
-import ContactData from './Forms/contactData';
-import PaymentData from './Forms/paymentData';
-import ServiceData from './Forms/serviceData';
+import { ContactData, PaymentData, ServiceData } from './FormSteps';
+import validationSchema from './FormValidation/validationSchema';
 import { Form, Formik } from 'formik';
 
 export default function Checkout() {
@@ -121,6 +119,7 @@ export default function Checkout() {
           cidade: '',
           document: '',
           estado: '',
+          forma_pagamento: '',
           mail: '',
           name: '',
           phone: '',
