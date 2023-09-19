@@ -13,78 +13,78 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="col-span-4 lg:col-span-12">
-        <ul>
+      <div className="lg:col-span-12">
+        <ul className=" flex flex-row">
           <li
-            className={`border-b-2 inline ${
-              toggle === 1 ? 'border-red-600' : 'border-soft-gray'
-            } px-4 py-6 cursor-pointer`}
+            className={`border-b-0 flex-auto w-8 ${
+              toggle === 1 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+            } p-3 cursor-pointer`}
             onClick={() => toggleTab(1)}
           >
             <button
               className={`${
-                toggle === 1 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg text-left`}
+                toggle === 1 ? 'text-white' : 'text-soft-gray'
+              } self-auto	font-sans font-normal text-lg text-left`}
               type="button"
             >
               Distribuidores
             </button>
           </li>
           <li
-            className={`border-b-2 inline ${
-              toggle === 2 ? 'border-red-600' : 'border-soft-gray'
-            } px-4 py-6 cursor-pointer`}
+            className={`border-b-0 flex-auto w-8 w-auto ${
+              toggle === 2 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+            } p-3 cursor-pointer`}
             onClick={() => toggleTab(2)}
           >
             <button
               className={`${
-                toggle === 2 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg text-left`}
+                toggle === 2 ? 'text-white' : 'text-soft-gray'
+              } self-auto	font-sans font-normal text-lg text-left`}
               type="button"
             >
               Pequenos varejos
             </button>
           </li>
           <li
-            className={`border-b-2 inline ${
-              toggle === 3 ? 'border-red-600' : 'border-soft-gray'
-            } px-4 py-6 cursor-pointer`}
+            className={`border-b-0 flex-auto w-8 w-auto ${
+              toggle === 3 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+            } p-3 cursor-pointer`}
             onClick={() => toggleTab(3)}
           >
             <button
               className={`${
-                toggle === 3 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg text-left`}
+                toggle === 3 ? 'text-white' : 'text-soft-gray'
+              } self-auto	font-sans font-normal text-lg text-left`}
               type="button"
             >
               Prestadores de serviços
             </button>
           </li>
           <li
-            className={`border-b-2 inline ${
-              toggle === 4 ? 'border-red-600' : 'border-soft-gray'
-            } px-4 py-6 cursor-pointer`}
+            className={`border-b-0 flex-auto w-8 w-auto ${
+              toggle === 4 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+            } p-3 cursor-pointer`}
             onClick={() => toggleTab(4)}
           >
             <button
               className={`${
-                toggle === 4 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg text-left`}
+                toggle === 4 ? 'text-white' : 'text-soft-gray'
+              } self-auto	font-sans font-normal text-lg text-left`}
               type="button"
             >
               Recorrentes
             </button>
           </li>
           <li
-            className={`border-b-2 inline ${
-              toggle === 5 ? 'border-red-600' : 'border-soft-gray'
-            } px-4 py-6 cursor-pointer`}
+            className={`border-b-0 flex-auto w-8 w-auto ${
+              toggle === 5 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+            } p-3 cursor-pointer`}
             onClick={() => toggleTab(5)}
           >
             <button
               className={`${
-                toggle === 5 ? 'text-dark-blue' : 'text-soft-gray'
-              } font-sans font-bold text-lg text-left`}
+                toggle === 5 ? 'text-white' : 'text-soft-gray'
+              } self-auto	font-sans font-normal text-lg text-left`}
               type="button"
             >
               Documentos fiscais
@@ -92,7 +92,7 @@ export default function Tabs() {
           </li>
         </ul>
       </div>
-      <div className="col-span-4 lg:col-span-7 flex-grow">
+      <div className="lg:col-span-12 ">
         <div
           className={`${
             toggle === 1 ? 'block' : 'hidden'
@@ -108,10 +108,10 @@ export default function Tabs() {
           <Image
             alt="Sempre mensalidade"
             className="mt-6"
-            height={441}
+            height={410}
+            width={486}
             quality={100}
-            src="/icon-service-01.svg"
-            width={435}
+            src="/distriibuidores-tab.png"
           />
         </div>
         <div
