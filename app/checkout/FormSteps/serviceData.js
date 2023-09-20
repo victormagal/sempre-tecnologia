@@ -247,7 +247,7 @@ export default function ServiceData() {
           </ul>
           <div className="w-3/5">
             {values.tipo_atendimento === 'videoconferencia' && (
-              <ul className="flex flex-col space-y-4 list-disc">
+              <ul className="flex flex-col space-y-4">
                 <li>
                   <Text appearance="p3" color={neutralMid[500]}>
                     <b>Observação:</b> Para atendimento via videoconferência é
