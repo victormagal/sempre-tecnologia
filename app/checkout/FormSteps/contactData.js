@@ -1,4 +1,5 @@
-import { neutralDark, neutralLight, neutralMid } from '@/app/base/Colors';
+import { neutralDark, neutralLight, red, neutralMid } from '@/app/base/Colors';
+import { toCpfOrCnpj, toTel } from '@/app/base/Masks';
 import { Text, Title } from '@/app/base/Typography';
 import { Container } from '@/app/components/Foundation';
 import { Field, useFormikContext } from 'formik';
@@ -18,41 +19,41 @@ export default function ContactData() {
               CPF/CNPJ
             </Text>
             <Field
-              className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+              className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
               name="document"
-              type="text"
-              value={values.document}
               style={{
                 background: neutralLight[200],
-                border: `1px solid ${neutralLight[400]}`,
+                borderColor: errors.document ? red[900] : neutralLight[400],
                 color: neutralMid[500]
               }}
+              type="text"
+              value={toCpfOrCnpj(values.document)}
             />
-            {errors.name && (
-              <span className="ml-2 mt-1 text-red-600 text-sm">
+            {errors.document && (
+              <Text appearance="p4" className="mt-2" color={red[900]}>
                 {errors.document}
-              </span>
+              </Text>
             )}
           </li>
           <li className="flex-1">
             <Text className="mb-2" appearance="p4" color={neutralDark[500]}>
-              Nome
+              Nome completo
             </Text>
             <Field
-              className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+              className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
               name="name"
-              type="text"
-              value={values.name}
               style={{
                 background: neutralLight[200],
-                border: `1px solid ${neutralLight[400]}`,
+                borderColor: errors.name ? red[900] : neutralLight[400],
                 color: neutralMid[500]
               }}
+              type="text"
+              value={values.name}
             />
             {errors.name && (
-              <span className="ml-2 mt-1 text-red-600 text-sm">
+              <Text appearance="p4" className="mt-2" color={red[900]}>
                 {errors.name}
-              </span>
+              </Text>
             )}
           </li>
         </ul>
@@ -62,20 +63,20 @@ export default function ContactData() {
               Email
             </Text>
             <Field
-              className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+              className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
               name="mail"
-              type="email"
-              value={values.mail}
               style={{
                 background: neutralLight[200],
-                border: `1px solid ${neutralLight[400]}`,
+                borderColor: errors.name ? red[900] : neutralLight[400],
                 color: neutralMid[500]
               }}
+              type="email"
+              value={values.mail}
             />
-            {errors.name && (
-              <span className="ml-2 mt-1 text-red-600 text-sm">
+            {errors.mail && (
+              <Text appearance="p4" className="mt-2" color={red[900]}>
                 {errors.mail}
-              </span>
+              </Text>
             )}
           </li>
           <li className="flex-1">
@@ -83,20 +84,20 @@ export default function ContactData() {
               Telefone
             </Text>
             <Field
-              className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+              className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
               name="phone"
-              type="phone"
-              value={values.phone}
               style={{
                 background: neutralLight[200],
-                border: `1px solid ${neutralLight[400]}`,
+                borderColor: errors.phone ? red[900] : neutralLight[400],
                 color: neutralMid[500]
               }}
+              type="text"
+              value={toTel(values.phone)}
             />
-            {errors.name && (
-              <span className="ml-2 mt-1 text-red-600 text-sm">
+            {errors.phone && (
+              <Text appearance="p4" className="mt-2" color={red[900]}>
                 {errors.phone}
-              </span>
+              </Text>
             )}
           </li>
         </ul>

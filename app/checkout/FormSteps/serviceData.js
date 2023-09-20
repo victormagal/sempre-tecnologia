@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   blue,
   neutralDark,
@@ -21,6 +21,8 @@ export default function ServiceData() {
   const [filteredStories, setFilteredStories] = useState([]);
   const [states, setStates] = useState([]);
   const [stories, setStories] = useState([]);
+
+  // Colocar os estados e cidades no contexto do formik
 
   useQuery(getAllStates, {
     onCompleted: ({ estados: { data } }) => {
@@ -81,6 +83,11 @@ export default function ServiceData() {
     });
   };
 
+  useEffect(() => {
+    values.estado && filterStories(values.estado);
+  }, [values.estado]);
+  console.log(filteredStories);
+
   return (
     <Container>
       <div className="border col-span-10 col-start-2 flex flex-col my-6 py-8 px-12 rounded space-y-6">
@@ -103,12 +110,12 @@ export default function ServiceData() {
           >
             <Field
               className="hidden"
-              name="tipo_atendimento"
+              name="has_atendimento"
               type="hidden"
               value={values.tipo_atendimento}
             />
             <Text appearance="p4" color={red[1200]}>
-              Preencha todos os campos corretamente
+              {errors.tipo_atendimento}
             </Text>
           </div>
         )}
@@ -116,9 +123,10 @@ export default function ServiceData() {
           <ul className="flex flex-col space-y-4 w-2/5" role="group">
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
-              onClick={() =>
-                setFieldValue('tipo_atendimento', 'videoconferencia')
-              }
+              onClick={() => {
+                setFieldValue('has_atendimento', false);
+                setFieldValue('tipo_atendimento', 'videoconferencia');
+              }}
               style={{
                 borderColor:
                   values.tipo_atendimento === 'videoconferencia'
@@ -161,6 +169,7 @@ export default function ServiceData() {
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
               onClick={() => {
+                setFieldValue('has_atendimento', true);
                 setFieldValue('tipo_atendimento', 'presencial');
               }}
               style={{
@@ -204,7 +213,10 @@ export default function ServiceData() {
             </li>
             <li
               className="border cursor-pointer flex space-x-6 p-6 rounded"
-              onClick={() => setFieldValue('tipo_atendimento', 'express')}
+              onClick={() => {
+                setFieldValue('has_atendimento', true);
+                setFieldValue('tipo_atendimento', 'express');
+              }}
               style={{
                 borderColor:
                   values.tipo_atendimento === 'express'
@@ -278,19 +290,22 @@ export default function ServiceData() {
                     <div className="flex items-center">
                       <Field
                         as="select"
-                        className="appearance-none border p-3 rounded text-sm w-full"
+                        className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                        name="estado"
                         onChange={(e) => {
                           setFieldValue('estado', e.target.value);
                           filterStories(e.target.value);
                         }}
                         style={{
                           background: neutralLight[200],
-                          borderColor: neutralLight[400],
+                          borderColor: errors.estado
+                            ? red[900]
+                            : neutralLight[400],
                           color: neutralMid[500]
                         }}
                         value={values.estado}
                       >
-                        <option defaultValue="default">Selecione</option>
+                        <option value="">Selecione</option>
                         {states?.map((state) => (
                           <option key={state?.uf} value={state?.uf}>
                             {state?.estado}
@@ -303,6 +318,11 @@ export default function ServiceData() {
                         newClasses="h-4 -ml-10"
                       />
                     </div>
+                    {errors.estado && (
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
+                        {errors.estado}
+                      </Text>
+                    )}
                   </li>
                   <li className="flex-1">
                     <Text
@@ -315,19 +335,22 @@ export default function ServiceData() {
                     <div className="flex items-center">
                       <Field
                         as="select"
-                        className="appearance-none text-sm p-3 rounded w-full"
+                        className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                        name="cidade"
                         onChange={(e) => {
                           setFieldValue('cidade', e.target.value);
                           storyDetails(e.target.value);
                         }}
                         style={{
                           background: neutralLight[200],
-                          border: `1px solid ${neutralLight[400]}`,
+                          borderColor: errors.estado
+                            ? red[900]
+                            : neutralLight[400],
                           color: neutralMid[500]
                         }}
                         value={values.cidade}
                       >
-                        <option defaultValue="default">Selecione</option>
+                        <option value="">Selecione</option>
                         {filteredStories?.map((filteredStory) => (
                           <option
                             key={filteredStory?.cidade}
@@ -343,6 +366,11 @@ export default function ServiceData() {
                         newClasses="h-4 -ml-10"
                       />
                     </div>
+                    {errors.cidade && (
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
+                        {errors.cidade}
+                      </Text>
+                    )}
                   </li>
                 </ul>
                 {values.tipo_atendimento === 'presencial' &&

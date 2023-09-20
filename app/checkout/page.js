@@ -1,16 +1,11 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import {
-  neutralDark,
-  neutralLight,
-  neutralMid,
-  red,
-  success
-} from '../base/Colors';
+import { neutralDark, neutralLight, neutralMid, success } from '../base/Colors';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
+import FormStepper from './FormStepper';
 import {
   ContactData,
   PaymentData,
@@ -71,181 +66,7 @@ export default function Checkout() {
 
   return (
     <main className="pt-24">
-      <Container newClasses="py-12">
-        <ul className="col-span-8 col-start-3 flex items-center justify-between">
-          <li>
-            <div
-              className="border flex h-8 items-center justify-center rounded-full w-8"
-              style={{
-                backgroundColor: `${
-                  activeStep === 0
-                    ? red[900]
-                    : activeStep > 0
-                    ? success[900]
-                    : 'transparent'
-                }`,
-                borderColor:
-                  activeStep === 0
-                    ? neutralLight[100]
-                    : activeStep > 0
-                    ? neutralLight[100]
-                    : neutralMid[100]
-              }}
-            >
-              {activeStep <= 0 && (
-                <Title
-                  appearance="h7"
-                  color={
-                    activeStep === 0
-                      ? neutralLight[100]
-                      : activeStep > 0
-                      ? neutralLight[100]
-                      : neutralMid[100]
-                  }
-                >
-                  1
-                </Title>
-              )}
-              {activeStep > 0 && (
-                <SolidIcon
-                  icon="faCheck"
-                  iconColor={neutralLight[100]}
-                  newClasses="h-3"
-                />
-              )}
-            </div>
-          </li>
-          <hr className="border flex-grow mx-2" />
-          <li>
-            <div
-              className="border flex h-8 items-center justify-center rounded-full w-8"
-              style={{
-                backgroundColor: `${
-                  activeStep === 1
-                    ? red[900]
-                    : activeStep > 1
-                    ? success[900]
-                    : 'transparent'
-                }`,
-                borderColor:
-                  activeStep === 1
-                    ? neutralLight[100]
-                    : activeStep > 1
-                    ? neutralLight[100]
-                    : neutralMid[100]
-              }}
-            >
-              {activeStep <= 1 && (
-                <Title
-                  appearance="h7"
-                  color={
-                    activeStep === 1
-                      ? neutralLight[100]
-                      : activeStep > 1
-                      ? neutralLight[100]
-                      : neutralMid[100]
-                  }
-                >
-                  2
-                </Title>
-              )}
-              {activeStep > 1 && (
-                <SolidIcon
-                  icon="faCheck"
-                  iconColor={neutralLight[100]}
-                  newClasses="h-3"
-                />
-              )}
-            </div>
-          </li>
-          <hr className="border flex-grow mx-2" />
-          <li>
-            <div
-              className="border flex h-8 items-center justify-center rounded-full w-8"
-              style={{
-                backgroundColor: `${
-                  activeStep === 2
-                    ? red[900]
-                    : activeStep > 2
-                    ? success[900]
-                    : 'transparent'
-                }`,
-                borderColor:
-                  activeStep === 2
-                    ? neutralLight[100]
-                    : activeStep > 2
-                    ? neutralLight[100]
-                    : neutralMid[100]
-              }}
-            >
-              {activeStep <= 2 && (
-                <Title
-                  appearance="h7"
-                  color={
-                    activeStep === 2
-                      ? neutralLight[100]
-                      : activeStep > 2
-                      ? neutralLight[100]
-                      : neutralMid[100]
-                  }
-                >
-                  3
-                </Title>
-              )}
-              {activeStep > 2 && (
-                <SolidIcon
-                  icon="faCheck"
-                  iconColor={neutralLight[100]}
-                  newClasses="h-3"
-                />
-              )}
-            </div>
-          </li>
-          <hr className="border flex-grow mx-2" />
-          <li>
-            <div
-              className="border flex h-8 items-center justify-center rounded-full w-8"
-              style={{
-                backgroundColor: `${
-                  activeStep === 3
-                    ? red[900]
-                    : activeStep > 3
-                    ? success[900]
-                    : 'transparent'
-                }`,
-                borderColor:
-                  activeStep === 3
-                    ? neutralLight[100]
-                    : activeStep > 3
-                    ? neutralLight[100]
-                    : neutralMid[100]
-              }}
-            >
-              {activeStep <= 3 && (
-                <Title
-                  appearance="h7"
-                  color={
-                    activeStep === 3
-                      ? neutralLight[100]
-                      : activeStep > 3
-                      ? neutralLight[100]
-                      : neutralMid[100]
-                  }
-                >
-                  4
-                </Title>
-              )}
-              {activeStep > 3 && (
-                <SolidIcon
-                  icon="faCheck"
-                  iconColor={neutralLight[100]}
-                  newClasses="h-3"
-                />
-              )}
-            </div>
-          </li>
-        </ul>
-      </Container>
+      <FormStepper step={activeStep} />
       <Container>
         <ul className="border col-span-10 col-start-2 flex justify-between mb-6 py-8 px-12 rounded">
           <li>
@@ -309,12 +130,15 @@ export default function Checkout() {
           document: '',
           estado: '',
           forma_pagamento: '',
+          has_atendimento: false,
           mail: '',
           name: '',
           phone: '',
           tipo_atendimento: ''
         }}
         onSubmit={handleSubmit}
+        validateOnBlur={true}
+        validateOnChange={true}
         validationSchema={currentValidationSchema}
       >
         <Form>
