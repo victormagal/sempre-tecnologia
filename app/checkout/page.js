@@ -5,7 +5,12 @@ import { neutralDark, neutralLight, neutralMid, success } from '../base/Colors';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
-import { ContactData, PaymentData, ServiceData } from './FormSteps';
+import {
+  ContactData,
+  PaymentData,
+  ServiceData,
+  SummaryData
+} from './FormSteps';
 import validationSchema from './FormValidation/validationSchema';
 import { Form, Formik } from 'formik';
 
@@ -14,7 +19,8 @@ export default function Checkout() {
   const steps = [
     'Dados de contato',
     'Forma de atendimento',
-    'Formas de pagamento'
+    'Formas de pagamento',
+    'Resumo da compra'
   ];
 
   const [activeStep, setActiveStep] = useState(0);
@@ -29,8 +35,10 @@ export default function Checkout() {
         return <ServiceData />;
       case 2:
         return <PaymentData />;
+      case 3:
+        return <SummaryData />;
       default:
-        return <div>Not found</div>;
+        return <div>Vazio</div>;
     }
   };
 
