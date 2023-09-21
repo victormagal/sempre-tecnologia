@@ -13,11 +13,11 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="lg:col-span-12">
+      <div className="lg:col-span-12  container mx-auto">
         <ul className="flex flex-row gap-1 text-center">
           <li
             className={`border-b-0 flex-auto ${
-              toggle === 1 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+              toggle === 1 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
             } p-3 cursor-pointer`}
             onClick={() => toggleTab(1)}
           >
@@ -32,7 +32,7 @@ export default function Tabs() {
           </li>
           <li
             className={`border-b-0 flex-auto ${
-              toggle === 2 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+              toggle === 2 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
             } p-3 cursor-pointer`}
             onClick={() => toggleTab(2)}
           >
@@ -47,7 +47,7 @@ export default function Tabs() {
           </li>
           <li
             className={`border-b-0 flex-auto ${
-              toggle === 3 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+              toggle === 3 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
             } p-3 cursor-pointer`}
             onClick={() => toggleTab(3)}
           >
@@ -62,7 +62,7 @@ export default function Tabs() {
           </li>
           <li
             className={`border-b-0 flex-auto ${
-              toggle === 4 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+              toggle === 4 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
             } p-3 cursor-pointer`}
             onClick={() => toggleTab(4)}
           >
@@ -77,7 +77,7 @@ export default function Tabs() {
           </li>
           <li
             className={`border-b-0 flex-auto ${
-              toggle === 5 ? 'bg-red-600' : 'bg-[#F9FAFB]'
+              toggle === 5 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
             } p-3 cursor-pointer`}
             onClick={() => toggleTab(5)}
           >
@@ -92,9 +92,9 @@ export default function Tabs() {
           </li>
         </ul>
       </div>
-      <div className="col-span-12">
+      <div className="col-span-12 mt-0 bg-[#F4F5F7] container mx-auto">
         <div className={`${toggle === 1 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-16">
+          <div className="basis-1/2 py-24 ml-20">
             <Image
               alt="Sempre gestor"
               className="inline m-6 ml-0"
@@ -132,10 +132,10 @@ export default function Tabs() {
               Picolés e sorvetes
             </Text>
           </div>
-          <div className="basis-1/2 ml-16">
+          <div className="basis-1/2 ml-80">
             <Image
               alt="Sempre mensalidade"
-              className="mt-6"
+              className="mt-16"
               height={410}
               width={486}
               quality={100}
@@ -144,7 +144,7 @@ export default function Tabs() {
           </div>
         </div>
         <div className={`${toggle === 2 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-16">
+          <div className="basis-1/2 py-24 ml-20">
             <Image
               alt="Sempre gestor"
               className="inline m-6 ml-0"
@@ -182,10 +182,10 @@ export default function Tabs() {
               Picolés e sorvetes
             </Text>
           </div>
-          <div className="basis-1/2">
+          <div className="basis-1/2 ml-80">
             <Image
               alt="Sempre mensalidade"
-              className="mt-6"
+              className="mt-16"
               height={410}
               width={486}
               quality={100}
@@ -194,7 +194,7 @@ export default function Tabs() {
           </div>
         </div>
         <div className={`${toggle === 3 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-16">
+          <div className="basis-1/2 py-24 ml-20">
             <Image
               alt="Sempre gestor"
               className="inline m-6 ml-0"
@@ -232,10 +232,10 @@ export default function Tabs() {
               Picolés e sorvetes
             </Text>
           </div>
-          <div className="basis-1/2">
+          <div className="basis-1/2 ml-80">
             <Image
               alt="Sempre mensalidade"
-              className="mt-6"
+              className="mt-16"
               height={410}
               width={486}
               quality={100}
@@ -244,7 +244,7 @@ export default function Tabs() {
           </div>
         </div>
         <div className={`${toggle === 4 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-16">
+          <div className="basis-1/2 py-24 ml-20">
             <Image
               alt="Sempre gestor"
               className="inline m-6 ml-0"
@@ -282,10 +282,10 @@ export default function Tabs() {
               Picolés e sorvetes
             </Text>
           </div>
-          <div className="basis-1/2">
+          <div className="basis-1/2 ml-80">
             <Image
               alt="Sempre mensalidade"
-              className="mt-6"
+              className="mt-16"
               height={410}
               width={486}
               quality={100}
@@ -294,7 +294,7 @@ export default function Tabs() {
           </div>
         </div>
         <div className={`${toggle === 5 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-16">
+          <div className="basis-1/2 py-24 ml-20">
             <Image
               alt="Sempre gestor"
               className="inline m-6 ml-0"
@@ -332,10 +332,10 @@ export default function Tabs() {
               Picolés e sorvetes
             </Text>
           </div>
-          <div className="basis-1/2">
+          <div className="basis-1/2 ml-80">
             <Image
               alt="Sempre mensalidade"
-              className="mt-6"
+              className="mt-16"
               height={410}
               width={486}
               quality={100}
