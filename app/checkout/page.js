@@ -127,8 +127,10 @@ export default function Checkout() {
       <Formik
         initialValues={{
           cidade: '',
+          detailed_story: {},
           document: '',
           estado: '',
+          filtered_stories: [],
           forma_pagamento: '',
           has_atendimento: false,
           mail: '',
@@ -138,7 +140,7 @@ export default function Checkout() {
         }}
         onSubmit={handleSubmit}
         validateOnBlur={true}
-        validateOnChange={true}
+        validateOnChange={false}
         validationSchema={currentValidationSchema}
       >
         <Form>

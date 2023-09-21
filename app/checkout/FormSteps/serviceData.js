@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   blue,
   neutralDark,
@@ -17,12 +17,8 @@ import { Field, useFormikContext } from 'formik';
 
 export default function ServiceData() {
   const { errors, setFieldValue, values } = useFormikContext();
-  const [detailedStory, setDetailedStory] = useState({});
-  const [filteredStories, setFilteredStories] = useState([]);
   const [states, setStates] = useState([]);
   const [stories, setStories] = useState([]);
-
-  // Colocar os estados e cidades no contexto do formik
 
   useQuery(getAllStates, {
     onCompleted: ({ estados: { data } }) => {
@@ -72,21 +68,16 @@ export default function ServiceData() {
         selectedStories.push(story);
       }
     });
-    setFilteredStories(selectedStories);
+    setFieldValue('filtered_stories', selectedStories);
   };
 
   const storyDetails = (value) => {
-    filteredStories.map((story) => {
+    values.filtered_stories.map((story) => {
       if (story.cidade === value) {
-        setDetailedStory(story);
+        setFieldValue('detailed_story', story);
       }
     });
   };
-
-  useEffect(() => {
-    values.estado && filterStories(values.estado);
-  }, [values.estado]);
-  console.log(filteredStories);
 
   return (
     <Container>
@@ -343,7 +334,7 @@ export default function ServiceData() {
                         }}
                         style={{
                           background: neutralLight[200],
-                          borderColor: errors.estado
+                          borderColor: errors.cidade
                             ? red[900]
                             : neutralLight[400],
                           color: neutralMid[500]
@@ -351,7 +342,7 @@ export default function ServiceData() {
                         value={values.cidade}
                       >
                         <option value="">Selecione</option>
-                        {filteredStories?.map((filteredStory) => (
+                        {values?.filtered_stories?.map((filteredStory) => (
                           <option
                             key={filteredStory?.cidade}
                             value={filteredStory?.cidade}
@@ -374,22 +365,26 @@ export default function ServiceData() {
                   </li>
                 </ul>
                 {values.tipo_atendimento === 'presencial' &&
-                  Object.keys(detailedStory).length !== 0 && (
+                  Object.keys(values?.detailed_story).length !== 0 && (
                     <div
                       className="flex p-8 rounded space-x-6"
                       style={{ backgroundColor: neutralLight[200] }}
                     >
                       <div className="flex flex-col space-y-4">
                         <Title appearance="h5" color={neutralDark[500]}>
-                          Loja Sempre Tecnologia {detailedStory?.cidade}
+                          Loja Sempre Tecnologia{' '}
+                          {values?.detailed_story?.cidade}
                         </Title>
                         <Text appearance="p4" color={neutralDark[500]}>
-                          {detailedStory?.telefones}
+                          {values?.detailed_story?.telefones}
                         </Text>
                         <Text appearance="p3" color={neutralMid[500]}>
-                          {detailedStory?.endereco}
+                          {values?.detailed_story?.endereco}
                         </Text>
-                        <Link href={detailedStory?.mapa || `/`} target="_blank">
+                        <Link
+                          href={values?.detailed_story?.mapa || `/`}
+                          target="_blank"
+                        >
                           <button
                             className="flex items-center space-x-3"
                             type="button"
