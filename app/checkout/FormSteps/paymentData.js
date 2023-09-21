@@ -17,7 +17,6 @@ import { Field, useFormikContext } from 'formik';
 
 export default function PaymentData() {
   const { errors, setFieldValue, values } = useFormikContext();
-  const [filteredStories, setFilteredStories] = useState([]);
   const [states, setStates] = useState([]);
   const [stories, setStories] = useState([]);
 
@@ -69,7 +68,7 @@ export default function PaymentData() {
         selectedStories.push(story);
       }
     });
-    setFilteredStories(selectedStories);
+    setFieldValue('filtered_stories_payment', selectedStories);
   };
 
   return (
@@ -85,12 +84,12 @@ export default function PaymentData() {
           >
             <Field
               className="hidden"
-              name="tipo_atendimento"
+              name="forma_pagamento"
               type="hidden"
-              value={values.tipo_atendimento}
+              value={values.forma_pagamento}
             />
             <Text appearance="p4" color={red[1200]}>
-              Preencha todos os campos corretamente
+              {errors.forma_pagamento}
             </Text>
           </div>
         )}
@@ -227,20 +226,22 @@ export default function PaymentData() {
                       Número do cartão
                     </Text>
                     <Field
-                      className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                      className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                       name="card_number"
-                      type="text"
-                      value={values.card_number}
                       style={{
                         background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
+                        borderColor: errors.card_number
+                          ? red[900]
+                          : neutralLight[400],
                         color: neutralMid[500]
                       }}
+                      type="text"
+                      value={values.card_number}
                     />
                     {errors.card_number && (
-                      <span className="ml-2 mt-1 text-red-600 text-sm">
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
                         {errors.card_number}
-                      </span>
+                      </Text>
                     )}
                   </li>
                 </ul>
@@ -254,20 +255,22 @@ export default function PaymentData() {
                       Nome no cartão
                     </Text>
                     <Field
-                      className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                      className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                       name="card_name"
-                      type="text"
-                      value={values.card_name}
                       style={{
                         background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
+                        borderColor: errors.card_name
+                          ? red[900]
+                          : neutralLight[400],
                         color: neutralMid[500]
                       }}
+                      type="text"
+                      value={values.card_name}
                     />
                     {errors.card_name && (
-                      <span className="ml-2 mt-1 text-red-600 text-sm">
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
                         {errors.card_name}
-                      </span>
+                      </Text>
                     )}
                   </li>
                 </ul>
@@ -281,20 +284,22 @@ export default function PaymentData() {
                       Data de validade
                     </Text>
                     <Field
-                      className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                      className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                       name="card_expiration_date"
-                      type="text"
-                      value={values.card_expiration_date}
                       style={{
                         background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
+                        borderColor: errors.card_expiration_date
+                          ? red[900]
+                          : neutralLight[400],
                         color: neutralMid[500]
                       }}
+                      type="text"
+                      value={values.card_expiration_date}
                     />
                     {errors.card_expiration_date && (
-                      <span className="ml-2 mt-1 text-red-600 text-sm">
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
                         {errors.card_expiration_date}
-                      </span>
+                      </Text>
                     )}
                   </li>
                   <li className="flex-1">
@@ -306,20 +311,22 @@ export default function PaymentData() {
                       CVC
                     </Text>
                     <Field
-                      className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                      className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                       name="card_code"
-                      type="text"
-                      value={values.card_code}
                       style={{
                         background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
+                        borderColor: errors.card_code
+                          ? red[900]
+                          : neutralLight[400],
                         color: neutralMid[500]
                       }}
+                      type="text"
+                      value={values.card_code}
                     />
                     {errors.card_code && (
-                      <span className="ml-2 mt-1 text-red-600 text-sm">
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
                         {errors.card_code}
-                      </span>
+                      </Text>
                     )}
                   </li>
                 </ul>
@@ -332,29 +339,39 @@ export default function PaymentData() {
                     >
                       Em quantas parcelas deseja pagar?
                     </Text>
-                    <Field
-                      as="select"
-                      className="appearance-none border p-3 rounded text-sm w-full"
-                      onChange={(e) =>
-                        setFieldValue('parcelas', e.target.value)
-                      }
-                      style={{
-                        background: neutralLight[200],
-                        borderColor: neutralLight[400],
-                        color: neutralMid[500]
-                      }}
-                      value={values.parcelas}
-                    >
-                      <option defaultValue="default">Selecione</option>
-                      <option key="1">1x de R$ 179.90</option>
-                      <option key="2">2x de R$ 179.90</option>
-                      <option key="3">3x de R$ 179.90</option>
-                    </Field>
-                    <SolidIcon
-                      icon="faChevronDown"
-                      iconColor={neutralMid[500]}
-                      newClasses="h-4 -ml-10"
-                    />
+                    <div className="flex items-center">
+                      <Field
+                        as="select"
+                        className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                        name="parcelas"
+                        onChange={(e) =>
+                          setFieldValue('parcelas', e.target.value)
+                        }
+                        style={{
+                          background: neutralLight[200],
+                          borderColor: errors.parcelas
+                            ? red[900]
+                            : neutralLight[400],
+                          color: neutralMid[500]
+                        }}
+                        value={values.parcelas}
+                      >
+                        <option value="">Selecione</option>
+                        <option key="1">1x de R$ 179.90</option>
+                        <option key="2">2x de R$ 179.90</option>
+                        <option key="3">3x de R$ 179.90</option>
+                      </Field>
+                      <SolidIcon
+                        icon="faChevronDown"
+                        iconColor={neutralMid[500]}
+                        newClasses="h-4 -ml-10"
+                      />
+                    </div>
+                    {errors.parcelas && (
+                      <Text appearance="p4" className="mt-2" color={red[900]}>
+                        {errors.parcelas}
+                      </Text>
+                    )}
                   </li>
                 </ul>
               </>
@@ -419,28 +436,43 @@ export default function PaymentData() {
                           CEP
                         </Text>
                         <Field
-                          className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                          className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                           name="cep"
-                          type="text"
-                          value={values.cep}
                           style={{
                             background: neutralLight[200],
-                            border: `1px solid ${neutralLight[400]}`,
+                            borderColor: errors.cep
+                              ? red[900]
+                              : neutralLight[400],
                             color: neutralMid[500]
                           }}
+                          type="text"
+                          value={values.cep}
                         />
                         {errors.cep && (
-                          <span className="ml-2 mt-1 text-red-600 text-sm">
+                          <Text
+                            appearance="p4"
+                            className="mt-2"
+                            color={red[900]}
+                          >
                             {errors.cep}
-                          </span>
+                          </Text>
                         )}
                       </li>
-                      <li className="flex flex-1 items-center">
-                        <Link href="/">
-                          <Text appearance="p1" color={blue[800]}>
-                            Não sei o meu CEP
-                          </Text>
-                        </Link>
+                      <li className="flex flex-col flex-1">
+                        <Text
+                          className="invisible mb-2"
+                          appearance="p4"
+                          color={neutralDark[500]}
+                        >
+                          Não sei o meu CEP
+                        </Text>
+                        <div className="flex flex-1 items-center">
+                          <Link href="/">
+                            <Text appearance="p1" color={blue[800]}>
+                              Não sei o meu CEP
+                            </Text>
+                          </Link>
+                        </div>
                       </li>
                     </ul>
                     <ul className="flex flex-wrap mb-6 space-x-8">
@@ -453,20 +485,26 @@ export default function PaymentData() {
                           Endereço
                         </Text>
                         <Field
-                          className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
-                          name="endereco"
-                          type="text"
-                          value={values.endereco}
+                          className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                          name="logradouro"
                           style={{
                             background: neutralLight[200],
-                            border: `1px solid ${neutralLight[400]}`,
+                            borderColor: errors.logradouro
+                              ? red[900]
+                              : neutralLight[400],
                             color: neutralMid[500]
                           }}
+                          type="text"
+                          value={values.logradouro}
                         />
-                        {errors.endereco && (
-                          <span className="ml-2 mt-1 text-red-600 text-sm">
-                            {errors.endereco}
-                          </span>
+                        {errors.logradouro && (
+                          <Text
+                            appearance="p4"
+                            className="mt-2"
+                            color={red[900]}
+                          >
+                            {errors.logradouro}
+                          </Text>
                         )}
                       </li>
                       <li className="flex-1">
@@ -478,20 +516,26 @@ export default function PaymentData() {
                           Número
                         </Text>
                         <Field
-                          className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
-                          name="addressNumber"
-                          type="text"
-                          value={values.addressNumber}
+                          className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                          name="address_number"
                           style={{
                             background: neutralLight[200],
-                            border: `1px solid ${neutralLight[400]}`,
+                            borderColor: errors.address_number
+                              ? red[900]
+                              : neutralLight[400],
                             color: neutralMid[500]
                           }}
+                          type="text"
+                          value={values.address_number}
                         />
-                        {errors.addressNumber && (
-                          <span className="ml-2 mt-1 text-red-600 text-sm">
-                            {errors.addressNumber}
-                          </span>
+                        {errors.address_number && (
+                          <Text
+                            appearance="p4"
+                            className="mt-2"
+                            color={red[900]}
+                          >
+                            {errors.address_number}
+                          </Text>
                         )}
                       </li>
                     </ul>
@@ -505,21 +549,16 @@ export default function PaymentData() {
                           Complemento
                         </Text>
                         <Field
-                          className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                          className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                           name="complemento"
-                          type="text"
-                          value={values.complemento}
                           style={{
                             background: neutralLight[200],
-                            border: `1px solid ${neutralLight[400]}`,
+                            borderColor: neutralLight[400],
                             color: neutralMid[500]
                           }}
+                          type="text"
+                          value={values.complemento}
                         />
-                        {errors.complemento && (
-                          <span className="ml-2 mt-1 text-red-600 text-sm">
-                            {errors.complemento}
-                          </span>
-                        )}
                       </li>
                     </ul>
                     <ul className="flex mb-6 space-x-6">
@@ -534,19 +573,22 @@ export default function PaymentData() {
                         <div className="flex items-center">
                           <Field
                             as="select"
-                            className="appearance-none border p-3 rounded text-sm w-full"
+                            className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                            name="address_state"
                             onChange={(e) => {
-                              setFieldValue('estado', e.target.value);
+                              setFieldValue('address_state', e.target.value);
                               filterStories(e.target.value);
                             }}
                             style={{
                               background: neutralLight[200],
-                              borderColor: neutralLight[400],
+                              borderColor: errors.address_state
+                                ? red[900]
+                                : neutralLight[400],
                               color: neutralMid[500]
                             }}
-                            value={values.estado}
+                            value={values.address_state}
                           >
-                            <option defaultValue="default">Selecione</option>
+                            <option value="">Selecione</option>
                             {states?.map((state) => (
                               <option key={state?.uf} value={state?.uf}>
                                 {state?.estado}
@@ -559,6 +601,15 @@ export default function PaymentData() {
                             newClasses="h-4 -ml-10"
                           />
                         </div>
+                        {errors.address_state && (
+                          <Text
+                            appearance="p4"
+                            className="mt-2"
+                            color={red[900]}
+                          >
+                            {errors.address_state}
+                          </Text>
+                        )}
                       </li>
                       <li className="flex-1">
                         <Text
@@ -571,26 +622,31 @@ export default function PaymentData() {
                         <div className="flex items-center">
                           <Field
                             as="select"
-                            className="appearance-none text-sm p-3 rounded w-full"
+                            className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                            name="address_story"
                             onChange={(e) => {
-                              setFieldValue('cidade', e.target.value);
+                              setFieldValue('address_story', e.target.value);
                             }}
                             style={{
                               background: neutralLight[200],
-                              border: `1px solid ${neutralLight[400]}`,
+                              borderColor: errors.address_story
+                                ? red[900]
+                                : neutralLight[400],
                               color: neutralMid[500]
                             }}
-                            value={values.cidade}
+                            value={values.address_story}
                           >
-                            <option defaultValue="default">Selecione</option>
-                            {filteredStories?.map((filteredStory) => (
-                              <option
-                                key={filteredStory?.cidade}
-                                value={filteredStory?.cidade}
-                              >
-                                {filteredStory?.cidade}
-                              </option>
-                            ))}
+                            <option value="">Selecione</option>
+                            {values?.filtered_stories_payment?.map(
+                              (filteredStory) => (
+                                <option
+                                  key={filteredStory?.cidade}
+                                  value={filteredStory?.cidade}
+                                >
+                                  {filteredStory?.cidade}
+                                </option>
+                              )
+                            )}
                           </Field>
                           <SolidIcon
                             icon="faChevronDown"
@@ -598,6 +654,15 @@ export default function PaymentData() {
                             newClasses="h-4 -ml-10"
                           />
                         </div>
+                        {errors.address_story && (
+                          <Text
+                            appearance="p4"
+                            className="mt-2"
+                            color={red[900]}
+                          >
+                            {errors.address_story}
+                          </Text>
+                        )}
                       </li>
                     </ul>
                     <ul className="flex flex-wrap mb-6 space-x-8">
@@ -610,20 +675,26 @@ export default function PaymentData() {
                           Bairro
                         </Text>
                         <Field
-                          className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                          className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                           name="bairro"
-                          type="text"
-                          value={values.bairro}
                           style={{
                             background: neutralLight[200],
-                            border: `1px solid ${neutralLight[400]}`,
+                            borderColor: errors.bairro
+                              ? red[900]
+                              : neutralLight[400],
                             color: neutralMid[500]
                           }}
+                          type="text"
+                          value={values.bairro}
                         />
                         {errors.bairro && (
-                          <span className="ml-2 mt-1 text-red-600 text-sm">
+                          <Text
+                            appearance="p4"
+                            className="mt-2"
+                            color={red[900]}
+                          >
                             {errors.bairro}
-                          </span>
+                          </Text>
                         )}
                       </li>
                     </ul>

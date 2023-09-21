@@ -126,15 +126,29 @@ export default function Checkout() {
       </Container>
       <Formik
         initialValues={{
+          address_number: '',
+          address_state: '',
+          address_story: '',
+          bairro: '',
+          card_code: '',
+          card_expiration_date: '',
+          card_name: '',
+          card_number: '',
+          cep: '',
           cidade: '',
+          complemento: '',
           detailed_story: {},
           document: '',
           estado: '',
           filtered_stories: [],
+          filtered_stories_payment: [],
           forma_pagamento: '',
           has_atendimento: false,
+          has_pagamento: false,
+          logradouro: '',
           mail: '',
           name: '',
+          parcelas: '',
           phone: '',
           tipo_atendimento: ''
         }}
