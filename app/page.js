@@ -72,7 +72,7 @@ export default function Home() {
           </h2>
         </div>
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="py-16">
+      <Container newClasses="py-16">
         <div className="col-span-12 lg:col-span-6 lg:col-start-4 flex flex-col md:space-y-6 text-center">
           <Overline appearance="o1" color={red[700]}>
             Segmentos
@@ -86,9 +86,9 @@ export default function Home() {
           </Text>
         </div>
       </Container>
-      <Container>
-        <Tabs />
-      </Container>
+      {/* <Container> */}
+      <Tabs />
+      {/* </Container> */}
       <Container bgColor={neutralLight[100]}>
         <div className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last">
           <video
