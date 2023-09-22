@@ -393,7 +393,7 @@ export default function Header() {
                 <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
               </button>
               <ul
-                className="absolute dropDown drop-shadow hidden"
+                className="absolute dropDown drop-shadow hidden pt-6 bg-white px-4 w-[328px]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
@@ -409,7 +409,9 @@ export default function Header() {
                   />
                   Programa de parceria para Contadores
                 </span>
-                <li>Conheça e aproveite benefícios exclusivos.</li>
+                <li className="text-sm py-3 mb-2">
+                  Conheça e aproveite benefícios exclusivos.
+                </li>
 
                 <span className="text-xs uppercase font-bold">
                   <Image
@@ -422,7 +424,7 @@ export default function Header() {
                   />
                   Seja um parceiro certificador
                 </span>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   Programa de parceria para venda de Certificado Digital e
                   Sistemas Web de Gestão.
                 </li>

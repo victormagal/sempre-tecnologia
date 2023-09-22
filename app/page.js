@@ -45,31 +45,35 @@ export default function Home() {
 
       <Container
         bgContainer={neutralDark[500]}
-        newClasses="flex rounded-2xl lg:w-full lg:py-auto py-8 w-auto mx-4"
+        newClasses="rounded-2xl lg:w-full lg:py-auto py-8 w-auto mx-4"
       >
-        <div className="col-span-4 flex flex-col items-center">
-          <h1 className="font-serif font-normal my-4 text-white text-5xl">
-            97%
-          </h1>
-          <h2 className="font-sans font-semibold text-soft-gray text-sm text-center w-1/2">
-            Atendimento Pós-Venda
-          </h2>
-        </div>
-        <div className="col-span-4 flex flex-col items-center">
-          <h1 className="font-serif font-normal my-4 text-white text-5xl">
-            98%
-          </h1>
-          <h2 className="font-sans font-semibold text-soft-gray text-sm text-center w-1/2">
-            Atendimento Suporte Técnico a Sistemas
-          </h2>
-        </div>
-        <div className="col-span-4 flex flex-col items-center">
-          <h1 className="font-serif font-normal my-4 text-white text-5xl">
-            85%
-          </h1>
-          <h2 className="font-sans font-semibold text-soft-gray text-sm text-center w-1/2">
-            Atendimento Certificado Digital
-          </h2>
+        <div className="col-span-8 col-start-3 flex justify-between">
+          <div className="flex flex-col items-center">
+            <Title appearance="h1" color={neutralLight[100]} extra>
+              97%
+            </Title>
+            <Title appearance="h6" color={neutralMid[100]} extra>
+              Atendimento Pós-Venda%
+            </Title>
+          </div>
+          <div className="flex flex-col items-center">
+            <Title appearance="h1" color={neutralLight[100]} extra>
+              98%
+            </Title>
+            <Title appearance="h6" color={neutralMid[100]} extra>
+              Atendimento Suporte Técnico a Sistemas
+            </Title>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
+              <Title appearance="h1" color={neutralLight[100]} extra>
+                85%
+              </Title>
+              <Title appearance="h6" color={neutralMid[100]} extra>
+                Atendimento Certificado Digital
+              </Title>
+            </div>
+          </div>
         </div>
       </Container>
       <Container newClasses="py-16">
@@ -86,9 +90,9 @@ export default function Home() {
           </Text>
         </div>
       </Container>
-      {/* <Container> */}
+
       <Tabs />
-      {/* </Container> */}
+
       <Container bgColor={neutralLight[100]}>
         <div className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last">
           <video
