@@ -56,7 +56,7 @@ export default function Header() {
           </Link>
         </div>
         <nav className="col-end-13 col-span-9 flex space-x-4 justify-between items-center">
-          <ul className="flex items-center justify-between w-full">
+          <ul className="flex items-center justify-between w-full ">
             <li>
               <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
@@ -79,267 +79,300 @@ export default function Header() {
                 <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
               </button>
               <ul
-                className="absolute dropDown drop-shadow hidden"
+                className="absolute dropDown drop-shadow hidden pt-6 bg-white px-4 w-[328px]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
               >
-                <span>Distribuidores</span>
-                <li>
+                <span className="text-xs uppercase font-bold">
+                  Distribuidores
+                </span>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/pescados.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Pescados, bovinos e suínos
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/paes.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Pães e salgados
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/hortifruti.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Hortifruti
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/cosmeticos.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Comésticos
                 </li>
-                <li>
+                <li className="text-sm py-3">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/picoles.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Picolés e sorvetes
                 </li>
 
-                <span>Pequenos varejos</span>
-                <li>
+                <span className="text-xs uppercase font-bold">
+                  Pequenos varejos
+                </span>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/vestuarios.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Vestuários e calçados
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/barbearias.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Barbearias e salões de beleza
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/petshops.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Petshops
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/lanchonetes.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Lanchonetes e quiosques
                 </li>
-                <li>
+                <li className="text-sm py-3">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/moveis.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Móveis e colchões
                 </li>
 
-                <span>Prestadores de serviço</span>
-                <li>
+                <span className="text-xs uppercase font-bold">
+                  Prestadores de serviço
+                </span>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/contabilidades.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Contabilidades e BPO
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2 w-full">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/construtoras.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Construtoras e Engenharias
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/consultorios.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Consultórios
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/seguranca.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Segurança, limpeza e conservação
                 </li>
-                <li>
+                <li className="text-sm py-3">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/manutencao.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Manutenção e instalações
                 </li>
 
-                <span>Recorrentes</span>
-                <li>
+                <span className="text-xs uppercase font-bold">Recorrentes</span>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/associacoes.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Associações e sindicatos
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/clubes.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Clubes
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/cursos.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Cursos
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/condominios.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Condomínios
                 </li>
-                <li>
+                <li className="text-sm py-3">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/locacoes.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Locações e serviços
                 </li>
 
-                <span>Documentos fiscais</span>
-                <li>
+                <span className="text-xs uppercase font-bold">
+                  Documentos fiscais
+                </span>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/nfprodutos.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   NF-e Nota Fiscal Produtos
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/nfservicos.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   NF-e Nota Fiscal Serviços
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/conhecimento.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   CT-e Conhecimento de transporte
                 </li>
-                <li>
+                <li className="text-sm py-3 mb-2">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/manifesto.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   MDF-e Manifesto destinatário
                 </li>
-                <li>
+                <li className="text-sm py-3">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/nfconsumidor.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   NFC-e Nota Fiscal Consumidor
                 </li>
@@ -365,25 +398,27 @@ export default function Header() {
                   e.stopPropagation();
                 }}
               >
-                <span>
+                <span className="text-xs uppercase font-bold">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/parceiro.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Programa de parceria para Contadores
                 </span>
                 <li>Conheça e aproveite benefícios exclusivos.</li>
 
-                <span>
+                <span className="text-xs uppercase font-bold">
                   <Image
-                    alt="Sempre mensalidade - Sistemas web para gestão de recorrência"
+                    alt=""
                     height={24}
                     quality={100}
                     src="/menu-icons/parceiro.svg"
                     width={27}
+                    className="inline-block mr-4"
                   />
                   Seja um parceiro certificador
                 </span>
