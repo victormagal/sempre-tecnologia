@@ -65,7 +65,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/sobre">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Quem somos
                 </Text>
@@ -474,7 +474,7 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/parceria">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Certificado Digital
                 </Text>
@@ -566,7 +566,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contato">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Contato
                 </Text>
