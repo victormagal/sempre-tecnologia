@@ -209,14 +209,14 @@ export default function Footer() {
         </div>
         <ul className="col-span-12 lg:col-end-13 lg:col-span-3 flex justify-start lg:justify-end space-x-4">
           <li>
-            <Link href="/">
+            <Link href="/termo">
               <Text appearance="p3" color={neutralMid[500]}>
                 Termos
               </Text>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/privacidade">
               <Text appearance="p3" color={neutralMid[500]}>
                 Privacidade
               </Text>

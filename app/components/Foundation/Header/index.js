@@ -79,7 +79,7 @@ export default function Header() {
                 <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
               </button>
               <ul
-                className="fixed left-52 dropDown drop-shadow rounded w-auto h-auto pt-6 bg-white px-4 flex gap-6"
+                className="flex fixed left-52 dropDown drop-shadow rounded w-auto h-auto hidden pt-6 bg-white px-4 gap-6"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
