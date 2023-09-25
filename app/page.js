@@ -1,14 +1,22 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from './base/Colors';
 import { Overline, Text, Title } from './base/Typography';
-import { LastPosts, Tabs } from './components/Elements';
+import { LastPosts, ModalVimeo, PlayCard, Tabs } from './components/Elements';
 import { Container, HeroPage, Testimonies } from './components/Foundation';
 
 export default function Home() {
+  const [openModalVimeo, setOpenModalVimeo] = useState(false);
+
   return (
     <main className="pt-24">
+      <ModalVimeo
+        open={openModalVimeo}
+        onClose={() => setOpenModalVimeo(false)}
+        link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
+      />
       <HeroPage bgColor={neutralLight[1100]} gradient={false} className="py-10">
         <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10 ">
           <Title appearance="h1" color={neutralDark[500]} extra>
@@ -94,13 +102,11 @@ export default function Home() {
       <Tabs />
 
       <Container bgColor={neutralLight[100]}>
-        <div className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last">
-          <video
-            className="rounded-xl flex-shrink overflow-auto h-[388px]"
-            src="/sempre-exemplo.mp4"
-            height={388}
-            width={1283}
-          />
+        <div
+          className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last cursor-pointer"
+          onClick={() => setOpenModalVimeo(true)}
+        >
+          <PlayCard bgImage="/bg-play-home-quem-somos.png" />
         </div>
         <div className="flex flex-col lg:flex-row items-center col-span-12 lg:mt-24">
           <div className="lg:basis-1/2">

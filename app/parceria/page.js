@@ -4,15 +4,26 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
-import { CardFeature, ContactForm } from '../components/Elements';
+import {
+  CardFeature,
+  ContactForm,
+  ModalVimeo,
+  PlayCard
+} from '../components/Elements';
 import { Container, HeroPage, ModalForm } from '../components/Foundation';
 
 export default function Certificadora() {
   const [openModal, setOpenModal] = useState(false);
+  const [openModalVimeo, setOpenModalVimeo] = useState(false);
 
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalVimeo
+        open={openModalVimeo}
+        onClose={() => setOpenModalVimeo(false)}
+        link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
+      />
       <HeroPage bgColor={neutralDark[500]} gradient={false} className="py-10">
         <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10">
           <Image
@@ -107,16 +118,14 @@ export default function Certificadora() {
         </div>
       </Container>
       <Container bgColor={neutralLight[100]}>
-        <div className="col-span-12 lg:col-span-5 lg:col-start-2 lg:mt-24 lg:mb-32 lg:order-first">
-          <video
-            className="rounded-xl"
-            src="/sempre-exemplo.mp4"
-            height={324}
-            width={568}
-          />
+        <div
+          className="col-span-12 lg:col-span-5 lg:mt-24 lg:mb-32 lg:order-first cursor-pointer"
+          onClick={() => setOpenModalVimeo(true)}
+        >
+          <PlayCard bgImage="/bg-play-certificado-digital.png" />
         </div>
-        <div className="lg:col-span-5 col-span-12 lg:mt-24">
-          <Overline appearance="o1" className="my-6" color={red[700]}>
+        <div className="col-span-12 col-start-6 lg:col-span-6 lg:mt-24">
+          <Overline appearance="o1" className="my-10" color={red[700]}>
             Quem somos
           </Overline>
           <Title
