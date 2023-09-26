@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Container from '../Container';
 import ModalForm from '../ModalForm';
-import { neutralDark, neutralLight, neutralMid, red } from '@/app/base/Colors';
-import { Text, Title } from '@/app/base/Typography';
+import { neutralLight, neutralMid, red } from '@/app/base/Colors';
+import { Text } from '@/app/base/Typography';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -41,10 +41,16 @@ export default function Header() {
     });
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const burgerMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="bg-white fixed w-full z-60 border-b">
+    <header className="bg-white fixed w-full z-60 lg:border-b">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      <Container newClasses="py-6">
+      <Container newClasses="hidden lg:grid py-6">
         <div className="col-span-2 flex justify-center items-center">
           <Link href="/">
             <Image
@@ -65,7 +71,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/sobre">
+              <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Quem somos
                 </Text>
@@ -79,21 +85,16 @@ export default function Header() {
                 <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
               </button>
               <ul
-                className="flex fixed left-52 dropDown drop-shadow rounded w-auto h-auto hidden pt-6 bg-white px-4 gap-6"
+                className="fixed left-52 dropDown drop-shadow hidden pt-6 bg-white px-4 flex gap-6"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
               >
                 <li className="flex-1">
                   <ul>
-                    <Title
-                      className="mb-1"
-                      appearance="h7"
-                      color={neutralMid[600]}
-                      extra
-                    >
+                    <span className="text-xs uppercase font-bold">
                       Distribuidores
-                    </Title>
+                    </span>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
                         alt=""
@@ -103,9 +104,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Pescados, bovinos e suínos
-                      </Text>
+                      Pescados, bovinos e suínos
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -116,9 +115,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Pães e salgados
-                      </Text>
+                      Pães e salgados
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -129,9 +126,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Hortifruti
-                      </Text>
+                      Hortifruti
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -142,9 +137,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Comésticos
-                      </Text>
+                      Comésticos
                     </li>
                     <li className="flex text-sm py-3">
                       <Image
@@ -155,23 +148,16 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Picolés e sorvetes
-                      </Text>
+                      Picolés e sorvetes
                     </li>
                   </ul>
                 </li>
 
                 <li className="flex-1">
                   <ul>
-                    <Title
-                      className="mb-1"
-                      appearance="h7"
-                      color={neutralMid[600]}
-                      extra
-                    >
+                    <span className="text-xs uppercase font-bold">
                       Pequenos varejos
-                    </Title>
+                    </span>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
                         alt=""
@@ -181,9 +167,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Vestuários e calçados
-                      </Text>
+                      Vestuários e calçados
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -194,9 +178,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Barbearias e salões de beleza
-                      </Text>
+                      Barbearias e salões de beleza
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -207,9 +189,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Petshops
-                      </Text>
+                      Petshops
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -220,9 +200,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Lanchonetes e quiosques
-                      </Text>
+                      Lanchonetes e quiosques
                     </li>
                     <li className="flex text-sm py-3">
                       <Image
@@ -233,23 +211,16 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Móveis e colchões
-                      </Text>
+                      Móveis e colchões
                     </li>
                   </ul>
                 </li>
 
                 <li className="flex-1">
                   <ul>
-                    <Title
-                      className="mb-1"
-                      appearance="h7"
-                      color={neutralMid[600]}
-                      extra
-                    >
+                    <span className="text-xs uppercase font-bold">
                       Prestadores de serviço
-                    </Title>
+                    </span>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
                         alt=""
@@ -270,9 +241,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Construtoras e Engenharias
-                      </Text>
+                      Construtoras e Engenharias
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -283,9 +252,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Consultórios
-                      </Text>
+                      Consultórios
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -296,9 +263,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Segurança, limpeza e conservação
-                      </Text>
+                      Segurança, limpeza e conservação
                     </li>
                     <li className="flex text-sm py-3">
                       <Image
@@ -309,23 +274,16 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Manutenção e instalações
-                      </Text>
+                      Manutenção e instalações
                     </li>
                   </ul>
                 </li>
 
                 <li className="flex-1">
                   <ul>
-                    <Title
-                      className="mb-1"
-                      appearance="h7"
-                      color={neutralMid[600]}
-                      extra
-                    >
+                    <span className="text-xs uppercase font-bold">
                       Recorrentes
-                    </Title>
+                    </span>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
                         alt=""
@@ -335,9 +293,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Associações e sindicatos
-                      </Text>
+                      Associações e sindicatos
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -348,9 +304,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Clubes
-                      </Text>
+                      Clubes
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -361,9 +315,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Cursos
-                      </Text>
+                      Cursos
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -374,9 +326,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Condomínios
-                      </Text>
+                      Condomínios
                     </li>
                     <li className="flex text-sm py-3">
                       <Image
@@ -387,23 +337,16 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        Locações e serviços
-                      </Text>
+                      Locações e serviços
                     </li>
                   </ul>
                 </li>
 
                 <li className="flex-1">
                   <ul>
-                    <Title
-                      className="mb-1"
-                      appearance="h7"
-                      color={neutralMid[600]}
-                      extra
-                    >
+                    <span className="text-xs uppercase font-bold">
                       Documentos fiscais
-                    </Title>
+                    </span>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
                         alt=""
@@ -413,9 +356,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        NF-e Nota Fiscal Produtos
-                      </Text>
+                      NF-e Nota Fiscal Produtos
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -426,9 +367,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        NF-e Nota Fiscal Serviços
-                      </Text>
+                      NF-e Nota Fiscal Serviços
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -439,9 +378,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        CT-e Conhecimento de transporte
-                      </Text>
+                      CT-e Conhecimento de transporte
                     </li>
                     <li className="flex text-sm py-3 mb-2">
                       <Image
@@ -452,9 +389,7 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        MDF-e Manifesto destinatário
-                      </Text>
+                      MDF-e Manifesto destinatário
                     </li>
                     <li className="flex text-sm py-3">
                       <Image
@@ -465,16 +400,14 @@ export default function Header() {
                         width={27}
                         className="inline-block mr-4"
                       />
-                      <Text appearance="p4" color={neutralDark[500]}>
-                        NFC-e Nota Fiscal Consumidor
-                      </Text>
+                      NFC-e Nota Fiscal Consumidor
                     </li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href="/parceria">
+              <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Certificado Digital
                 </Text>
@@ -488,66 +421,40 @@ export default function Header() {
                 <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
               </button>
               <ul
-                className="absolute dropDown drop-shadow rounded w-96 h-48 hidden pt-6 bg-white px-4 "
+                className="absolute dropDown drop-shadow hidden pt-6 bg-white px-4 w-[328px]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
               >
-                <li className="flex">
-                  <ul>
-                    <li className="flex items-start text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/parceiro.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      <div>
-                        <Title
-                          className="mb-1"
-                          appearance="h7"
-                          color={neutralDark[500]}
-                          extra
-                        >
-                          Programa de parceria para Contadores
-                        </Title>
-                        <Text appearance="p4" color={neutralMid[500]}>
-                          Conheça e aproveite benefícios exclusivos.
-                        </Text>
-                      </div>
-                    </li>
-                  </ul>
+                <span className="text-xs uppercase font-bold">
+                  <Image
+                    alt=""
+                    height={24}
+                    quality={100}
+                    src="/menu-icons/parceiro.svg"
+                    width={27}
+                    className="inline-block mr-4"
+                  />
+                  Programa de parceria para Contadores
+                </span>
+                <li className="flex text-sm py-3 mb-2">
+                  Conheça e aproveite benefícios exclusivos.
                 </li>
 
-                <li className="flex">
-                  <ul>
-                    <li className="flex items-start text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/parceiro.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      <div>
-                        <Title
-                          className="mb-1"
-                          appearance="h7"
-                          color={neutralDark[500]}
-                          extra
-                        >
-                          Seja um parceiro certificador
-                        </Title>
-                        <Text appearance="p4" color={neutralMid[500]}>
-                          Programa de parceria para venda de Certificado Digital
-                          e Sistemas Web de Gestão.
-                        </Text>
-                      </div>
-                    </li>
-                  </ul>
+                <span className="text-xs uppercase font-bold">
+                  <Image
+                    alt=""
+                    height={24}
+                    quality={100}
+                    src="/menu-icons/parceiro.svg"
+                    width={27}
+                    className="inline-block mr-4"
+                  />
+                  Seja um parceiro certificador
+                </span>
+                <li className="flex text-sm py-3 mb-2">
+                  Programa de parceria para venda de Certificado Digital e
+                  Sistemas Web de Gestão.
                 </li>
               </ul>
             </li>
@@ -566,7 +473,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/contato">
+              <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Contato
                 </Text>
@@ -588,6 +495,59 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+      </Container>
+
+      {/* menu mobile */}
+
+      <Container newClasses="lg:hidden flex flex-col py-6">
+        <div className="col-span-8 flex justify-between items-center">
+          <Link href="/">
+            <Image
+              alt="Sempre Tecnologia"
+              height={46}
+              src="/logo-positiva.svg"
+              width={172}
+            />
+          </Link>
+          <button
+            className="block text-gray-700 hover:text-gray-900 focus:text-gray-900 focus:outline-none col-span-1 order-last"
+            onClick={burgerMenu}
+          >
+            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              {isOpen
+                ? `
+                <line x1="8" x2="56" y1="16" y2="16"/>
+                <line x1="8" x2="56" y1="32" y2="32"/>
+                <line x1="8" x2="56" y1="48" y2="48"/>
+                `
+                : `
+                <line x1="16" x2="48" y1="16" y2="48"/>
+                <line x1="16" x2="48" y1="48" y2="16"/>
+                `}
+            </svg>
+
+            {/* <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              {isOpen ? (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M3 5H21V7H3V5ZM3 12H21V14H3V12ZM3 19H21V21H3V19Z"
+                />
+              ) : (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M3 5H21V7H3V5ZM3 12H21V14H3V12ZM3 19H21V21H3V19Z"
+                />
+              )}
+            </svg> */}
+          </button>
+        </div>
+        {isOpen && (
+          <div className="fixed z-10 top-0 top-20 left-0 mt-2 bg-white text-gray-800 border rounded-lg shadow-lg h-screen w-screen">
+            teste
+          </div>
+        )}
       </Container>
     </header>
   );
