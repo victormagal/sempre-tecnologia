@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import { neutralDark, neutralMid } from '@/app/base/Colors';
+import { Text, Title } from '@/app/base/Typography';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
@@ -24,41 +26,32 @@ export default function ModalForm({ open, onClose }) {
           e.stopPropagation();
         }}
       >
-        <div
-          className="hidden lg:flex flex-col space-y-8 p-10 w-1/2"
-          style={{
-            background: 'linear-gradient(265deg, #CF2932 0%, #77335F 100%)'
-          }}
-        >
-          <div className="bg-white drop-shadow flex justify-center items-center h-20 w-20 rounded-full">
-            <Image
-              alt="Sempre mensalidade"
-              height={22}
-              quality={100}
-              src="/icon-call-5.svg"
-              width={22}
-            />
-          </div>
-          <h1 className="font-serif font-bold text-white text-4xl">
-            Ligamos para você
-          </h1>
-          <p className="font-sans text-white">
-            Preencha os seus dados e em seguida clique em ME LIGUE AGORA.
-          </p>
-          <p className="font-sans text-white">
-            Entraremos em contato em até 30 segundos se estivermos em horário
-            comercial.
-          </p>
-        </div>
         <div className="bg-white p-6 w-full lg:w-1/2">
           <div className="flex justify-end">
             <FontAwesomeIcon
-              className="cursor-pointer h-8 w-8 text-custom-orange"
+              className="cursor-pointer h-5 w-4"
+              color={neutralMid[500]}
               icon={faXmark}
               onClick={onClose}
             />
           </div>
           <div className="p-10">
+            <div className="lg:col-start-2 lg:col-span-4 col-span-12">
+              <Title
+                appearance="h3"
+                className="mb-4 font-bold"
+                color={neutralDark[500]}
+              >
+                Ligamos para você
+              </Title>
+              <Text
+                appearance="p2"
+                className="mb-8 font-normal"
+                color={neutralMid[600]}
+              >
+                Preencha os dados abaixo e entraremos em contato em breve.
+              </Text>
+            </div>
             <Formik
               initialValues={{ mail: '', name: '', phone: '' }}
               onSubmit={(values) => {
@@ -108,12 +101,36 @@ export default function ModalForm({ open, onClose }) {
                 <Form>
                   <ul className="flex flex-col space-y-6">
                     <li className="flex flex-col space-y-2">
-                      <label
+                      <Text
+                        htmlFor="assunto"
+                        appearance="p4"
+                        className="font-normal"
+                        color={neutralDark[500]}
+                      >
+                        Assunto
+                      </Text>
+                      <Field
+                        className="bg-transparent border border-custom-purple font-sans px-4 py-2 placeholder:text-soft-gray text-soft-gray rounded w-full"
+                        name="name"
+                        placeholder="Assunto"
+                        type="text"
+                        value={values.name}
+                      />
+                      {errors.name && (
+                        <span className="text-red-600 text-sm">
+                          {errors.name}
+                        </span>
+                      )}
+                    </li>
+                    <li className="flex flex-col space-y-2">
+                      <Text
                         htmlFor="name"
-                        className="font-sans font-semibold text-custom-purple"
+                        appearance="p4"
+                        className="font-normal"
+                        color={neutralDark[500]}
                       >
                         Nome
-                      </label>
+                      </Text>
                       <Field
                         className="bg-transparent border border-custom-purple font-sans px-4 py-2 placeholder:text-soft-gray text-soft-gray rounded w-full"
                         name="name"
@@ -128,12 +145,14 @@ export default function ModalForm({ open, onClose }) {
                       )}
                     </li>
                     <li className="flex flex-col space-y-2">
-                      <label
+                      <Text
                         htmlFor="mail"
-                        className="font-sans font-semibold text-custom-purple"
+                        appearance="p4"
+                        className="font-normal"
+                        color={neutralDark[500]}
                       >
                         E-mail
-                      </label>
+                      </Text>
                       <Field
                         className="bg-transparent border border-custom-purple font-sans px-4 py-2 placeholder:text-soft-gray text-soft-gray rounded w-full"
                         name="mail"
@@ -148,12 +167,14 @@ export default function ModalForm({ open, onClose }) {
                       )}
                     </li>
                     <li className="flex flex-col space-y-2">
-                      <label
+                      <Text
                         htmlFor="phone"
-                        className="font-sans font-semibold text-custom-purple"
+                        appearance="p4"
+                        className="font-normal"
+                        color={neutralDark[500]}
                       >
                         Celular ou Whatsapp
-                      </label>
+                      </Text>
                       <Field
                         className="bg-transparent border border-custom-purple font-sans px-4 py-2 placeholder:text-soft-gray text-soft-gray rounded w-full"
                         name="phone"
@@ -186,7 +207,7 @@ export default function ModalForm({ open, onClose }) {
                         className="bg-white font-sans font-bold py-4 text-white rounded w-2/3"
                         style={{
                           background:
-                            'linear-gradient(190deg, #F8B44C 14%, #F07E26 89%)'
+                            'linear-gradient(190deg, #039855 14%, #039855 89%)'
                         }}
                         type="submit"
                       >
