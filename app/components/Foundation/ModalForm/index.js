@@ -21,13 +21,13 @@ export default function ModalForm({ open, onClose }) {
       className="bg-overlay-black fixed h-screen w-screen z-60"
     >
       <div
-        className="absolute flex left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] h-auto w-10/12 lg:w-8/12"
+        className="absolute flex left-[50%] lg:left-[70%] translate-x-[-50%] top-[50%] translate-y-[-50%] h-auto w-10/12 lg:w-8/12"
         onClick={(e) => {
           e.stopPropagation();
         }}
       >
-        <div className="bg-white p-6 w-full lg:w-1/2">
-          <div className="flex justify-end">
+        <div className="bg-white p-6 w-full lg:w-1/2 ">
+          <div className="flex justify-end ">
             <FontAwesomeIcon
               className="cursor-pointer h-5 w-4"
               color={neutralMid[500]}
@@ -202,9 +202,15 @@ export default function ModalForm({ open, onClose }) {
                         {messageMail}
                       </p>
                     )}
-                    <li>
+                    <li className="flex gap-4">
                       <button
-                        className="bg-white font-sans font-bold py-4 text-white rounded w-2/3"
+                        className="bg-white font-sans font-bold py-4 text-blue-950 border-2 rounded-md w-1/2"
+                        type="submit"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        className="bg-white font-sans font-bold py-4 text-white border-2 rounded-md w-1/2"
                         style={{
                           background:
                             'linear-gradient(190deg, #039855 14%, #039855 89%)'
