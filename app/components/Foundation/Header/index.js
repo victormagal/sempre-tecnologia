@@ -79,7 +79,7 @@ export default function Header() {
                 </Text>
               </Link>
             </li>
-            <li className="p-4 mb-2">
+            <li className="relative p-4 mb-2">
               <button className="flex" onClick={toggleMenu}>
                 <Text appearance="p4" color={neutralMid[600]}>
                   Segmentos
@@ -87,7 +87,7 @@ export default function Header() {
                 <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
               </button>
               <ul
-                className="fixed left-52 dropDown drop-shadow hidden pt-6 bg-white px-4 flex gap-6"
+                className="fixed flex left-[50%] lg:left-[50%] translate-x-[-50%] md:top-[90px]  dropDown drop-shadow hidden pt-6 bg-white px-4 flex gap-6 col-span-12 col-start-1 lg:w-8/12 "
                 onClick={(e) => {
                   e.stopPropagation();
                 }}

@@ -51,12 +51,12 @@ export default function Home() {
         </div>
       </HeroPage>
 
-      <Container
-        bgContainer={neutralDark[500]}
-        newClasses="rounded-2xl lg:w-full lg:py-auto py-8 w-auto mx-4"
-      >
-        <div className="col-span-8 col-start-3 flex justify-between">
-          <div className="flex flex-col justify-center">
+      <Container newClasses="lg:w-full ">
+        <div
+          className=" bg-[#091E42] rounded-2xl  lg:py-auto py-8
+         col-span-12   flex flex-col lg:flex-row justify-center lg:gap-16 "
+        >
+          <div className="flex flex-col items-center mb-10 lg:mb-0">
             <Title appearance="h1" color={neutralLight[100]} extra>
               97%
             </Title>
@@ -64,7 +64,7 @@ export default function Home() {
               Atendimento Pós-Venda%
             </Title>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-10 lg:mb-0">
             <Title appearance="h1" color={neutralLight[100]} extra>
               98%
             </Title>
@@ -72,15 +72,13 @@ export default function Home() {
               Atendimento Suporte Técnico a Sistemas
             </Title>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center">
-              <Title appearance="h1" color={neutralLight[100]} extra>
-                85%
-              </Title>
-              <Title appearance="h6" color={neutralMid[100]} extra>
-                Atendimento Certificado Digital
-              </Title>
-            </div>
+          <div className="flex flex-col items-center mb-4 lg:mb-0">
+            <Title appearance="h1" color={neutralLight[100]} extra>
+              85%
+            </Title>
+            <Title appearance="h6" color={neutralMid[100]} extra>
+              Atendimento Certificado Digital
+            </Title>
           </div>
         </div>
       </Container>
