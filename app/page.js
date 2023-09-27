@@ -56,7 +56,7 @@ export default function Home() {
         newClasses="rounded-2xl lg:w-full lg:py-auto py-8 w-auto mx-4"
       >
         <div className="col-span-8 col-start-3 flex justify-between">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col justify-center">
             <Title appearance="h1" color={neutralLight[100]} extra>
               97%
             </Title>
@@ -103,10 +103,13 @@ export default function Home() {
 
       <Container bgColor={neutralLight[100]}>
         <div
-          className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last cursor-pointer"
+          className="col-span-12 lg:order-last cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
-          <PlayCard bgImage="/bg-play-home-quem-somos.png" />
+          <PlayCard
+            className="w-full h-full"
+            bgImage="/bg-play-home-quem-somos.png"
+          />
         </div>
         <div className="flex flex-col lg:flex-row items-center col-span-12 lg:mt-24">
           <div className="lg:basis-1/2">
@@ -208,7 +211,7 @@ export default function Home() {
         bgContainer={neutralDark[500]}
         newClasses="flex rounded-2xl lg:w-full lg:py-auto py-24 w-auto col-span-12 mx-4"
       >
-        <div className="lg:col-start-4 col-span-6 text-center ">
+        <div className="lg:col-start-4 col-span-6 text-center">
           <Title
             appearance="h2"
             className="mb-6"

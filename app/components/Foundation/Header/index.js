@@ -880,7 +880,7 @@ export default function Header() {
                 </ul>
               </li>
               <li className=" p-4">
-                <Link href="/">
+                <Link href="/parceria">
                   <Text appearance="p4" color={neutralDark[500]}>
                     Certificado Digital
                   </Text>
