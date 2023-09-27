@@ -73,7 +73,7 @@ export default function Header() {
               </Link>
             </li>
             <li className=" p-4 mb-2">
-              <Link href="/">
+              <Link href="/sobre">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Quem somos
                 </Text>
@@ -409,7 +409,7 @@ export default function Header() {
               </ul>
             </li>
             <li className=" p-4 mb-2">
-              <Link href="/">
+              <Link href="/parceria">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Certificado Digital
                 </Text>
@@ -475,7 +475,7 @@ export default function Header() {
               </Link>
             </li>
             <li className=" p-4 mb-2">
-              <Link href="/">
+              <Link href="/contato">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Contato
                 </Text>
