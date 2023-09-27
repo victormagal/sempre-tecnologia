@@ -79,7 +79,7 @@ export default function Header() {
                 </Text>
               </Link>
             </li>
-            <li className="relative">
+            <li className="p-4 mb-2">
               <button className="flex" onClick={toggleMenu}>
                 <Text appearance="p4" color={neutralMid[600]}>
                   Segmentos
@@ -415,7 +415,7 @@ export default function Header() {
                 </Text>
               </Link>
             </li>
-            <li className="relative">
+            <li className="p-4 mb-2">
               <button className="flex" onClick={toggleMenu}>
                 <Text appearance="p4" color={neutralMid[600]}>
                   Seja um parceiro
