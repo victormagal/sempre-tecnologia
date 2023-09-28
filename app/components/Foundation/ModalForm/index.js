@@ -206,6 +206,7 @@ export default function ModalForm({ open, onClose }) {
                       <button
                         className="bg-white font-sans font-bold py-4 text-blue-950 border-2 rounded-md w-1/2"
                         type="submit"
+                        onClick={onClose}
                       >
                         Cancelar
                       </button>
