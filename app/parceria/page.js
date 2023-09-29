@@ -4,12 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
-import {
-  CardFeature,
-  ContactForm,
-  ModalVimeo,
-  PlayCard
-} from '../components/Elements';
+import { CardFeature, ContactForm, ModalVimeo } from '../components/Elements';
 import { Container, HeroPage, ModalForm } from '../components/Foundation';
 
 export default function Certificadora() {
@@ -119,18 +114,23 @@ export default function Certificadora() {
       </Container>
       <Container bgColor={neutralLight[100]}>
         <div
-          className="col-span-12 lg:col-span-5 lg:mt-24 lg:mb-32 lg:order-first cursor-pointer"
+          className="col-span-12 lg:col-span-5 lg:col-start-2 lg:mt-24 lg:mb-32 lg:order-first cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
-          <PlayCard bgImage="/bg-play-certificado-digital.png" />
+          <Image
+            src="/bg-play-certificado-digital.png"
+            height={324}
+            width={568}
+          />
+          {/* <PlayCard bgImage="/bg-play-certificado-digital.png" /> */}
         </div>
-        <div className="col-span-12 col-start-6 lg:col-span-6 lg:mt-24">
+        <div className="col-span-12 col-start-6 lg:col-span-6 lg:mt-12 ">
           <Overline appearance="o1" className="my-10" color={red[700]}>
             Quem somos
           </Overline>
           <Title
             appearance="h3"
-            className="mb-6"
+            className="mb-10"
             color={neutralDark[500]}
             extra
           >
@@ -145,7 +145,7 @@ export default function Certificadora() {
           </Text>
           <Link href="/">
             <button
-              className="w-full lg:w-auto py-4 px-8 rounded"
+              className="w-full lg:w-auto mt-7 py-4 px-8 rounded"
               style={{ background: red[1000] }}
               type="button"
             >
@@ -248,9 +248,8 @@ export default function Certificadora() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-12  lg:col-span-5 lg:col-start-2 mt-24 lg:order-first order-last">
+        <div className="col-span-12 lg:col-span-5 lg:col-start-2 mt-24 lg:order-first order-last">
           <Image
-            className=""
             alt="Portal Sempre Contador"
             height={674}
             width={466}

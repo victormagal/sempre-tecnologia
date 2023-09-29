@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from './base/Colors';
 import { Overline, Text, Title } from './base/Typography';
-import { LastPosts, ModalVimeo, PlayCard, Tabs } from './components/Elements';
+import { LastPosts, ModalVimeo, Tabs } from './components/Elements';
 import { Container, HeroPage, Testimonies } from './components/Foundation';
 
 export default function Home() {
@@ -101,13 +101,10 @@ export default function Home() {
 
       <Container bgColor={neutralLight[100]}>
         <div
-          className="col-span-12 lg:order-last cursor-pointer"
+          className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
-          <PlayCard
-            className="w-full h-full"
-            bgImage="/bg-play-home-quem-somos.png"
-          />
+          <Image height={388} width={1503} src="/bg-play-home-quem-somos.png" />
         </div>
         <div className="flex flex-col lg:flex-row items-center col-span-12 lg:mt-24">
           <div className="lg:basis-1/2">
