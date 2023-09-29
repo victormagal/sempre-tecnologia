@@ -101,7 +101,7 @@ export default function Home() {
 
       <Container bgColor={neutralLight[100]}>
         <div
-          className="col-span-12 lg:mt-24 lg:mb-32 lg:order-last cursor-pointer"
+          className="col-span-12 lg:mt-24 lg:mb-32 order-last cursor-pointer"
           onClick={() => setOpenModalVimeo(true)}
         >
           <Image height={388} width={1503} src="/bg-play-home-quem-somos.png" />
