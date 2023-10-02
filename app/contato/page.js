@@ -118,7 +118,7 @@ export default function Contato() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-12 lg:col-span-4 lg:col-start-7 mt-24 order-last">
+        <div className="col-span-12 lg:col-span-5 lg:col-start-8 mt-24 lg:order-last mx-auto justify-end items-end text-right">
           <Image
             className="justify-end"
             alt="Portal Sempre Contador"
@@ -127,7 +127,7 @@ export default function Contato() {
             src="/img-contato.png"
           />
         </div>
-        <div className="lg:col-start-2 lg:col-span-4 col-span-12 mt-24">
+        <div className=" lg:col-span-5 col-span-12 mt-24 ml-6">
           <Overline appearance="o1" color={red[700]}>
             FALE CONOSCO
           </Overline>
