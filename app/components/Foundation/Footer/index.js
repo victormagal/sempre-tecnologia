@@ -24,7 +24,10 @@ export default function Footer() {
           </Title>
           <ul className="flex mt-4 space-x-3">
             <li>
-              <Link href="/">
+              <Link
+                href="https://www.facebook.com/sempretecnologia/"
+                target="_blank"
+              >
                 <SocialIcon
                   icon="faSquareFacebook"
                   iconColor={neutralLight[600]}
@@ -33,16 +36,22 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link
+                href="https://www.linkedin.com/company/sempre-tecnologia/"
+                target="_blank"
+              >
                 <SocialIcon
-                  icon="faTwitter"
+                  icon="faLinkedinIn"
                   iconColor={neutralLight[600]}
                   newClasses="h-6"
                 />
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link
+                href="https://www.instagram.com/sempretecnologia/"
+                target="_blank"
+              >
                 <SocialIcon
                   icon="faInstagram"
                   iconColor={neutralLight[600]}
@@ -60,7 +69,7 @@ export default function Footer() {
               </Title>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/sobre">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Quem somos
                 </Text>
@@ -74,7 +83,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/noticias">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Blog
                 </Text>
@@ -148,14 +157,14 @@ export default function Footer() {
               </Title>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contador">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Programa de parceria com contadores
                 </Text>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/parceria">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Parceria em certificado digital
                 </Text>
@@ -171,7 +180,7 @@ export default function Footer() {
               </Title>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contato">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Fale conosco
                 </Text>
@@ -209,14 +218,14 @@ export default function Footer() {
         </div>
         <ul className="col-span-12 lg:col-end-13 lg:col-span-3 flex justify-start lg:justify-end space-x-4">
           <li>
-            <Link href="/">
+            <Link href="/termo">
               <Text appearance="p3" color={neutralMid[500]}>
                 Termos
               </Text>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/privacidade">
               <Text appearance="p3" color={neutralMid[500]}>
                 Privacidade
               </Text>

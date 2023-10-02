@@ -76,7 +76,7 @@ export default function HeaderMobile() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">
+                    <Link href="/sobre">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Quem somos
                       </Title>
@@ -601,7 +601,7 @@ export default function HeaderMobile() {
                       </summary>
                       <article>
                         <ul className="flex flex-col space-y-6">
-                          <Link href="/">
+                          <Link href="/contador">
                             <li className="flex space-x-4">
                               <div>
                                 <SolidIcon
@@ -620,7 +620,7 @@ export default function HeaderMobile() {
                               </div>
                             </li>
                           </Link>
-                          <Link href="/">
+                          <Link href="/parceria">
                             <li className="flex space-x-4">
                               <div>
                                 <SolidIcon
@@ -645,7 +645,7 @@ export default function HeaderMobile() {
                     </details>
                   </li>
                   <li>
-                    <Link href="/">
+                    <Link href="/noticias">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Blog
                       </Title>
@@ -659,7 +659,7 @@ export default function HeaderMobile() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">
+                    <Link href="/contato">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Contato
                       </Title>

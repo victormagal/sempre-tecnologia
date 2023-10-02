@@ -459,7 +459,7 @@ export default function Header() {
                 }}
                 style={{ backgroundColor: neutralLight[100] }}
               >
-                <Link href="/">
+                <Link href="/contador">
                   <li className="flex items-start mb-4 space-x-4">
                     <div>
                       <SolidIcon
@@ -478,7 +478,7 @@ export default function Header() {
                     </div>
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="/parceria">
                   <li className="flex items-start space-x-4">
                     <div>
                       <SolidIcon
@@ -501,7 +501,7 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/noticias">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Blog
                 </Text>
