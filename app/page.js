@@ -2,10 +2,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { neutralDark, neutralLight, neutralMid, red } from './base/Colors';
+import {
+  creamAssistant,
+  neutralDark,
+  neutralLight,
+  neutralMid,
+  red
+} from './base/Colors';
+import SolidIcon from './base/SolidIcon';
 import { Overline, Text, Title } from './base/Typography';
 import { LastPosts, ModalVimeo, Tabs } from './components/Elements';
-import { Container, HeroPage, Testimonies } from './components/Foundation';
+import { Container, Testimonies } from './components/Foundation';
 
 export default function Home() {
   const [openModalVimeo, setOpenModalVimeo] = useState(false);
@@ -17,8 +24,8 @@ export default function Home() {
         onClose={() => setOpenModalVimeo(false)}
         link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
       />
-      <HeroPage bgColor={neutralLight[1100]} gradient={false} className="py-10">
-        <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10 ">
+      <Container newClasses="py-14">
+        <div className="col-span-6 flex flex-col justify-center space-y-10">
           <Title appearance="h1" color={neutralDark[500]} extra>
             Seja bem-vindo a Sempre Tecnologia
           </Title>
@@ -40,23 +47,18 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="flex lg:col-end-13 lg:col-span-6 lg:justify-end md:py-16">
+        <div className="col-span-6 flex items-center justify-end">
           <Image
-            className="h-screen-sm max-w-screen-lg  "
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={352}
             src="/hero-home.png"
             width={560}
           />
         </div>
-      </HeroPage>
-
-      <Container newClasses="lg:w-full ">
-        <div
-          className=" bg-[#091E42] rounded-2xl  lg:py-auto py-8
-         col-span-12   flex flex-col lg:flex-row justify-center lg:gap-16 "
-        >
-          <div className="flex flex-col items-center mb-10 lg:mb-0">
+      </Container>
+      <Container bgContainer={neutralDark[500]} newClasses="rounded-2xl">
+        <div className="col-span-10 col-start-2 flex justify-between py-8">
+          <div className="flex flex-col items-center space-y-2">
             <Title appearance="h1" color={neutralLight[100]} extra>
               97%
             </Title>
@@ -64,7 +66,7 @@ export default function Home() {
               Atendimento Pós-Venda%
             </Title>
           </div>
-          <div className="flex flex-col items-center mb-10 lg:mb-0">
+          <div className="flex flex-col items-center space-y-2">
             <Title appearance="h1" color={neutralLight[100]} extra>
               98%
             </Title>
@@ -72,7 +74,7 @@ export default function Home() {
               Atendimento Suporte Técnico a Sistemas
             </Title>
           </div>
-          <div className="flex flex-col items-center mb-4 lg:mb-0">
+          <div className="flex flex-col items-center space-y-2">
             <Title appearance="h1" color={neutralLight[100]} extra>
               85%
             </Title>
@@ -83,14 +85,19 @@ export default function Home() {
         </div>
       </Container>
       <Container newClasses="py-16">
-        <div className="col-span-12 lg:col-span-6 lg:col-start-4 flex flex-col md:space-y-6 text-center">
-          <Overline appearance="o1" color={red[700]}>
+        <div className="col-span-6 col-start-4 flex flex-col space-y-4">
+          <Overline appearance="o1" className="text-center" color={red[700]}>
             Segmentos
           </Overline>
-          <Title appearance="h2" color={neutralDark[500]} extra>
+          <Title
+            appearance="h2"
+            className="text-center"
+            color={neutralDark[500]}
+            extra
+          >
             Qual é a sua necessidade?
           </Title>
-          <Text appearance="p1" color={neutralMid[500]}>
+          <Text appearance="p1" className="text-center" color={neutralMid[500]}>
             Temos um sistema de gestão perfeito para você. Confira as nossas
             soluções:
           </Text>
@@ -99,39 +106,34 @@ export default function Home() {
 
       <Tabs />
 
-      <Container bgColor={neutralLight[100]}>
-        <div
-          className="col-span-12 lg:mt-24 lg:mb-32 order-last cursor-pointer"
-          onClick={() => setOpenModalVimeo(true)}
-        >
-          <Image height={388} width={1503} src="/bg-play-home-quem-somos.png" />
+      <Container bgColor={creamAssistant[100]} newClasses="py-20">
+        <div className="col-span-6 flex flex-col justify-center space-y-6">
+          <Overline appearance="o1" color={red[700]}>
+            Quem somos
+          </Overline>
+          <Title appearance="h1" color={neutralDark[500]} extra>
+            Você conhece a Sempre Tecnologia?
+          </Title>
         </div>
-        <div className="flex flex-col lg:flex-row items-center col-span-12 lg:mt-24">
-          <div className="lg:basis-1/2">
-            <Overline appearance="o1" className="mb-6" color={red[700]}>
-              Quem somos
-            </Overline>
-            <Title
-              appearance="h1"
-              newclassName="mb-6"
-              color={neutralDark[500]}
-              extra
-            >
-              Você conhece a Sempre Tecnologia?
-            </Title>
-          </div>
-          <div className="lg:basis-1/2 ">
-            <Text appearance="p3" className="mt-8 " color={neutralMid[500]}>
-              Somos uma empresa especializada em desenvolver sistemas com
-              tecnologia própria em plataforma web para nossos clientes. Já
-              estamos há mais de 12 anos no mercado. Possuímos uma estrutura
-              ampla e atendimento diferenciado para atender e dar suporte para
-              micro, pequenas e médias empresas.
-            </Text>
-          </div>
+        <div className="col-span-6 flex items-center">
+          <Text appearance="p3" color={neutralMid[500]}>
+            Somos uma empresa especializada em desenvolver sistemas com
+            tecnologia própria em plataforma web para nossos clientes. Já
+            estamos há mais de 12 anos no mercado. Possuímos uma estrutura ampla
+            e atendimento diferenciado para atender e dar suporte para micro,
+            pequenas e médias empresas.
+          </Text>
+        </div>
+        <div className="col-span-12 flex justify-center mt-8">
+          <Image
+            className="cursor-pointer"
+            height={388}
+            onClick={() => setOpenModalVimeo(true)}
+            src="/bg-play-home-quem-somos.png"
+            width={1151}
+          />
         </div>
       </Container>
-
       <Testimonies />
       <Container newClasses="py-8">
         <ul className="col-span-12 flex justify-between mb-14">
@@ -185,7 +187,6 @@ export default function Home() {
           </li>
         </ul>
       </Container>
-
       <Container>
         <div className="col-span-4 lg:col-span-9 mb-6">
           <h1 className="font-serif font-semibold text-4xl text-dark-blue text-center lg:text-left">
@@ -204,29 +205,29 @@ export default function Home() {
       </Container>
       <Container
         bgContainer={neutralDark[500]}
-        newClasses="flex rounded-2xl lg:w-full lg:py-auto py-24 w-auto col-span-12 mx-4"
+        newClasses="mt-16 py-16 rounded-2xl"
       >
-        <div className="lg:col-start-4 col-span-6 text-center">
-          <Title
-            appearance="h2"
-            className="mb-6"
-            color={neutralLight[100]}
-            extra
-          >
+        <div className="col-span-6 col-start-4 flex flex-col items-center space-y-12">
+          <Title appearance="h2" color={neutralLight[100]} extra>
             Seja Sempre!
           </Title>
-          <Text className="mb-6" appearance="p1" color={neutralMid[100]}>
+          <Text appearance="p1" className="text-center" color={neutralMid[100]}>
             Venha conversar conosco. Temos a solução perfeita em sistemas web
             para alavancar a gestão do seu negócio.
           </Text>
           <Link href="/">
             <button
-              className="flex p-4 rounded-md space-x-3 mx-auto w-full lg:w-auto justify-center mt-12"
-              style={{ background: red[1000] }}
+              className="flex items-center p-4 rounded-md space-x-3"
+              style={{ backgroundColor: red[1000] }}
             >
               <Text appearance="p4" color={neutralLight[100]}>
                 Converse com um especialista
               </Text>
+              <SolidIcon
+                icon="faChevronRight"
+                iconColor={neutralLight[100]}
+                newClasses="h-3"
+              />
             </button>
           </Link>
         </div>
