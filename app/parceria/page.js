@@ -114,7 +114,7 @@ export default function Certificadora() {
       </Container>
       <Container bgColor={neutralLight[100]}>
         <div
-          className="col-span-12 lg:col-span-5 lg:col-start-2 lg:mt-24 lg:mb-32 lg:order-first cursor-pointer"
+          className="col-span-12 lg:col-span-5 md:col-start-2 lg:mt-24 lg:mb-32 lg:order-first cursor-pointer mx-auto"
           onClick={() => setOpenModalVimeo(true)}
         >
           <Image
@@ -122,9 +122,8 @@ export default function Certificadora() {
             height={324}
             width={568}
           />
-          {/* <PlayCard bgImage="/bg-play-certificado-digital.png" /> */}
         </div>
-        <div className="col-span-12 col-start-6 lg:col-span-6 lg:mt-12 ">
+        <div className="col-span-12 lg:col-start-6 lg:col-span-6 lg:mt-12 ">
           <Overline appearance="o1" className="my-10" color={red[700]}>
             Quem somos
           </Overline>
