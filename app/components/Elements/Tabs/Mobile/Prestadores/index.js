@@ -57,7 +57,7 @@ export default function PrestadoresMobile() {
           </li>
         </ul>
       </div>
-      <div className="col-span-4 flex justify-end">
+      <div className="col-span-4 flex justify-center">
         <Image
           alt="Sempre mensalidade"
           className="mt-16"

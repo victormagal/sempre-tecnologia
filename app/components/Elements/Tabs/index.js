@@ -125,39 +125,39 @@ export default function Tabs() {
           {toggle === 5 && <Fiscais />}
         </Container>
       </div>
-      <div className="container grid grid-cols-4 lg:hidden">
-        <div className={`col-span-4 ${styles.swiperContainer}`}>
+      <div className="lg:hidden">
+        <div className={`${styles.swiperContainer}`}>
           <Swiper
             modules={[Pagination]}
             pagination={true}
             style={{ paddingBottom: '3rem' }}
           >
             <SwiperSlide
-              className="pt-8 px-8 rounded-3xl"
+              className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
               <DistribuidoresMobile />
             </SwiperSlide>
             <SwiperSlide
-              className="pt-8 px-8 rounded-3xl"
+              className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
               <FiscaisMobile />
             </SwiperSlide>
             <SwiperSlide
-              className="pt-8 px-8 rounded-3xl"
+              className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
               <PrestadoresMobile />
             </SwiperSlide>
             <SwiperSlide
-              className="pt-8 px-8 rounded-3xl"
+              className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
               <RecorrentesMobile />
             </SwiperSlide>
             <SwiperSlide
-              className="pt-8 px-8 rounded-3xl"
+              className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
               <VarejosMobile />

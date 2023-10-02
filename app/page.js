@@ -42,7 +42,7 @@ export default function Home() {
               type="button"
             >
               <Text appearance="p4" color={neutralLight[100]}>
-                Saiba mais
+                Fale com um consultor
               </Text>
             </button>
           </Link>

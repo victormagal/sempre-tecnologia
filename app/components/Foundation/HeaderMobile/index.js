@@ -5,8 +5,9 @@ import { useState } from 'react';
 import Container from '../Container';
 import ModalForm from '../ModalForm';
 import { neutralDark, neutralMid, neutralLight, red } from '@/app/base/Colors';
+import RegularIcon from '@/app/base/RegularIcon';
 import SolidIcon from '@/app/base/SolidIcon';
-import { Text, Title } from '@/app/base/Typography';
+import { Overline, Text, Title } from '@/app/base/Typography';
 
 export default function HeaderMobile() {
   const [openModal, setOpenModal] = useState(false);
@@ -70,7 +71,231 @@ export default function HeaderMobile() {
                   <li>
                     <Link href="/">
                       <Title appearance="h6" color={neutralDark[500]}>
-                        Sempre Tecnologia
+                        Home
+                      </Title>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/">
+                      <Title appearance="h6" color={neutralDark[500]}>
+                        Quem somos
+                      </Title>
+                    </Link>
+                  </li>
+                  <li>
+                    <details className="flex flex-col space-y-6">
+                      <summary className="flex items-center justify-between">
+                        <Title appearance="h6" color={neutralDark[500]}>
+                          Segmentos
+                        </Title>
+                        <SolidIcon
+                          icon="faChevronDown"
+                          iconColor={neutralMid[500]}
+                          newClasses="h-4"
+                        />
+                      </summary>
+                      <article>
+                        <ul className="flex flex-col space-y-6">
+                          <li>
+                            <details className="flex flex-col space-y-6">
+                              <summary className="flex items-center justify-between">
+                                <Overline
+                                  appearance="o1"
+                                  color={neutralDark[500]}
+                                >
+                                  Distribuidores
+                                </Overline>
+                                <SolidIcon
+                                  icon="faChevronDown"
+                                  iconColor={red[900]}
+                                  newClasses="h-4"
+                                />
+                              </summary>
+                              <article>
+                                <ul className="flex flex-col space-y-4">
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faCow"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Pescados, bovinos e suínos
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faBreadSlice"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Pães e salgados
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faSeedling"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Hortifruti
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <RegularIcon
+                                        icon="faEye"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Comésticos
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faIceCream"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Picolés e sorvetes
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                </ul>
+                              </article>
+                            </details>
+                          </li>
+                          <li>
+                            <details className="flex flex-col space-y-6">
+                              <summary className="flex items-center justify-between">
+                                <Overline
+                                  appearance="o1"
+                                  color={neutralDark[500]}
+                                >
+                                  Pequenos Varejos
+                                </Overline>
+                                <SolidIcon
+                                  icon="faChevronDown"
+                                  iconColor={red[900]}
+                                  newClasses="h-4"
+                                />
+                              </summary>
+                              <article>
+                                <ul className="flex flex-col space-y-4">
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faShirt"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Vestuários e calçados
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faScissors"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Barbearias e salões de beleza
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faDog"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Petshops
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faBurger"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Lanchonetes e quiosques
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faChair"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Móveis e colchões
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                </ul>
+                              </article>
+                            </details>
+                          </li>
+                        </ul>
+                      </article>
+                    </details>
+                  </li>
+                  <li>
+                    <Link href="/">
+                      <Title appearance="h6" color={neutralDark[500]}>
+                        Certificado Digital
                       </Title>
                     </Link>
                   </li>
@@ -94,7 +319,7 @@ export default function HeaderMobile() {
                           ></path>
                         </svg>
                       </summary>
-                      <article className="pb-4">
+                      <article>
                         <ul className="flex flex-col gap-0 mt-4 mb-42">
                           <Link href="/">
                             <li className="flex items-start mb-4 space-x-4">
