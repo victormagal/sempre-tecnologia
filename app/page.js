@@ -185,18 +185,30 @@ export default function Home() {
           </li>
         </ul>
       </Container>
-      <Container>
-        <div className="col-span-4 lg:col-span-9 mb-6">
-          <h1 className="font-serif font-semibold text-4xl text-dark-blue text-center lg:text-left">
-            Veja os últimos conteúdos do nosso Blog
-          </h1>
+      <Container bgColor={creamAssistant[100]} newClasses="py-16">
+        <div className="col-span-4 lg:col-span-6">
+          <Overline appearance="o1" color={red[700]}>
+            Blog
+          </Overline>
+          <Title appearance="h2" color={neutralDark[500]}>
+            Quer dicas, conteúdos e tirar dúvidas? Acesse o nosso Blog
+          </Title>
         </div>
-        <div className="col-span-4 lg:col-span-3 flex justify-center lg:justify-end mb-6">
-          <Link
-            className="bg-custom-red font-sans font-bold py-4 rounded text-center text-xs text-white uppercase w-2/3"
-            href="/noticias"
-          >
-            Ver mais
+        <div className="col-span-4 lg:col-span-6 flex items-center justify-center lg:justify-end">
+          <Link href="/">
+            <button
+              className="flex items-center p-4 rounded-md space-x-3"
+              style={{ backgroundColor: red[1000] }}
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Veja todos os artigos
+              </Text>
+              <SolidIcon
+                icon="faChevronRight"
+                iconColor={neutralLight[100]}
+                newClasses="h-3"
+              />
+            </button>
           </Link>
         </div>
         <LastPosts />

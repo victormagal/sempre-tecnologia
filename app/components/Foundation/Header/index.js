@@ -56,7 +56,7 @@ export default function Header() {
           </Link>
         </div>
         <nav className="col-end-13 col-span-10">
-          <ul className="flex items-center justify-end space-x-12">
+          <ul className="flex items-center justify-end space-x-3 xl:space-x-12">
             <li>
               <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
@@ -86,14 +86,14 @@ export default function Header() {
                 />
               </button>
               <nav
-                className="absolute dropDown drop-shadow hidden mt-4 p-8 translate-x-[-40%]"
+                className="absolute dropDown drop-shadow hidden mt-4 p-8 translate-x-[-33%] xl:translate-x-[-40%]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
                 style={{ backgroundColor: neutralLight[100] }}
               >
                 <div className="flex space-x-12">
-                  <ul className="flex flex-col space-y-8 w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Distribuidores
@@ -104,7 +104,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faCow"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Pescados, bovinos e suínos
@@ -116,7 +116,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faBreadSlice"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Pães e salgados
@@ -128,7 +128,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faSeedling"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Hortifruti
@@ -140,7 +140,7 @@ export default function Header() {
                         <RegularIcon
                           icon="faEye"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Comésticos
@@ -152,7 +152,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faIceCream"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Picolés e sorvetes
@@ -160,7 +160,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Pequenos varejos
@@ -171,7 +171,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faShirt"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Vestuários e calçados
@@ -183,7 +183,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faScissors"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Barbearias e salões de beleza
@@ -195,7 +195,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faDog"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Petshops
@@ -207,7 +207,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faBurger"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Lanchonetes e quiosques
@@ -219,7 +219,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faChair"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Móveis e colchões
@@ -227,7 +227,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Prestadores de serviço
@@ -238,7 +238,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faCalculator"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Contabilidades e BPO
@@ -250,7 +250,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faTractor"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Construtoras e Engenharias
@@ -262,7 +262,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faStethoscope"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Consultórios
@@ -274,7 +274,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faBuildingShield"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Segurança, limpeza e conservação
@@ -286,7 +286,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faHelmetSafety"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Manutenção e instalações
@@ -294,7 +294,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Recorrentes
@@ -305,7 +305,7 @@ export default function Header() {
                         <RegularIcon
                           icon="faHandshake"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Associações e sindicatos
@@ -317,7 +317,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faWaterLadder"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Clubes
@@ -329,7 +329,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faBook"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Cursos
@@ -341,7 +341,7 @@ export default function Header() {
                         <RegularIcon
                           icon="faBuilding"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Condomínios
@@ -353,7 +353,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faBellConcierge"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           Locações e serviços
@@ -361,7 +361,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Documentos fiscais
@@ -372,7 +372,7 @@ export default function Header() {
                         <RegularIcon
                           icon="faFileLines"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           NF-e Nota Fiscal Produtos
@@ -384,7 +384,7 @@ export default function Header() {
                         <RegularIcon
                           icon="faFileLines"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           NF-e Nota Fiscal Serviços
@@ -396,7 +396,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faCarSide"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           CT-e Conhecimento de transporte
@@ -408,7 +408,7 @@ export default function Header() {
                         <SolidIcon
                           icon="faArrowsUpDownLeftRight"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           MDF-e Manifesto destinatário
@@ -420,7 +420,7 @@ export default function Header() {
                         <RegularIcon
                           icon="faUser"
                           iconColor={red[900]}
-                          newClasses="h-6"
+                          newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
                           NFC-e Nota Fiscal Consumidor
