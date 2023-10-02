@@ -25,7 +25,7 @@ export default function Home() {
         link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
       />
       <Container newClasses="py-14">
-        <div className="col-span-6 flex flex-col justify-center space-y-10">
+        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-10">
           <Title appearance="h1" color={neutralDark[500]} extra>
             Seja bem-vindo a Sempre Tecnologia
           </Title>
@@ -47,7 +47,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="col-span-6 flex items-center justify-end">
+        <div className="col-span-4 lg:col-span-6 flex items-center justify-end">
           <Image
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={352}
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </Container>
       <Container bgContainer={neutralDark[500]} newClasses="rounded-2xl">
-        <div className="col-span-10 col-start-2 flex justify-between py-8">
+        <div className="col-span-4 lg:col-span-10 lg:col-start-2 flex flex-col lg:flex-row lg:justify-between py-12 space-y-12 lg:space-y-0">
           <div className="flex flex-col items-center space-y-2">
             <Title appearance="h1" color={neutralLight[100]} extra>
               97%
@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </Container>
       <Container newClasses="py-16">
-        <div className="col-span-6 col-start-4 flex flex-col space-y-4">
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col space-y-4">
           <Overline appearance="o1" className="text-center" color={red[700]}>
             Segmentos
           </Overline>
@@ -103,11 +103,9 @@ export default function Home() {
           </Text>
         </div>
       </Container>
-
       <Tabs />
-
-      <Container bgColor={creamAssistant[100]} newClasses="py-20">
-        <div className="col-span-6 flex flex-col justify-center space-y-6">
+      <Container bgColor={creamAssistant[100]} newClasses="mt-12 py-20">
+        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
           <Overline appearance="o1" color={red[700]}>
             Quem somos
           </Overline>
@@ -115,7 +113,7 @@ export default function Home() {
             Você conhece a Sempre Tecnologia?
           </Title>
         </div>
-        <div className="col-span-6 flex items-center">
+        <div className="col-span-4 lg:col-span-6 flex items-center">
           <Text appearance="p3" color={neutralMid[500]}>
             Somos uma empresa especializada em desenvolver sistemas com
             tecnologia própria em plataforma web para nossos clientes. Já
@@ -124,7 +122,7 @@ export default function Home() {
             pequenas e médias empresas.
           </Text>
         </div>
-        <div className="col-span-12 flex justify-center mt-8">
+        <div className="col-span-4 lg:col-span-12 flex justify-center mt-8">
           <Image
             className="cursor-pointer"
             height={388}
@@ -135,8 +133,8 @@ export default function Home() {
         </div>
       </Container>
       <Testimonies />
-      <Container newClasses="py-8">
-        <ul className="col-span-12 flex justify-between mb-14">
+      <Container newClasses="py-16">
+        <ul className="col-span-4 lg:col-span-12 flex flex-col md:flex-row items-center md:justify-between space-y-8 md:space-y-0">
           <li>
             <Image
               alt="Litoral"
@@ -207,7 +205,7 @@ export default function Home() {
         bgContainer={neutralDark[500]}
         newClasses="mt-16 py-16 rounded-2xl"
       >
-        <div className="col-span-6 col-start-4 flex flex-col items-center space-y-12">
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-12">
           <Title appearance="h2" color={neutralLight[100]} extra>
             Seja Sempre!
           </Title>

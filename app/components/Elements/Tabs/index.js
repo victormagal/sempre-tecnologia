@@ -1,18 +1,27 @@
 'use client';
-import Image from 'next/image';
 import { useState } from 'react';
-import { neutralDark, neutralMid } from '@/app/base/Colors';
-import { Text, Title } from '@/app/base/Typography';
+import styles from './styles.module.css';
+import { Pagination } from 'swiper/modules';
+import { Container } from '../../Foundation';
+import {
+  Distribuidores,
+  Fiscais,
+  Prestadores,
+  Recorrentes,
+  Varejos
+} from './Desktop';
+import {
+  DistribuidoresMobile,
+  FiscaisMobile,
+  PrestadoresMobile,
+  RecorrentesMobile,
+  VarejosMobile
+} from './Mobile';
+import { neutralLight, neutralMid, red } from '@/app/base/Colors';
+import { Title } from '@/app/base/Typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import './style.css';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
 
 export default function Tabs() {
   const [toggle, setToggle] = useState(1);
@@ -23,600 +32,139 @@ export default function Tabs() {
 
   return (
     <>
-      {/* desktop */}
-      <div className="lg:col-span-12 container mx-auto hidden lg:block">
-        <ul className="lg:flex flex-row gap-1 text-center hidden">
-          <li
-            className={`border-b-0 flex-auto ${
-              toggle === 1 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
-            } p-3 cursor-pointer`}
-            onClick={() => toggleTab(1)}
-          >
-            <button
-              className={`${
-                toggle === 1 ? 'text-white' : 'text-soft-gray'
-              } self-auto	font-sans font-normal text-lg`}
-              type="button"
+      <div className="hidden lg:block">
+        <Container>
+          <ul className="col-span-12 flex flex-grow space-x-1">
+            <li
+              className="cursor-pointer flex flex-1 justify-center p-3"
+              onClick={() => toggleTab(1)}
+              style={{
+                backgroundColor: toggle === 1 ? red[1100] : neutralLight[200]
+              }}
             >
-              Distribuidores
-            </button>
-          </li>
-          <li
-            className={`border-b-0 flex-auto ${
-              toggle === 2 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
-            } p-3 cursor-pointer`}
-            onClick={() => toggleTab(2)}
-          >
-            <button
-              className={`${
-                toggle === 2 ? 'text-white' : 'text-soft-gray'
-              } self-auto	font-sans font-normal text-lg text-center`}
-              type="button"
+              <button type="button">
+                <Title
+                  appearance="h7"
+                  color={toggle === 1 ? neutralLight[100] : neutralMid[400]}
+                >
+                  Distribuidores
+                </Title>
+              </button>
+            </li>
+            <li
+              className="cursor-pointer flex flex-1 justify-center p-3"
+              onClick={() => toggleTab(2)}
+              style={{
+                backgroundColor: toggle === 2 ? red[1100] : neutralLight[200]
+              }}
             >
-              Pequenos varejos
-            </button>
-          </li>
-          <li
-            className={`border-b-0 flex-auto ${
-              toggle === 3 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
-            } p-3 cursor-pointer`}
-            onClick={() => toggleTab(3)}
-          >
-            <button
-              className={`${
-                toggle === 3 ? 'text-white' : 'text-soft-gray'
-              } self-auto	font-sans font-normal text-lg text-center`}
-              type="button"
+              <button type="button">
+                <Title
+                  appearance="h7"
+                  color={toggle === 2 ? neutralLight[100] : neutralMid[400]}
+                >
+                  Pequenos varejos
+                </Title>
+              </button>
+            </li>
+            <li
+              className="cursor-pointer flex flex-1 justify-center p-3"
+              onClick={() => toggleTab(3)}
+              style={{
+                backgroundColor: toggle === 3 ? red[1100] : neutralLight[200]
+              }}
             >
-              Prestadores de serviços
-            </button>
-          </li>
-          <li
-            className={`border-b-0 flex-auto ${
-              toggle === 4 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
-            } p-3 cursor-pointer`}
-            onClick={() => toggleTab(4)}
-          >
-            <button
-              className={`${
-                toggle === 4 ? 'text-white' : 'text-soft-gray'
-              } self-auto	font-sans font-normal text-lg text-center`}
-              type="button"
+              <button type="button">
+                <Title
+                  appearance="h7"
+                  color={toggle === 3 ? neutralLight[100] : neutralMid[400]}
+                >
+                  Prestadores de serviços
+                </Title>
+              </button>
+            </li>
+            <li
+              className="cursor-pointer flex flex-1 justify-center p-3"
+              onClick={() => toggleTab(4)}
+              style={{
+                backgroundColor: toggle === 4 ? red[1100] : neutralLight[200]
+              }}
             >
-              Recorrentes
-            </button>
-          </li>
-          <li
-            className={`border-b-0 flex-auto ${
-              toggle === 5 ? 'bg-[#AD1B15]' : 'bg-[#F9FAFB]'
-            } p-3 cursor-pointer`}
-            onClick={() => toggleTab(5)}
-          >
-            <button
-              className={`${
-                toggle === 5 ? 'text-white' : 'text-soft-gray'
-              } self-auto	font-sans font-normal text-lg text-center`}
-              type="button"
+              <button type="button">
+                <Title
+                  appearance="h7"
+                  color={toggle === 4 ? neutralLight[100] : neutralMid[400]}
+                >
+                  Recorrentes
+                </Title>
+              </button>
+            </li>
+            <li
+              className="cursor-pointer flex flex-1 justify-center p-3"
+              onClick={() => toggleTab(5)}
+              style={{
+                backgroundColor: toggle === 5 ? red[1100] : neutralLight[200]
+              }}
             >
-              Documentos fiscais
-            </button>
-          </li>
-        </ul>
+              <button type="button">
+                <Title
+                  appearance="h7"
+                  color={toggle === 5 ? neutralLight[100] : neutralMid[400]}
+                >
+                  Documentos fiscais
+                </Title>
+              </button>
+            </li>
+          </ul>
+        </Container>
+        <Container bgContainer={neutralLight[300]} newClasses="mb-16">
+          {toggle === 1 && <Distribuidores />}
+          {toggle === 2 && <Varejos />}
+          {toggle === 3 && <Prestadores />}
+          {toggle === 4 && <Recorrentes />}
+          {toggle === 5 && <Fiscais />}
+        </Container>
       </div>
-      <div className="col-span-12 mt-0 bg-[#F4F5F7] hidden lg:block container mx-auto">
-        <div className={`${toggle === 1 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-20">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
+      <div className="container grid grid-cols-4 lg:hidden">
+        <div className={`col-span-4 ${styles.swiperContainer}`}>
+          <Swiper
+            modules={[Pagination]}
+            pagination={true}
+            style={{ paddingBottom: '3rem' }}
+          >
+            <SwiperSlide
+              className="pt-8 px-8 rounded-3xl"
+              style={{ backgroundColor: neutralLight[300] }}
             >
-              Distribuidores
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2 ml-80">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </div>
-        <div className={`${toggle === 2 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-20">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
+              <DistribuidoresMobile />
+            </SwiperSlide>
+            <SwiperSlide
+              className="pt-8 px-8 rounded-3xl"
+              style={{ backgroundColor: neutralLight[300] }}
             >
-              Pequenos varejos
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2 ml-80">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </div>
-        <div className={`${toggle === 3 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-20">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
+              <FiscaisMobile />
+            </SwiperSlide>
+            <SwiperSlide
+              className="pt-8 px-8 rounded-3xl"
+              style={{ backgroundColor: neutralLight[300] }}
             >
-              Prestadores de serviços
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2 ml-80">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </div>
-        <div className={`${toggle === 4 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-20">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
+              <PrestadoresMobile />
+            </SwiperSlide>
+            <SwiperSlide
+              className="pt-8 px-8 rounded-3xl"
+              style={{ backgroundColor: neutralLight[300] }}
             >
-              Recorrentes
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2 ml-80">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </div>
-        <div className={`${toggle === 5 ? 'block' : 'hidden'} flex flex-row`}>
-          <div className="basis-1/2 py-24 ml-20">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
+              <RecorrentesMobile />
+            </SwiperSlide>
+            <SwiperSlide
+              className="pt-8 px-8 rounded-3xl"
+              style={{ backgroundColor: neutralLight[300] }}
             >
-              Documentos fiscais
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2 ml-80">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
+              <VarejosMobile />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
-
-      {/* mobile */}
-      <Swiper
-        pagination={true}
-        modules={[Pagination]}
-        className="mySwiper block lg:hidden mb-24"
-      >
-        <SwiperSlide className="flex flex-col lg:hidden">
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
-            >
-              Distribuidores
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="flex flex-col lg:hidden">
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
-            >
-              Pequenos varejos
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="flex flex-col lg:hidden">
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
-            >
-              Prestadores de serviços
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="flex flex-col lg:hidden">
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
-            >
-              Recorrentes
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="flex flex-col lg:hidden">
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre gestor"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
-            />
-            <Image
-              alt="Sempre light"
-              className="inline m-6 ml-0"
-              height={16}
-              quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
-            />
-            <Title
-              className="py-6"
-              appearance="h2"
-              color={neutralDark[500]}
-              extra
-            >
-              Documentos fiscais
-            </Title>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Pães e salgados
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Hortifruti
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Comésticos
-            </Text>
-            <Text appearance="p1" color={neutralMid[500]}>
-              Picolés e sorvetes
-            </Text>
-          </div>
-          <div className="basis-1/2">
-            <Image
-              alt="Sempre mensalidade"
-              className="mt-16"
-              height={410}
-              width={486}
-              quality={100}
-              src="/distriibuidores-tab.png"
-            />
-          </div>
-        </SwiperSlide>
-      </Swiper>
     </>
   );
 }

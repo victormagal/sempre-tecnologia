@@ -4,6 +4,7 @@ import {
   Analytics,
   Footer,
   Header,
+  HeaderMobile,
   Locations,
   ModalForm
 } from './components/Foundation';
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
             <main>
               <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
               <Header />
+              <HeaderMobile />
               {children}
               <Locations />
               <Footer />

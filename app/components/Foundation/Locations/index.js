@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import styles from './styles.module.css';
 import {
   neutralDark,
   neutralLight,
@@ -9,46 +8,89 @@ import {
 } from '../../../base/Colors';
 import { Overline, Text, Title } from '../../../base/Typography';
 import Container from '../Container';
-import { cities, states } from './data';
 import SolidIcon from '@/app/base/SolidIcon';
+import { getAllBranches, getAllStates } from '@/app/graphql/queries';
+import { useQuery } from '@apollo/client';
 
 export default function Locations() {
-  const [phones, setPhones] = useState([
-    '(61)3045-5090',
-    '(61)99314-8813',
-    '(61)99312-0192'
-  ]);
-  const [stores, setStores] = useState([]);
-  const [whatsapp, setWhatsapp] = useState('(61)99252-2820');
+  const [states, setStates] = useState([]);
+  const [stories, setStories] = useState([]);
+  const [storiesFiltered, setStoriesFiltered] = useState([]);
+  const [storySelected, setStorySelected] = useState({});
 
-  const getCities = (e) => {
+  useQuery(getAllStates, {
+    onCompleted: ({ estados: { data } }) => {
+      data.map(({ attributes: { label, uf } }) => {
+        const node = {
+          estado: label,
+          uf: uf
+        };
+        setStates((prevState) => [...prevState, node]);
+      });
+    }
+  });
+  useQuery(getAllBranches, {
+    onCompleted: ({ filiais: { data } }) => {
+      data.map(
+        ({
+          attributes: {
+            label,
+            telefone,
+            celular,
+            endereco,
+            mapa,
+            estado: {
+              data: {
+                attributes: { label: labelState, uf }
+              }
+            }
+          }
+        }) => {
+          const node = {
+            endereco: endereco,
+            estado: labelState,
+            cidade: label,
+            mapa: mapa,
+            telefone: telefone,
+            celular: celular,
+            uf: uf
+          };
+          setStories((prevState) => [...prevState, node]);
+        }
+      );
+    }
+  });
+
+  const filterStories = (e) => {
     const {
       target: { value }
     } = e;
 
-    const { counties } = cities.find((city) => city.state === value);
-    setStores(counties);
+    const selectedStories = [];
+    stories.map((story) => {
+      if (story.uf === value) {
+        selectedStories.push(story);
+      }
+    });
+    setStoriesFiltered(selectedStories);
   };
 
-  const getDetails = (e) => {
+  const storyDetails = (e) => {
     const {
-      target: { value, children }
+      target: { value }
     } = e;
 
-    const target = [...children].find(
-      (element) => element.textContent === value
-    );
-    const { phones, whatsapp: storeWhatsapp } = target.dataset;
-    const phonesList = phones.replace(/\s/g, '').split(',');
-
-    setPhones(phonesList);
-    setWhatsapp(storeWhatsapp);
+    storiesFiltered.map((story) => {
+      if (story.cidade === value) {
+        setStorySelected(story);
+      }
+    });
   };
 
   return (
-    <div id="mapLocations" className={styles.container}>
-      <Container newClasses="pb-12 pt-24">
-        <div className="col-span-6 col-start-4 text-center">
+    <div className="py-16">
+      <Container>
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 text-center">
           <Overline appearance="o1" color={red[700]}>
             Unidades
           </Overline>
@@ -61,29 +103,29 @@ export default function Locations() {
             Temos uma unidade perto de você.
           </Title>
           <Text appearance="p1" color={neutralMid[500]}>
-            São + de 25 unidades para atendimento.
+            São mais de 20 unidades para atendimento.
           </Text>
         </div>
       </Container>
-      <Container newClasses="pb-24">
-        <div className="col-span-4 lg:col-span-3 lg:col-start-4 flex flex-col mb-12">
+      <Container newClasses="pt-16">
+        <div className="col-span-4 md:col-span-2 lg:col-span-3 lg:col-start-4 flex flex-col lg:mb-12">
           <Text appearance="p4" className="mb-2" color={neutralDark[500]}>
             Estado
           </Text>
           <div className="flex items-center">
             <select
               className="appearance-none p-3 rounded w-full"
-              onClick={getCities}
+              onChange={filterStories}
               style={{
                 background: neutralLight[200],
                 border: `1px solid ${neutralLight[400]}`,
                 color: neutralMid[500]
               }}
             >
-              <option defaultValue="default">Filtrar por estado</option>
-              {states.map(({ label, value }) => (
-                <option key={value} value={value}>
-                  {label}
+              <option value="">Filtrar por estado</option>
+              {states.map(({ estado, uf }) => (
+                <option key={uf} value={uf}>
+                  {estado}
                 </option>
               ))}
             </select>
@@ -94,30 +136,24 @@ export default function Locations() {
             />
           </div>
         </div>
-        <div className="col-span-4 lg:col-span-3 flex flex-col mb-12">
+        <div className="col-span-4 md:col-span-2 lg:col-span-3 flex flex-col mb-12">
           <Text appearance="p4" className="mb-2" color={neutralDark[500]}>
             Unidade
           </Text>
           <div className="flex items-center">
             <select
               className="appearance-none p-3 rounded w-full"
-              onChange={getDetails}
+              onChange={storyDetails}
               style={{
                 background: neutralLight[200],
                 border: `1px solid ${neutralLight[400]}`,
                 color: neutralMid[500]
               }}
             >
-              <option defaultValue="default">Filtrar por loja</option>
-              {stores.map(({ id, map, name, phones, whatsapp }) => (
-                <option
-                  data-location={map}
-                  data-phones={phones}
-                  data-whatsapp={whatsapp}
-                  key={id}
-                  value={name}
-                >
-                  {name}
+              <option value="">Filtrar por loja</option>
+              {storiesFiltered.map(({ cidade }) => (
+                <option key={cidade} value={cidade}>
+                  {cidade}
                 </option>
               ))}
             </select>
@@ -128,7 +164,7 @@ export default function Locations() {
             />
           </div>
         </div>
-        <div className="col-span-3 col-start-4 flex flex-col items-center">
+        <div className="col-span-4 md:col-span-2 lg:col-span-3 lg:col-start-4 flex flex-col items-center mb-4 lg:mb-0">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -141,15 +177,21 @@ export default function Locations() {
               newClasses="h-5"
             />
           </div>
-          <Title appearance="h5">Endereço</Title>
-          <Text appearance="p4" className="my-2">
+          <Title appearance="h5" color={neutralDark[500]}>
+            Endereço
+          </Title>
+          <Text
+            appearance="p4"
+            className="my-4 text-center"
+            color={neutralMid[500]}
+          >
             Venha nos fazer uma visita
           </Text>
           <Title appearance="h7" className="text-center" color={red[1000]}>
-            Endereço aqui
+            {storySelected?.endereco}
           </Title>
         </div>
-        <div className="col-span-3 flex flex-col items-center">
+        <div className="col-span-4 md:col-span-2 lg:col-span-3 flex flex-col items-center">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -158,21 +200,25 @@ export default function Locations() {
           >
             <SolidIcon icon="faPhone" iconColor={red[700]} newClasses="h-5" />
           </div>
-          <Title appearance="h5">Telefone</Title>
-          <Text appearance="p4" className="my-2">
+          <Title appearance="h5" color={neutralDark[500]}>
+            Telefone
+          </Title>
+          <Text
+            appearance="p4"
+            className="my-4 text-center"
+            color={neutralMid[500]}
+          >
             Nosso time está aqui para te ajudar
           </Text>
           <ul className="flex flex-col space-y-1 text-center">
-            {phones.map((phone) => (
-              <li key={phone}>
-                <Title appearance="h7" color={red[1000]}>
-                  {phone}
-                </Title>
-              </li>
-            ))}
             <li>
               <Title appearance="h7" color={red[1000]}>
-                {whatsapp}
+                {storySelected?.telefone}
+              </Title>
+            </li>
+            <li>
+              <Title appearance="h7" color={red[1000]}>
+                {storySelected?.celular}
               </Title>
             </li>
           </ul>

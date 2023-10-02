@@ -2,11 +2,12 @@ import { gql } from '@apollo/client';
 
 const getAllBranches = gql`
   query {
-    filiais {
+    filiais(pagination: { limit: 30 }) {
       data {
         attributes {
           label
-          telefones
+          telefone
+          celular
           endereco
           mapa
           estado {
@@ -17,6 +18,7 @@ const getAllBranches = gql`
               }
             }
           }
+          id_filial
         }
       }
     }
@@ -177,6 +179,56 @@ const getPostsByCategory = gql`
   }
 `;
 
+const getProductsById = gql`
+  query ($produto: String) {
+    produtos(filters: { id_produto: { eq: $produto } }) {
+      data {
+        attributes {
+          id_produto
+          nome
+          valor
+          valor_desconto
+          percentual_desconto
+          valor_com_desconto
+          certificado {
+            data {
+              attributes {
+                tipo
+              }
+            }
+          }
+          descricao
+        }
+      }
+    }
+  }
+`;
+
+const getProductsByType = gql`
+  query ($tipo: String) {
+    produtos(filters: { certificado: { tipo: { eq: $tipo } } }) {
+      data {
+        attributes {
+          id_produto
+          nome
+          valor
+          valor_desconto
+          percentual_desconto
+          valor_com_desconto
+          certificado {
+            data {
+              attributes {
+                tipo
+              }
+            }
+          }
+          descricao
+        }
+      }
+    }
+  }
+`;
+
 const getTestimonies = gql`
   query {
     depoimentos {
@@ -200,5 +252,7 @@ export {
   getAllStates,
   getPost,
   getPostsByCategory,
+  getProductsById,
+  getProductsByType,
   getTestimonies
 };
