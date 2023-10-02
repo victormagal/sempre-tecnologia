@@ -9,14 +9,18 @@ export default function RegularIcon({ icon, iconColor, newClasses }) {
     faCircleDot: Icon.faCircleDot,
     faCirclePlay: Icon.faCirclePlay,
     faComments: Icon.faComments,
+    faEye: Icon.faEye,
     faFaceSmile: Icon.faFaceSmile,
     faFaceSmileWink: Icon.faFaceSmileWink,
     faFile: Icon.faFile,
+    faFileLines: Icon.faFileLines,
     faGem: Icon.faGem,
+    faHandshake: Icon.faHandshake,
     faLemon: Icon.faLemon,
     faLightbulb: Icon.faLightbulb,
     faMoneyBill1: Icon.faMoneyBill1,
     faPaperPlane: Icon.faPaperPlane,
+    faStar: Icon.faStar,
     faUser: Icon.faUser
   };
 

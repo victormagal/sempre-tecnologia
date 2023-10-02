@@ -3,16 +3,36 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function SolidIcon({ icon, iconColor, newClasses }) {
   const { [icon]: fontIcon } = {
+    faArrowsUpDownLeftRight: Icon.faArrowsUpDownLeftRight,
+    faBellConcierge: Icon.faBellConcierge,
+    faBook: Icon.faBook,
+    faBreadSlice: Icon.faBreadSlice,
+    faBuildingShield: Icon.faBuildingShield,
+    faBurger: Icon.faBurger,
+    faCalculator: Icon.faCalculator,
+    faCarSide: Icon.faCarSide,
+    faChair: Icon.faChair,
     faCheck: Icon.faCheck,
     faChevronDown: Icon.faChevronDown,
     faChevronLeft: Icon.faChevronLeft,
     faChevronRight: Icon.faChevronRight,
+    faCow: Icon.faCow,
     faDownload: Icon.faDownload,
+    faDog: Icon.faDog,
     faFaceSmile: Icon.faFaceSmile,
+    faFileLines: Icon.faFileLines,
+    faHelmetSafety: Icon.faHelmetSafety,
+    faIceCream: Icon.faIceCream,
     faLocationDot: Icon.faLocationDot,
     faMinus: Icon.faMinus,
     faPhone: Icon.faPhone,
-    faStar: Icon.faStar
+    faTractor: Icon.faTractor,
+    faScissors: Icon.faScissors,
+    faSeedling: Icon.faSeedling,
+    faShirt: Icon.faShirt,
+    faStar: Icon.faStar,
+    faStethoscope: Icon.faStethoscope,
+    faWaterLadder: Icon.faWaterLadder
   };
 
   return (

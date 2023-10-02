@@ -3,12 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Container from '../Container';
-import HeaderMobile from '../HeaderMobile';
 import ModalForm from '../ModalForm';
-import { neutralLight, neutralMid, red } from '@/app/base/Colors';
-import { Text } from '@/app/base/Typography';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { neutralDark, neutralLight, neutralMid, red } from '@/app/base/Colors';
+import RegularIcon from '@/app/base/RegularIcon';
+import SolidIcon from '@/app/base/SolidIcon';
+import { Overline, Text, Title } from '@/app/base/Typography';
 
 export default function Header() {
   const [openModal, setOpenModal] = useState(false);
@@ -43,11 +42,9 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white fixed w-full z-60 lg:border-b">
+    <header className="lg:block lg:border-b fixed hidden w-full z-60">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-
-      {/* menu desktop */}
-      <Container newClasses="hidden lg:grid py-6">
+      <Container bgColor={neutralLight[100]} newClasses="py-7">
         <div className="col-span-2 flex justify-center items-center">
           <Link href="/">
             <Image
@@ -58,425 +55,533 @@ export default function Header() {
             />
           </Link>
         </div>
-        <nav className="col-end-13 col-span-9 flex space-x-4 justify-between items-center">
-          <ul className="flex items-center justify-between w-full ">
-            <li className=" p-4 mb-2">
+        <nav className="col-end-13 col-span-10">
+          <ul className="flex items-center justify-end space-x-12">
+            <li>
               <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Home
                 </Text>
               </Link>
             </li>
-            <li className=" p-4 mb-2">
+            <li>
               <Link href="/sobre">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Quem somos
                 </Text>
               </Link>
             </li>
-            <li className="relative p-4 mb-2">
-              <button className="flex" onClick={toggleMenu}>
+            <li>
+              <button
+                className="flex items-center space-x-2"
+                onClick={toggleMenu}
+              >
                 <Text appearance="p4" color={neutralMid[600]}>
                   Segmentos
                 </Text>
-                <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
+                <SolidIcon
+                  icon="faChevronDown"
+                  iconColor={neutralMid[600]}
+                  newClasses="h-3"
+                />
               </button>
-              <ul
-                className="fixed flex left-[50%] lg:left-[50%] translate-x-[-50%] md:top-[90px]  dropDown drop-shadow hidden pt-6 bg-white px-4 flex gap-6 col-span-12 col-start-1 lg:w-8/12 "
+              <nav
+                className="absolute dropDown drop-shadow hidden mt-4 p-8 translate-x-[-40%]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
+                style={{ backgroundColor: neutralLight[100] }}
               >
-                <li className="flex-1">
-                  <ul>
-                    <span className="text-xs uppercase font-bold">
-                      Distribuidores
-                    </span>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/pescados.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Pescados, bovinos e suínos
+                <div className="flex space-x-12">
+                  <ul className="flex flex-col space-y-8 w-[250px]">
+                    <li>
+                      <Overline appearance="o1" color={neutralMid[600]}>
+                        Distribuidores
+                      </Overline>
                     </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/paes.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Pães e salgados
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/hortifruti.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Hortifruti
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/cosmeticos.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Comésticos
-                    </li>
-                    <li className="flex text-sm py-3">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/picoles.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Picolés e sorvetes
-                    </li>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faCow"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Pescados, bovinos e suínos
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faBreadSlice"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Pães e salgados
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faSeedling"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Hortifruti
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faEye"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Comésticos
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faIceCream"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Picolés e sorvetes
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faStar"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Outras categorias
+                        </Text>
+                      </li>
+                    </Link>
                   </ul>
-                </li>
-
-                <li className="flex-1">
-                  <ul>
-                    <span className="text-xs uppercase font-bold">
-                      Pequenos varejos
-                    </span>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/vestuarios.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Vestuários e calçados
+                  <ul className="flex flex-col space-y-8 w-[250px]">
+                    <li>
+                      <Overline appearance="o1" color={neutralMid[600]}>
+                        Pequenos varejos
+                      </Overline>
                     </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/barbearias.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Barbearias e salões de beleza
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/petshops.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Petshops
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/lanchonetes.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Lanchonetes e quiosques
-                    </li>
-                    <li className="flex text-sm py-3">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/moveis.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Móveis e colchões
-                    </li>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faShirt"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Vestuários e calçados
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faScissors"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Barbearias e salões de beleza
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faDog"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Petshops
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faBurger"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Lanchonetes e quiosques
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faChair"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Móveis e colchões
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faStar"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Outras categorias
+                        </Text>
+                      </li>
+                    </Link>
                   </ul>
-                </li>
-
-                <li className="flex-1">
-                  <ul>
-                    <span className="text-xs uppercase font-bold">
-                      Prestadores de serviço
-                    </span>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/contabilidades.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Contabilidades e BPO
+                  <ul className="flex flex-col space-y-8 w-[250px]">
+                    <li>
+                      <Overline appearance="o1" color={neutralMid[600]}>
+                        Prestadores de serviço
+                      </Overline>
                     </li>
-                    <li className="flex text-sm py-3 mb-2 w-full">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/construtoras.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Construtoras e Engenharias
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/consultorios.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Consultórios
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/seguranca.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Segurança, limpeza e conservação
-                    </li>
-                    <li className="flex text-sm py-3">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/manutencao.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Manutenção e instalações
-                    </li>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faCalculator"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Contabilidades e BPO
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faTractor"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Construtoras e Engenharias
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faStethoscope"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Consultórios
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faBuildingShield"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Segurança, limpeza e conservação
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faHelmetSafety"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Manutenção e instalações
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faStar"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Outras categorias
+                        </Text>
+                      </li>
+                    </Link>
                   </ul>
-                </li>
-
-                <li className="flex-1">
-                  <ul>
-                    <span className="text-xs uppercase font-bold">
-                      Recorrentes
-                    </span>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/associacoes.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Associações e sindicatos
+                  <ul className="flex flex-col space-y-8 w-[250px]">
+                    <li>
+                      <Overline appearance="o1" color={neutralMid[600]}>
+                        Recorrentes
+                      </Overline>
                     </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/clubes.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Clubes
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/cursos.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Cursos
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/condominios.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Condomínios
-                    </li>
-                    <li className="flex text-sm py-3">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/locacoes.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      Locações e serviços
-                    </li>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faHandshake"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Associações e sindicatos
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faWaterLadder"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Clubes
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faBook"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Cursos
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faBuilding"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Condomínios
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faBellConcierge"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Locações e serviços
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faStar"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Outras categorias
+                        </Text>
+                      </li>
+                    </Link>
                   </ul>
-                </li>
-
-                <li className="flex-1">
-                  <ul>
-                    <span className="text-xs uppercase font-bold">
-                      Documentos fiscais
-                    </span>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/nfprodutos.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      NF-e Nota Fiscal Produtos
+                  <ul className="flex flex-col space-y-8 w-[250px]">
+                    <li>
+                      <Overline appearance="o1" color={neutralMid[600]}>
+                        Documentos fiscais
+                      </Overline>
                     </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/nfservicos.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      NF-e Nota Fiscal Serviços
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/conhecimento.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      CT-e Conhecimento de transporte
-                    </li>
-                    <li className="flex text-sm py-3 mb-2">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/manifesto.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      MDF-e Manifesto destinatário
-                    </li>
-                    <li className="flex text-sm py-3">
-                      <Image
-                        alt=""
-                        height={24}
-                        quality={100}
-                        src="/menu-icons/nfconsumidor.svg"
-                        width={27}
-                        className="inline-block mr-4"
-                      />
-                      NFC-e Nota Fiscal Consumidor
-                    </li>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faFileLines"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          NF-e Nota Fiscal Produtos
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faFileLines"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          NF-e Nota Fiscal Serviços
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faCarSide"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          CT-e Conhecimento de transporte
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faArrowsUpDownLeftRight"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          MDF-e Manifesto destinatário
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faUser"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          NFC-e Nota Fiscal Consumidor
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center space-x-4">
+                        <RegularIcon
+                          icon="faStar"
+                          iconColor={red[900]}
+                          newClasses="h-6"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Outras categorias
+                        </Text>
+                      </li>
+                    </Link>
                   </ul>
-                </li>
-              </ul>
+                </div>
+              </nav>
             </li>
-            <li className=" p-4 mb-2">
+            <li>
               <Link href="/parceria">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Certificado Digital
                 </Text>
               </Link>
             </li>
-            <li className="p-4 mb-2">
-              <button className="flex" onClick={toggleMenu}>
+            <li>
+              <button
+                className="flex items-center space-x-2"
+                onClick={toggleMenu}
+              >
                 <Text appearance="p4" color={neutralMid[600]}>
                   Seja um parceiro
                 </Text>
-                <FontAwesomeIcon className="ml-2" icon={faChevronDown} />
+                <SolidIcon
+                  icon="faChevronDown"
+                  iconColor={neutralMid[600]}
+                  newClasses="h-3"
+                />
               </button>
               <ul
-                className="absolute dropDown drop-shadow hidden pt-6 bg-white px-4 w-[328px]"
+                className="absolute dropDown drop-shadow hidden mt-4 p-6 w-[360px]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
+                style={{ backgroundColor: neutralLight[100] }}
               >
-                <span className="text-xs uppercase font-bold">
-                  <Image
-                    alt=""
-                    height={24}
-                    quality={100}
-                    src="/menu-icons/parceiro.svg"
-                    width={27}
-                    className="inline-block mr-4"
-                  />
-                  Programa de parceria para Contadores
-                </span>
-                <li className="flex text-sm py-3 mb-2">
-                  Conheça e aproveite benefícios exclusivos.
-                </li>
-
-                <span className="text-xs uppercase font-bold">
-                  <Image
-                    alt=""
-                    height={24}
-                    quality={100}
-                    src="/menu-icons/parceiro.svg"
-                    width={27}
-                    className="inline-block mr-4"
-                  />
-                  Seja um parceiro certificador
-                </span>
-                <li className="flex text-sm py-3 mb-2">
-                  Programa de parceria para venda de Certificado Digital e
-                  Sistemas Web de Gestão.
-                </li>
+                <Link href="/">
+                  <li className="flex items-start mb-4 space-x-4">
+                    <div>
+                      <SolidIcon
+                        icon="faFileLines"
+                        iconColor={red[600]}
+                        newClasses="h-6"
+                      />
+                    </div>
+                    <div>
+                      <Title appearance="h7" color={neutralDark[500]}>
+                        Programa de parceria para Contadores
+                      </Title>
+                      <Text appearance="p4" color={neutralMid[500]}>
+                        Conheça e aproveite benefícios exclusivos.
+                      </Text>
+                    </div>
+                  </li>
+                </Link>
+                <Link href="/">
+                  <li className="flex items-start space-x-4">
+                    <div>
+                      <SolidIcon
+                        icon="faFileLines"
+                        iconColor={red[600]}
+                        newClasses="h-6"
+                      />
+                    </div>
+                    <div>
+                      <Title appearance="h7" color={neutralDark[500]}>
+                        Seja um parceiro certificador
+                      </Title>
+                      <Text appearance="p4" color={neutralMid[500]}>
+                        Programa de parceria para venda de Certificado Digital e
+                        Sistemas Web de Gestão.
+                      </Text>
+                    </div>
+                  </li>
+                </Link>
               </ul>
             </li>
-            <li className=" p-4 mb-2">
+            <li>
               <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Blog
                 </Text>
               </Link>
             </li>
-            <li className=" p-4 mb-2">
+            <li>
               <Link href="/">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Suporte
                 </Text>
               </Link>
             </li>
-            <li className=" p-4 mb-2">
+            <li>
               <Link href="/contato">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Contato
                 </Text>
               </Link>
             </li>
-            <li className=" p-4 mb-2">
+            <li>
               <button
                 className="px-8 py-3 rounded"
                 onClick={() => setOpenModal(true)}
@@ -493,9 +598,6 @@ export default function Header() {
           </ul>
         </nav>
       </Container>
-
-      {/* menu mobile */}
-      <HeaderMobile />
     </header>
   );
 }
