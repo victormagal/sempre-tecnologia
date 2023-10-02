@@ -118,7 +118,7 @@ export default function Contato() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-12 lg:col-span-4 lg:col-start-7 mt-24 lg:order-last">
+        <div className="col-span-12 lg:col-span-4 lg:col-start-7 mt-24 order-last">
           <Image
             className="justify-end"
             alt="Portal Sempre Contador"
