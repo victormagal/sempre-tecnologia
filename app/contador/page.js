@@ -67,7 +67,7 @@ export default function Contador() {
           </Text>
         </div>
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="pb-16 col-span-12">
+      <Container bgColor={neutralLight[200]} newClasses="pb-8 col-span-12">
         <CardFeature
           className="col-span-12"
           third={true}
@@ -123,7 +123,9 @@ export default function Contador() {
           iconSize="h-10"
           title="Soluções web"
         />
-        <div className="col-span-12 lg:col-span-2 lg:col-start-6">
+      </Container>
+      <Container bgColor={neutralLight[200]}>
+        <div className="col-span-12 lg:col-span-2 lg:col-start-6 mb-20">
           <Link href="/">
             <button
               className="py-4 rounded-md w-full"
