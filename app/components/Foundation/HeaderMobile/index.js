@@ -288,6 +288,294 @@ export default function HeaderMobile() {
                               </article>
                             </details>
                           </li>
+                          <li>
+                            <details className="flex flex-col space-y-6">
+                              <summary className="flex items-center justify-between">
+                                <Overline
+                                  appearance="o1"
+                                  color={neutralDark[500]}
+                                >
+                                  Prestadores de serviço
+                                </Overline>
+                                <SolidIcon
+                                  icon="faChevronDown"
+                                  iconColor={red[900]}
+                                  newClasses="h-4"
+                                />
+                              </summary>
+                              <article>
+                                <ul className="flex flex-col space-y-4">
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faCalculator"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Contabilidades e BPO
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faTractor"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Construtoras e Engenharias
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faStethoscope"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Consultórios
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faBuildingShield"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Segurança, limpeza e conservação
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faHelmetSafety"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Manutenção e instalações
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                </ul>
+                              </article>
+                            </details>
+                          </li>
+                          <li>
+                            <details className="flex flex-col space-y-6">
+                              <summary className="flex items-center justify-between">
+                                <Overline
+                                  appearance="o1"
+                                  color={neutralDark[500]}
+                                >
+                                  Recorrentes
+                                </Overline>
+                                <SolidIcon
+                                  icon="faChevronDown"
+                                  iconColor={red[900]}
+                                  newClasses="h-4"
+                                />
+                              </summary>
+                              <article>
+                                <ul className="flex flex-col space-y-4">
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <RegularIcon
+                                        icon="faHandshake"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Associações e sindicatos
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faWaterLadder"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Clubes
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faBook"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Cursos
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <RegularIcon
+                                        icon="faBuilding"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Condomínios
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faBellConcierge"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Locações e serviços
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                </ul>
+                              </article>
+                            </details>
+                          </li>
+                          <li>
+                            <details className="flex flex-col space-y-6">
+                              <summary className="flex items-center justify-between">
+                                <Overline
+                                  appearance="o1"
+                                  color={neutralDark[500]}
+                                >
+                                  Documentos fiscais
+                                </Overline>
+                                <SolidIcon
+                                  icon="faChevronDown"
+                                  iconColor={red[900]}
+                                  newClasses="h-4"
+                                />
+                              </summary>
+                              <article>
+                                <ul className="flex flex-col space-y-4">
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <RegularIcon
+                                        icon="faFileLines"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        NF-e Nota Fiscal Produtos
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <RegularIcon
+                                        icon="faFileLines"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        NF-e Nota Fiscal Serviços
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faCarSide"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        CT-e Conhecimento de transporte
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faArrowsUpDownLeftRight"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        MDF-e Manifesto destinatário
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/">
+                                    <li className="flex items-center space-x-4">
+                                      <RegularIcon
+                                        icon="faUser"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        NFC-e Nota Fiscal Consumidor
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                </ul>
+                              </article>
+                            </details>
+                          </li>
                         </ul>
                       </article>
                     </details>
