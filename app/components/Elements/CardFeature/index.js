@@ -15,9 +15,7 @@ export default function CardFeature({
   return (
     <Card
       background={bgColor}
-      className={`${
-        third ? ' col-span-12 lg:col-span-4 ' : 'col-span-12 lg:col-span-3'
-      } p-6`}
+      className={`${third ? 'col-span-4' : 'col-span-4 lg:col-span-3'} p-6`}
     >
       <RegularIcon icon={icon} iconColor={iconColor} newClasses={iconSize} />
       <Title appearance="h5" className="mb-2 mt-8" color={neutralDark[500]}>

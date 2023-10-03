@@ -20,7 +20,7 @@ export default function Certificadora() {
         link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
       />
       <HeroPage bgColor={neutralDark[500]} gradient={false} className="py-10">
-        <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10">
+        <div className="col-span-4 lg:col-span-5 flex flex-col space-y-6">
           <Image
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={33}
@@ -46,32 +46,37 @@ export default function Certificadora() {
             </button>
           </Link>
         </div>
-        <div className="flex lg:col-end-13 lg:col-span-6 lg:justify-end md:py-16">
+        <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:py-16">
           <Image
             className="h-screen-sm max-w-screen-lg  "
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={352}
-            src="/hero-certificados.png"
+            src="/hero-parceiro-certificador.png"
             width={560}
           />
         </div>
       </HeroPage>
       <Container bgColor={neutralLight[100]} newClasses="py-16">
-        <div className="col-span-12 lg:col-span-6 lg:col-start-4 flex flex-col md:space-y-6 text-center px-8">
-          <Overline appearance="o1" color={red[700]}>
-            sempre certificado
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
+          <Overline appearance="o1" className="text-center" color={red[700]}>
+            Sempre certificado
           </Overline>
-          <Title appearance="h2" color={neutralDark[500]} extra>
+          <Title
+            appearance="h2"
+            className="text-center"
+            color={neutralDark[500]}
+            extra
+          >
             Seja um parceiro da nossa rede de Certificado Digital
           </Title>
-          <Text appearance="p1" color={neutralMid[500]}>
+          <Text appearance="p3" className="text-center" color={neutralMid[500]}>
             Temos uma proposta de parceria com as melhores vantagens do mercado
             para você e seus clientes.
           </Text>
         </div>
-        <div className="col-span-12 flex flex-col lg:flex-row justify-between p-16 border-b-2">
+        <div className="border-b col-span-4 lg:col-span-12 flex flex-col lg:flex-row lg:justify-between p-16 space-y-8 lg:space-y-0">
           <div className="flex flex-col justify-center items-center">
-            <Title appearance="h3" color={neutralDark[500]}>
+            <Title appearance="h3" color={neutralDark[500]} extra>
               +200 mil
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
@@ -79,7 +84,7 @@ export default function Certificadora() {
             </Title>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Title appearance="h3" color={neutralDark[500]}>
+            <Title appearance="h3" color={neutralDark[500]} extra>
               +25
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
@@ -87,7 +92,7 @@ export default function Certificadora() {
             </Title>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Title appearance="h3" color={neutralDark[500]}>
+            <Title appearance="h3" color={neutralDark[500]} extra>
               +10
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
@@ -95,7 +100,7 @@ export default function Certificadora() {
             </Title>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Title appearance="h3" color={neutralDark[500]}>
+            <Title appearance="h3" color={neutralDark[500]} extra>
               85%
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
@@ -103,7 +108,7 @@ export default function Certificadora() {
             </Title>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Title appearance="h3" color={neutralDark[500]}>
+            <Title appearance="h3" color={neutralDark[500]} extra>
               95%
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
@@ -112,72 +117,67 @@ export default function Certificadora() {
           </div>
         </div>
       </Container>
-      <Container bgColor={neutralLight[100]}>
-        <div
-          className="col-span-12 lg:col-span-5 md:col-start-2 lg:mt-24 lg:mb-32 lg:order-first cursor-pointer mx-auto"
-          onClick={() => setOpenModalVimeo(true)}
-        >
-          <Image
-            src="/bg-play-certificado-digital.png"
-            height={324}
-            width={568}
-          />
+      <Container bgColor={neutralLight[100]} newClasses="pb-16">
+        <div className="col-span-4 lg:col-span-6 flex justify-center">
+          <div
+            className="cursor-pointer"
+            onClick={() => setOpenModalVimeo(true)}
+          >
+            <Image
+              src="/bg-play-certificado-digital.png"
+              height={324}
+              width={564}
+            />
+          </div>
         </div>
-        <div className="col-span-12 lg:col-start-6 lg:col-span-6 lg:mt-12 ">
-          <Overline appearance="o1" className="my-10" color={red[700]}>
+        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
+          <Overline appearance="o1" color={red[700]}>
             Quem somos
           </Overline>
-          <Title
-            appearance="h3"
-            className="mb-10"
-            color={neutralDark[500]}
-            extra
-          >
+          <Title appearance="h2" color={neutralDark[500]} extra>
             Você conhece a Sempre Tecnologia?
           </Title>
-          <Text appearance="p3" className="mb-6" color={neutralMid[500]}>
+          <Text appearance="p3" color={neutralMid[500]}>
             Com mais de 12 anos de sólida presença no mercado, temos uma
             estrutura ampla e um atendimento diferenciado. Atuamos no
             desenvolvimento de tecnologia própria para diversos segmentos e
             contamos com o credenciamento na emissão de Certificado Digital em
             todo o Brasil. Seja o nosso parceiro.
           </Text>
-          <Link href="/">
-            <button
-              className="w-full lg:w-auto mt-7 py-4 px-8 rounded"
-              style={{ background: red[1000] }}
-              type="button"
-            >
+          <button
+            className="py-4 rounded w-full lg:w-1/3"
+            style={{ background: red[1000] }}
+            type="button"
+          >
+            <Link href="/">
               <Text appearance="p4" color={neutralLight[100]}>
                 Quero ser um parceiro
               </Text>
-            </button>
-          </Link>
+            </Link>
+          </button>
         </div>
       </Container>
       <Container bgColor={neutralLight[200]} newClasses="py-16">
-        <div className="col-span-12 lg:col-span-6 lg:col-start-4 flex flex-col md:space-y-6 text-center">
-          {' '}
-          <Overline appearance="o1" color={red[700]}>
-            seja um parceiro sempre
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
+          <Overline appearance="o1" className="text-center" color={red[700]}>
+            Seja um parceiro sempre
           </Overline>
           <Title
-            appearance="h3"
-            className="my-6 text-center"
+            appearance="h2"
+            className="text-center"
             color={neutralDark[500]}
             extra
           >
             Nossos parceiros emitem certificados digitais com segurança
           </Title>
-          <Text appearance="p1" color={neutralMid[500]}>
+          <Text appearance="p3" className="text-center" color={neutralMid[500]}>
             Para você que quer emitir certificados digitais com segurança e
             rapidez para os seus clientes.
           </Text>
         </div>
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="pb-16 col-span-12">
+      <Container bgColor={neutralLight[200]} newClasses="pb-16">
         <CardFeature
-          className="col-span-12"
           third={true}
           bgColor={neutralLight[100]}
           description="Precisa de ajuda? Atendimento de excelência ao seu cliente e para você quando precisar de ajuda."
@@ -231,43 +231,42 @@ export default function Certificadora() {
           iconSize="h-10"
           title="Respeito e Profissionalismo​"
         />
-        <div className="col-span-12 lg:col-span-2 lg:col-start-6">
-          <Link href="/">
-            <button
-              className="py-4 rounded-md w-full"
-              onClick={() => setOpenModal(true)}
-              style={{ background: red[1000] }}
-              type="button"
-            >
+        <div className="col-span-4 lg:col-span-12 flex justify-center">
+          <button
+            className="px-8 py-4 rounded-md w-full lg:w-auto"
+            onClick={() => setOpenModal(true)}
+            style={{ background: red[1000] }}
+            type="button"
+          >
+            <Link href="/">
               <Text appearance="p4" color={neutralLight[100]}>
                 Quero ser um parceiro
               </Text>
-            </button>
-          </Link>
+            </Link>
+          </button>
         </div>
       </Container>
-      <Container>
-        <div className="col-span-12 lg:col-span-5 lg:col-start-2 mt-24 lg:order-first order-last">
-          <Image
-            alt="Portal Sempre Contador"
-            height={674}
-            width={466}
-            src="/img-ficou-interessado-esq.png"
-          />
+      <Container newClasses="lg:pb-16 pt-16">
+        <div className="col-span-4 lg:col-span-5 lg:col-start-2 flex items-stretch justify-center">
+          <div className="self-center">
+            <Image
+              alt="Portal Sempre Contador"
+              height={674}
+              width={466}
+              src="/img-ficou-interessado-esq.png"
+            />
+          </div>
         </div>
-        <div className="lg:col-span-5 col-span-12 mt-24">
-          <Title
-            appearance="h2"
-            className="mb-4"
-            color={neutralDark[600]}
-            extra
-          >
-            Ficou interessado?
-          </Title>
-          <Text appearance="p4" className="mb-8" color={neutralDark[100]}>
-            Temos vários benefícios exclusivos especialmente para a sua
-            necessidade. Venha ser um parceiro!
-          </Text>
+        <div className="col-span-4 lg:col-span-5">
+          <div className="flex flex-col mb-12 space-y-4">
+            <Title appearance="h2" color={neutralDark[600]} extra>
+              Ficou interessado?
+            </Title>
+            <Text appearance="p4" color={neutralDark[100]}>
+              Temos vários benefícios exclusivos especialmente para a sua
+              necessidade. Venha ser um parceiro!
+            </Text>
+          </div>
           <ContactForm />
         </div>
       </Container>
