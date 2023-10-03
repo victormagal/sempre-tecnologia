@@ -34,12 +34,12 @@ export default function SempreMDistribuidor() {
       />
       <HeroPage
         arrow={false}
-        cta={false}
+        cta={true}
+        description="Quer um Sistema de Gestão específico para você?"
         iconSource="/icon-sempre-distribuidor.svg"
         theme="blue"
-        title="Aproveite desconto inicial de 30% OFF"
+        title="Olá distribuidor"
         uri="/bg-sempre-distribuidor.png"
-        whatsapp={true}
       />
       <Container newClasses="py-12 lg:py-24">
         <div
