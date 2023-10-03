@@ -36,7 +36,7 @@ export default function Certificadora() {
           </Text>
           <Link href="/">
             <button
-              className="w-full lg:w-auto py-4 px-8 rounded"
+              className="w-full lg:w-auto py-4 lg:px-8 rounded"
               style={{ background: red[1000] }}
               type="button"
             >
@@ -48,7 +48,6 @@ export default function Certificadora() {
         </div>
         <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:py-16">
           <Image
-            className="h-screen-sm max-w-screen-lg  "
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={352}
             src="/hero-parceiro-certificador.png"

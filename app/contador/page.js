@@ -22,7 +22,7 @@ export default function Contador() {
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <HeroPage bgColor={red[1100]} gradient={false} className="py-10">
-        <div className="col-span-12 lg:col-span-5 flex flex-col space-y-10">
+        <div className="col-span-4 lg:col-span-5 flex flex-col space-y-6">
           <Title appearance="h1" color={neutralLight[100]} extra>
             Programa de parceria com contadores
           </Title>
@@ -32,7 +32,7 @@ export default function Contador() {
           </Text>
           <Link href="/">
             <button
-              className="w-full lg:w-auto py-4 px-8 rounded"
+              className="w-full lg:w-auto py-4 lg:px-8 rounded"
               style={{ background: neutralLight[100] }}
               type="button"
             >
@@ -42,9 +42,8 @@ export default function Contador() {
             </button>
           </Link>
         </div>
-        <div className="flex lg:col-end-13 lg:col-span-6 lg:justify-end md:py-16">
+        <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:py-16">
           <Image
-            className="h-screen-sm max-w-screen-lg  "
             alt="Certificado Digital - Emita o seu de onde estiver"
             height={352}
             src="/hero-contadores.png"
@@ -53,23 +52,27 @@ export default function Contador() {
         </div>
       </HeroPage>
       <Container bgColor={neutralLight[200]} newClasses="py-16">
-        <div className="col-span-12 lg:col-span-6 lg:col-start-4 flex flex-col md:space-y-6 text-center">
-          <Overline appearance="o1" color={red[700]}>
+        <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
+          <Overline appearance="o1" className="text-center" color={red[700]}>
             Parceria para contadores
           </Overline>
-          <Title appearance="h2" color={neutralDark[500]} extra>
+          <Title
+            appearance="h2"
+            className="text-center"
+            color={neutralDark[500]}
+            extra
+          >
             Simplifique sua rotina e ganhe tempo e produtividade
           </Title>
-          <Text appearance="p1" color={neutralMid[500]}>
+          <Text appearance="p3" className="text-center" color={neutralMid[500]}>
             Nosso programa de parceria para contadores oferece recursos que vão
             otimizar a rotina do seu escritório. Assim, você terá mais tempo
             para se dedicar aos seus clientes.
           </Text>
         </div>
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="pb-8 col-span-12">
+      <Container bgColor={neutralLight[200]} newClasses="pb-16">
         <CardFeature
-          className="col-span-12"
           third={true}
           bgColor={neutralLight[100]}
           description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
@@ -123,89 +126,93 @@ export default function Contador() {
           iconSize="h-10"
           title="Soluções web"
         />
-      </Container>
-      <Container bgColor={neutralLight[200]}>
-        <div className="col-span-12 lg:col-span-2 lg:col-start-6 mb-96">
-          <Link href="/">
-            <button
-              className="py-4 rounded-md w-full"
-              onClick={() => setOpenModal(true)}
-              style={{ background: red[1000] }}
-              type="button"
-            >
+        <div className="col-span-4 lg:col-span-12 flex justify-center">
+          <button
+            className="px-8 py-4 rounded-md w-full lg:w-auto"
+            onClick={() => setOpenModal(true)}
+            style={{ background: red[1000] }}
+            type="button"
+          >
+            <Link href="/">
               <Text appearance="p4" color={neutralLight[100]}>
                 Quero ser um parceiro
               </Text>
-            </button>
-          </Link>
+            </Link>
+          </button>
         </div>
       </Container>
-      <Container
-        bgContainer={creamAssistant[200]}
-        newClasses="flex rounded-2xl w-full lg:py-auto py-8 pb-0 w-auto -mt-64"
+      <section
+        style={{
+          background:
+            'linear-gradient(0deg, transparent 0, transparent 165px, #F9FAFB 0, #F9FAFB 100%)'
+        }}
       >
-        <div className="col-span-12 lg:col-span-6 lg:col-start-2">
-          <Image
-            className="mb-6 w-48 lg:w-auto"
-            alt="Portal Sempre Contador"
-            height={85}
-            width={288}
-            src="/logo-portal-sempre-contador.png"
-          />
-          <Text className="mb-6" appearance="p1" color={neutralDark[100]}>
-            Você já é um parceiro? Acesse o Portal Sempre Contador e cadastre-se
-            par receber vantagens exclusivas.
-          </Text>
-          <Link href="/">
-            <button
-              className="flex p-4 rounded-md space-x-3 w-full lg:w-auto justify-center"
-              style={{ background: emissor[500] }}
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Acessar plataforma
-              </Text>
-              <SolidIcon
-                icon="faChevronRight"
-                iconColor={neutralLight[100]}
-                newClasses="h-4 mt-0.5"
+        <Container
+          bgContainer={creamAssistant[200]}
+          newClasses="pt-16 lg:pt-0 rounded-2xl"
+        >
+          <div className="col-span-4 lg:col-span-6 lg:col-start-2 flex flex-col justify-center space-y-4 xl:space-y-6">
+            <div>
+              <Image
+                alt="Portal Sempre Contador"
+                height={85}
+                width={288}
+                src="/logo-portal-sempre-contador.png"
               />
-            </button>
-          </Link>
+            </div>
+            <Text appearance="p2" color={neutralDark[100]}>
+              Você já é um parceiro? Acesse o Portal Sempre Contador e
+              cadastre-se par receber vantagens exclusivas.
+            </Text>
+            <Link href="/">
+              <button
+                className="flex items-center justify-center p-4 rounded-md space-x-3 w-full lg:w-auto"
+                style={{ background: emissor[500] }}
+              >
+                <Text appearance="p4" color={neutralLight[100]}>
+                  Acessar plataforma
+                </Text>
+                <SolidIcon
+                  icon="faChevronRight"
+                  iconColor={neutralLight[100]}
+                  newClasses="h-3"
+                />
+              </button>
+            </Link>
+          </div>
+          <div className="col-span-4">
+            <Image
+              alt="Portal Sempre Contador"
+              className="mx-auto"
+              height={373}
+              width={470}
+              quality={100}
+              src="/avatar-portal-sempre-contador.png"
+            />
+          </div>
+        </Container>
+      </section>
+      <Container newClasses="lg:pb-16 pt-16">
+        <div className="col-span-4 lg:col-span-5 lg:col-start-2 flex items-stretch justify-center">
+          <div className="self-center">
+            <Image
+              alt="Portal Sempre Contador"
+              height={674}
+              width={466}
+              src="/img-ficou-interessado-esq.png"
+            />
+          </div>
         </div>
-        <div className="col-span-12 lg:col-end-12 lg:col-span-4">
-          <Image
-            alt="Portal Sempre Contador"
-            className="mx-auto"
-            height={373}
-            width={470}
-            quality={100}
-            src="/avatar-portal-sempre-contador.png"
-          />
-        </div>
-      </Container>
-      <Container>
-        <div className="col-span-12  lg:col-span-5 lg:col-start-2 mt-24 lg:order-first order-last">
-          <Image
-            className=""
-            alt="Portal Sempre Contador"
-            height={674}
-            width={466}
-            src="/img-ficou-interessado-esq.png"
-          />
-        </div>
-        <div className="lg:col-span-5 col-span-12 mt-24">
-          <Title
-            appearance="h2"
-            className="mb-4"
-            color={neutralDark[600]}
-            extra
-          >
-            Ficou interessado?
-          </Title>
-          <Text appearance="p4" className="mb-8" color={neutralDark[100]}>
-            Temos vários benefícios exclusivos especialmente para a sua
-            necessidade. Venha ser um parceiro!
-          </Text>
+        <div className="col-span-4 lg:col-span-5">
+          <div className="flex flex-col mb-12 space-y-4">
+            <Title appearance="h2" color={neutralDark[600]} extra>
+              Ficou interessado?
+            </Title>
+            <Text appearance="p4" color={neutralDark[100]}>
+              Temos vários benefícios exclusivos especialmente para a sua
+              necessidade. Venha ser um parceiro!
+            </Text>
+          </div>
           <ContactForm />
         </div>
       </Container>
