@@ -6,7 +6,8 @@ export default function SocialIcon({ icon, iconColor, newClasses }) {
     faInstagram: Icon.faInstagram,
     faLinkedinIn: Icon.faLinkedinIn,
     faSquareFacebook: Icon.faSquareFacebook,
-    faTwitter: Icon.faTwitter
+    faTwitter: Icon.faTwitter,
+    faWhatsapp: Icon.faWhatsapp
   };
 
   return (

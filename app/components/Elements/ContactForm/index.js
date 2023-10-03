@@ -1,10 +1,12 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { maskPhoneNumber } from '@/app/utils/masks';
 import { neutralDark, neutralLight, neutralMid, red } from '@/app/base/Colors';
 import SolidIcon from '@/app/base/SolidIcon';
-import { Text } from '@/app/base/Typography';
+import { Text, Title } from '@/app/base/Typography';
+import { cidades, estados } from '@/app/base/Utils';
 import { sendMail } from '@/app/graphql/mutations';
 import { useMutation } from '@apollo/client';
 import { Field, Form, Formik } from 'formik';
@@ -25,11 +27,14 @@ export default function ContactForm() {
     <>
       <Formik
         initialValues={{
+          city: '',
+          company: '',
           mail: '',
           message: '',
           name: '',
           phone: '',
-          resume: null
+          resume: null,
+          state: ''
         }}
         onSubmit={(values) =>
           sendMailContact({
@@ -43,199 +48,240 @@ export default function ContactForm() {
           })
         }
         validationSchema={Yup.object({
+          city: Yup.string().required('Obrigatório'),
+          company: Yup.string().required('Obrigatório'),
           mail: Yup.string().email('E-mail inválido').required('Obrigatório'),
           message: Yup.string().required('Obrigatório'),
           name: Yup.string().required('Obrigatório'),
-          phone: Yup.string().required('Obrigatório')
+          phone: Yup.string().required('Obrigatório'),
+          state: Yup.string().required('Obrigatório')
         })}
       >
-        {({ errors, values }) => (
-          <Form>
-            <ul className="flex flex-col space-y-4">
-              <li>
-                <Text className="mb-2" appearance="p4" color={neutralDark[500]}>
+        {({ errors, setFieldValue, values }) => (
+          <Form className="flex flex-col space-y-6">
+            <ul className="flex flex-col space-y-6">
+              <li className="flex flex-col space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
                   Nome completo
                 </Text>
                 <Field
-                  className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                  className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                   name="name"
-                  type="text"
-                  value={values.name}
                   style={{
                     background: neutralLight[200],
-                    border: `1px solid ${neutralLight[400]}`,
+                    borderColor: errors.name ? red[900] : neutralLight[400],
                     color: neutralMid[500]
                   }}
+                  type="text"
+                  value={values.name}
                 />
                 {errors.name && (
-                  <p className="ml-2 mt-1 text-red-600 text-sm">
+                  <Text appearance="p4" color={red[900]}>
                     {errors.name}
-                  </p>
+                  </Text>
                 )}
               </li>
-              <li>
-                <Text className="mb-2" appearance="p4" color={neutralDark[500]}>
+              <li className="flex flex-col space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
                   E-mail
                 </Text>
                 <Field
-                  className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                  className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                   name="mail"
+                  style={{
+                    background: neutralLight[200],
+                    borderColor: errors.mail ? red[900] : neutralLight[400],
+                    color: neutralMid[500]
+                  }}
                   type="email"
                   value={values.mail}
-                  style={{
-                    background: neutralLight[200],
-                    border: `1px solid ${neutralLight[400]}`,
-                    color: neutralMid[500]
-                  }}
                 />
-                {errors.name && (
-                  <span className="ml-2 mt-1 text-red-600 text-sm">
+                {errors.mail && (
+                  <Text appearance="p4" color={red[900]}>
                     {errors.mail}
-                  </span>
+                  </Text>
                 )}
               </li>
-              <li>
-                <Text className="mb-2" appearance="p4" color={neutralDark[500]}>
-                  Telefone
+              <li className="flex flex-col space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Telefone (com DDD)
                 </Text>
                 <Field
-                  className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
+                  className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
                   name="phone"
-                  type="text"
-                  value={maskPhoneNumber(values.phone)}
                   style={{
                     background: neutralLight[200],
-                    border: `1px solid ${neutralLight[400]}`,
+                    borderColor: errors.phone ? red[900] : neutralLight[400],
                     color: neutralMid[500]
                   }}
+                  type="text"
+                  value={maskPhoneNumber(values.phone)}
                 />
-                {errors.name && (
-                  <span className="ml-2 mt-1 text-red-600 text-sm">
+                {errors.phone && (
+                  <Text appearance="p4" color={red[900]}>
                     {errors.phone}
-                  </span>
+                  </Text>
                 )}
               </li>
-              <li>
-                <Text className="mb-2" appearance="p4" color={neutralDark[500]}>
+              <li className="flex flex-col space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
                   Nome da empresa
                 </Text>
                 <Field
-                  className="border text-sm font-sans p-3 placeholder:text-gray-600 text-gray-600 rounded w-full"
-                  name="name"
-                  type="text"
-                  // value={values.name}
+                  className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                  name="company"
                   style={{
                     background: neutralLight[200],
-                    border: `1px solid ${neutralLight[400]}`,
+                    borderColor: errors.company ? red[900] : neutralLight[400],
                     color: neutralMid[500]
                   }}
+                  type="text"
+                  value={values.company}
                 />
-                {errors.name && (
-                  <p className="ml-2 mt-1 text-red-600 text-sm">
-                    {errors.name}
-                  </p>
+                {errors.company && (
+                  <Text appearance="p4" color={red[900]}>
+                    {errors.company}
+                  </Text>
                 )}
               </li>
-              <li className="grid grid-cols-12 col-span-12 gap-2">
-                <div className="col-span-6">
-                  <Text
-                    appearance="p4"
-                    className="mb-2"
-                    color={neutralDark[500]}
-                  >
-                    Estado
-                  </Text>
-                  <div className="flex items-center">
-                    <select
-                      className="appearance-none text-sm p-3 rounded w-full"
-                      // onClick={getCities}
-                      style={{
-                        background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
-                        color: neutralMid[500]
-                      }}
-                    >
-                      <option defaultValue="default">UF</option>
-                      {/* {states.map(({ label, value }) => (
-                      <option key={value} value={value}>
-                        {label}
-                      </option>
-                    ))} */}
-                    </select>
-                    <SolidIcon
-                      icon="faChevronDown"
-                      iconColor={neutralMid[500]}
-                      newClasses="h-4 -ml-10"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-6">
-                  <Text
-                    appearance="p4"
-                    className="mb-2"
-                    color={neutralDark[500]}
-                  >
-                    Unidade
-                  </Text>
-                  <div className="flex items-center">
-                    <select
-                      className="appearance-none text-sm p-3 rounded w-full"
-                      // onChange={getDetails}
-                      style={{
-                        background: neutralLight[200],
-                        border: `1px solid ${neutralLight[400]}`,
-                        color: neutralMid[500]
-                      }}
-                    >
-                      <option defaultValue="default">Cidade</option>
-                      {/* {stores.map(({ id, map, name, phones, whatsapp }) => (
-                      <option
-                        data-location={map}
-                        data-phones={phones}
-                        data-whatsapp={whatsapp}
-                        key={id}
-                        value={name}
-                      >
-                        {name}
-                      </option>
-                    ))} */}
-                    </select>
-                    <SolidIcon
-                      icon="faChevronDown"
-                      iconColor={neutralMid[500]}
-                      newClasses="h-4 -ml-10"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li>
-                <Text appearance="p4" className="" color={neutralDark[500]}>
-                  <Field
-                    className="mr-2"
-                    type="checkbox"
-                    name="checked"
-                    value="Aceito"
-                  />
-                  Li e aceito a{' '}
-                  <a className="border-b-2 hover:border-b-0 leading-4">
-                    política de privacidade
-                  </a>
-                  .
+              <li className="flex flex-col space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Mensagem
                 </Text>
+                <Field
+                  as="textarea"
+                  className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                  name="message"
+                  rows="4"
+                  style={{
+                    background: neutralLight[200],
+                    borderColor: errors.message ? red[900] : neutralLight[400],
+                    color: neutralMid[500]
+                  }}
+                  type="text"
+                  value={values.message}
+                />
+                {errors.message && (
+                  <Text appearance="p4" color={red[900]}>
+                    {errors.message}
+                  </Text>
+                )}
+              </li>
+            </ul>
+            <ul className="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0">
+              <li className="flex flex-col flex-1 space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Estado
+                </Text>
+                <div className="flex items-center">
+                  <Field
+                    as="select"
+                    className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                    name="state"
+                    onChange={(e) => {
+                      setFieldValue('state', e.target.value);
+
+                      const selectedCities = [];
+                      cidades.map((cidade) => {
+                        if (cidade.estado === e.target.value) {
+                          selectedCities.push(cidade);
+                        }
+                      });
+                      setFieldValue('cities', selectedCities);
+                    }}
+                    style={{
+                      background: neutralLight[200],
+                      borderColor: errors.state ? red[900] : neutralLight[400],
+                      color: neutralMid[500]
+                    }}
+                    value={values.state}
+                  >
+                    <option value="">Selecione</option>
+                    {estados?.map((estado) => (
+                      <option key={estado?.sigla} value={estado?.sigla}>
+                        {estado?.nome}
+                      </option>
+                    ))}
+                  </Field>
+                  <SolidIcon
+                    icon="faChevronDown"
+                    iconColor={neutralMid[500]}
+                    newClasses="h-4 -ml-10"
+                  />
+                </div>
+                {errors.state && (
+                  <Text appearance="p4" color={red[900]}>
+                    {errors.state}
+                  </Text>
+                )}
+              </li>
+              <li className="flex flex-col flex-1 space-y-2">
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Cidade
+                </Text>
+                <div className="flex items-center">
+                  <Field
+                    as="select"
+                    className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                    name="city"
+                    onChange={(e) => {
+                      setFieldValue('city', e.target.value);
+                    }}
+                    style={{
+                      background: neutralLight[200],
+                      borderColor: errors.city ? red[900] : neutralLight[400],
+                      color: neutralMid[500]
+                    }}
+                    value={values.city}
+                  >
+                    <option value="">Selecione</option>
+                    {values?.cities?.map((city) => (
+                      <option key={city?.name} value={city?.name}>
+                        {city?.name}
+                      </option>
+                    ))}
+                  </Field>
+                  <SolidIcon
+                    icon="faChevronDown"
+                    iconColor={neutralMid[500]}
+                    newClasses="h-4 -ml-10"
+                  />
+                </div>
+                {errors.city && (
+                  <Text appearance="p4" color={red[900]}>
+                    {errors.city}
+                  </Text>
+                )}
+              </li>
+            </ul>
+            <ul className="flex flex-col space-y-6">
+              <li>
+                <Link href="/">
+                  <Text appearance="p4" color={neutralMid[500]}>
+                    Você concorda com nossa{' '}
+                    <span className="font-bold underline">
+                      política de privacidade
+                    </span>
+                  </Text>
+                </Link>
               </li>
               {loading && (
-                <Image
-                  alt="Sempre Tecnologia"
-                  height={50}
-                  quality={100}
-                  src="/loading.svg"
-                  width={50}
-                />
+                <li>
+                  <Image
+                    alt="Sempre Tecnologia"
+                    height={50}
+                    quality={100}
+                    src="/loading.svg"
+                    width={50}
+                  />
+                </li>
               )}
               {messageMail && (
-                <p className="font-serif font-bold text-2xl text-gray-600">
-                  {messageMail}
-                </p>
+                <li>
+                  <Title appearance="h5" color={neutralDark[500]}>
+                    {messageMail}
+                  </Title>
+                </li>
               )}
               <li>
                 <button
