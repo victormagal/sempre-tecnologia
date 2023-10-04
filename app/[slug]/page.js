@@ -62,7 +62,7 @@ export default function Post() {
         </div>
       </Container>
       <Container>
-        <div className="col-span-4 lg:col-span-12">
+        <div className="col-span-4 lg:col-span-12 mb-12">
           <img
             alt={data?.title}
             src={`${data?.image?.data?.attributes?.url}`}
