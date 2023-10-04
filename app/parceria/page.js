@@ -266,7 +266,11 @@ export default function Certificadora() {
               necessidade. Venha ser um parceiro!
             </Text>
           </div>
-          <ContactForm />
+          <ContactForm
+            companyForm={true}
+            messageForm={false}
+            placesForm={true}
+          />
         </div>
       </Container>
     </main>

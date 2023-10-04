@@ -136,7 +136,11 @@ export default function Contato() {
               Por favor, preencha o formulário e entraremos em contato.
             </Text>
           </div>
-          <ContactForm />
+          <ContactForm
+            companyForm={false}
+            messageForm={true}
+            placesForm={false}
+          />
         </div>
         <div className="col-span-4 lg:col-span-5 flex items-stretch justify-center lg:justify-end">
           <div className="self-center">
