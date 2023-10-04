@@ -1,5 +1,5 @@
 'use client';
-import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
+import { neutralDark, neutralMid, red } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
 import { Container } from '../components/Foundation';
 
