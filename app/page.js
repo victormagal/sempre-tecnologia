@@ -195,11 +195,11 @@ export default function Home() {
           </Title>
         </div>
         <div className="col-span-4 lg:col-span-6 flex items-center justify-center lg:justify-end">
-          <Link href="/noticias">
-            <button
-              className="flex items-center p-4 rounded-md space-x-3"
-              style={{ backgroundColor: red[1000] }}
-            >
+          <button
+            className="flex justify-center p-4 rounded-md w-full lg:w-auto"
+            style={{ backgroundColor: red[1000] }}
+          >
+            <Link className="flex items-center space-x-3" href="/noticias">
               <Text appearance="p4" color={neutralLight[100]}>
                 Veja todos os artigos
               </Text>
@@ -208,8 +208,8 @@ export default function Home() {
                 iconColor={neutralLight[100]}
                 newClasses="h-3"
               />
-            </button>
-          </Link>
+            </Link>
+          </button>
         </div>
         <LastPosts />
       </Container>

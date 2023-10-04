@@ -123,6 +123,7 @@ const getPost = gql`
       data {
         attributes {
           title
+          description
           image {
             data {
               attributes {

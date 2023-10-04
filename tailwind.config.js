@@ -26,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Public Sans', ...defaultTheme.fontFamily.sans],
-        serif: ['"Exo 2"', ...defaultTheme.fontFamily.serif]
+        serif: ['Public Sans', ...defaultTheme.fontFamily.serif]
       },
       spacing: {
         108: '27rem'

@@ -1,22 +1,26 @@
 .content h1 {
-	color: #2D3F89;
+	color: #091E42;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: 600;
+	line-height: 2.5rem;
 	margin-bottom: 1rem;
 }
 
 .content h2 {
-	color: #2D3F89;
+	color: #091E42;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-weight: 600;
+	line-height: 2rem;
+	margin-bottom: 1rem;
 }
 
 .content p {
-	color: #535568;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1rem;
+	color: #505F79;
+	font-family: 'Public Sans', sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
 	margin-bottom: 1rem;
 }
 
@@ -25,7 +29,7 @@
 }
 
 .content ol li {
-	color: #535568;
+	color: #505F79;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
 	list-style-type: decimal;
@@ -33,7 +37,7 @@
 }
 
 .content ul li {
-	color: #535568;
+	color: #505F79;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
 	list-style-type: square;
