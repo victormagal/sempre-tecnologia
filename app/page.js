@@ -195,7 +195,7 @@ export default function Home() {
           </Title>
         </div>
         <div className="col-span-4 lg:col-span-6 flex items-center justify-center lg:justify-end">
-          <Link href="/">
+          <Link href="/noticias">
             <button
               className="flex items-center p-4 rounded-md space-x-3"
               style={{ backgroundColor: red[1000] }}
