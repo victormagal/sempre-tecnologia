@@ -42,6 +42,8 @@ export default function Segment() {
     }
   });
 
+  console.log(data);
+
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
@@ -114,7 +116,11 @@ export default function Segment() {
               bgColor={neutralLight[100]}
               description={description}
               icon={icon ? icon : 'faPenToSquare'}
-              iconColor={red[600]}
+              iconColor={
+                data?.attributes?.theme?.icon_color
+                  ? data?.attributes?.theme?.icon_color
+                  : red[600]
+              }
               iconSize="h-10"
               title={title}
             />
@@ -135,100 +141,138 @@ export default function Segment() {
           </button>
         </div>
       </Container>
-      <Container bgColor={neutralLight[100]} newClasses="py-16">
-        <div className="col-span-4 lg:col-span-6 flex justify-center">
-          <div
-            className="cursor-pointer"
-            onClick={() => setOpenModalVimeo(true)}
+      {data?.attributes?.generic?.generic ? (
+        <>
+          <Container bgColor={neutralLight[100]} newClasses="py-16">
+            <div className="col-span-4 lg:col-span-6 flex justify-center">
+              <div
+                className="cursor-pointer"
+                onClick={() => setOpenModalVimeo(true)}
+              >
+                <Image
+                  src="/bg-play-certificado-digital.png"
+                  height={324}
+                  width={564}
+                />
+              </div>
+            </div>
+            <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
+              {data?.attributes?.produto.map(
+                ({
+                  description,
+                  image: {
+                    data: {
+                      attributes: { height, url, width }
+                    }
+                  },
+                  title
+                }) => (
+                  <>
+                    <div className="flex flex-col space-y-2">
+                      <Image height={height} src={url} width={width} />
+                      <Title appearance="h3" color={neutralDark[500]} extra>
+                        {title}
+                      </Title>
+                      <Text appearance="p2" color={neutralMid[600]}>
+                        {description}
+                      </Text>
+                    </div>
+                  </>
+                )
+              )}
+            </div>
+          </Container>
+          <Container
+            firstColor={data?.attributes?.theme?.first_color}
+            fourthColor={data?.attributes?.theme?.fourth_color}
+            gradient={true}
+            newClasses="rounded-xl"
+            secondColor={data?.attributes?.theme?.second_color}
+            thirdColor={data?.attributes?.theme?.third_color}
           >
+            <div className="col-span-4 lg:col-span-6 lg:col-start-2 flex flex-col justify-center pb-6 lg:pb-0 pt-12 lg:pt-0 space-y-6">
+              <Overline appearance="o1" color={neutralLight[200]}>
+                {data?.attributes?.loja?.name}
+              </Overline>
+              <Title appearance="h2" color={neutralLight[200]} extra>
+                {data?.attributes?.loja?.title}
+              </Title>
+              <Text appearance="p3" color={neutralLight[600]}>
+                {data?.attributes?.loja?.description}
+              </Text>
+              <ul className="flex space-x-4">
+                <li>
+                  <Link
+                    href={data?.attributes?.loja?.link_google || '/'}
+                    target="_blank"
+                  >
+                    <Image
+                      alt="Google Play"
+                      height={44}
+                      src="/btn-google.png"
+                      width={148}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={data?.attributes?.loja?.link_apple || '/'}
+                    target="_blank"
+                  >
+                    <Image
+                      alt="Apple Store"
+                      height={44}
+                      src="/btn-apple.png"
+                      width={132}
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="col-span-4 lg:col-end-12 lg:col-span-3 flex justify-center lg:justify-end md:pt-8">
+              <Image
+                height={data?.attributes?.loja?.image?.data?.attributes?.height}
+                src={data?.attributes?.loja?.image?.data?.attributes?.url}
+                width={data?.attributes?.loja?.image?.data?.attributes?.width}
+              />
+            </div>
+          </Container>
+        </>
+      ) : (
+        <Container bgColor={neutralDark[600]} newClasses="py-16">
+          <div className="col-span-4 lg:col-span-6 lg:col-start-2 flex flex-col justify-center space-y-6">
+            <Overline appearance="o1" color={red[700]}>
+              Conheça mais
+            </Overline>
+            <Title appearance="h2" color={neutralLight[100]} extra>
+              Melhore os resultados da sua empresa com os nossos sistemas.
+            </Title>
+            <Text appearance="p2" color={neutralLight[600]}>
+              Agende uma demonstração e encontre a solução ideal!
+            </Text>
+            <button
+              className="px-8 py-4 rounded-md w-full lg:w-1/3"
+              onClick={() => setOpenModal(true)}
+              style={{ background: red[1000] }}
+              type="button"
+            >
+              <Link href="/">
+                <Text appearance="p4" color={neutralLight[100]}>
+                  Quero ser um parceiro
+                </Text>
+              </Link>
+            </button>
+          </div>
+          <div className="col-span-4 flex justify-center lg:justify-end">
             <Image
-              src="/bg-play-certificado-digital.png"
-              height={324}
-              width={564}
+              alt="Demonstração"
+              height={366}
+              src="/demonstracao.png"
+              width={392}
             />
           </div>
-        </div>
-        <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
-          {data?.attributes?.produto.map(
-            ({
-              description,
-              image: {
-                data: {
-                  attributes: { height, url, width }
-                }
-              },
-              title
-            }) => (
-              <>
-                <div className="flex flex-col space-y-2">
-                  <Image height={height} src={url} width={width} />
-                  <Title appearance="h3" color={neutralDark[500]} extra>
-                    {title}
-                  </Title>
-                  <Text appearance="p2" color={neutralMid[600]}>
-                    {description}
-                  </Text>
-                </div>
-              </>
-            )
-          )}
-        </div>
-      </Container>
-      <Container
-        firstColor={data?.attributes?.theme?.first_color}
-        fourthColor={data?.attributes?.theme?.fourth_color}
-        gradient={true}
-        newClasses="rounded-xl"
-        secondColor={data?.attributes?.theme?.second_color}
-        thirdColor={data?.attributes?.theme?.third_color}
-      >
-        <div className="col-span-4 lg:col-span-6 lg:col-start-2 flex flex-col justify-center pb-6 lg:pb-0 pt-12 lg:pt-0 space-y-6">
-          <Overline appearance="o1" color={neutralLight[200]}>
-            {data?.attributes?.loja?.name}
-          </Overline>
-          <Title appearance="h2" color={neutralLight[200]} extra>
-            {data?.attributes?.loja?.title}
-          </Title>
-          <Text appearance="p3" color={neutralLight[600]}>
-            {data?.attributes?.loja?.description}
-          </Text>
-          <ul className="flex space-x-4">
-            <li>
-              <Link
-                href={data?.attributes?.loja?.link_google || '/'}
-                target="_blank"
-              >
-                <Image
-                  alt="Google Play"
-                  height={44}
-                  src="/btn-google.png"
-                  width={148}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={data?.attributes?.loja?.link_apple || '/'}
-                target="_blank"
-              >
-                <Image
-                  alt="Apple Store"
-                  height={44}
-                  src="/btn-apple.png"
-                  width={132}
-                />
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-4 lg:col-end-12 lg:col-span-3 flex justify-center lg:justify-end md:pt-8">
-          <Image
-            height={data?.attributes?.loja?.image?.data?.attributes?.height}
-            src={data?.attributes?.loja?.image?.data?.attributes?.url}
-            width={data?.attributes?.loja?.image?.data?.attributes?.width}
-          />
-        </div>
-      </Container>
+        </Container>
+      )}
       <Testimonies />
       <Container newClasses="py-16">
         <ul className="col-span-4 lg:col-span-12 flex flex-col md:flex-row items-center md:justify-between space-y-8 md:space-y-0">

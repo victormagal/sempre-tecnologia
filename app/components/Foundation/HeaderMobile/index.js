@@ -113,7 +113,7 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link href="/">
+                                  <Link href="/pescados-suinos-e-bovinos">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faCow"
@@ -128,7 +128,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  {/* <Link href="/">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faBreadSlice"
@@ -142,8 +142,8 @@ export default function HeaderMobile() {
                                         Pães e salgados
                                       </Text>
                                     </li>
-                                  </Link>
-                                  <Link href="/">
+                                  </Link> */}
+                                  <Link href="/hortifruti">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faSeedling"
@@ -158,7 +158,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  <Link href="/cosmeticos">
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faEye"
@@ -169,11 +169,11 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Comésticos
+                                        Cosméticos
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  <Link href="/picoles-e-sorvetes">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faIceCream"
@@ -224,7 +224,7 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link href="/">
+                                  <Link href="/vestuarios-e-calcados">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faShirt"
@@ -239,7 +239,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  <Link href="/barbearias-e-saloes-de-beleza">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faScissors"
@@ -254,7 +254,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  <Link href="/petshops">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faDog"
@@ -269,7 +269,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  <Link href="/lanchonetes-e-quiosques">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faBurger"
@@ -284,7 +284,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/">
+                                  <Link href="/moveis-e-colchoes">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faChair"

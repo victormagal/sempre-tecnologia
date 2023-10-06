@@ -117,6 +117,20 @@ const getAllStates = gql`
   }
 `;
 
+const getDistribuidor = gql`
+  query ($distribuidor: String!) {
+    distribuidores(filters: { distribuidor: { eq: $distribuidor } }) {
+      data {
+        id
+        attributes {
+          distribuidor
+          title
+        }
+      }
+    }
+  }
+`;
+
 const getPost = gql`
   query ($slug: String!) {
     blogPosts(filters: { slug: { eq: $slug } }) {
@@ -252,11 +266,15 @@ const getSegment = gql`
     segmentos(filters: { slug: { eq: $slug } }) {
       data {
         attributes {
+          generic {
+            generic
+          }
           theme {
             first_color
             second_color
             third_color
             fourth_color
+            icon_color
           }
           hero {
             slug
@@ -341,6 +359,7 @@ export {
   getAllPosts,
   getAllSlides,
   getAllStates,
+  getDistribuidor,
   getPost,
   getPostsByCategory,
   getProductsById,
