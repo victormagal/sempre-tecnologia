@@ -20,6 +20,7 @@ export default function RegularIcon({ icon, iconColor, newClasses }) {
     faLightbulb: Icon.faLightbulb,
     faMoneyBill1: Icon.faMoneyBill1,
     faPaperPlane: Icon.faPaperPlane,
+    faPenToSquare: Icon.faPenToSquare,
     faStar: Icon.faStar,
     faUser: Icon.faUser
   };

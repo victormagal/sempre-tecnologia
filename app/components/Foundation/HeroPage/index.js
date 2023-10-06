@@ -12,7 +12,7 @@ export default function HeroPage({
   return (
     <section
       style={{
-        background: `url(../../../../bg-pattern.png) center right no-repeat, ${
+        background: `${
           gradient
             ? `linear-gradient(83deg, ${firstColor} -1.48%, ${secondColor} 16.92%, ${thirdColor} 55.59%, ${fourthColor} 100%)`
             : bgColor

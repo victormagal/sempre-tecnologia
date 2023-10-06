@@ -106,35 +106,35 @@ export default function Footer() {
               </Title>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/distribuidores">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Distribuidores
                 </Text>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/pequenos-varejos">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Pequenos varejos
                 </Text>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/prestadores-de-servico">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Prestadores de serviço
                 </Text>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/recorrentes">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Recorrentes
                 </Text>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/documentos-fiscais">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Documentos fiscais
                 </Text>
@@ -228,13 +228,6 @@ export default function Footer() {
             <Link href="/privacidade">
               <Text appearance="p3" color={neutralMid[500]}>
                 Privacidade
-              </Text>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <Text appearance="p3" color={neutralMid[500]}>
-                Cookies
               </Text>
             </Link>
           </li>

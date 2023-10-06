@@ -265,7 +265,9 @@ const getSegment = gql`
             image {
               data {
                 attributes {
+                  height
                   url
+                  width
                 }
               }
             }

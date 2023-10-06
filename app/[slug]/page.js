@@ -82,9 +82,10 @@ export default function Segment() {
           </Link>
         </div>
         <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:pt-8">
-          <img
-            alt="Certificado Digital"
+          <Image
+            height={data?.attributes?.hero?.image?.data?.attributes?.height}
             src={data?.attributes?.hero?.image?.data?.attributes?.url}
+            width={data?.attributes?.hero?.image?.data?.attributes?.width}
           />
         </div>
       </HeroPage>
@@ -107,18 +108,20 @@ export default function Segment() {
         </div>
       </Container>
       <Container bgColor={creamAssistant[100]} newClasses="pb-16">
-        {data?.attributes?.card.map((feature) => (
-          <CardFeature
-            key={feature.id}
-            third={feature.third}
-            bgColor={neutralLight[100]}
-            description={feature.description}
-            icon={feature.icon}
-            iconColor={red[600]}
-            iconSize="h-10"
-            title={feature.title}
-          />
-        ))}
+        {data?.attributes?.card.map(
+          ({ description, icon, id, third, title }) => (
+            <CardFeature
+              key={id}
+              third={third}
+              bgColor={neutralLight[100]}
+              description={description}
+              icon={icon ? icon : 'faPenToSquare'}
+              iconColor={red[600]}
+              iconSize="h-10"
+              title={title}
+            />
+          )
+        )}
         <div className="col-span-4 lg:col-span-12 flex justify-center mt-8">
           <button
             className="px-8 py-4 rounded-md w-full lg:w-auto"
@@ -148,23 +151,29 @@ export default function Segment() {
           </div>
         </div>
         <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
-          {data?.attributes?.produto.map((item) => (
-            <>
-              <div className="flex flex-col space-y-2">
-                <Image
-                  height={item?.image?.data?.attributes?.height}
-                  src={item?.image?.data?.attributes?.url}
-                  width={item?.image?.data?.attributes?.width}
-                />
-                <Title appearance="h3" color={neutralDark[500]} extra>
-                  {item?.title}
-                </Title>
-                <Text appearance="p2" color={neutralMid[600]}>
-                  {item?.description}
-                </Text>
-              </div>
-            </>
-          ))}
+          {data?.attributes?.produto.map(
+            ({
+              description,
+              image: {
+                data: {
+                  attributes: { height, url, width }
+                }
+              },
+              title
+            }) => (
+              <>
+                <div className="flex flex-col space-y-2">
+                  <Image height={height} src={url} width={width} />
+                  <Title appearance="h3" color={neutralDark[500]} extra>
+                    {title}
+                  </Title>
+                  <Text appearance="p2" color={neutralMid[600]}>
+                    {description}
+                  </Text>
+                </div>
+              </>
+            )
+          )}
         </div>
       </Container>
       <Container
