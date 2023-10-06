@@ -4,7 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { neutralDark, neutralMid, neutralLight, red } from '../base/Colors';
+import {
+  creamAssistant,
+  neutralDark,
+  neutralMid,
+  neutralLight,
+  red
+} from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
 import {
   Container,
@@ -12,7 +18,7 @@ import {
   ModalForm,
   Testimonies
 } from '../components/Foundation';
-import { getSegment } from '../graphql/queries';
+import { getQuestions, getSegment } from '../graphql/queries';
 import { CardFeature, Doubts, ModalVimeo } from '@/app/components/Elements';
 import { useQuery } from '@apollo/client';
 
@@ -20,7 +26,9 @@ export default function Segment() {
   const [openModal, setOpenModal] = useState(false);
   const [openModalVimeo, setOpenModalVimeo] = useState(false);
   const [data, setData] = useState({});
+  const [faq, setFaq] = useState({});
   const path = usePathname().slice(1);
+
   useQuery(getSegment, {
     variables: { slug: path },
     onCompleted: (data) => {
@@ -28,7 +36,13 @@ export default function Segment() {
     }
   });
 
-  console.log(data?.attributes?.faq);
+  useQuery(getQuestions, {
+    onCompleted: (data) => {
+      setFaq(data?.faq?.data);
+    }
+  });
+
+  console.log(faq);
 
   return (
     <main className="pt-24">
@@ -38,20 +52,22 @@ export default function Segment() {
         onClose={() => setOpenModalVimeo(false)}
         link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
       />
-      <HeroPage bgColor={neutralDark[500]} gradient={false} className="py-10">
+      <HeroPage
+        firstColor={data?.attributes?.theme?.first_color}
+        fourthColor={data?.attributes?.theme?.fourth_color}
+        gradient={true}
+        secondColor={data?.attributes?.theme?.second_color}
+        thirdColor={data?.attributes?.theme?.third_color}
+      >
         <div className="col-span-4 lg:col-span-5 flex flex-col space-y-6">
-          <Image
-            alt="Certificado Digital - Emita o seu de onde estiver"
-            height={33}
-            src="/logos/parceria.svg"
-            width={172}
-          />
+          <Overline appearance="o1" color={neutralLight[100]}>
+            {data?.attributes?.hero?.slug}
+          </Overline>
           <Title appearance="h1" color={neutralLight[100]} extra>
-            Parceria em Certificado Digital
+            {data?.attributes?.hero?.title}
           </Title>
-          <Text appearance="p3" color={neutralLight[100]}>
-            Aproveite todas as vantagens e benefícios com o nosso programa de
-            parceria na emissão de Certificado Digital.
+          <Text appearance="p1" color={neutralLight[200]}>
+            {data?.attributes?.hero?.description}
           </Text>
           <Link href="/">
             <button
@@ -60,24 +76,22 @@ export default function Segment() {
               type="button"
             >
               <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
+                Contrate agora
               </Text>
             </button>
           </Link>
         </div>
-        <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:py-16">
-          <Image
-            alt="Certificado Digital - Emita o seu de onde estiver"
-            height={352}
-            src="/hero-parceiro-certificador.png"
-            width={560}
+        <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:pt-8">
+          <img
+            alt="Certificado Digital"
+            src={data?.attributes?.hero?.image?.data?.attributes?.url}
           />
         </div>
       </HeroPage>
-      <Container bgColor={neutralLight[100]} newClasses="py-16">
+      <Container bgColor={creamAssistant[100]} newClasses="py-16">
         <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
           <Overline appearance="o1" className="text-center" color={red[700]}>
-            Sempre certificado
+            {data?.attributes?.vantagem?.title}
           </Overline>
           <Title
             appearance="h2"
@@ -85,70 +99,27 @@ export default function Segment() {
             color={neutralDark[500]}
             extra
           >
-            Seja um parceiro da nossa rede de Certificado Digital
+            {data?.attributes?.vantagem?.subtitle}
           </Title>
           <Text appearance="p3" className="text-center" color={neutralMid[500]}>
-            Temos uma proposta de parceria com as melhores vantagens do mercado
-            para você e seus clientes.
+            {data?.attributes?.vantagem?.description}
           </Text>
         </div>
       </Container>
-      <Container bgColor={neutralLight[200]} newClasses="pb-16">
-        <CardFeature
-          third={true}
-          bgColor={neutralLight[100]}
-          description="Precisa de ajuda? Atendimento de excelência ao seu cliente e para você quando precisar de ajuda."
-          icon="faBuilding"
-          iconColor={red[600]}
-          iconSize="h-10"
-          title="Atendimento Personalizado​"
-        />
-        <CardFeature
-          third={true}
-          bgColor={neutralLight[100]}
-          description="Disponibilizamos todo o material de comunicação para os nossos parceiros serem referência na região."
-          icon="faComments"
-          iconColor={red[600]}
-          iconSize="h-10"
-          title="Marketing"
-        />
-        <CardFeature
-          third={true}
-          bgColor={neutralLight[100]}
-          description="Plataforma intuitiva para administrar certificados digitais."
-          icon="faGem"
-          iconColor={red[600]}
-          iconSize="h-10"
-          title="Administre os certificados"
-        />
-        <CardFeature
-          third={true}
-          bgColor={neutralLight[100]}
-          description="Nossa parceria privilegia sua competência comercial, pois sabemos que essa relação tem que ser boa para ambas as partes."
-          icon="faLightbulb"
-          iconColor={red[600]}
-          iconSize="h-10"
-          title="Parceria diferenciada"
-        />
-        <CardFeature
-          third={true}
-          bgColor={neutralLight[100]}
-          description="Eleve seu negócio com certificados digitais, atraindo parcerias de prestígio com entidades de classe."
-          icon="faLightbulb"
-          iconColor={red[600]}
-          iconSize="h-10"
-          title="Expanda sua rede de contatos."
-        />
-        <CardFeature
-          third={true}
-          bgColor={neutralLight[100]}
-          description="Segurança, respeito e profissionalismo, liberando você para focar no seu negócio com tranquilidade."
-          icon="faLightbulb"
-          iconColor={red[600]}
-          iconSize="h-10"
-          title="Respeito e Profissionalismo​"
-        />
-        <div className="col-span-4 lg:col-span-12 flex justify-center">
+      <Container bgColor={creamAssistant[100]} newClasses="pb-16">
+        {data?.attributes?.card.map((feature) => (
+          <CardFeature
+            key={feature.id}
+            third={feature.third}
+            bgColor={neutralLight[100]}
+            description={feature.description}
+            icon={feature.icon}
+            iconColor={red[600]}
+            iconSize="h-10"
+            title={feature.title}
+          />
+        ))}
+        <div className="col-span-4 lg:col-span-12 flex justify-center mt-8">
           <button
             className="px-8 py-4 rounded-md w-full lg:w-auto"
             onClick={() => setOpenModal(true)}
@@ -163,7 +134,7 @@ export default function Segment() {
           </button>
         </div>
       </Container>
-      <Container bgColor={neutralLight[100]} newClasses="pb-16">
+      <Container bgColor={neutralLight[100]} newClasses="py-16">
         <div className="col-span-4 lg:col-span-6 flex justify-center">
           <div
             className="cursor-pointer"
@@ -177,30 +148,78 @@ export default function Segment() {
           </div>
         </div>
         <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
-          <Overline appearance="o1" color={red[700]}>
-            Quem somos
+          {data?.attributes?.produto.map((item) => (
+            <>
+              <div className="flex flex-col space-y-2">
+                <Image
+                  height={item?.image?.data?.attributes?.height}
+                  src={item?.image?.data?.attributes?.url}
+                  width={item?.image?.data?.attributes?.width}
+                />
+                <Title appearance="h3" color={neutralDark[500]} extra>
+                  {item?.title}
+                </Title>
+                <Text appearance="p2" color={neutralMid[600]}>
+                  {item?.description}
+                </Text>
+              </div>
+            </>
+          ))}
+        </div>
+      </Container>
+      <Container
+        firstColor={data?.attributes?.theme?.first_color}
+        fourthColor={data?.attributes?.theme?.fourth_color}
+        gradient={true}
+        newClasses="rounded-xl"
+        secondColor={data?.attributes?.theme?.second_color}
+        thirdColor={data?.attributes?.theme?.third_color}
+      >
+        <div className="col-span-4 lg:col-span-6 lg:col-start-2 flex flex-col justify-center pb-6 lg:pb-0 pt-12 lg:pt-0 space-y-6">
+          <Overline appearance="o1" color={neutralLight[200]}>
+            {data?.attributes?.loja?.name}
           </Overline>
-          <Title appearance="h2" color={neutralDark[500]} extra>
-            Você conhece a Sempre Tecnologia?
+          <Title appearance="h2" color={neutralLight[200]} extra>
+            {data?.attributes?.loja?.title}
           </Title>
-          <Text appearance="p3" color={neutralMid[500]}>
-            Com mais de 12 anos de sólida presença no mercado, temos uma
-            estrutura ampla e um atendimento diferenciado. Atuamos no
-            desenvolvimento de tecnologia própria para diversos segmentos e
-            contamos com o credenciamento na emissão de Certificado Digital em
-            todo o Brasil. Seja o nosso parceiro.
+          <Text appearance="p3" color={neutralLight[600]}>
+            {data?.attributes?.loja?.description}
           </Text>
-          <button
-            className="py-4 rounded w-full lg:w-1/3"
-            style={{ background: red[1000] }}
-            type="button"
-          >
-            <Link href="/">
-              <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
-              </Text>
-            </Link>
-          </button>
+          <ul className="flex space-x-4">
+            <li>
+              <Link
+                href={data?.attributes?.loja?.link_google || '/'}
+                target="_blank"
+              >
+                <Image
+                  alt="Google Play"
+                  height={44}
+                  src="/btn-google.png"
+                  width={148}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={data?.attributes?.loja?.link_apple || '/'}
+                target="_blank"
+              >
+                <Image
+                  alt="Apple Store"
+                  height={44}
+                  src="/btn-apple.png"
+                  width={132}
+                />
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="col-span-4 lg:col-end-12 lg:col-span-3 flex justify-center lg:justify-end md:pt-8">
+          <Image
+            height={data?.attributes?.loja?.image?.data?.attributes?.height}
+            src={data?.attributes?.loja?.image?.data?.attributes?.url}
+            width={data?.attributes?.loja?.image?.data?.attributes?.width}
+          />
         </div>
       </Container>
       <Testimonies />
@@ -256,7 +275,7 @@ export default function Segment() {
           </li>
         </ul>
       </Container>
-      <Doubts doubts={data?.attributes?.faq} />
+      <Doubts doubts={faq?.attributes?.itens} />
     </main>
   );
 }

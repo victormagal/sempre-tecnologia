@@ -230,15 +230,87 @@ const getProductsByType = gql`
   }
 `;
 
+const getQuestions = gql`
+  query {
+    faq {
+      data {
+        id
+        attributes {
+          itens {
+            id
+            question
+            answer
+          }
+        }
+      }
+    }
+  }
+`;
+
 const getSegment = gql`
   query ($slug: String!) {
     segmentos(filters: { slug: { eq: $slug } }) {
       data {
         attributes {
-          faq {
+          theme {
+            first_color
+            second_color
+            third_color
+            fourth_color
+          }
+          hero {
+            slug
+            title
+            description
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+          }
+          vantagem {
+            title
+            subtitle
+            description
+          }
+          card {
             id
-            question
-            answer
+            icon
+            title
+            description
+            third
+          }
+          produto {
+            id
+            image {
+              data {
+                attributes {
+                  height
+                  url
+                  width
+                }
+              }
+            }
+            title
+            description
+          }
+          loja {
+            name
+            title
+            description
+            link_google
+            link_apple
+            image {
+              data {
+                attributes {
+                  height
+                  url
+                  width
+                }
+              }
+            }
           }
         }
       }
@@ -271,6 +343,7 @@ export {
   getPostsByCategory,
   getProductsById,
   getProductsByType,
+  getQuestions,
   getSegment,
   getTestimonies
 };

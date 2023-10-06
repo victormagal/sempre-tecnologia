@@ -3,16 +3,18 @@
 export default function HeroPage({
   bgColor,
   children,
-  endGradient,
   gradient,
-  initGradient
+  firstColor,
+  secondColor,
+  thirdColor,
+  fourthColor
 }) {
   return (
     <section
       style={{
         background: `url(../../../../bg-pattern.png) center right no-repeat, ${
           gradient
-            ? `linear-gradient(270deg, ${initGradient} 1.41%, ${endGradient} 50%)`
+            ? `linear-gradient(83deg, ${firstColor} -1.48%, ${secondColor} 16.92%, ${thirdColor} 55.59%, ${fourthColor} 100%)`
             : bgColor
         }`
       }}
