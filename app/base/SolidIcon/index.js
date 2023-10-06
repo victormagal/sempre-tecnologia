@@ -19,6 +19,7 @@ export default function SolidIcon({ icon, iconColor, newClasses }) {
     faChevronDown: Icon.faChevronDown,
     faChevronLeft: Icon.faChevronLeft,
     faChevronRight: Icon.faChevronRight,
+    faCirclePlus: Icon.faCirclePlus,
     faCow: Icon.faCow,
     faDownload: Icon.faDownload,
     faDog: Icon.faDog,

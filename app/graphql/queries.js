@@ -230,6 +230,22 @@ const getProductsByType = gql`
   }
 `;
 
+const getSegment = gql`
+  query ($slug: String!) {
+    segmentos(filters: { slug: { eq: $slug } }) {
+      data {
+        attributes {
+          faq {
+            id
+            question
+            answer
+          }
+        }
+      }
+    }
+  }
+`;
+
 const getTestimonies = gql`
   query {
     depoimentos {
@@ -255,5 +271,6 @@ export {
   getPostsByCategory,
   getProductsById,
   getProductsByType,
+  getSegment,
   getTestimonies
 };

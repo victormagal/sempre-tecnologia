@@ -106,10 +106,10 @@ export default function Blog() {
           <Link
             className="col-span-4 flex flex-col space-y-6"
             key={i}
-            href={`/${post.attributes.slug}`}
+            href={`/noticias/${post.attributes.slug}`}
           >
             {post?.attributes?.image?.data?.attributes?.url && (
-              <div className="h-60 overflow-hidden rounded-lg">
+              <div className="h-52 overflow-hidden rounded-lg">
                 <img
                   alt={post.attributes.title}
                   src={`${post?.attributes?.image?.data?.attributes?.url}`}

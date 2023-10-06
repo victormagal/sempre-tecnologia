@@ -20,7 +20,7 @@ export default function LastPosts() {
         <Link
           className="col-span-4 flex flex-col space-y-6"
           key={i}
-          href={`/${post.attributes.slug}`}
+          href={`/noticias/${post.attributes.slug}`}
         >
           {post?.attributes?.image?.data?.attributes?.url && (
             <div className="h-60 overflow-hidden rounded-lg">
