@@ -188,6 +188,21 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
+                                  <Link href="/distribuidores">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faStar"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Outras categorias
+                                      </Text>
+                                    </li>
+                                  </Link>
                                 </ul>
                               </article>
                             </details>
@@ -281,6 +296,21 @@ export default function HeaderMobile() {
                                         color={neutralMid[600]}
                                       >
                                         Móveis e colchões
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/pequenos-varejos">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faStar"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Outras categorias
                                       </Text>
                                     </li>
                                   </Link>
@@ -380,6 +410,21 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
+                                  <Link href="/prestadores-de-servico">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faStar"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Outras categorias
+                                      </Text>
+                                    </li>
+                                  </Link>
                                 </ul>
                               </article>
                             </details>
@@ -476,6 +521,21 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
+                                  <Link href="/recorrentes">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faStar"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Outras categorias
+                                      </Text>
+                                    </li>
+                                  </Link>
                                 </ul>
                               </article>
                             </details>
@@ -569,6 +629,21 @@ export default function HeaderMobile() {
                                         color={neutralMid[600]}
                                       >
                                         NFC-e Nota Fiscal Consumidor
+                                      </Text>
+                                    </li>
+                                  </Link>
+                                  <Link href="/documentos-fiscais">
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faStar"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Outras categorias
                                       </Text>
                                     </li>
                                   </Link>

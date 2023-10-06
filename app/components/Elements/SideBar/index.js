@@ -7,7 +7,6 @@ import { useQuery } from '@apollo/client';
 
 export default function SideBar({ path }) {
   const { data } = useQuery(getAllCategories);
-  console.log(data);
 
   return (
     <>
