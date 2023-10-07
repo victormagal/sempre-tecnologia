@@ -59,7 +59,7 @@ export default function Segment() {
         secondColor={data?.attributes?.theme?.second_color}
         thirdColor={data?.attributes?.theme?.third_color}
       >
-        <div className="col-span-4 lg:col-span-5 flex flex-col space-y-6">
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center space-y-6">
           <Overline appearance="o1" color={neutralLight[100]}>
             {data?.attributes?.hero?.slug}
           </Overline>
@@ -81,7 +81,7 @@ export default function Segment() {
             </button>
           </Link>
         </div>
-        <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:pt-8">
+        <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end">
           <Image
             height={data?.attributes?.hero?.image?.data?.attributes?.height}
             src={data?.attributes?.hero?.image?.data?.attributes?.url}

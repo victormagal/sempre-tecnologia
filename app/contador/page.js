@@ -21,8 +21,8 @@ export default function Contador() {
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      <HeroPage bgColor={red[1100]} gradient={false} className="py-10">
-        <div className="col-span-4 lg:col-span-5 flex flex-col space-y-6">
+      <HeroPage bgColor={red[1100]} gradient={false}>
+        <div className="col-span-4 lg:col-span-5 flex flex-col justify-center space-y-6">
           <Title appearance="h1" color={neutralLight[100]} extra>
             Programa de parceria com contadores
           </Title>
