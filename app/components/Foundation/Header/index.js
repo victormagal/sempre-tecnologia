@@ -257,7 +257,7 @@ export default function Header() {
                         Prestadores de serviço
                       </Overline>
                     </li>
-                    <Link href="/">
+                    <Link href="/contabilidade">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faCalculator"
@@ -265,11 +265,23 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Contabilidades e BPO
+                          Contabilidade
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/bpo">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faCalculator"
+                          iconColor={red[900]}
+                          newClasses="h-6 w-8"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          BPO
+                        </Text>
+                      </li>
+                    </Link>
+                    <Link href="/construtoras-e-engenharias">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faTractor"
@@ -281,7 +293,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/consultorios">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faStethoscope"
@@ -293,7 +305,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/seguranca-limpeza-e-conservacao">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBuildingShield"
@@ -305,7 +317,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/manutencao-e-Instalacoes">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faHelmetSafety"
@@ -336,7 +348,7 @@ export default function Header() {
                         Recorrentes
                       </Overline>
                     </li>
-                    <Link href="/">
+                    <Link href="/associacoes-e-sindicatos">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faHandshake"
@@ -348,7 +360,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/clubes">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faWaterLadder"
@@ -360,7 +372,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/cursos">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBook"
@@ -372,7 +384,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/condominios">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faBuilding"
@@ -384,7 +396,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/locacoes-e-servicos">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBellConcierge"
@@ -415,7 +427,7 @@ export default function Header() {
                         Documentos fiscais
                       </Overline>
                     </li>
-                    <Link href="/">
+                    <Link href="/emissao-de-notas-fiscais-de-produtos-nf-e">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faFileLines"
@@ -427,7 +439,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/nota-fiscal-de-servico-eletronica-nfs-e">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faFileLines"
@@ -439,7 +451,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/conhecimento-de-transporte-eletronico-ct-e">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faCarSide"
@@ -451,7 +463,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/manifesto-do-destinatario-mdf-e">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faArrowsUpDownLeftRight"
@@ -463,7 +475,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/nota-fiscal-ao-consumidor-eletronica-nfc-e">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faUser"
