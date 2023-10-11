@@ -34,17 +34,16 @@ export default function Certificadora() {
             Aproveite todas as vantagens e benefícios com o nosso programa de
             parceria na emissão de Certificado Digital.
           </Text>
-          <Link href="/">
-            <button
-              className="w-full lg:w-auto py-4 lg:px-8 rounded"
-              style={{ background: red[1000] }}
-              type="button"
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
-              </Text>
-            </button>
-          </Link>
+          <button
+            className="w-full xl:w-1/3 py-4 lg:px-8 rounded"
+            onClick={() => setOpenModal(true)}
+            style={{ background: red[1000] }}
+            type="button"
+          >
+            <Text appearance="p4" color={neutralLight[100]}>
+              Quero ser um parceiro
+            </Text>
+          </button>
         </div>
         <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:py-16">
           <Image
@@ -76,7 +75,7 @@ export default function Certificadora() {
         <div className="border-b col-span-4 lg:col-span-12 flex flex-col lg:flex-row lg:justify-between p-16 space-y-8 lg:space-y-0">
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h3" color={neutralDark[500]} extra>
-              +200 mil
+              +250 mil
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
               certificados emitidos
@@ -84,7 +83,7 @@ export default function Certificadora() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h3" color={neutralDark[500]} extra>
-              +25
+              +20
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
               filiais abertas pelo país
@@ -92,7 +91,7 @@ export default function Certificadora() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h3" color={neutralDark[500]} extra>
-              +10
+              +12
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
               anos de mercado

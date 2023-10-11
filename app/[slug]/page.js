@@ -42,8 +42,6 @@ export default function Segment() {
     }
   });
 
-  console.log(data);
-
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
@@ -69,17 +67,16 @@ export default function Segment() {
           <Text appearance="p1" color={neutralLight[200]}>
             {data?.attributes?.hero?.description}
           </Text>
-          <Link href="/">
-            <button
-              className="w-full lg:w-auto py-4 lg:px-8 rounded"
-              style={{ background: red[1000] }}
-              type="button"
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Contrate agora
-              </Text>
-            </button>
-          </Link>
+          <button
+            className="w-full xl:w-1/3 py-4 lg:px-8 rounded"
+            onClick={() => setOpenModal(true)}
+            style={{ background: red[1000] }}
+            type="button"
+          >
+            <Text appearance="p4" color={neutralLight[100]}>
+              Contrate agora
+            </Text>
+          </button>
         </div>
         <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end">
           <Image
@@ -133,11 +130,9 @@ export default function Segment() {
             style={{ background: red[1000] }}
             type="button"
           >
-            <Link href="/">
-              <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
-              </Text>
-            </Link>
+            <Text appearance="p4" color={neutralLight[100]}>
+              Quero ser um parceiro
+            </Text>
           </button>
         </div>
       </Container>

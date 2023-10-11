@@ -42,7 +42,7 @@ export default function Sobre() {
         <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex flex-col lg:flex-row lg:justify-between p-16 space-y-8 lg:space-y-0">
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h1" color="white">
-              +25
+              +20
             </Title>
             <Title appearance="h6" color="#B3BAC5">
               filiais no Brasil
@@ -50,7 +50,7 @@ export default function Sobre() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h1" color="white">
-              +10
+              +12
             </Title>
             <Title appearance="h6" color="#B3BAC5">
               anos no mercado

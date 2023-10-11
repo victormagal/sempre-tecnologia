@@ -21,7 +21,7 @@ export default function HeroPage({
       }}
       className="relative flex flex-col justify-center"
     >
-      <Container>{children}</Container>
+      <Container newClasses="pt-8 lg:pt-0">{children}</Container>
     </section>
   );
 }

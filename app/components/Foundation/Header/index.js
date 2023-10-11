@@ -545,7 +545,7 @@ export default function Header() {
                         Programa de parceria para contadores
                       </Title>
                       <Text appearance="p4" color={neutralMid[500]}>
-                        Conheça e aproveite benefícios exclusivos.
+                        Seja um parceiro Certificador
                       </Text>
                     </div>
                   </li>

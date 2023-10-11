@@ -30,17 +30,16 @@ export default function Contador() {
             Conheça nosso programa de parceria para Contadores e tenha vantagens
             exclusivas com a Sempre Tecnologia!
           </Text>
-          <Link href="/">
-            <button
-              className="w-full lg:w-auto py-4 lg:px-8 rounded"
-              style={{ background: neutralLight[100] }}
-              type="button"
-            >
-              <Text appearance="p4" color={neutralDark[500]}>
-                Quero ser um parceiro
-              </Text>
-            </button>
-          </Link>
+          <button
+            className="w-full xl:w-1/3 py-4 lg:px-8 rounded"
+            onClick={() => setOpenModal(true)}
+            style={{ background: neutralLight[100] }}
+            type="button"
+          >
+            <Text appearance="p4" color={neutralDark[500]}>
+              Quero ser um parceiro
+            </Text>
+          </button>
         </div>
         <div className="col-span-4 lg:col-end-13 lg:col-span-6 flex justify-center lg:justify-end md:py-16">
           <Image
@@ -164,7 +163,10 @@ export default function Contador() {
               Você já é um parceiro? Acesse o Portal Sempre Contador e
               cadastre-se par receber vantagens exclusivas.
             </Text>
-            <Link href="/">
+            <Link
+              href="https://scd.semprecertificadora.com.br/app_login/"
+              target="_blank"
+            >
               <button
                 className="flex items-center justify-center p-4 rounded-md space-x-3 w-full lg:w-auto"
                 style={{ background: emissor[500] }}
