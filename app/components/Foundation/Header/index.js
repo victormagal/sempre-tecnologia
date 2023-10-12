@@ -100,7 +100,10 @@ export default function Header() {
                         Distribuidores
                       </Overline>
                     </li>
-                    <Link href="/pescados-suinos-e-bovinos">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/pescados-suinos-e-bovinos"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faCow"
@@ -112,19 +115,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    {/* <Link href="/">
-                      <li className="flex items-center space-x-4">
-                        <SolidIcon
-                          icon="faBreadSlice"
-                          iconColor={red[900]}
-                          newClasses="h-6 w-8"
-                        />
-                        <Text appearance="p4" color={neutralMid[600]}>
-                          Pães e salgados
-                        </Text>
-                      </li>
-                    </Link> */}
-                    <Link href="/hortifruti">
+                    <Link onClick={closeDropdownItens} href="/hortifruti">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faSeedling"
@@ -136,7 +127,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/cosmeticos">
+                    <Link onClick={closeDropdownItens} href="/cosmeticos">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faEye"
@@ -148,7 +139,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/picoles-e-sorvetes">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/picoles-e-sorvetes"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faIceCream"
@@ -160,7 +154,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/distribuidores">
+                    <Link onClick={closeDropdownItens} href="/distribuidores">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faStar"
@@ -179,7 +173,10 @@ export default function Header() {
                         Pequenos varejos
                       </Overline>
                     </li>
-                    <Link href="/vestuarios-e-calcados">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/vestuarios-e-calcados"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faShirt"
@@ -191,7 +188,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/barbearias-e-saloes-de-beleza">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/barbearias-e-saloes-de-beleza"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faScissors"
@@ -203,7 +203,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/petshops">
+                    <Link onClick={closeDropdownItens} href="/petshops">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faDog"
@@ -215,7 +215,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/lanchonetes-e-quiosques">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/lanchonetes-e-quiosques"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBurger"
@@ -227,7 +230,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/moveis-e-colchoes">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/moveis-e-colchoes"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faChair"
@@ -239,7 +245,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/pequenos-varejos">
+                    <Link onClick={closeDropdownItens} href="/pequenos-varejos">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faStar"
@@ -258,7 +264,7 @@ export default function Header() {
                         Prestadores de serviço
                       </Overline>
                     </li>
-                    <Link href="/contabilidade">
+                    <Link onClick={closeDropdownItens} href="/contabilidade">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faCalculator"
@@ -270,7 +276,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/bpo">
+                    <Link onClick={closeDropdownItens} href="/bpo">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faCalculator"
@@ -282,7 +288,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/construtoras-e-engenharias">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/construtoras-e-engenharias"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faTractor"
@@ -294,7 +303,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/consultorios">
+                    <Link onClick={closeDropdownItens} href="/consultorios">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faStethoscope"
@@ -306,7 +315,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/seguranca-limpeza-e-conservacao">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/seguranca-limpeza-e-conservacao"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBuildingShield"
@@ -318,7 +330,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/manutencao-e-Instalacoes">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/manutencao-e-Instalacoes"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faHelmetSafety"
@@ -330,7 +345,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/prestadores-de-servico">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/prestadores-de-servico"
+                    >
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faStar"
@@ -349,7 +367,10 @@ export default function Header() {
                         Recorrentes
                       </Overline>
                     </li>
-                    <Link href="/associacoes-e-sindicatos">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/associacoes-e-sindicatos"
+                    >
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faHandshake"
@@ -361,7 +382,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/clubes">
+                    <Link onClick={closeDropdownItens} href="/clubes">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faWaterLadder"
@@ -373,7 +394,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/cursos">
+                    <Link onClick={closeDropdownItens} href="/cursos">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBook"
@@ -385,7 +406,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/condominios">
+                    <Link onClick={closeDropdownItens} href="/condominios">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faBuilding"
@@ -397,7 +418,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/locacoes-e-servicos">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/locacoes-e-servicos"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faBellConcierge"
@@ -409,7 +433,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/recorrentes">
+                    <Link onClick={closeDropdownItens} href="/recorrentes">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faStar"
@@ -428,7 +452,10 @@ export default function Header() {
                         Documentos fiscais
                       </Overline>
                     </li>
-                    <Link href="/emissao-de-notas-fiscais-de-produtos-nf-e">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/emissao-de-notas-fiscais-de-produtos-nf-e"
+                    >
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faFileLines"
@@ -440,7 +467,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/nota-fiscal-de-servico-eletronica-nfs-e">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/nota-fiscal-de-servico-eletronica-nfs-e"
+                    >
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faFileLines"
@@ -452,7 +482,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/conhecimento-de-transporte-eletronico-ct-e">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/conhecimento-de-transporte-eletronico-ct-e"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faCarSide"
@@ -464,7 +497,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/manifesto-do-destinatario-mdf-e">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/manifesto-do-destinatario-mdf-e"
+                    >
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faArrowsUpDownLeftRight"
@@ -476,7 +512,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/nota-fiscal-ao-consumidor-eletronica-nfc-e">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/nota-fiscal-ao-consumidor-eletronica-nfc-e"
+                    >
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faUser"
@@ -488,7 +527,10 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link href="/documentos-fiscais">
+                    <Link
+                      onClick={closeDropdownItens}
+                      href="/documentos-fiscais"
+                    >
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faStar"
@@ -535,7 +577,7 @@ export default function Header() {
                 }}
                 style={{ backgroundColor: neutralLight[100] }}
               >
-                <Link href="/contador">
+                <Link onClick={closeDropdownItens} href="/contador">
                   <li className="flex items-start mb-4 space-x-4">
                     <div>
                       <SolidIcon
@@ -554,7 +596,7 @@ export default function Header() {
                     </div>
                   </li>
                 </Link>
-                <Link href="/parceria">
+                <Link onClick={closeDropdownItens} href="/parceria">
                   <li className="flex items-start space-x-4">
                     <div>
                       <SolidIcon

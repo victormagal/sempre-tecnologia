@@ -53,10 +53,6 @@ export default function Segment() {
     });
   }, [data]);
 
-  // console.log(
-  //   data?.attributes?.hero?.slug.toLowerCase().trim().replace(/\s/g, '-')
-  // );
-
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />

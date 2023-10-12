@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +12,6 @@ import { Overline, Text, Title } from '@/app/base/Typography';
 
 export default function HeaderMobile() {
   const [openModal, setOpenModal] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const burgerMenu = () => {
@@ -69,14 +69,14 @@ export default function HeaderMobile() {
               >
                 <ul className="flex flex-col space-y-6">
                   <li>
-                    <Link href="/">
+                    <Link onClick={burgerMenu} href="/">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Home
                       </Title>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/sobre">
+                    <Link onClick={burgerMenu} href="/sobre">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Quem somos
                       </Title>
@@ -113,7 +113,10 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link href="/pescados-suinos-e-bovinos">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/pescados-suinos-e-bovinos"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faCow"
@@ -128,22 +131,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  {/* <Link href="/">
-                                    <li className="flex items-center space-x-4">
-                                      <SolidIcon
-                                        icon="faBreadSlice"
-                                        iconColor={red[900]}
-                                        newClasses="h-6 w-8"
-                                      />
-                                      <Text
-                                        appearance="p4"
-                                        color={neutralMid[600]}
-                                      >
-                                        Pães e salgados
-                                      </Text>
-                                    </li>
-                                  </Link> */}
-                                  <Link href="/hortifruti">
+                                  <Link onClick={burgerMenu} href="/hortifruti">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faSeedling"
@@ -158,7 +146,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/cosmeticos">
+                                  <Link onClick={burgerMenu} href="/cosmeticos">
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faEye"
@@ -173,7 +161,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/picoles-e-sorvetes">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/picoles-e-sorvetes"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faIceCream"
@@ -188,7 +179,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/distribuidores">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/distribuidores"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faStar"
@@ -224,7 +218,10 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link href="/vestuarios-e-calcados">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/vestuarios-e-calcados"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faShirt"
@@ -239,7 +236,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/barbearias-e-saloes-de-beleza">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/barbearias-e-saloes-de-beleza"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faScissors"
@@ -254,7 +254,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/petshops">
+                                  <Link onClick={burgerMenu} href="/petshops">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faDog"
@@ -269,7 +269,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/lanchonetes-e-quiosques">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/lanchonetes-e-quiosques"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faBurger"
@@ -284,7 +287,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/moveis-e-colchoes">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/moveis-e-colchoes"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faChair"
@@ -299,7 +305,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/pequenos-varejos">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/pequenos-varejos"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faStar"
@@ -335,7 +344,10 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link href="/contabilidade">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/contabilidade"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faCalculator"
@@ -350,7 +362,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/bpo">
+                                  <Link onClick={burgerMenu} href="/bpo">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faCalculator"
@@ -365,7 +377,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/construtoras-e-engenharias">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/construtoras-e-engenharias"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faTractor"
@@ -380,7 +395,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/consultorios">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/consultorios"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faStethoscope"
@@ -395,7 +413,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/seguranca-limpeza-e-conservacao">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/seguranca-limpeza-e-conservacao"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faBuildingShield"
@@ -410,7 +431,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/manutencao-e-Instalacoes">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/manutencao-e-Instalacoes"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faHelmetSafety"
@@ -425,7 +449,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/prestadores-de-servico">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/prestadores-de-servico"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faStar"
@@ -476,7 +503,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/clubes">
+                                  <Link onClick={burgerMenu} href="/clubes">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faWaterLadder"
@@ -491,7 +518,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/cursos">
+                                  <Link onClick={burgerMenu} href="/cursos">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faBook"
@@ -506,7 +533,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/condominios">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/condominios"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faBuilding"
@@ -521,7 +551,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/locacoes-e-servicos">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/locacoes-e-servicos"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faBellConcierge"
@@ -536,7 +569,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/recorrentes">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/recorrentes"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faStar"
@@ -572,7 +608,10 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link href="/emissao-de-notas-fiscais-de-produtos-nf-e">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/emissao-de-notas-fiscais-de-produtos-nf-e"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faFileLines"
@@ -587,7 +626,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/nota-fiscal-de-servico-eletronica-nfs-e">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/nota-fiscal-de-servico-eletronica-nfs-e"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faFileLines"
@@ -602,7 +644,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/conhecimento-de-transporte-eletronico-ct-e">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/conhecimento-de-transporte-eletronico-ct-e"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faCarSide"
@@ -617,7 +662,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/manifesto-do-destinatario-mdf-e">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/manifesto-do-destinatario-mdf-e"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faArrowsUpDownLeftRight"
@@ -632,7 +680,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/nota-fiscal-ao-consumidor-eletronica-nfc-e">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/nota-fiscal-ao-consumidor-eletronica-nfc-e"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faUser"
@@ -647,7 +698,10 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link href="/documentos-fiscais">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/documentos-fiscais"
+                                  >
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faStar"
@@ -671,7 +725,11 @@ export default function HeaderMobile() {
                     </details>
                   </li>
                   <li>
-                    <Link href="/">
+                    <Link
+                      onClick={burgerMenu}
+                      href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}`}
+                      target="_blank"
+                    >
                       <Title appearance="h6" color={neutralDark[500]}>
                         Certificado Digital
                       </Title>
@@ -691,7 +749,7 @@ export default function HeaderMobile() {
                       </summary>
                       <article>
                         <ul className="flex flex-col space-y-6">
-                          <Link href="/contador">
+                          <Link onClick={burgerMenu} href="/contador">
                             <li className="flex space-x-4">
                               <div>
                                 <SolidIcon
@@ -710,7 +768,7 @@ export default function HeaderMobile() {
                               </div>
                             </li>
                           </Link>
-                          <Link href="/parceria">
+                          <Link onClick={burgerMenu} href="/parceria">
                             <li className="flex space-x-4">
                               <div>
                                 <SolidIcon
@@ -735,21 +793,14 @@ export default function HeaderMobile() {
                     </details>
                   </li>
                   <li>
-                    <Link href="/noticias">
+                    <Link onClick={burgerMenu} href="/noticias">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Blog
                       </Title>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">
-                      <Title appearance="h6" color={neutralDark[500]}>
-                        Suporte
-                      </Title>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contato">
+                    <Link onClick={burgerMenu} href="/contato">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Contato
                       </Title>
