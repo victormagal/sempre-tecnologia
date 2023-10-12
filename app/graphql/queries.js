@@ -131,6 +131,23 @@ const getDistribuidor = gql`
   }
 `;
 
+const getFaqsBySegment = gql`
+  query ($segmento: String) {
+    faqs(filters: { segmento: { eq: $segmento } }) {
+      data {
+        attributes {
+          segmento
+          faq {
+            id
+            question
+            answer
+          }
+        }
+      }
+    }
+  }
+`;
+
 const getPost = gql`
   query ($slug: String!) {
     blogPosts(filters: { slug: { eq: $slug } }) {
@@ -360,6 +377,7 @@ export {
   getAllSlides,
   getAllStates,
   getDistribuidor,
+  getFaqsBySegment,
   getPost,
   getPostsByCategory,
   getProductsById,

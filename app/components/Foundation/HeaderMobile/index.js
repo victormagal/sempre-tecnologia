@@ -190,7 +190,7 @@ export default function HeaderMobile() {
                                   </Link>
                                   <Link href="/distribuidores">
                                     <li className="flex items-center space-x-4">
-                                      <SolidIcon
+                                      <RegularIcon
                                         icon="faStar"
                                         iconColor={red[900]}
                                         newClasses="h-6 w-8"
@@ -301,7 +301,7 @@ export default function HeaderMobile() {
                                   </Link>
                                   <Link href="/pequenos-varejos">
                                     <li className="flex items-center space-x-4">
-                                      <SolidIcon
+                                      <RegularIcon
                                         icon="faStar"
                                         iconColor={red[900]}
                                         newClasses="h-6 w-8"
@@ -427,7 +427,7 @@ export default function HeaderMobile() {
                                   </Link>
                                   <Link href="/prestadores-de-servico">
                                     <li className="flex items-center space-x-4">
-                                      <SolidIcon
+                                      <RegularIcon
                                         icon="faStar"
                                         iconColor={red[900]}
                                         newClasses="h-6 w-8"
@@ -538,7 +538,7 @@ export default function HeaderMobile() {
                                   </Link>
                                   <Link href="/recorrentes">
                                     <li className="flex items-center space-x-4">
-                                      <SolidIcon
+                                      <RegularIcon
                                         icon="faStar"
                                         iconColor={red[900]}
                                         newClasses="h-6 w-8"
@@ -649,7 +649,7 @@ export default function HeaderMobile() {
                                   </Link>
                                   <Link href="/documentos-fiscais">
                                     <li className="flex items-center space-x-4">
-                                      <SolidIcon
+                                      <RegularIcon
                                         icon="faStar"
                                         iconColor={red[900]}
                                         newClasses="h-6 w-8"

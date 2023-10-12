@@ -26,18 +26,18 @@ export default function Doubts({ doubts }) {
             className="text-center lg:text-left"
             color={neutralMid[500]}
           >
-            Tudo o que você precisa saber sobre nossos produtos e entrega.
+            Ainda tem dúvidas sobre o Certificado Digital?
           </Text>
         </div>
-        <div>
+        <div className="flex flex-col space-y-6">
           {doubts?.map(({ question, answer }) => (
             <details
               key={question}
-              className="border-b mb-6 pb-6"
+              className="border-b flex flex-col pb-6 space-y-3"
               style={{ borderColor: neutralLight[400] }}
             >
               <summary
-                className={`cursor-pointer flex items-center justify-between space-x-4 ${styles.noMarker}`}
+                className={`cursor-pointer flex items-center justify-between ${styles.noMarker}`}
               >
                 <Title appearance="h6" color={neutralDark[500]}>
                   {question}
@@ -48,7 +48,7 @@ export default function Doubts({ doubts }) {
                   newClasses="h-5"
                 />
               </summary>
-              <Text appearance="p3" color={neutralMid[500]}>
+              <Text appearance="p3" className="w-5/6" color={neutralMid[500]}>
                 {answer}
               </Text>
             </details>

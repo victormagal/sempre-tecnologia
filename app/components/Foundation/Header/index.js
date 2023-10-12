@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -504,7 +505,10 @@ export default function Header() {
               </nav>
             </li>
             <li>
-              <Link href="/parceria">
+              <Link
+                href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}`}
+                target="_blank"
+              >
                 <Text appearance="p4" color={neutralMid[600]}>
                   Certificado Digital
                 </Text>
@@ -576,13 +580,6 @@ export default function Header() {
               <Link href="/noticias">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Blog
-                </Text>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <Text appearance="p4" color={neutralMid[600]}>
-                  Suporte
                 </Text>
               </Link>
             </li>

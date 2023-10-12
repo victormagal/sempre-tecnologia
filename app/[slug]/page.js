@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   creamAssistant,
   neutralDark,
@@ -18,9 +18,9 @@ import {
   ModalForm,
   Testimonies
 } from '../components/Foundation';
-import { getQuestions, getSegment } from '../graphql/queries';
+import { getFaqsBySegment, getSegment } from '../graphql/queries';
 import { CardFeature, Doubts, ModalVimeo } from '@/app/components/Elements';
-import { useQuery } from '@apollo/client';
+import { useQuery, useLazyQuery } from '@apollo/client';
 
 export default function Segment() {
   const [openModal, setOpenModal] = useState(false);
@@ -36,11 +36,26 @@ export default function Segment() {
     }
   });
 
-  useQuery(getQuestions, {
-    onCompleted: (data) => {
-      setFaq(data?.faq?.data);
+  const [getQuestions] = useLazyQuery(getFaqsBySegment, {
+    onCompleted: ({ faqs: { data } }) => {
+      setFaq(data[0]);
     }
   });
+
+  useEffect(() => {
+    getQuestions({
+      variables: {
+        segmento: data?.attributes?.hero?.slug
+          .toLowerCase()
+          .trim()
+          .replace(/\s/g, '-')
+      }
+    });
+  }, [data]);
+
+  // console.log(
+  //   data?.attributes?.hero?.slug.toLowerCase().trim().replace(/\s/g, '-')
+  // );
 
   return (
     <main className="pt-24">
@@ -251,11 +266,9 @@ export default function Segment() {
               style={{ background: red[1000] }}
               type="button"
             >
-              <Link href="/">
-                <Text appearance="p4" color={neutralLight[100]}>
-                  Quero ser um parceiro
-                </Text>
-              </Link>
+              <Text appearance="p4" color={neutralLight[100]}>
+                Quero ser um parceiro
+              </Text>
             </button>
           </div>
           <div className="col-span-4 flex justify-center lg:justify-end">
@@ -321,7 +334,7 @@ export default function Segment() {
           </li>
         </ul>
       </Container>
-      <Doubts doubts={faq?.attributes?.itens} />
+      <Doubts doubts={faq?.attributes?.faq} />
     </main>
   );
 }

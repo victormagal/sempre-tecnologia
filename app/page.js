@@ -12,13 +12,15 @@ import {
 import SolidIcon from './base/SolidIcon';
 import { Overline, Text, Title } from './base/Typography';
 import { LastPosts, ModalVimeo, Tabs } from './components/Elements';
-import { Container, Testimonies } from './components/Foundation';
+import { Container, ModalForm, Testimonies } from './components/Foundation';
 
 export default function Home() {
+  const [openModal, setOpenModal] = useState(false);
   const [openModalVimeo, setOpenModalVimeo] = useState(false);
 
   return (
     <main className="pt-24">
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <ModalVimeo
         open={openModalVimeo}
         onClose={() => setOpenModalVimeo(false)}
@@ -35,17 +37,16 @@ export default function Home() {
             emissão de Certificado Digital em todo o Brasil.{' '}
             <strong>Conheça os segmentos em que atuamos.</strong>
           </Text>
-          <Link href="/">
-            <button
-              className="w-full lg:w-auto py-4 px-8 rounded"
-              style={{ background: red[1000] }}
-              type="button"
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Fale com um consultor
-              </Text>
-            </button>
-          </Link>
+          <button
+            className="w-full xl:w-1/3 py-4 px-8 rounded"
+            onClick={() => setOpenModal(true)}
+            style={{ background: red[1000] }}
+            type="button"
+          >
+            <Text appearance="p4" color={neutralLight[100]}>
+              Fale com um consultor
+            </Text>
+          </button>
         </div>
         <div className="col-span-4 lg:col-span-6 flex items-center justify-end">
           <Image
@@ -225,21 +226,20 @@ export default function Home() {
             Venha conversar conosco. Temos a solução perfeita em sistemas web
             para alavancar a gestão do seu negócio.
           </Text>
-          <Link href="/">
-            <button
-              className="flex items-center p-4 rounded-md space-x-3"
-              style={{ backgroundColor: red[1000] }}
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Converse com um especialista
-              </Text>
-              <SolidIcon
-                icon="faChevronRight"
-                iconColor={neutralLight[100]}
-                newClasses="h-3"
-              />
-            </button>
-          </Link>
+          <button
+            className="flex items-center p-4 rounded-md space-x-3"
+            onClick={() => setOpenModal(true)}
+            style={{ backgroundColor: red[1000] }}
+          >
+            <Text appearance="p4" color={neutralLight[100]}>
+              Converse com um especialista
+            </Text>
+            <SolidIcon
+              icon="faChevronRight"
+              iconColor={neutralLight[100]}
+              newClasses="h-3"
+            />
+          </button>
         </div>
       </Container>
     </main>

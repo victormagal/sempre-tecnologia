@@ -132,11 +132,9 @@ export default function Contador() {
             style={{ background: red[1000] }}
             type="button"
           >
-            <Link href="/">
-              <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
-              </Text>
-            </Link>
+            <Text appearance="p4" color={neutralLight[100]}>
+              Quero ser um parceiro
+            </Text>
           </button>
         </div>
       </Container>

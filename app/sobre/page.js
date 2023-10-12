@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import styles from './styles.module.css';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
 import { CardFeature } from '../components/Elements';
@@ -27,17 +27,13 @@ export default function Sobre() {
           </Text>
         </div>
       </Container>
-      <Container bgColor="linear-gradient(180deg, transparent 0, transparent 85px, #091E42 0, #091E42 100%);">
-        <div className="col-span-4 lg:col-span-12 flex h-[153px] sm:h-[200px] md:h-[300px] lg:h-[350px] xl:h-[539px] justify-center relative">
-          <Image
-            alt="Sempre mensalidade"
-            fill
-            sizes="100vw"
-            src="/about.png"
-            style={{ objectFit: 'contain' }}
-          />
-        </div>
-      </Container>
+      <section className={styles.blueBox}>
+        <Container>
+          <div className="col-span-4 lg:col-span-12 flex justify-center">
+            <img src="/about.png" />
+          </div>
+        </Container>
+      </section>
       <Container bgColor={neutralDark[500]}>
         <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex flex-col lg:flex-row lg:justify-between p-16 space-y-8 lg:space-y-0">
           <div className="flex flex-col justify-center items-center">

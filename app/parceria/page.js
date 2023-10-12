@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import { Overline, Text, Title } from '../base/Typography';
@@ -144,14 +143,13 @@ export default function Certificadora() {
           </Text>
           <button
             className="py-4 rounded w-full lg:w-1/3"
+            onClick={() => setOpenModal(true)}
             style={{ background: red[1000] }}
             type="button"
           >
-            <Link href="/">
-              <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
-              </Text>
-            </Link>
+            <Text appearance="p4" color={neutralLight[100]}>
+              Quero ser um parceiro
+            </Text>
           </button>
         </div>
       </Container>
@@ -236,11 +234,9 @@ export default function Certificadora() {
             style={{ background: red[1000] }}
             type="button"
           >
-            <Link href="/">
-              <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
-              </Text>
-            </Link>
+            <Text appearance="p4" color={neutralLight[100]}>
+              Quero ser um parceiro
+            </Text>
           </button>
         </div>
       </Container>

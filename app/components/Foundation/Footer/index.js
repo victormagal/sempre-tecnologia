@@ -76,23 +76,9 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/">
-                <Text appearance="p4" color={neutralDark[500]}>
-                  Trabalhe conosco
-                </Text>
-              </Link>
-            </li>
-            <li>
               <Link href="/noticias">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Blog
-                </Text>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <Text appearance="p4" color={neutralDark[500]}>
-                  Suporte
                 </Text>
               </Link>
             </li>
@@ -166,7 +152,7 @@ export default function Footer() {
             <li>
               <Link href="/parceria">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Parceria em certificado digital
+                  Seja um parceiro Certificador
                 </Text>
               </Link>
             </li>
@@ -187,23 +173,16 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="tel:08008416260">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Central de atendimento
                 </Text>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="https://api.whatsapp.com/send?phone=556130839390">
                 <Text appearance="p4" color={neutralDark[500]}>
                   WhatsApp
-                </Text>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <Text appearance="p4" color={neutralDark[500]}>
-                  Agende uma ligação
                 </Text>
               </Link>
             </li>

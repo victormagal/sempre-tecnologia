@@ -13,7 +13,7 @@ import {
 } from '../../base/Colors';
 import SolidIcon from '../../base/SolidIcon';
 import { Overline, Text, Title } from '../../base/Typography';
-import { Container } from '../../components/Foundation';
+import { Container, ModalForm } from '../../components/Foundation';
 import { getPost } from '../../graphql/queries';
 import { LastPosts } from '@/app/components/Elements';
 import { useQuery } from '@apollo/client';
@@ -21,6 +21,7 @@ import MarkdownIt from 'markdown-it';
 
 export default function Post() {
   const md = new MarkdownIt();
+  const [openModal, setOpenModal] = useState(false);
   const [content, setContent] = useState();
   const [data, setData] = useState({});
   const path = usePathname().slice(10);
@@ -34,6 +35,7 @@ export default function Post() {
 
   return (
     <main className="pt-24">
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <Container newClasses="py-16">
         <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex flex-col items-center space-y-6">
           <Overline appearance="o1" className="text-center" color={red[700]}>
@@ -111,21 +113,20 @@ export default function Post() {
             Venha conversar conosco. Temos a solução perfeita em sistemas web
             para alavancar a gestão do seu negócio.
           </Text>
-          <Link href="/">
-            <button
-              className="flex items-center p-4 rounded-md space-x-3"
-              style={{ backgroundColor: red[1000] }}
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Converse com um especialista
-              </Text>
-              <SolidIcon
-                icon="faChevronRight"
-                iconColor={neutralLight[100]}
-                newClasses="h-3"
-              />
-            </button>
-          </Link>
+          <button
+            className="flex items-center p-4 rounded-md space-x-3"
+            onClick={() => setOpenModal(true)}
+            style={{ backgroundColor: red[1000] }}
+          >
+            <Text appearance="p4" color={neutralLight[100]}>
+              Converse com um especialista
+            </Text>
+            <SolidIcon
+              icon="faChevronRight"
+              iconColor={neutralLight[100]}
+              newClasses="h-3"
+            />
+          </button>
         </div>
       </Container>
     </main>

@@ -1,16 +1,20 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import SocialIcon from '../base/SocialIcon';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import { ContactForm } from '../components/Elements';
-import { Container } from '../components/Foundation';
+import { Container, ModalForm } from '../components/Foundation';
 
 export default function Contato() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <main className="pt-24">
+      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <Container bgColor={neutralLight[100]} newClasses="py-16">
         <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
           <Overline appearance="o1" color={red[700]}>
@@ -49,7 +53,7 @@ export default function Contato() {
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             Estamos aqui para atender você e tirar suas dúvidas.
           </Text>
-          <Link href="/">
+          <Link href="mailto:contato@sempretecnologia.com.br">
             <Title appearance="h7" color={red[1000]}>
               contato@sempretecnologia.com.br
             </Title>
@@ -70,7 +74,7 @@ export default function Contato() {
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             De segunda a sexta (8h às 18h)
           </Text>
-          <Link href="/">
+          <Link href="tel:08008416260">
             <Title appearance="h7" color={red[1000]}>
               0800 841 6260
             </Title>
@@ -90,12 +94,12 @@ export default function Contato() {
             />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Whatsapp
+            WhatsApp
           </Title>
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             De segunda a sexta (8h às 18h)
           </Text>
-          <Link href="/">
+          <Link href="https://api.whatsapp.com/send?phone=556130839390">
             <Title appearance="h7" color={red[1000]}>
               Mandar mensagem
             </Title>
@@ -116,11 +120,11 @@ export default function Contato() {
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             De segunda a sexta (8h às 18h)
           </Text>
-          <Link href="/">
+          <button onClick={() => setOpenModal(true)} type="button">
             <Title appearance="h7" color={red[1000]}>
               Agendar ligação
             </Title>
-          </Link>
+          </button>
         </div>
       </Container>
       <Container newClasses="lg:pb-16 pt-16">
