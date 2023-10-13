@@ -9,20 +9,29 @@ export default function FiscaisMobile() {
         <ul className="flex space-x-4">
           <li>
             <Image
-              alt="Sempre Gestor"
-              height={16}
+              alt="Sempre Emissor"
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
+              src="/logos/tab-sempre-emissor.svg"
+              width={140}
             />
           </li>
           <li>
             <Image
-              alt="Sempre Lite"
-              height={16}
+              alt="Sempre Emissor Contador"
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
+              src="/logos/tab-sempre-emissor-contador.svg"
+              width={178}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Sempre Free"
+              height={20}
+              quality={100}
+              src="/logos/tab-sempre-free.svg"
+              width={116}
             />
           </li>
         </ul>

@@ -156,7 +156,7 @@ export default function Footer() {
             <li>
               <Link href="/parceria">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Seja um parceiro Certificador
+                  Seja um parceiro em Certificado Digital
                 </Text>
               </Link>
             </li>

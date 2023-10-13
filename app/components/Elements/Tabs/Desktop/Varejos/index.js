@@ -5,24 +5,33 @@ import { Text, Title } from '@/app/base/Typography';
 export default function Varejos() {
   return (
     <>
-      <div className="col-span-4 col-start-2 flex flex-col justify-center space-y-8">
-        <ul className="flex space-x-4">
+      <div className="col-span-5 col-start-2 flex flex-col justify-center space-y-8">
+        <ul className="flex items-center space-x-4">
           <li>
             <Image
-              alt="Sempre Gestor"
-              height={16}
+              alt="Sempre Vest"
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
+              src="/logos/tab-sempre-vest.svg"
+              width={123}
             />
           </li>
           <li>
             <Image
-              alt="Sempre Lite"
-              height={16}
+              alt="Sempre PDV Lite"
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
+              src="/logos/tab-sempre-pdv-lite.svg"
+              width={129}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Sempre PDV Lite"
+              height={20}
+              quality={100}
+              src="/logos/tab-sempre-pdv.svg"
+              width={106}
             />
           </li>
         </ul>
@@ -57,7 +66,7 @@ export default function Varejos() {
           </li>
         </ul>
       </div>
-      <div className="col-span-6 flex justify-end">
+      <div className="col-span-5 flex justify-end">
         <Image
           alt="Sempre mensalidade"
           className="mt-16"

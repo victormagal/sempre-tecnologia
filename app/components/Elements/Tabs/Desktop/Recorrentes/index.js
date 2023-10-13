@@ -5,24 +5,33 @@ import { Text, Title } from '@/app/base/Typography';
 export default function Recorrentes() {
   return (
     <>
-      <div className="col-span-4 col-start-2 flex flex-col justify-center space-y-8">
-        <ul className="flex space-x-4">
+      <div className="col-span-5 col-start-2 flex flex-col justify-center space-y-8">
+        <ul className="flex items-center space-x-4">
           <li>
             <Image
-              alt="Sempre Gestor"
-              height={16}
+              alt="Sempre Mensalidade"
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
+              src="/logos/tab-sempre-mensalidade.svg"
+              width={163}
             />
           </li>
           <li>
             <Image
-              alt="Sempre Lite"
-              height={16}
+              alt="Sempre Condomínio"
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
+              src="/logos/tab-sempre-condominio.svg"
+              width={156}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Sempre BPO"
+              height={20}
+              quality={100}
+              src="/logos/tab-sempre-bpo.svg"
+              width={104}
             />
           </li>
         </ul>
@@ -57,7 +66,7 @@ export default function Recorrentes() {
           </li>
         </ul>
       </div>
-      <div className="col-span-6 flex justify-end">
+      <div className="col-span-5 flex justify-end">
         <Image
           alt="Sempre mensalidade"
           className="mt-16"

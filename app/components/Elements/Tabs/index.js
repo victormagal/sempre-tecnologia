@@ -142,7 +142,7 @@ export default function Tabs() {
               className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
-              <FiscaisMobile />
+              <VarejosMobile />
             </SwiperSlide>
             <SwiperSlide
               className="pt-8 px-8 rounded-3xl w-full"
@@ -160,7 +160,7 @@ export default function Tabs() {
               className="pt-8 px-8 rounded-3xl w-full"
               style={{ backgroundColor: neutralLight[300] }}
             >
-              <VarejosMobile />
+              <FiscaisMobile />
             </SwiperSlide>
           </Swiper>
         </div>

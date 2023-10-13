@@ -24,7 +24,7 @@ export default function Home() {
       <ModalVimeo
         open={openModalVimeo}
         onClose={() => setOpenModalVimeo(false)}
-        link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
+        link="https://player.vimeo.com/video/554410663?h=75a44195db&title=0&byline=0&portrait=0"
       />
       <Container newClasses="py-14">
         <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-10">

@@ -10,19 +10,19 @@ export default function PrestadoresMobile() {
           <li>
             <Image
               alt="Sempre Gestor"
-              height={16}
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-gestor.png"
-              width={104}
+              src="/logos/tab-sempre-gestor.svg"
+              width={126}
             />
           </li>
           <li>
             <Image
               alt="Sempre Lite"
-              height={16}
+              height={20}
               quality={100}
-              src="/logos/tab-sempre-lite.png"
-              width={93}
+              src="/logos/tab-sempre-lite.svg"
+              width={113}
             />
           </li>
         </ul>

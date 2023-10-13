@@ -109,7 +109,7 @@ export default function Blog() {
             href={`/noticias/${post.attributes.slug}`}
           >
             {post?.attributes?.image?.data?.attributes?.url && (
-              <div className="h-52 overflow-hidden rounded-lg">
+              <div className="overflow-hidden rounded-xl">
                 <img
                   alt={post.attributes.title}
                   src={`${post?.attributes?.image?.data?.attributes?.url}`}
