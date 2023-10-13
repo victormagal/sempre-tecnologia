@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '../Container';
@@ -127,7 +128,10 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link
+                href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}`}
+                target="_blank"
+              >
                 <Text appearance="p4" color={neutralDark[500]}>
                   Certificado digital
                 </Text>

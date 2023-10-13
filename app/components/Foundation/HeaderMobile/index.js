@@ -760,7 +760,7 @@ export default function HeaderMobile() {
                               </div>
                               <div>
                                 <Title appearance="h7" color={neutralDark[500]}>
-                                  Programa de parceria para Contadores
+                                  Programa de parceria para contadores
                                 </Title>
                                 <Text appearance="p4" color={neutralMid[500]}>
                                   Conheça e aproveite benefícios exclusivos.
@@ -779,7 +779,7 @@ export default function HeaderMobile() {
                               </div>
                               <div>
                                 <Title appearance="h7" color={neutralDark[500]}>
-                                  Seja um parceiro certificador
+                                  Seja um parceiro Certificador
                                 </Title>
                                 <Text appearance="p4" color={neutralMid[500]}>
                                   Programa de parceria para venda de Certificado

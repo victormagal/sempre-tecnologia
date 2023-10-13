@@ -64,7 +64,7 @@ export default function Home() {
               97%
             </Title>
             <Title appearance="h6" color={neutralMid[100]} extra>
-              Atendimento Pós-Venda%
+              Atendimento Pós-Venda
             </Title>
           </div>
           <div className="flex flex-col items-center space-y-2">
