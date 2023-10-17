@@ -149,14 +149,14 @@ export default function Footer() {
             <li>
               <Link href="/contador">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Programa de parceria com contadores
+                  Parceria para Contadores
                 </Text>
               </Link>
             </li>
             <li>
               <Link href="/parceria">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Seja um parceiro em Certificado Digital
+                  Parceria em Certificado Digital
                 </Text>
               </Link>
             </li>
