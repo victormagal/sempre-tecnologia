@@ -263,7 +263,7 @@ export default function Segment() {
               type="button"
             >
               <Text appearance="p4" color={neutralLight[100]}>
-                Quero ser um parceiro
+                Quero uma demonstração
               </Text>
             </button>
           </div>

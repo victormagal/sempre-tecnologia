@@ -26,7 +26,7 @@ export default function Doubts({ doubts }) {
             className="text-center lg:text-left"
             color={neutralMid[500]}
           >
-            Ainda tem dúvidas sobre o Certificado Digital?
+            Tudo o que você precisa saber sobre os nossos produtos e entrega.
           </Text>
         </div>
         <div className="flex flex-col space-y-6">
