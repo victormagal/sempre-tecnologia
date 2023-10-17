@@ -332,6 +332,7 @@ const getSegment = gql`
             }
             title
             description
+            link_vimeo
           }
           loja {
             name

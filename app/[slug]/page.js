@@ -56,11 +56,13 @@ export default function Segment() {
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      <ModalVimeo
-        open={openModalVimeo}
-        onClose={() => setOpenModalVimeo(false)}
-        link="https://player.vimeo.com/video/377878667?h=0e8c653561&title=0&byline=0&portrait=0"
-      />
+      {data?.attributes?.produto[0]?.link_vimeo && (
+        <ModalVimeo
+          open={openModalVimeo}
+          onClose={() => setOpenModalVimeo(false)}
+          link={data?.attributes?.produto[0]?.link_vimeo}
+        />
+      )}
       <HeroPage
         firstColor={data?.attributes?.theme?.first_color}
         fourthColor={data?.attributes?.theme?.fourth_color}
@@ -151,16 +153,26 @@ export default function Segment() {
         <>
           <Container bgColor={neutralLight[100]} newClasses="py-16">
             <div className="col-span-4 lg:col-span-6 flex justify-center">
-              <div
-                className="cursor-pointer"
-                onClick={() => setOpenModalVimeo(true)}
-              >
-                <Image
-                  src="/bg-play-certificado-digital.png"
-                  height={324}
-                  width={564}
-                />
-              </div>
+              {data?.attributes?.produto[0]?.link_vimeo ? (
+                <div
+                  className="cursor-pointer"
+                  onClick={() => setOpenModalVimeo(true)}
+                >
+                  <Image
+                    src="/bg-play-certificado-digital.png"
+                    height={324}
+                    width={564}
+                  />
+                </div>
+              ) : (
+                <div>
+                  <Image
+                    src="/bg-play-certificado-digital.png"
+                    height={324}
+                    width={564}
+                  />
+                </div>
+              )}
             </div>
             <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-6">
               {data?.attributes?.produto.map(
