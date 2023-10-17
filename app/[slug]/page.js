@@ -23,16 +23,20 @@ import { CardFeature, Doubts, ModalVimeo } from '@/app/components/Elements';
 import { useQuery, useLazyQuery } from '@apollo/client';
 
 export default function Segment() {
+  const [pageSize, setPageSize] = useState(6);
   const [openModal, setOpenModal] = useState(false);
   const [openModalVimeo, setOpenModalVimeo] = useState(false);
   const [data, setData] = useState({});
+  const [cards, setCards] = useState([]);
   const [faq, setFaq] = useState({});
   const path = usePathname().slice(1);
+  const cardsPerPage = 6;
 
   useQuery(getSegment, {
     variables: { slug: path },
     onCompleted: (data) => {
       setData(data?.segmentos?.data[0]);
+      setCards(data?.segmentos?.data[0]?.attributes?.card);
     }
   });
 
@@ -52,6 +56,11 @@ export default function Segment() {
       }
     });
   }, [data]);
+
+  const nextCards = () => {
+    const newPageSize = pageSize + cardsPerPage;
+    setPageSize(newPageSize < cards.length ? newPageSize : cards.length);
+  };
 
   return (
     <main className="pt-24">
@@ -118,8 +127,9 @@ export default function Segment() {
         </div>
       </Container>
       <Container bgColor={creamAssistant[100]} newClasses="pb-16">
-        {data?.attributes?.card.map(
-          ({ description, icon, id, third, title }) => (
+        {cards
+          .slice(0, pageSize)
+          .map(({ description, icon, id, third, title }) => (
             <CardFeature
               key={id}
               third={third}
@@ -134,20 +144,21 @@ export default function Segment() {
               iconSize="h-10"
               title={title}
             />
-          )
+          ))}
+        {pageSize < cards.length && (
+          <div className="col-span-4 lg:col-span-12 flex justify-center mt-8">
+            <button
+              className="px-8 py-4 rounded-md w-full lg:w-auto"
+              onClick={nextCards}
+              style={{ background: red[1000] }}
+              type="button"
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Ver mais diferenciais
+              </Text>
+            </button>
+          </div>
         )}
-        <div className="col-span-4 lg:col-span-12 flex justify-center mt-8">
-          <button
-            className="px-8 py-4 rounded-md w-full lg:w-auto"
-            onClick={() => setOpenModal(true)}
-            style={{ background: red[1000] }}
-            type="button"
-          >
-            <Text appearance="p4" color={neutralLight[100]}>
-              Quero ser um parceiro
-            </Text>
-          </button>
-        </div>
       </Container>
       {data?.attributes?.generic?.generic ? (
         <>
