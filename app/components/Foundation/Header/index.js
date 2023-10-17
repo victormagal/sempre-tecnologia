@@ -154,6 +154,18 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
+                    <Link onClick={closeDropdownItens} href="/paes-e-salgados">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faIceCream"
+                          iconColor={red[900]}
+                          newClasses="h-6 w-8"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Pães e Salgados
+                        </Text>
+                      </li>
+                    </Link>
                     <Link onClick={closeDropdownItens} href="/distribuidores">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
