@@ -124,6 +124,16 @@ export default function Segment() {
           <Text appearance="p3" className="text-center" color={neutralMid[500]}>
             {data?.attributes?.vantagem?.description}
           </Text>
+          {data?.attributes?.vantagem?.image?.data && (
+            <Image
+              className="pt-6"
+              height={
+                data?.attributes?.vantagem?.image?.data?.attributes?.height
+              }
+              src={data?.attributes?.vantagem?.image?.data?.attributes?.url}
+              width={data?.attributes?.vantagem?.image?.data?.attributes?.width}
+            />
+          )}
         </div>
       </Container>
       <Container bgColor={creamAssistant[100]} newClasses="pb-16">
@@ -178,7 +188,7 @@ export default function Segment() {
               ) : (
                 <div>
                   <Image
-                    src="/bg-play-certificado-digital.png"
+                    src="/bg-play-certificado-digital-without-player.png"
                     height={324}
                     width={564}
                   />

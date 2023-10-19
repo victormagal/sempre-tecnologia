@@ -320,6 +320,15 @@ const getSegment = gql`
             title
             subtitle
             description
+            image {
+              data {
+                attributes {
+                  height
+                  url
+                  width
+                }
+              }
+            }
           }
           card {
             id
