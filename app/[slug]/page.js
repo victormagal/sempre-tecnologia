@@ -16,6 +16,7 @@ import {
   Container,
   HeroPage,
   ModalForm,
+  Partners,
   Testimonies
 } from '../components/Foundation';
 import { getFaqsBySegment, getSegment } from '../graphql/queries';
@@ -314,58 +315,7 @@ export default function Segment() {
         </Container>
       )}
       <Testimonies />
-      <Container newClasses="py-16">
-        <ul className="col-span-4 lg:col-span-12 flex flex-col md:flex-row items-center md:justify-between space-y-8 md:space-y-0">
-          <li>
-            <Image
-              alt="Litoral"
-              height={35}
-              src="/parceiros/litoral.png"
-              width={88}
-            />
-          </li>
-          <li>
-            <Image
-              alt="SmartFit"
-              height={35}
-              src="/parceiros/smart-fit.png"
-              width={98}
-            />
-          </li>
-          <li>
-            <Image
-              alt="Coco Bambu"
-              height={28}
-              src="/parceiros/coco-bambu.png"
-              width={134}
-            />
-          </li>
-          <li>
-            <Image
-              alt="Sebrae"
-              height={30}
-              src="/parceiros/sebrae.png"
-              width={56}
-            />
-          </li>
-          <li>
-            <Image
-              alt="Magic Color"
-              height={35}
-              src="/parceiros/magic-color.png"
-              width={56}
-            />
-          </li>
-          <li>
-            <Image
-              alt="Valor Ambiental"
-              height={38}
-              src="/parceiros/valor-ambiental.png"
-              width={37}
-            />
-          </li>
-        </ul>
-      </Container>
+      <Partners />
       <Doubts doubts={faq?.attributes?.faq} />
     </main>
   );
