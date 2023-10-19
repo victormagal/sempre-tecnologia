@@ -185,7 +185,7 @@ export default function HeaderMobile() {
                                   >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
-                                        icon="faIceCream"
+                                        icon="faBreadSlice"
                                         iconColor={red[900]}
                                         newClasses="h-6 w-8"
                                       />

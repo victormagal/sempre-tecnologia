@@ -64,7 +64,7 @@ export default function DistribuidoresMobile() {
           height={410}
           width={486}
           quality={100}
-          src="/distriibuidores-tab.png"
+          src="/home/distribuidor-mobile.png"
         />
       </div>
     </>

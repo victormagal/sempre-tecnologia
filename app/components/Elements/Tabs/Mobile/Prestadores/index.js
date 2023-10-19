@@ -64,7 +64,7 @@ export default function PrestadoresMobile() {
           height={410}
           width={486}
           quality={100}
-          src="/distriibuidores-tab.png"
+          src="/home/gestor-mobile.png"
         />
       </div>
     </>

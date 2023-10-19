@@ -73,7 +73,7 @@ export default function Recorrentes() {
           height={410}
           width={486}
           quality={100}
-          src="/distriibuidores-tab.png"
+          src="/home/recorrente-desktop.png"
         />
       </div>
     </>
