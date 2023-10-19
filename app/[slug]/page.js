@@ -293,9 +293,12 @@ export default function Segment() {
           <div className="col-span-4 flex justify-center lg:justify-end">
             <Image
               alt="Demonstração"
-              height={366}
-              src="/demonstracao.png"
-              width={392}
+              className="rounded-xl"
+              height={
+                data?.attributes?.generic?.thumb?.data?.attributes?.height
+              }
+              src={data?.attributes?.generic?.thumb?.data?.attributes?.url}
+              width={data?.attributes?.generic?.thumb?.data?.attributes?.width}
             />
           </div>
         </Container>

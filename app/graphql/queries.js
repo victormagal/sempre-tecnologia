@@ -285,6 +285,15 @@ const getSegment = gql`
         attributes {
           generic {
             generic
+            thumb {
+              data {
+                attributes {
+                  url
+                  width
+                  height
+                }
+              }
+            }
           }
           theme {
             first_color
