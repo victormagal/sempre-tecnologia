@@ -51,7 +51,7 @@ export default function Home() {
         <div className="col-span-4 lg:col-span-6 flex items-center justify-end">
           <Image
             alt="Certificado Digital - Emita o seu de onde estiver"
-            height={352}
+            height={539}
             src="/hero-home.png"
             width={560}
           />
