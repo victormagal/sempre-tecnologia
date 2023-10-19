@@ -135,7 +135,7 @@ export default function Segment() {
               third={third}
               bgColor={neutralLight[100]}
               description={description}
-              icon={icon ? icon : 'faPenToSquare'}
+              icon={icon ? icon : 'faPen'}
               iconColor={
                 data?.attributes?.theme?.icon_color
                   ? data?.attributes?.theme?.icon_color
