@@ -265,7 +265,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Outras categoria
+                          Outras categorias
                         </Text>
                       </li>
                     </Link>
