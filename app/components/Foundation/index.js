@@ -7,7 +7,9 @@ import HeaderMobile from './HeaderMobile';
 import HeroPage from './HeroPage';
 import Locations from './Locations';
 import ModalForm from './ModalForm';
+import Partners from './Partners';
 import Slideshow from './Slideshow';
+import Testimonies from './Testimonies';
 
 export {
   Analytics,
@@ -19,5 +21,7 @@ export {
   HeroPage,
   Locations,
   ModalForm,
-  Slideshow
+  Partners,
+  Slideshow,
+  Testimonies
 };
