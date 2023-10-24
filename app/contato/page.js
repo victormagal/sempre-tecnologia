@@ -74,7 +74,7 @@ export default function Contato() {
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             De segunda a sexta (8h às 18h)
           </Text>
-          <Link href="tel:08008416260">
+          <Link href="tel:08009416260">
             <Title appearance="h7" color={red[1000]}>
               0800 841 6260
             </Title>

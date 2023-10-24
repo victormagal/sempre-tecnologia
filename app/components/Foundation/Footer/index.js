@@ -177,7 +177,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="tel:08008416260">
+              <Link href="tel:08009416260">
                 <Text appearance="p4" color={neutralDark[500]}>
                   Central de atendimento
                 </Text>

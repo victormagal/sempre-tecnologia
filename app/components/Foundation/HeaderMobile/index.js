@@ -658,7 +658,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        NF-e Nota Fiscal Serviços
+                                        NFS-e Nota Fiscal Serviços
                                       </Text>
                                     </li>
                                   </Link>
@@ -676,13 +676,13 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        CT-e Conhecimento de transporte
+                                        CT-e Conhecimento de Transporte
                                       </Text>
                                     </li>
                                   </Link>
                                   <Link
                                     onClick={burgerMenu}
-                                    href="/manifesto-do-destinatario-mdf-e"
+                                    href="/manifesto-documentos-fiscais-mdf-e"
                                   >
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
@@ -694,7 +694,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        MDF-e Manifesto destinatário
+                                        MDF-e Manifesto Documentos Fiscais
                                       </Text>
                                     </li>
                                   </Link>
