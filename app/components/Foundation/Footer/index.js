@@ -83,6 +83,26 @@ export default function Footer() {
                 </Text>
               </Link>
             </li>
+            <li>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/certificado-a1`}
+                target="_blank"
+              >
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Suporte A1
+                </Text>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/certificado-a3`}
+                target="_blank"
+              >
+                <Text appearance="p4" color={neutralDark[500]}>
+                  Suporte A3
+                </Text>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="col-span-2">

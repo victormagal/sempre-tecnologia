@@ -43,6 +43,7 @@ export default function SolidIcon({ icon, iconColor, newClasses }) {
     faComments: Icon.faComments,
     faComputer: Icon.faComputer,
     faCow: Icon.faCow,
+    faDesktop: Icon.faDesktop,
     faDiagramProject: Icon.faDiagramProject,
     faDownload: Icon.faDownload,
     faDog: Icon.faDog,
