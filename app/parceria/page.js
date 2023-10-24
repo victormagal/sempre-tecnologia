@@ -177,7 +177,7 @@ export default function Certificadora() {
           third={true}
           bgColor={neutralLight[100]}
           description="Precisa de ajuda? Atendimento de excelência ao seu cliente e para você quando precisar de ajuda."
-          icon="faBuilding"
+          icon="faUserCheck"
           iconColor={red[600]}
           iconSize="h-10"
           title="Atendimento Personalizado​"
@@ -186,7 +186,7 @@ export default function Certificadora() {
           third={true}
           bgColor={neutralLight[100]}
           description="Disponibilizamos todo o material de comunicação para os nossos parceiros serem referência na região."
-          icon="faComments"
+          icon="faBullseye"
           iconColor={red[600]}
           iconSize="h-10"
           title="Marketing"
@@ -195,7 +195,7 @@ export default function Certificadora() {
           third={true}
           bgColor={neutralLight[100]}
           description="Plataforma intuitiva para administrar certificados digitais."
-          icon="faGem"
+          icon="faFileLines"
           iconColor={red[600]}
           iconSize="h-10"
           title="Administre os certificados"
@@ -204,7 +204,7 @@ export default function Certificadora() {
           third={true}
           bgColor={neutralLight[100]}
           description="Nossa parceria privilegia sua competência comercial, pois sabemos que essa relação tem que ser boa para ambas as partes."
-          icon="faLightbulb"
+          icon="faUserTie"
           iconColor={red[600]}
           iconSize="h-10"
           title="Parceria diferenciada"
@@ -213,16 +213,16 @@ export default function Certificadora() {
           third={true}
           bgColor={neutralLight[100]}
           description="Eleve seu negócio com certificados digitais, atraindo parcerias de prestígio com entidades de classe."
-          icon="faLightbulb"
+          icon="faUserGroup"
           iconColor={red[600]}
           iconSize="h-10"
-          title="Expanda sua rede de contatos."
+          title="Expanda sua rede de contatos"
         />
         <CardFeature
           third={true}
           bgColor={neutralLight[100]}
           description="Segurança, respeito e profissionalismo, liberando você para focar no seu negócio com tranquilidade."
-          icon="faLightbulb"
+          icon="faHelmetSafety"
           iconColor={red[600]}
           iconSize="h-10"
           title="Respeito e Profissionalismo​"

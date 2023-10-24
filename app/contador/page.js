@@ -75,7 +75,7 @@ export default function Contador() {
           third={true}
           bgColor={neutralLight[100]}
           description="Você recebe todas as informações fiscais do seu cliente por meio de nossas soluções."
-          icon="faBuilding"
+          icon="faMoneyBillWave"
           iconColor={red[600]}
           iconSize="h-10"
           title="Integração contábil"
@@ -84,7 +84,7 @@ export default function Contador() {
           third={true}
           bgColor={neutralLight[100]}
           description="Conte com nosso apoio tanto para seu escritório quanto para seus clientes. Estamos #SemprePresente"
-          icon="faComments"
+          icon="faUserCheck"
           iconColor={red[600]}
           iconSize="h-10"
           title="Atendimento diferenciado"
@@ -93,7 +93,7 @@ export default function Contador() {
           third={true}
           bgColor={neutralLight[100]}
           description="Plataforma para administrar as indicações de certificados digitais."
-          icon="faGem"
+          icon="faUserTie"
           iconColor={red[600]}
           iconSize="h-10"
           title="Portal Sempre Contador"
@@ -102,7 +102,7 @@ export default function Contador() {
           third={true}
           bgColor={neutralLight[100]}
           description="Emita notas fiscais eletrônicas para seus clientes e gere renda adicional para seu escritório."
-          icon="faLightbulb"
+          icon="faBuilding"
           iconColor={red[600]}
           iconSize="h-10"
           title="Solução Multiempresas"
@@ -111,7 +111,7 @@ export default function Contador() {
           third={true}
           bgColor={neutralLight[100]}
           description="Gerencie a validade dos certificados digitais de seus clientes por meio do Portal Sempre Contador."
-          icon="faLightbulb"
+          icon="faFileLines"
           iconColor={red[600]}
           iconSize="h-10"
           title="Certificados digitais em dia"
@@ -120,7 +120,7 @@ export default function Contador() {
           third={true}
           bgColor={neutralLight[100]}
           description="Conte com nossas soluções web e facilite a vida do seu cliente e também da sua contabilidade."
-          icon="faLightbulb"
+          icon="faFilePen"
           iconColor={red[600]}
           iconSize="h-10"
           title="Soluções web"
