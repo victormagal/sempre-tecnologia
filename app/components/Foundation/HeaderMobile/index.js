@@ -69,13 +69,6 @@ export default function HeaderMobile() {
               >
                 <ul className="flex flex-col space-y-6">
                   <li>
-                    <Link onClick={burgerMenu} href="/">
-                      <Title appearance="h6" color={neutralDark[500]}>
-                        Home
-                      </Title>
-                    </Link>
-                  </li>
-                  <li>
                     <Link onClick={burgerMenu} href="/sobre">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Quem somos

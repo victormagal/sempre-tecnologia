@@ -57,14 +57,7 @@ export default function Header() {
           </Link>
         </div>
         <nav className="col-end-13 col-span-10">
-          <ul className="flex items-center justify-end space-x-3 xl:space-x-12">
-            <li>
-              <Link href="/">
-                <Text appearance="p4" color={neutralMid[600]}>
-                  Home
-                </Text>
-              </Link>
-            </li>
+          <ul className="flex items-center justify-end space-x-3 xl:space-x-8">
             <li>
               <Link href="/sobre">
                 <Text appearance="p4" color={neutralMid[600]}>
@@ -87,14 +80,14 @@ export default function Header() {
                 />
               </button>
               <nav
-                className="absolute dropDown drop-shadow hidden mt-4 p-8 translate-x-[-33%] xl:translate-x-[-40%]"
+                className="absolute dropDown drop-shadow hidden mt-4 p-8 translate-x-[-30%] xl:translate-x-[-35%]"
                 onClick={(e) => {
                   e.stopPropagation();
                 }}
                 style={{ backgroundColor: neutralLight[100] }}
               >
-                <div className="flex space-x-12">
-                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
+                <div className="flex space-x-12 xl:space-x-6">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Distribuidores
@@ -179,7 +172,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Pequenos varejos
@@ -270,7 +263,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Prestadores de serviço
@@ -373,7 +366,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Recorrentes
@@ -458,7 +451,7 @@ export default function Header() {
                       </li>
                     </Link>
                   </ul>
-                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[250px]">
+                  <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
                         Documentos fiscais
