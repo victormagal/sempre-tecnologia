@@ -34,6 +34,7 @@ export default function SolidIcon({ icon, iconColor, newClasses }) {
     faChevronRight: Icon.faChevronRight,
     faCircleDot: Icon.faCircleDot,
     faCircleExclamation: Icon.faCircleExclamation,
+    faCirclePlay: Icon.faCirclePlay,
     faCirclePlus: Icon.faCirclePlus,
     faClipboardList: Icon.faClipboardList,
     faClockRotateLeft: Icon.faClockRotateLeft,

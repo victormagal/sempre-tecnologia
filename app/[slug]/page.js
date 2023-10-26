@@ -9,8 +9,10 @@ import {
   neutralDark,
   neutralMid,
   neutralLight,
-  red
+  red,
+  blue
 } from '../base/Colors';
+import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
 import {
   Container,
@@ -66,11 +68,11 @@ export default function Segment() {
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      {data?.attributes?.produto[0]?.link_vimeo && (
+      {data?.attributes?.generic?.link_vimeo && (
         <ModalVimeo
           open={openModalVimeo}
           onClose={() => setOpenModalVimeo(false)}
-          link={data?.attributes?.produto[0]?.link_vimeo}
+          link={data?.attributes?.generic?.link_vimeo}
         />
       )}
       <HeroPage
@@ -175,23 +177,46 @@ export default function Segment() {
         <>
           <Container bgColor={neutralLight[100]} newClasses="py-16">
             <div className="col-span-4 lg:col-span-6 flex justify-center">
-              {data?.attributes?.produto[0]?.link_vimeo ? (
+              {data?.attributes?.generic?.link_vimeo ? (
                 <div
-                  className="cursor-pointer"
+                  className="cursor-pointer relative"
                   onClick={() => setOpenModalVimeo(true)}
                 >
                   <Image
-                    src="/bg-play-certificado-digital.png"
-                    height={324}
-                    width={564}
+                    src={
+                      data?.attributes?.generic?.image_produto?.data?.attributes
+                        ?.url
+                    }
+                    height={
+                      data?.attributes?.generic?.image_produto?.data?.attributes
+                        ?.height
+                    }
+                    width={
+                      data?.attributes?.generic?.image_produto?.data?.attributes
+                        ?.width
+                    }
+                  />
+                  <SolidIcon
+                    icon="faCirclePlay"
+                    iconColor={red[600]}
+                    newClasses="absolute bg-white h-16 left-[50%] rounded-full top-[50%] translate-x-[-50%] translate-y-[-50%] w-16"
                   />
                 </div>
               ) : (
                 <div>
                   <Image
-                    src="/bg-play-certificado-digital-without-player.png"
-                    height={324}
-                    width={564}
+                    src={
+                      data?.attributes?.generic?.image_produto?.data?.attributes
+                        ?.url
+                    }
+                    height={
+                      data?.attributes?.generic?.image_produto?.data?.attributes
+                        ?.height
+                    }
+                    width={
+                      data?.attributes?.generic?.image_produto?.data?.attributes
+                        ?.width
+                    }
                   />
                 </div>
               )}

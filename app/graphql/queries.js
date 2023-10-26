@@ -294,6 +294,16 @@ const getSegment = gql`
                 }
               }
             }
+            image_produto {
+              data {
+                attributes {
+                  url
+                  width
+                  height
+                }
+              }
+            }
+            link_vimeo
           }
           theme {
             first_color
