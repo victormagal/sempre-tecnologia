@@ -303,7 +303,7 @@ const getSegment = gql`
                 }
               }
             }
-            link_vimeo
+            vimeo
           }
           theme {
             first_color
@@ -360,7 +360,6 @@ const getSegment = gql`
             }
             title
             description
-            link_vimeo
           }
           loja {
             name

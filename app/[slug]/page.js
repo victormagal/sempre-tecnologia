@@ -67,11 +67,11 @@ export default function Segment() {
   return (
     <main className="pt-24">
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
-      {data?.attributes?.generic?.link_vimeo && (
+      {data?.attributes?.generic?.vimeo && (
         <ModalVimeo
           open={openModalVimeo}
           onClose={() => setOpenModalVimeo(false)}
-          link={data?.attributes?.generic?.link_vimeo}
+          link={data?.attributes?.generic?.vimeo}
         />
       )}
       <HeroPage
@@ -176,7 +176,7 @@ export default function Segment() {
         <>
           <Container bgColor={neutralLight[100]} newClasses="py-16">
             <div className="col-span-4 lg:col-span-6 flex justify-center">
-              {data?.attributes?.generic?.link_vimeo ? (
+              {data?.attributes?.generic?.vimeo ? (
                 <div
                   className="cursor-pointer relative"
                   onClick={() => setOpenModalVimeo(true)}
