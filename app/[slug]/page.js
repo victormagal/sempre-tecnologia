@@ -9,8 +9,7 @@ import {
   neutralDark,
   neutralMid,
   neutralLight,
-  red,
-  blue
+  red
 } from '../base/Colors';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
