@@ -33,32 +33,43 @@ export default function Home() {
       />
       <Container newClasses="py-14">
         <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-10">
-          <Title appearance="h1" color={neutralDark[500]} extra>
-            Seja bem-vindo a Sempre Tecnologia
-          </Title>
-          <Text appearance="p3" color={neutralMid[500]}>
-            Atuamos no desenvolvimento de Sistemas Web de Gestão com tecnologia
-            própria para diversos segmentos e contamos com o credenciamento na
-            emissão de Certificado Digital em todo o Brasil.{' '}
-            <strong>Conheça os segmentos em que atuamos.</strong>
-          </Text>
-          <button
-            className="w-full xl:w-1/3 py-4 px-8 rounded"
-            onClick={() => setOpenModal(true)}
-            style={{ background: red[1000] }}
-            type="button"
+          <Title
+            appearance="h1"
+            className="text-center lg:text-left"
+            color={neutralDark[500]}
+            extra
           >
-            <Text appearance="p4" color={neutralLight[100]}>
-              Fale com um consultor
-            </Text>
-          </button>
+            Adquira o seu Sistema de Gestão + Consultoria grátis por apenas
+            99,00 ao mês
+          </Title>
+          <Text
+            appearance="p3"
+            className="text-center lg:text-left"
+            color={neutralMid[500]}
+          >
+            Promoção válida para o Sistema SempreLite até 30.11
+          </Text>
+          <Link
+            href="https://sempretecnologia.rds.land/black-november-sistemas-2023"
+            target="_blank"
+          >
+            <button
+              className="w-full xl:w-1/3 py-4 px-8 rounded"
+              style={{ background: red[1000] }}
+              type="button"
+            >
+              <Text appearance="p4" color={neutralLight[100]}>
+                Confira!
+              </Text>
+            </button>
+          </Link>
         </div>
-        <div className="col-span-4 lg:col-span-6 flex items-center justify-end">
+        <div className="col-span-4 lg:col-span-6 flex items-center justify-end mt-8 lg:mt-0">
           <Image
-            alt="Certificado Digital - Emita o seu de onde estiver"
-            height={539}
-            src="/hero-home.png"
-            width={560}
+            alt="Aproveite nossa Black November"
+            height={203}
+            src="/black-friday.png"
+            width={664}
           />
         </div>
       </Container>
