@@ -74,7 +74,7 @@ export default function Certificadora() {
         <div className="border-b col-span-4 lg:col-span-12 flex flex-col lg:flex-row lg:justify-between p-16 space-y-8 lg:space-y-0">
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h3" color={neutralDark[500]} extra>
-              +250 mil
+              +280 mil
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
               certificados emitidos
@@ -98,7 +98,7 @@ export default function Certificadora() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h3" color={neutralDark[500]} extra>
-              85%
+              97%
             </Title>
             <Title appearance="h6" color={neutralMid[600]}>
               de satisfação no atendimento

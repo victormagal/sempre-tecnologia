@@ -54,7 +54,7 @@ export default function Sobre() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Title appearance="h1" color="white">
-              85%
+              97%
             </Title>
             <Title appearance="h6" color="#B3BAC5">
               de satisfação no atendimento

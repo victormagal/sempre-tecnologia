@@ -93,7 +93,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center space-y-2">
             <Title appearance="h1" color={neutralLight[100]} extra>
-              85%
+              97%
             </Title>
             <Title appearance="h6" color={neutralMid[100]} extra>
               Atendimento Certificado Digital
