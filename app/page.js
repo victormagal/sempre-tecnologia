@@ -39,37 +39,35 @@ export default function Home() {
             color={neutralDark[500]}
             extra
           >
-            Adquira o seu Sistema de Gestão + Consultoria grátis por apenas
-            99,00 ao mês
+            Seja bem-vindo a Sempre Tecnologia
           </Title>
           <Text
             appearance="p3"
             className="text-center lg:text-left"
             color={neutralMid[500]}
           >
-            Promoção válida para o Sistema SempreLite até 30.11
+            Atuamos no desenvolvimento de Sistemas Web de Gestão com tecnologia
+            própria para diversos segmentos e contamos com o credenciamento na
+            emissão de Certificado Digital em todo o Brasil.{' '}
+            <strong>Conheça os segmentos em que atuamos.</strong>
           </Text>
-          <Link
-            href="https://sempretecnologia.rds.land/black-november-sistemas-2023"
-            target="_blank"
+          <button
+            className="w-full xl:w-1/3 py-4 px-8 rounded"
+            onClick={() => setOpenModal(true)}
+            style={{ background: red[1000] }}
+            type="button"
           >
-            <button
-              className="w-full xl:w-1/3 py-4 px-8 rounded"
-              style={{ background: red[1000] }}
-              type="button"
-            >
-              <Text appearance="p4" color={neutralLight[100]}>
-                Confira!
-              </Text>
-            </button>
-          </Link>
+            <Text appearance="p4" color={neutralLight[100]}>
+              Fale com um consultor
+            </Text>
+          </button>
         </div>
         <div className="col-span-4 lg:col-span-6 flex items-center justify-end mt-8 lg:mt-0">
           <Image
             alt="Aproveite nossa Black November"
-            height={203}
-            src="/black-friday.png"
-            width={664}
+            height={539}
+            src="/hero-home.png"
+            width={560}
           />
         </div>
       </Container>
