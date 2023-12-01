@@ -78,7 +78,7 @@ export default function Home() {
               97%
             </Title>
             <Title appearance="h6" color={neutralMid[100]} extra>
-              Atendimento Pós-Venda
+              Satisfação ao atendimento Pós-Venda
             </Title>
           </div>
           <div className="flex flex-col items-center space-y-2">
@@ -86,7 +86,7 @@ export default function Home() {
               98%
             </Title>
             <Title appearance="h6" color={neutralMid[100]} extra>
-              Atendimento Suporte Técnico a Sistemas
+              Satisfação ao atendimento Suporte Técnico a Sistemas
             </Title>
           </div>
           <div className="flex flex-col items-center space-y-2">
@@ -94,7 +94,7 @@ export default function Home() {
               97%
             </Title>
             <Title appearance="h6" color={neutralMid[100]} extra>
-              Atendimento Certificado Digital
+              Satisfação ao atendimento Certificado Digital
             </Title>
           </div>
         </div>
