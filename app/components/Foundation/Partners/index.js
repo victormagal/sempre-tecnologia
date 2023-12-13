@@ -7,7 +7,7 @@ export default function Partners() {
   return (
     <>
       <div className="block md:hidden">
-        <Container newClasses="py-12 lg:py-24">
+        <Container newClasses="pb-12 lg:pb-24">
           <div className="col-span-4 lg:col-span-12">
             <div className="flex flex-col m-auto p-auto">
               <div
@@ -82,7 +82,7 @@ export default function Partners() {
         </Container>
       </div>
       <div className="hidden md:block">
-        <Container newClasses="py-16">
+        <Container newClasses="pb-16">
           <ul className="col-span-4 lg:col-span-12 flex flex-col md:flex-row items-center md:justify-between space-y-8 md:space-y-0">
             <li>
               <Image

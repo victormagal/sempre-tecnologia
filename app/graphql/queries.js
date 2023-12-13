@@ -377,6 +377,17 @@ const getSegment = gql`
               }
             }
           }
+          parceiros {
+            logo {
+              data {
+                attributes {
+                  height
+                  url
+                  width
+                }
+              }
+            }
+          }
         }
       }
     }

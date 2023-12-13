@@ -8,6 +8,7 @@ import HeroPage from './HeroPage';
 import Locations from './Locations';
 import ModalForm from './ModalForm';
 import Partners from './Partners';
+import SegmentPartners from './SegmentPartners';
 import Slideshow from './Slideshow';
 import Testimonies from './Testimonies';
 
@@ -22,6 +23,7 @@ export {
   Locations,
   ModalForm,
   Partners,
+  SegmentPartners,
   Slideshow,
   Testimonies
 };

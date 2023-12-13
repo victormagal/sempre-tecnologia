@@ -17,7 +17,7 @@ import {
   Container,
   HeroPage,
   ModalForm,
-  Partners,
+  SegmentPartners,
   Testimonies
 } from '../components/Foundation';
 import { getFaqsBySegment, getSegment } from '../graphql/queries';
@@ -339,7 +339,9 @@ export default function Segment() {
         </Container>
       )}
       <Testimonies />
-      <Partners />
+      {data?.attributes?.parceiros?.logo?.data && (
+        <SegmentPartners data={data?.attributes?.parceiros?.logo?.data} />
+      )}
       <Doubts doubts={faq?.attributes?.faq} />
     </main>
   );

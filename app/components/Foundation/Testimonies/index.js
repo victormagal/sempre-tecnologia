@@ -58,7 +58,7 @@ export default function Testimonies() {
   return (
     <>
       <div className="hidden lg:block">
-        <Container newClasses="flex items-center pt-16">
+        <Container newClasses="flex items-center py-16">
           <div className="col-span-7 flex flex-col space-y-8">
             <div className="flex space-x-2">
               <SolidIcon icon="faStar" iconColor="#FEC84B" newClasses="h-4" />
@@ -129,7 +129,7 @@ export default function Testimonies() {
         </Container>
       </div>
       <div className="block lg:hidden">
-        <Container newClasses="flex items-center pt-16">
+        <Container newClasses="flex items-center py-16">
           <div className="col-span-4 flex flex-col space-y-8">
             <div className="flex space-x-2">
               <SolidIcon icon="faStar" iconColor="#FEC84B" newClasses="h-4" />

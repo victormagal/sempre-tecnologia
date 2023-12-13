@@ -76,7 +76,7 @@ export default function Contato() {
           </Text>
           <Link href="tel:08009416260">
             <Title appearance="h7" color={red[1000]}>
-              0800 841 6260
+              0800 941 6260
             </Title>
           </Link>
         </div>
