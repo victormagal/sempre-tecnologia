@@ -36,7 +36,7 @@ export default function FiscaisMobile() {
           </li>
         </ul>
         <Title appearance="h4" color={neutralDark[500]} extra>
-          Documentos Fiscais
+          Documentos fiscais
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>
@@ -51,12 +51,12 @@ export default function FiscaisMobile() {
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              CT-e Conhecimento de transporte
+              CT-e Conhecimento de Transporte
             </Text>
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              MDF-e Manifesto destinatário
+              MDF-e Manifesto Documentos Fiscais
             </Text>
           </li>
           <li>

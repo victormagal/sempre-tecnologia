@@ -36,32 +36,22 @@ export default function Varejos() {
           </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
-          Pequenos Varejos
+          Gestão de produto
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Vestuários e calçados
+              Vestuário e Calçado
             </Text>
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Barbearias e salões de beleza
+              Indústria
             </Text>
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Petshops
-            </Text>
-          </li>
-          <li>
-            <Text appearance="p3" color={neutralMid[500]}>
-              Lanchonetes e quiosques
-            </Text>
-          </li>
-          <li>
-            <Text appearance="p3" color={neutralMid[500]}>
-              Móveis e colchões
+              Móveis e Colchões
             </Text>
           </li>
         </ul>

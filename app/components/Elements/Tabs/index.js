@@ -63,7 +63,7 @@ export default function Tabs() {
                   appearance="h7"
                   color={toggle === 2 ? neutralLight[100] : neutralMid[400]}
                 >
-                  Pequenos varejos
+                  Gestão de produto
                 </Title>
               </button>
             </li>
@@ -79,7 +79,7 @@ export default function Tabs() {
                   appearance="h7"
                   color={toggle === 3 ? neutralLight[100] : neutralMid[400]}
                 >
-                  Prestadores de serviços
+                  Gestão de serviço
                 </Title>
               </button>
             </li>
@@ -95,7 +95,7 @@ export default function Tabs() {
                   appearance="h7"
                   color={toggle === 4 ? neutralLight[100] : neutralMid[400]}
                 >
-                  Recorrentes
+                  Recorrência
                 </Title>
               </button>
             </li>
