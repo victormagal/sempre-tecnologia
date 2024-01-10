@@ -104,7 +104,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Pescados, bovinos e suínos
+                          Pescados, Bovinos e Suínos
                         </Text>
                       </li>
                     </Link>
@@ -143,7 +143,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Picolés e sorvetes
+                          Picolés e Sorvetes
                         </Text>
                       </li>
                     </Link>
@@ -175,7 +175,7 @@ export default function Header() {
                   <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
-                        Pequenos varejos
+                        Gestão de produto
                       </Overline>
                     </li>
                     <Link
@@ -189,7 +189,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Vestuários e calçados
+                          Vestuário e Calçado
                         </Text>
                       </li>
                     </Link>
@@ -204,34 +204,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Barbearias e salões de beleza
-                        </Text>
-                      </li>
-                    </Link>
-                    <Link onClick={closeDropdownItens} href="/petshops">
-                      <li className="flex items-center space-x-4">
-                        <SolidIcon
-                          icon="faDog"
-                          iconColor={red[900]}
-                          newClasses="h-6 w-8"
-                        />
-                        <Text appearance="p4" color={neutralMid[600]}>
-                          Petshops
-                        </Text>
-                      </li>
-                    </Link>
-                    <Link
-                      onClick={closeDropdownItens}
-                      href="/lanchonetes-e-quiosques"
-                    >
-                      <li className="flex items-center space-x-4">
-                        <SolidIcon
-                          icon="faBurger"
-                          iconColor={red[900]}
-                          newClasses="h-6 w-8"
-                        />
-                        <Text appearance="p4" color={neutralMid[600]}>
-                          Lanchonetes e quiosques
+                          Indústria
                         </Text>
                       </li>
                     </Link>
@@ -246,7 +219,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Móveis e colchões
+                          Móveis e Colchões
                         </Text>
                       </li>
                     </Link>
@@ -266,7 +239,7 @@ export default function Header() {
                   <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
-                        Prestadores de serviço
+                        Gestão de serviço
                       </Overline>
                     </li>
                     <Link onClick={closeDropdownItens} href="/contabilidade">
@@ -308,18 +281,6 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link onClick={closeDropdownItens} href="/consultorios">
-                      <li className="flex items-center space-x-4">
-                        <SolidIcon
-                          icon="faStethoscope"
-                          iconColor={red[900]}
-                          newClasses="h-6 w-8"
-                        />
-                        <Text appearance="p4" color={neutralMid[600]}>
-                          Consultórios
-                        </Text>
-                      </li>
-                    </Link>
                     <Link
                       onClick={closeDropdownItens}
                       href="/seguranca-limpeza-e-conservacao"
@@ -331,7 +292,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Segurança, limpeza e conservação
+                          Segurança, Limpeza e Conservação
                         </Text>
                       </li>
                     </Link>
@@ -346,7 +307,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Manutenção e instalações
+                          Manutenção e Instalações
                         </Text>
                       </li>
                     </Link>
@@ -369,7 +330,7 @@ export default function Header() {
                   <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
-                        Recorrentes
+                        Recorrência
                       </Overline>
                     </li>
                     <Link
@@ -383,7 +344,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Associações e sindicatos
+                          Associações e Sindicatos
                         </Text>
                       </li>
                     </Link>
@@ -434,7 +395,7 @@ export default function Header() {
                           newClasses="h-6 w-8"
                         />
                         <Text appearance="p4" color={neutralMid[600]}>
-                          Locações e serviços
+                          Locações e Serviços
                         </Text>
                       </li>
                     </Link>
