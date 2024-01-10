@@ -122,21 +122,21 @@ export default function Footer() {
             <li>
               <Link href="/pequenos-varejos">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Pequenos varejos
+                  Gestão de produto
                 </Text>
               </Link>
             </li>
             <li>
               <Link href="/prestadores-de-servico">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Prestadores de serviço
+                  Gestão de serviço
                 </Text>
               </Link>
             </li>
             <li>
               <Link href="/recorrentes">
                 <Text appearance="p4" color={neutralDark[500]}>
-                  Recorrentes
+                  Recorrência
                 </Text>
               </Link>
             </li>
