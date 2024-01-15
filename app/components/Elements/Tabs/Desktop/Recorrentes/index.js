@@ -36,7 +36,7 @@ export default function Recorrentes() {
           </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
-          Recorrência
+          Cobranças recorrentes
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>

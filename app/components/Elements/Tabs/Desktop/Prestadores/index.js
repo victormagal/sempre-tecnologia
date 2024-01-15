@@ -27,7 +27,7 @@ export default function Prestadores() {
           </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
-          Gestão de serviço
+          Gestão de serviços
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>

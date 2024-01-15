@@ -36,7 +36,7 @@ export default function VarejosMobile() {
           </li>
         </ul>
         <Title appearance="h4" color={neutralDark[500]} extra>
-          Gestão de produto
+          Gestão de produtos
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>

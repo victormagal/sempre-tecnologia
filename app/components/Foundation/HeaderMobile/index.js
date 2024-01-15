@@ -219,7 +219,7 @@ export default function HeaderMobile() {
                                   appearance="o1"
                                   color={neutralDark[500]}
                                 >
-                                  Gestão de produto
+                                  Gestão de produtos
                                 </Overline>
                                 <SolidIcon
                                   icon="faChevronDown"
@@ -309,7 +309,7 @@ export default function HeaderMobile() {
                                   appearance="o1"
                                   color={neutralDark[500]}
                                 >
-                                  Gestão de serviço
+                                  Gestão de serviços
                                 </Overline>
                                 <SolidIcon
                                   icon="faChevronDown"
@@ -435,7 +435,7 @@ export default function HeaderMobile() {
                                   appearance="o1"
                                   color={neutralDark[500]}
                                 >
-                                  Recorrência
+                                  Cobranças recorrentes
                                 </Overline>
                                 <SolidIcon
                                   icon="faChevronDown"

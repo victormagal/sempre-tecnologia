@@ -36,7 +36,7 @@ export default function Varejos() {
           </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
-          Gestão de produto
+          Gestão de produtos
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>

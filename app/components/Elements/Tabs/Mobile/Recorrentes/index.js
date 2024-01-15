@@ -36,7 +36,7 @@ export default function RecorrentesMobile() {
           </li>
         </ul>
         <Title appearance="h4" color={neutralDark[500]} extra>
-          Recorrência
+          Cobranças recorrentes
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>

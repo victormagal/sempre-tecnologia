@@ -175,7 +175,7 @@ export default function Header() {
                   <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
-                        Gestão de produto
+                        Gestão de produtos
                       </Overline>
                     </li>
                     <Link
@@ -236,7 +236,7 @@ export default function Header() {
                   <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
-                        Gestão de serviço
+                        Gestão de serviços
                       </Overline>
                     </li>
                     <Link onClick={closeDropdownItens} href="/contabilidade">
@@ -327,7 +327,7 @@ export default function Header() {
                   <ul className="flex flex-col space-y-8 w-[150px] xl:w-[220px]">
                     <li>
                       <Overline appearance="o1" color={neutralMid[600]}>
-                        Recorrência
+                        Cobranças recorrentes
                       </Overline>
                     </li>
                     <Link
