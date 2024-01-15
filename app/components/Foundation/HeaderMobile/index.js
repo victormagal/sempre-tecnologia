@@ -247,10 +247,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link
-                                    onClick={burgerMenu}
-                                    href="/barbearias-e-saloes-de-beleza"
-                                  >
+                                  <Link onClick={burgerMenu} href="/industria">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faScissors"

@@ -193,10 +193,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link
-                      onClick={closeDropdownItens}
-                      href="/barbearias-e-saloes-de-beleza"
-                    >
+                    <Link onClick={closeDropdownItens} href="/industria">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
                           icon="faScissors"
