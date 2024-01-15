@@ -36,12 +36,12 @@ export default function RecorrentesMobile() {
           </li>
         </ul>
         <Title appearance="h4" color={neutralDark[500]} extra>
-          Recorrentes
+          Cobranças recorrentes
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Associações e sindicatos
+              Associações e Sindicatos
             </Text>
           </li>
           <li>
@@ -61,7 +61,7 @@ export default function RecorrentesMobile() {
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Locações e serviços
+              Locações e Serviços
             </Text>
           </li>
         </ul>

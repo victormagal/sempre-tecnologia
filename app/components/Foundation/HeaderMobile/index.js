@@ -120,7 +120,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Pescados, bovinos e suínos
+                                        Pescados, Bovinos e Suínos
                                       </Text>
                                     </li>
                                   </Link>
@@ -168,7 +168,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Picolés e sorvetes
+                                        Picolés e Sorvetes
                                       </Text>
                                     </li>
                                   </Link>
@@ -219,7 +219,7 @@ export default function HeaderMobile() {
                                   appearance="o1"
                                   color={neutralDark[500]}
                                 >
-                                  Pequenos Varejos
+                                  Gestão de produtos
                                 </Overline>
                                 <SolidIcon
                                   icon="faChevronDown"
@@ -243,14 +243,11 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Vestuários e calçados
+                                        Vestuário e Calçado
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link
-                                    onClick={burgerMenu}
-                                    href="/barbearias-e-saloes-de-beleza"
-                                  >
+                                  <Link onClick={burgerMenu} href="/industria">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
                                         icon="faScissors"
@@ -261,40 +258,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Barbearias e salões de beleza
-                                      </Text>
-                                    </li>
-                                  </Link>
-                                  <Link onClick={burgerMenu} href="/petshops">
-                                    <li className="flex items-center space-x-4">
-                                      <SolidIcon
-                                        icon="faDog"
-                                        iconColor={red[900]}
-                                        newClasses="h-6 w-8"
-                                      />
-                                      <Text
-                                        appearance="p4"
-                                        color={neutralMid[600]}
-                                      >
-                                        Petshops
-                                      </Text>
-                                    </li>
-                                  </Link>
-                                  <Link
-                                    onClick={burgerMenu}
-                                    href="/lanchonetes-e-quiosques"
-                                  >
-                                    <li className="flex items-center space-x-4">
-                                      <SolidIcon
-                                        icon="faBurger"
-                                        iconColor={red[900]}
-                                        newClasses="h-6 w-8"
-                                      />
-                                      <Text
-                                        appearance="p4"
-                                        color={neutralMid[600]}
-                                      >
-                                        Lanchonetes e quiosques
+                                        Indústria
                                       </Text>
                                     </li>
                                   </Link>
@@ -312,7 +276,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Móveis e colchões
+                                        Móveis e Colchões
                                       </Text>
                                     </li>
                                   </Link>
@@ -345,7 +309,7 @@ export default function HeaderMobile() {
                                   appearance="o1"
                                   color={neutralDark[500]}
                                 >
-                                  Prestadores de serviço
+                                  Gestão de serviços
                                 </Overline>
                                 <SolidIcon
                                   icon="faChevronDown"
@@ -408,24 +372,6 @@ export default function HeaderMobile() {
                                   </Link>
                                   <Link
                                     onClick={burgerMenu}
-                                    href="/consultorios"
-                                  >
-                                    <li className="flex items-center space-x-4">
-                                      <SolidIcon
-                                        icon="faStethoscope"
-                                        iconColor={red[900]}
-                                        newClasses="h-6 w-8"
-                                      />
-                                      <Text
-                                        appearance="p4"
-                                        color={neutralMid[600]}
-                                      >
-                                        Consultórios
-                                      </Text>
-                                    </li>
-                                  </Link>
-                                  <Link
-                                    onClick={burgerMenu}
                                     href="/seguranca-limpeza-e-conservacao"
                                   >
                                     <li className="flex items-center space-x-4">
@@ -438,7 +384,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Segurança, limpeza e conservação
+                                        Segurança, Limpeza e Conservação
                                       </Text>
                                     </li>
                                   </Link>
@@ -456,7 +402,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Manutenção e instalações
+                                        Manutenção e Instalações
                                       </Text>
                                     </li>
                                   </Link>
@@ -489,7 +435,7 @@ export default function HeaderMobile() {
                                   appearance="o1"
                                   color={neutralDark[500]}
                                 >
-                                  Recorrentes
+                                  Cobranças recorrentes
                                 </Overline>
                                 <SolidIcon
                                   icon="faChevronDown"
@@ -510,7 +456,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Associações e sindicatos
+                                        Associações e Sindicatos
                                       </Text>
                                     </li>
                                   </Link>
@@ -576,7 +522,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Locações e serviços
+                                        Locações e Serviços
                                       </Text>
                                     </li>
                                   </Link>

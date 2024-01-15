@@ -32,12 +32,7 @@ export default function Distribuidores() {
         <ul className="flex flex-col space-y-2">
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Pescados, bovinos e suínos
-            </Text>
-          </li>
-          <li>
-            <Text appearance="p3" color={neutralMid[500]}>
-              Pães e salgados
+              Pescados, Bovinos e Suínos
             </Text>
           </li>
           <li>
@@ -52,7 +47,12 @@ export default function Distribuidores() {
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Picolés e sorvetes
+              Picolés e Sorvetes
+            </Text>
+          </li>
+          <li>
+            <Text appearance="p3" color={neutralMid[500]}>
+              Pães e Salgados
             </Text>
           </li>
         </ul>

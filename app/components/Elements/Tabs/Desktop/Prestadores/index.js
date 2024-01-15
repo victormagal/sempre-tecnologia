@@ -27,12 +27,17 @@ export default function Prestadores() {
           </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
-          Prestadores de Serviço
+          Gestão de serviços
         </Title>
         <ul className="flex flex-col space-y-2">
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Contabilidade e BPO
+              Contabilidade
+            </Text>
+          </li>
+          <li>
+            <Text appearance="p3" color={neutralMid[500]}>
+              BPO
             </Text>
           </li>
           <li>
@@ -42,17 +47,12 @@ export default function Prestadores() {
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Consultórios
+              Segurança, Limpeza e Conservação
             </Text>
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Segurança, limpeza e conservação
-            </Text>
-          </li>
-          <li>
-            <Text appearance="p3" color={neutralMid[500]}>
-              Manutenção e instalações
+              Manutenção e Instalações
             </Text>
           </li>
         </ul>
