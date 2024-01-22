@@ -441,7 +441,7 @@ export default function HeaderMobile() {
                                         appearance="p4"
                                         color={neutralMid[600]}
                                       >
-                                        Contabilidade
+                                        Contabilidades
                                       </Text>
                                     </li>
                                   </Link>
