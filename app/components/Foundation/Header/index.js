@@ -239,18 +239,6 @@ export default function Header() {
                         Gestão de serviços
                       </Overline>
                     </li>
-                    <Link onClick={closeDropdownItens} href="/contabilidade">
-                      <li className="flex items-center space-x-4">
-                        <SolidIcon
-                          icon="faCalculator"
-                          iconColor={red[900]}
-                          newClasses="h-6 w-8"
-                        />
-                        <Text appearance="p4" color={neutralMid[600]}>
-                          Contabilidade
-                        </Text>
-                      </li>
-                    </Link>
                     <Link onClick={closeDropdownItens} href="/bpo">
                       <li className="flex items-center space-x-4">
                         <SolidIcon
@@ -330,6 +318,18 @@ export default function Header() {
                         Cobranças recorrentes
                       </Overline>
                     </li>
+                    <Link onClick={closeDropdownItens} href="/contabilidade">
+                      <li className="flex items-center space-x-4">
+                        <SolidIcon
+                          icon="faCalculator"
+                          iconColor={red[900]}
+                          newClasses="h-6 w-8"
+                        />
+                        <Text appearance="p4" color={neutralMid[600]}>
+                          Contabilidade
+                        </Text>
+                      </li>
+                    </Link>
                     <Link
                       onClick={closeDropdownItens}
                       href="/associacoes-e-sindicatos"

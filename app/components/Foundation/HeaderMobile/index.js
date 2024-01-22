@@ -319,24 +319,6 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
-                                  <Link
-                                    onClick={burgerMenu}
-                                    href="/contabilidade"
-                                  >
-                                    <li className="flex items-center space-x-4">
-                                      <SolidIcon
-                                        icon="faCalculator"
-                                        iconColor={red[900]}
-                                        newClasses="h-6 w-8"
-                                      />
-                                      <Text
-                                        appearance="p4"
-                                        color={neutralMid[600]}
-                                      >
-                                        Contabilidade
-                                      </Text>
-                                    </li>
-                                  </Link>
                                   <Link onClick={burgerMenu} href="/bpo">
                                     <li className="flex items-center space-x-4">
                                       <SolidIcon
@@ -445,6 +427,24 @@ export default function HeaderMobile() {
                               </summary>
                               <article>
                                 <ul className="flex flex-col space-y-4">
+                                  <Link
+                                    onClick={burgerMenu}
+                                    href="/contabilidade"
+                                  >
+                                    <li className="flex items-center space-x-4">
+                                      <SolidIcon
+                                        icon="faCalculator"
+                                        iconColor={red[900]}
+                                        newClasses="h-6 w-8"
+                                      />
+                                      <Text
+                                        appearance="p4"
+                                        color={neutralMid[600]}
+                                      >
+                                        Contabilidade
+                                      </Text>
+                                    </li>
+                                  </Link>
                                   <Link href="/associacoes-e-sindicatos">
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
