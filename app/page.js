@@ -72,12 +72,17 @@ export default function Home() {
         </div>
       </Container>
       <Container bgContainer={neutralDark[500]} newClasses="rounded-2xl">
-        <div className="col-span-4 lg:col-span-10 lg:col-start-2 flex flex-col lg:flex-row lg:justify-between py-12 space-y-12 lg:space-y-0">
+        <div className="col-span-4 lg:col-span-10 lg:col-start-2 flex flex-col lg:flex-row lg:justify-between py-12 space-y-12 lg:space-y-0 lg:space-x-8">
           <div className="flex flex-col items-center space-y-2">
             <Title appearance="h1" color={neutralLight[100]} extra>
               97%
             </Title>
-            <Title appearance="h6" color={neutralMid[100]} extra>
+            <Title
+              appearance="h6"
+              color={neutralMid[100]}
+              className="text-center"
+              extra
+            >
               Satisfação ao atendimento Pós-Venda
             </Title>
           </div>
@@ -85,7 +90,12 @@ export default function Home() {
             <Title appearance="h1" color={neutralLight[100]} extra>
               98%
             </Title>
-            <Title appearance="h6" color={neutralMid[100]} extra>
+            <Title
+              appearance="h6"
+              color={neutralMid[100]}
+              className="text-center"
+              extra
+            >
               Satisfação ao atendimento Suporte Técnico a Sistemas
             </Title>
           </div>
@@ -93,7 +103,12 @@ export default function Home() {
             <Title appearance="h1" color={neutralLight[100]} extra>
               97%
             </Title>
-            <Title appearance="h6" color={neutralMid[100]} extra>
+            <Title
+              appearance="h6"
+              color={neutralMid[100]}
+              className="text-center"
+              extra
+            >
               Satisfação ao atendimento Certificado Digital
             </Title>
           </div>
