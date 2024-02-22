@@ -42,7 +42,7 @@ export default function Distribuidores() {
           </li>
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
-              Comésticos
+              Cosméticos
             </Text>
           </li>
           <li>
