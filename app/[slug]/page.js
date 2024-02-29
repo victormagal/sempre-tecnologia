@@ -326,15 +326,41 @@ export default function Segment() {
             </button>
           </div>
           <div className="col-span-4 flex justify-center lg:justify-end">
-            <Image
-              alt="Demonstração"
-              className="rounded-xl"
-              height={
-                data?.attributes?.generic?.thumb?.data?.attributes?.height
-              }
-              src={data?.attributes?.generic?.thumb?.data?.attributes?.url}
-              width={data?.attributes?.generic?.thumb?.data?.attributes?.width}
-            />
+            {data?.attributes?.generic?.vimeo ? (
+              <div
+                className="cursor-pointer relative"
+                onClick={() => setOpenModalVimeo(true)}
+              >
+                <Image
+                  alt="Demonstração"
+                  className="rounded-xl"
+                  height={
+                    data?.attributes?.generic?.thumb?.data?.attributes?.height
+                  }
+                  src={data?.attributes?.generic?.thumb?.data?.attributes?.url}
+                  width={
+                    data?.attributes?.generic?.thumb?.data?.attributes?.width
+                  }
+                />
+                <SolidIcon
+                  icon="faCirclePlay"
+                  iconColor={red[600]}
+                  newClasses="absolute bg-white h-16 left-[50%] rounded-full top-[50%] translate-x-[-50%] translate-y-[-50%] w-16"
+                />
+              </div>
+            ) : (
+              <Image
+                alt="Demonstração"
+                className="rounded-xl"
+                height={
+                  data?.attributes?.generic?.thumb?.data?.attributes?.height
+                }
+                src={data?.attributes?.generic?.thumb?.data?.attributes?.url}
+                width={
+                  data?.attributes?.generic?.thumb?.data?.attributes?.width
+                }
+              />
+            )}
           </div>
         </Container>
       )}
