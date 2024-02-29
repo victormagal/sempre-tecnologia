@@ -112,7 +112,7 @@ export default function Sobre() {
         />
         <CardFeature
           bgColor={neutralLight[200]}
-          description="Ser referência em sistemas de gestão e certificado digital no Brasil de forma sustentável."
+          description="Ser referência em sistemas para gestão de serviços e produtos, distribuidores e cobranças recorrentes no DF, GO e TO, além de certificado digital no Brasil, de forma sustentável, até 2025."
           icon="faLightbulb"
           iconColor={red[600]}
           iconSize="h-10"
