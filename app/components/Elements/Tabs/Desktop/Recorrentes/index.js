@@ -25,15 +25,6 @@ export default function Recorrentes() {
               width={156}
             />
           </li>
-          <li>
-            <Image
-              alt="Sempre BPO"
-              height={20}
-              quality={100}
-              src="/logos/tab-sempre-bpo.svg"
-              width={104}
-            />
-          </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
           Cobranças recorrentes
@@ -62,6 +53,11 @@ export default function Recorrentes() {
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
               Locações e Serviços
+            </Text>
+          </li>
+          <li>
+            <Text appearance="p3" color={neutralMid[500]}>
+              Cobranças recorrentes
             </Text>
           </li>
         </ul>

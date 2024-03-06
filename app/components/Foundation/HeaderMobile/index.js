@@ -79,7 +79,7 @@ export default function HeaderMobile() {
                     <details className="flex flex-col space-y-6">
                       <summary className="flex items-center justify-between">
                         <Title appearance="h6" color={neutralDark[500]}>
-                          Segmentos
+                          Nossos Sistemas
                         </Title>
                         <SolidIcon
                           icon="faChevronDown"

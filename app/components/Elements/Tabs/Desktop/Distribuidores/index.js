@@ -16,7 +16,7 @@ export default function Distribuidores() {
               width={171}
             />
           </li>
-          <li>
+          {/* <li>
             <Image
               alt="Sempre Distribuidor Lite"
               height={20}
@@ -24,7 +24,7 @@ export default function Distribuidores() {
               src="/logos/tab-sempre-distribuidor-lite.svg"
               width={187}
             />
-          </li>
+          </li> */}
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
           Distribuidores

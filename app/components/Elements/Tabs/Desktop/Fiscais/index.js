@@ -25,7 +25,7 @@ export default function Fiscais() {
               width={178}
             />
           </li>
-          <li>
+          {/* <li>
             <Image
               alt="Sempre Free"
               height={20}
@@ -33,7 +33,7 @@ export default function Fiscais() {
               src="/logos/tab-sempre-free.svg"
               width={116}
             />
-          </li>
+          </li> */}
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
           Documentos fiscais

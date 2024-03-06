@@ -71,7 +71,7 @@ export default function Header() {
                 onClick={toggleMenu}
               >
                 <Text appearance="p4" color={neutralMid[600]}>
-                  Segmentos
+                  Nossos Sistemas
                 </Text>
                 <SolidIcon
                   icon="faChevronDown"

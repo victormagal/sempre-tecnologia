@@ -34,7 +34,7 @@ export default function Home() {
       <Container newClasses="py-14">
         <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-10">
           <Title
-            appearance="h1"
+            appearance="h2"
             className="text-center lg:text-left"
             color={neutralDark[500]}
             extra
@@ -42,7 +42,7 @@ export default function Home() {
             Seja bem-vindo a Sempre Tecnologia
           </Title>
           <Text
-            appearance="p3"
+            appearance="p2"
             className="text-center lg:text-left"
             color={neutralMid[500]}
           >
@@ -65,9 +65,9 @@ export default function Home() {
         <div className="col-span-4 lg:col-span-6 flex items-center justify-end mt-8 lg:mt-0">
           <Image
             alt="Aproveite nossa Black November"
-            height={539}
+            height={503}
             src="/hero-home.png"
-            width={560}
+            width={486}
           />
         </div>
       </Container>

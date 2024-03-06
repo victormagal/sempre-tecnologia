@@ -9,29 +9,38 @@ export default function VarejosMobile() {
         <ul className="flex space-x-4">
           <li>
             <Image
+              alt="Sempre Gestor"
+              height={20}
+              quality={100}
+              src="/logos/tab-sempre-gestor.svg"
+              width={126}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Sempre Lite"
+              height={20}
+              quality={100}
+              src="/logos/tab-sempre-lite.svg"
+              width={113}
+            />
+          </li>
+          <li>
+            <Image
+              alt="Sempre BPO"
+              height={28}
+              quality={100}
+              src="/logos/tab-sempre-bpo-red.svg"
+              width={104}
+            />
+          </li>
+          <li>
+            <Image
               alt="Sempre Vest"
               height={20}
               quality={100}
-              src="/logos/tab-sempre-vest.svg"
-              width={123}
-            />
-          </li>
-          <li>
-            <Image
-              alt="Sempre PDV Lite"
-              height={20}
-              quality={100}
-              src="/logos/tab-sempre-pdv-lite.svg"
-              width={129}
-            />
-          </li>
-          <li>
-            <Image
-              alt="Sempre PDV Lite"
-              height={20}
-              quality={100}
-              src="/logos/tab-sempre-pdv.svg"
-              width={106}
+              src="/logos/tab-sempre-vest-red.svg"
+              width={120}
             />
           </li>
         </ul>

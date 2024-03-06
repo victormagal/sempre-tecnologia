@@ -25,16 +25,25 @@ export default function Prestadores() {
               width={113}
             />
           </li>
+          <li>
+            <Image
+              alt="Sempre BPO"
+              height={20}
+              quality={100}
+              src="/logos/tab-sempre-bpo.svg"
+              width={104}
+            />
+          </li>
         </ul>
         <Title appearance="h2" color={neutralDark[500]} extra>
           Gestão de serviços
         </Title>
         <ul className="flex flex-col space-y-2">
-          <li>
+          {/* <li>
             <Text appearance="p3" color={neutralMid[500]}>
               Contabilidade
             </Text>
-          </li>
+          </li> */}
           <li>
             <Text appearance="p3" color={neutralMid[500]}>
               BPO
