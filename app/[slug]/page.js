@@ -98,7 +98,7 @@ export default function Segment() {
             type="button"
           >
             <Text appearance="p4" color={neutralLight[100]}>
-              Contrate agora
+              Quero conhecer
             </Text>
           </button>
         </div>

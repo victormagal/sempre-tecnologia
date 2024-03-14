@@ -280,10 +280,7 @@ export default function HeaderMobile() {
                                       </Text>
                                     </li>
                                   </Link>
-                                  <Link
-                                    onClick={burgerMenu}
-                                    href="/pequenos-varejos"
-                                  >
+                                  <Link onClick={burgerMenu} href="/industria">
                                     <li className="flex items-center space-x-4">
                                       <RegularIcon
                                         icon="faStar"

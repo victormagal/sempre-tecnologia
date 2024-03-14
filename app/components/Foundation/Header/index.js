@@ -220,7 +220,7 @@ export default function Header() {
                         </Text>
                       </li>
                     </Link>
-                    <Link onClick={closeDropdownItens} href="/pequenos-varejos">
+                    <Link onClick={closeDropdownItens} href="/industria">
                       <li className="flex items-center space-x-4">
                         <RegularIcon
                           icon="faStar"
