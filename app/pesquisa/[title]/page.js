@@ -37,7 +37,7 @@ export default function Category() {
     } else {
       getPosts({
         variables: {
-          category: path,
+          title: decodeURI(path),
           page: newValue,
           pageSize: pageSize
         }
@@ -54,7 +54,7 @@ export default function Category() {
     } else {
       getPosts({
         variables: {
-          category: path,
+          title: decodeURI(path),
           page: newValue,
           pageSize: pageSize
         }
@@ -69,7 +69,7 @@ export default function Category() {
     if (currentPage !== value) {
       getPosts({
         variables: {
-          category: path,
+          title: decodeURI(path),
           page: value,
           pageSize: pageSize
         }
