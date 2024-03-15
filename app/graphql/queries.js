@@ -211,6 +211,47 @@ const getPostsByCategory = gql`
   }
 `;
 
+const getPostsByTitle = gql`
+  query ($title: String!, $page: Int!, $pageSize: Int!) {
+    blogPosts(
+      filters: { title: { contains: $title } }
+      pagination: { page: $page, pageSize: $pageSize }
+      sort: "publishedAt:desc"
+    ) {
+      data {
+        attributes {
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          category {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
+          title
+          publishedAt
+          description
+          slug
+        }
+      }
+      meta {
+        pagination {
+          page
+          pageSize
+          pageCount
+          total
+        }
+      }
+    }
+  }
+`;
+
 const getProductsById = gql`
   query ($produto: String) {
     produtos(filters: { id_produto: { eq: $produto } }) {
@@ -419,6 +460,7 @@ export {
   getFaqsBySegment,
   getPost,
   getPostsByCategory,
+  getPostsByTitle,
   getProductsById,
   getProductsByType,
   getQuestions,
