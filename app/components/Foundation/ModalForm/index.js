@@ -22,8 +22,6 @@ export default function ModalForm({ open, onClose }) {
 
   if (!open) return null;
 
-  console.log(window.location.href);
-
   return (
     <div
       onClick={onClose}
