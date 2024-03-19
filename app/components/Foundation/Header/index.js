@@ -581,7 +581,7 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <Link href="/noticias">
+              <Link href="/noticias?pagina=1">
                 <Text appearance="p4" color={neutralMid[600]}>
                   Blog
                 </Text>

@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 'use client';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { neutralDark, neutralMid, red } from '../base/Colors';
 import SolidIcon from '../base/SolidIcon';
@@ -11,8 +12,13 @@ import { getAllPosts } from '../graphql/queries';
 import { useLazyQuery } from '@apollo/client';
 
 export default function Blog() {
-  const [currentPage, setCurrentPage] = useState(1);
+  const searchParams = useSearchParams();
+  const page = Number(searchParams.get('pagina'));
+
+  const [currentPage, setCurrentPage] = useState(page);
   const pageSize = 6;
+
+  const router = useRouter();
   const listPages = [];
 
   const [getPosts, { data }] = useLazyQuery(getAllPosts);
@@ -24,20 +30,16 @@ export default function Blog() {
         pageSize: pageSize
       }
     });
-  }, []);
+  }, [currentPage]);
 
   const previousPosts = () => {
     const newValue = currentPage - 1;
 
     if (newValue <= 0) {
+      router.push('/noticias?pagina=1');
       setCurrentPage(1);
     } else {
-      getPosts({
-        variables: {
-          page: newValue,
-          pageSize: pageSize
-        }
-      });
+      router.push(`/noticias?pagina=${newValue}`);
       setCurrentPage(newValue);
     }
   };
@@ -46,14 +48,12 @@ export default function Blog() {
     const newValue = currentPage + 1;
 
     if (newValue > data?.blogPosts?.meta?.pagination?.pageCount) {
+      router.push(
+        `/noticias?pagina=${data?.blogPosts?.meta?.pagination?.pageCount}`
+      );
       setCurrentPage(data?.blogPosts?.meta?.pagination?.pageCount);
     } else {
-      getPosts({
-        variables: {
-          page: newValue,
-          pageSize: pageSize
-        }
-      });
+      router.push(`/noticias?pagina=${newValue}`);
       setCurrentPage(newValue);
     }
   };
@@ -62,12 +62,7 @@ export default function Blog() {
     const value = Number(e.target.innerHTML);
 
     if (currentPage !== value) {
-      getPosts({
-        variables: {
-          page: value,
-          pageSize: pageSize
-        }
-      });
+      router.push(`/noticias?pagina=${value}`);
       setCurrentPage(value);
     }
   };

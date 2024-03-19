@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { SideBar } from '../../components/Elements';
 import { Container } from '../../components/Foundation';
@@ -13,8 +13,14 @@ import { useLazyQuery } from '@apollo/client';
 
 export default function Category() {
   const path = usePathname().slice(10);
-  const [currentPage, setCurrentPage] = useState(1);
+
+  const searchParams = useSearchParams();
+  const page = Number(searchParams.get('pagina'));
+
+  const [currentPage, setCurrentPage] = useState(page);
   const pageSize = 6;
+
+  const router = useRouter();
   const listPages = [];
 
   const [getPosts, { data }] = useLazyQuery(getPostsByCategory);
@@ -27,21 +33,16 @@ export default function Category() {
         pageSize: pageSize
       }
     });
-  }, []);
+  }, [currentPage]);
 
   const previousPosts = () => {
     const newValue = currentPage - 1;
 
     if (newValue <= 0) {
+      router.push(`/category/${path}?pagina=1`);
       setCurrentPage(1);
     } else {
-      getPosts({
-        variables: {
-          category: path,
-          page: newValue,
-          pageSize: pageSize
-        }
-      });
+      router.push(`/category/${path}?pagina=${newValue}`);
       setCurrentPage(newValue);
     }
   };
@@ -50,15 +51,12 @@ export default function Category() {
     const newValue = currentPage + 1;
 
     if (newValue > data?.blogPosts?.meta?.pagination?.pageCount) {
+      router.push(
+        `/category/${path}?pagina=${data?.blogPosts?.meta?.pagination?.pageCount}`
+      );
       setCurrentPage(data?.blogPosts?.meta?.pagination?.pageCount);
     } else {
-      getPosts({
-        variables: {
-          category: path,
-          page: newValue,
-          pageSize: pageSize
-        }
-      });
+      router.push(`/category/${path}?pagina=${newValue}`);
       setCurrentPage(newValue);
     }
   };
@@ -67,13 +65,7 @@ export default function Category() {
     const value = Number(e.target.innerHTML);
 
     if (currentPage !== value) {
-      getPosts({
-        variables: {
-          category: path,
-          page: value,
-          pageSize: pageSize
-        }
-      });
+      router.push(`/category/${path}?pagina=${value}`);
       setCurrentPage(value);
     }
   };

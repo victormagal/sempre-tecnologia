@@ -22,7 +22,7 @@ export default function SideBar({ path }) {
           {data?.categories?.data?.map((category) => (
             <Link
               key={category.attributes.slug}
-              href={`category/${category.attributes.slug}`}
+              href={`category/${category.attributes.slug}?pagina=1`}
             >
               <li
                 className={`${
@@ -53,7 +53,9 @@ export default function SideBar({ path }) {
           initialValues={{
             title: ''
           }}
-          onSubmit={(values) => router.push(`/pesquisa/${values.title}`)}
+          onSubmit={(values) =>
+            router.push(`/pesquisa/${values.title}?pagina=1`)
+          }
           validationSchema={Yup.object({
             title: Yup.string().min(3, 'Título inválido')
           })}

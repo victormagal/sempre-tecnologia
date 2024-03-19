@@ -747,7 +747,7 @@ export default function HeaderMobile() {
                     </details>
                   </li>
                   <li>
-                    <Link onClick={burgerMenu} href="/noticias">
+                    <Link onClick={burgerMenu} href="/noticias?pagina=1">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Blog
                       </Title>
