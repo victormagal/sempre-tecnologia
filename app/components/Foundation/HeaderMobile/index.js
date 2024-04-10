@@ -754,6 +754,87 @@ export default function HeaderMobile() {
                     </Link>
                   </li>
                   <li>
+                    <details className="flex flex-col space-y-6">
+                      <summary className="flex items-center justify-between">
+                        <Title appearance="h6" color={neutralDark[500]}>
+                          Suporte
+                        </Title>
+                        <SolidIcon
+                          icon="faChevronDown"
+                          iconColor={neutralMid[500]}
+                          newClasses="h-4"
+                        />
+                      </summary>
+                      <article>
+                        <ul className="flex flex-col space-y-6">
+                          <Link onClick={burgerMenu} href="/suporte">
+                            <li className="flex space-x-4">
+                              <div>
+                                <SolidIcon
+                                  icon="faMobileScreenButton"
+                                  iconColor={red[600]}
+                                  newClasses="h-6"
+                                />
+                              </div>
+                              <div>
+                                <Title appearance="h7" color={neutralDark[500]}>
+                                  Suporte
+                                </Title>
+                                <Text appearance="p4" color={neutralMid[500]}>
+                                  Sistemas
+                                </Text>
+                              </div>
+                            </li>
+                          </Link>
+                          <Link
+                            onClick={burgerMenu}
+                            href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/certificado-a1`}
+                          >
+                            <li className="flex space-x-4">
+                              <div>
+                                <SolidIcon
+                                  icon="faDesktop"
+                                  iconColor={red[600]}
+                                  newClasses="h-6"
+                                />
+                              </div>
+                              <div>
+                                <Title appearance="h7" color={neutralDark[500]}>
+                                  Instalação Certificado Digital A1
+                                </Title>
+                                <Text appearance="p4" color={neutralMid[500]}>
+                                  Computador
+                                </Text>
+                              </div>
+                            </li>
+                          </Link>
+                          <Link
+                            onClick={burgerMenu}
+                            href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/certificado-a3`}
+                          >
+                            <li className="flex space-x-4">
+                              <div>
+                                <RegularIcon
+                                  icon="faHardDrive"
+                                  iconColor={red[600]}
+                                  newClasses="h-6"
+                                />
+                              </div>
+                              <div>
+                                <Title appearance="h7" color={neutralDark[500]}>
+                                  Instalação Certificado Digital A3
+                                </Title>
+                                <Text appearance="p4" color={neutralMid[500]}>
+                                  Cartão e Token
+                                </Text>
+                              </div>
+                            </li>
+                          </Link>
+                        </ul>
+                      </article>
+                    </details>
+                  </li>
+                  <li>
                     <Link onClick={burgerMenu} href="/contato">
                       <Title appearance="h6" color={neutralDark[500]}>
                         Contato

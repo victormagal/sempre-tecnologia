@@ -1,31 +1,35 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import { neutralDark, neutralLight, neutralMid, red } from '../base/Colors';
 import SolidIcon from '../base/SolidIcon';
 import { Overline, Text, Title } from '../base/Typography';
-import { ContactForm } from '../components/Elements';
-import { Container, ModalForm } from '../components/Foundation';
+import { SupportForm } from '../components/Elements';
+import { Container } from '../components/Foundation';
 
-export default function Contato() {
-  const [openModal, setOpenModal] = useState(false);
-
+export default function Suporte() {
   return (
     <main className="pt-24">
-      <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <Container bgColor={neutralLight[100]} newClasses="py-16">
         <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
           <Overline appearance="o1" color={red[700]}>
-            FALE CONOSCO
+            SUPORTE - SISTEMAS
           </Overline>
+          <Title
+            appearance="h2"
+            className="text-center"
+            color={neutralDark[500]}
+            extra
+          >
+            Fale com um dos nossos consultores
+          </Title>
           <Text appearance="p1" className="text-center" color={neutralMid[500]}>
             A nossa equipe está sempre à disposição para conversar com você!
           </Text>
         </div>
       </Container>
       <Container newClasses="border-b pb-16">
-        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
+        <div className="col-span-4 flex flex-col items-center space-y-2">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -44,18 +48,13 @@ export default function Contato() {
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             Estamos aqui para atender você e tirar suas dúvidas.
           </Text>
-          <Link href="mailto:contato@sempretecnologia.com.br">
+          <Link href="mailto:contato@suporteasistemas.com.br">
             <Title appearance="h7" color={red[1000]}>
-              contato@sempretecnologia.com.br
-            </Title>
-          </Link>
-          <Link href="https://api.whatsapp.com/send?phone=556130839390">
-            <Title appearance="h7" color={red[1000]}>
-              WhatsApp
+              contato@suporteasistemas.com.br
             </Title>
           </Link>
         </div>
-        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
+        <div className="col-span-4 flex flex-col items-center space-y-2">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -70,46 +69,13 @@ export default function Contato() {
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             De segunda a sexta (8h às 18h)
           </Text>
-          <Link href="tel:08009416260">
+          <Link href="tel:08006005090">
             <Title appearance="h7" color={red[1000]}>
-              0800 941 6260
+              0800 600 5090
             </Title>
           </Link>
         </div>
-        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
-          <div
-            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
-            style={{
-              background: red[100]
-            }}
-          >
-            <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
-          </div>
-          <Title appearance="h5" color={neutralDark[500]}>
-            Suporte
-          </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            De segunda a sexta (8h às 18h)
-          </Text>
-          <div className="flex space-x-4">
-            <Link href="tel:08006005090">
-              <Title appearance="h7" color={red[1000]}>
-                0800 600 5090
-              </Title>
-            </Link>
-            <Link href="tel:+556130839370">
-              <Title appearance="h7" color={red[1000]}>
-                (61) 3083-9370
-              </Title>
-            </Link>
-          </div>
-          <Link href="mailto:contato@suporteasistemas.com.br">
-            <Title appearance="h7" color={red[1000]}>
-              contato@suporteasistemas.com.br
-            </Title>
-          </Link>
-        </div>
-        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
+        <div className="col-span-4 flex flex-col items-center space-y-2">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -119,23 +85,23 @@ export default function Contato() {
             <SolidIcon icon="faPhone" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Ligamos para você
+            Entre em contato
           </Title>
           <Text appearance="p4" className="text-center" color={neutralMid[500]}>
             De segunda a sexta (8h às 18h)
           </Text>
-          <button onClick={() => setOpenModal(true)} type="button">
+          <Link href="tel:+556130839370">
             <Title appearance="h7" color={red[1000]}>
-              Agendar ligação
+              (61) 3083-9370
             </Title>
-          </button>
+          </Link>
         </div>
       </Container>
       <Container newClasses="lg:pb-16 pt-16">
         <div className="col-span-4 lg:col-span-5 lg:col-start-2">
           <div className="flex flex-col mb-12 space-y-4">
             <Overline appearance="o1" color={red[700]}>
-              Fale conosco
+              Suporte - Sistemas
             </Overline>
             <Title appearance="h2" color={neutralDark[600]} extra>
               Entrar em contato
@@ -144,7 +110,7 @@ export default function Contato() {
               Por favor, preencha o formulário e entraremos em contato.
             </Text>
           </div>
-          <ContactForm
+          <SupportForm
             companyForm={false}
             messageForm={true}
             placesForm={false}

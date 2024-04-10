@@ -9,6 +9,7 @@ import MicroCard from './MicroCard';
 import ModalVimeo from './ModalVimeo';
 import PlayCard from './PlayCard';
 import SideBar from './SideBar';
+import SupportForm from './SupportForm';
 import Tabs from './Tabs';
 import TabsDistribuidor from './TabsDistribuidor';
 import TabsGestao from './TabsGestao';
@@ -27,6 +28,7 @@ export {
   ModalVimeo,
   PlayCard,
   SideBar,
+  SupportForm,
   Tabs,
   TabsDistribuidor,
   TabsGestao,
