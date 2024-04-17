@@ -788,6 +788,28 @@ export default function HeaderMobile() {
                           </Link>
                           <Link
                             onClick={burgerMenu}
+                            href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/suporte-certificado`}
+                          >
+                            <li className="flex space-x-4">
+                              <div>
+                                <SolidIcon
+                                  icon="faMobileScreenButton"
+                                  iconColor={red[600]}
+                                  newClasses="h-6"
+                                />
+                              </div>
+                              <div>
+                                <Title appearance="h7" color={neutralDark[500]}>
+                                  Suporte
+                                </Title>
+                                <Text appearance="p4" color={neutralMid[500]}>
+                                  Certificado Digital
+                                </Text>
+                              </div>
+                            </li>
+                          </Link>
+                          <Link
+                            onClick={burgerMenu}
                             href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/certificado-a1`}
                           >
                             <li className="flex space-x-4">

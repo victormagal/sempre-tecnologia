@@ -629,6 +629,29 @@ export default function Header() {
                 </Link>
                 <Link
                   onClick={closeDropdownItens}
+                  href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/suporte-certificado`}
+                  target="_blank"
+                >
+                  <li className="flex items-start mb-4 space-x-4">
+                    <div>
+                      <SolidIcon
+                        icon="faMobileScreenButton"
+                        iconColor={red[600]}
+                        newClasses="h-6"
+                      />
+                    </div>
+                    <div>
+                      <Title appearance="h7" color={neutralDark[500]}>
+                        Suporte
+                      </Title>
+                      <Text appearance="p4" color={neutralMid[500]}>
+                        Certificado Digital
+                      </Text>
+                    </div>
+                  </li>
+                </Link>
+                <Link
+                  onClick={closeDropdownItens}
                   href={`${process.env.NEXT_PUBLIC_SEMPRE_CERTIFICADORA_URL}/certificado-a1`}
                   target="_blank"
                 >

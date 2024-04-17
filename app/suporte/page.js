@@ -21,15 +21,15 @@ export default function Suporte() {
             color={neutralDark[500]}
             extra
           >
-            Fale com um dos nossos consultores
+            Fale com um de nossos consultores especialistas
           </Title>
           <Text appearance="p1" className="text-center" color={neutralMid[500]}>
-            A nossa equipe está sempre à disposição para conversar com você!
+            Nossa equipe está sempre à disposição para conversar com você!
           </Text>
         </div>
       </Container>
       <Container newClasses="border-b pb-16">
-        <div className="col-span-4 flex flex-col items-center space-y-2">
+        <div className="col-span-4 lg:col-start-3 flex flex-col items-center space-y-2">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -64,32 +64,24 @@ export default function Suporte() {
             <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Central de atendimento
+            Atendimento telefônico
           </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            De segunda a sexta (8h às 18h)
-          </Text>
-          <Link href="tel:08006005090">
-            <Title appearance="h7" color={red[1000]}>
-              0800 600 5090
-            </Title>
-          </Link>
-        </div>
-        <div className="col-span-4 flex flex-col items-center space-y-2">
-          <div
-            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
-            style={{
-              background: red[100]
-            }}
-          >
-            <SolidIcon icon="faPhone" iconColor={red[700]} newClasses="h-5" />
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              De segunda à sexta (8h às 18h)
+            </Text>
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Sábado (8h às 12h)
+            </Text>
           </div>
-          <Title appearance="h5" color={neutralDark[500]}>
-            Entre em contato
-          </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            De segunda a sexta (8h às 18h)
-          </Text>
           <Link href="tel:+556130839370">
             <Title appearance="h7" color={red[1000]}>
               (61) 3083-9370
