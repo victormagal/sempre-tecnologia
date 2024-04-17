@@ -16,11 +16,11 @@ export default function Contato() {
       <ModalForm open={openModal} onClose={() => setOpenModal(false)} />
       <Container bgColor={neutralLight[100]} newClasses="py-16">
         <div className="col-span-4 lg:col-span-6 lg:col-start-4 flex flex-col items-center space-y-6">
-          <Overline appearance="o1" color={red[700]}>
-            FALE CONOSCO
+          <Overline appearance="o1" className="text-center" color={red[700]}>
+            Fale Conosco
           </Overline>
           <Text appearance="p1" className="text-center" color={neutralMid[500]}>
-            A nossa equipe está sempre à disposição para conversar com você!
+            Nossa equipe está sempre à disposição para conversar com você!
           </Text>
         </div>
       </Container>
@@ -41,19 +41,11 @@ export default function Contato() {
           <Title appearance="h5" color={neutralDark[500]}>
             Email
           </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            Estamos aqui para atender você e tirar suas dúvidas.
-          </Text>
           <Link href="mailto:contato@sempretecnologia.com.br">
             <Title appearance="h7" color={red[1000]}>
               contato@sempretecnologia.com.br
             </Title>
           </Link>
-          <Link href="https://api.whatsapp.com/send?phone=556130839390">
-            <Title appearance="h7" color={red[1000]}>
-              WhatsApp
-            </Title>
-          </Link>
         </div>
         <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
           <div
@@ -65,49 +57,89 @@ export default function Contato() {
             <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Central de atendimento
+            Central de Vendas
           </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            De segunda a sexta (8h às 18h)
-          </Text>
-          <Link href="tel:08009416260">
-            <Title appearance="h7" color={red[1000]}>
-              0800 941 6260
-            </Title>
-          </Link>
-        </div>
-        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
-          <div
-            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
-            style={{
-              background: red[100]
-            }}
-          >
-            <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              De segunda à sexta (8h às 18h)
+            </Text>
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Sábado (8h às 12h)
+            </Text>
           </div>
-          <Title appearance="h5" color={neutralDark[500]}>
-            Suporte
-          </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            De segunda a sexta (8h às 18h)
-          </Text>
-          <div className="flex space-x-4">
-            <Link href="tel:08006005090">
+          <div className="text-center">
+            <Link href="tel:08009416260">
               <Title appearance="h7" color={red[1000]}>
-                0800 600 5090
+                0800 941 6260
               </Title>
             </Link>
+            <Link href="https://api.whatsapp.com/send?phone=556130839390">
+              <Title appearance="h7" color={red[1000]}>
+                WhatsApp
+              </Title>
+            </Link>
+          </div>
+        </div>
+        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
+          <div
+            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
+            style={{
+              background: red[100]
+            }}
+          >
+            <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
+          </div>
+          <Title appearance="h5" color={neutralDark[500]}>
+            Suporte Técnico
+          </Title>
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              De segunda à sexta (8h às 18h)
+            </Text>
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Sábado (8h às 12h)
+            </Text>
+          </div>
+          <div className="text-center">
             <Link href="tel:+556130839370">
               <Title appearance="h7" color={red[1000]}>
-                (61) 3083-9370
+                Sistemas - (61) 3083-9370
+              </Title>
+            </Link>
+            <Link href="mailto:contato@suporteasistemas.com.br">
+              <Title appearance="h7" color={red[1000]}>
+                contato@suporteasistemas.com.br
               </Title>
             </Link>
           </div>
-          <Link href="mailto:contato@suporteasistemas.com.br">
-            <Title appearance="h7" color={red[1000]}>
-              contato@suporteasistemas.com.br
-            </Title>
-          </Link>
+          <div className="text-center">
+            <Link href="tel:+556130839370">
+              <Title appearance="h7" color={red[1000]}>
+                Certificado Digital - (61) 3083-9370
+              </Title>
+            </Link>
+            <Link href="mailto:suporte@semprecertificado.com.br">
+              <Title appearance="h7" color={red[1000]}>
+                suporte@semprecertificado.com.br
+              </Title>
+            </Link>
+          </div>
         </div>
         <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
           <div
@@ -121,9 +153,22 @@ export default function Contato() {
           <Title appearance="h5" color={neutralDark[500]}>
             Ligamos para você
           </Title>
-          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
-            De segunda a sexta (8h às 18h)
-          </Text>
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              De segunda à sexta (8h às 18h)
+            </Text>
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Sábado (8h às 12h)
+            </Text>
+          </div>
           <button onClick={() => setOpenModal(true)} type="button">
             <Title appearance="h7" color={red[1000]}>
               Agendar ligação
