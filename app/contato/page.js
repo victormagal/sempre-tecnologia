@@ -87,9 +87,9 @@ export default function Contato() {
                 (61) 3083-9370
               </Title>
             </Link>
-            <Link href="mailto:contato@suportesistemas.com.br">
+            <Link href="mailto:contato@suporteasistemas.com.br">
               <Title appearance="h7" color={red[1000]}>
-                contato@suportesistemas.com.br
+                contato@suporteasistemas.com.br
               </Title>
             </Link>
           </div>

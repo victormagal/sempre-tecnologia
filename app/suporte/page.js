@@ -21,7 +21,7 @@ export default function Suporte() {
             color={neutralDark[500]}
             extra
           >
-            Fale com um de nossos consultores especialistas
+            Fale com um de nossos atendentes
           </Title>
           <Text appearance="p1" className="text-center" color={neutralMid[500]}>
             Nossa equipe está sempre à disposição para conversar com você!
@@ -64,15 +64,20 @@ export default function Suporte() {
             <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Atendimento telefônico
+            Atendimento por telefone
           </Title>
+          <Link href="tel:+556130839370">
+            <Title appearance="h7" color={red[1000]}>
+              (61) 3083-9370
+            </Title>
+          </Link>
           <div className="text-center">
             <Text
               appearance="p4"
               className="text-center"
               color={neutralMid[500]}
             >
-              De segunda à sexta (8h às 18h)
+              Segunda à sexta (8h às 18h)
             </Text>
             <Text
               appearance="p4"
@@ -82,11 +87,6 @@ export default function Suporte() {
               Sábado (8h às 12h)
             </Text>
           </div>
-          <Link href="tel:+556130839370">
-            <Title appearance="h7" color={red[1000]}>
-              (61) 3083-9370
-            </Title>
-          </Link>
         </div>
       </Container>
       <Container newClasses="lg:pb-16 pt-16">
