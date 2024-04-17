@@ -32,49 +32,14 @@ export default function Contato() {
               background: red[100]
             }}
           >
-            <SolidIcon
-              icon="faLocationDot"
-              iconColor={red[700]}
-              newClasses="h-5"
-            />
-          </div>
-          <Title appearance="h5" color={neutralDark[500]}>
-            Email
-          </Title>
-          <Link href="mailto:contato@sempretecnologia.com.br">
-            <Title appearance="h7" color={red[1000]}>
-              contato@sempretecnologia.com.br
-            </Title>
-          </Link>
-        </div>
-        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
-          <div
-            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
-            style={{
-              background: red[100]
-            }}
-          >
             <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
             Central de Vendas
           </Title>
-          <div className="text-center">
-            <Text
-              appearance="p4"
-              className="text-center"
-              color={neutralMid[500]}
-            >
-              De segunda à sexta (8h às 18h)
-            </Text>
-            <Text
-              appearance="p4"
-              className="text-center"
-              color={neutralMid[500]}
-            >
-              Sábado (8h às 12h)
-            </Text>
-          </div>
+          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
+            Segunda à sexta (8h às 18h)
+          </Text>
           <div className="text-center">
             <Link href="tel:08009416260">
               <Title appearance="h7" color={red[1000]}>
@@ -98,7 +63,7 @@ export default function Contato() {
             <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Suporte Técnico
+            Suporte Sistemas
           </Title>
           <div className="text-center">
             <Text
@@ -106,7 +71,7 @@ export default function Contato() {
               className="text-center"
               color={neutralMid[500]}
             >
-              De segunda à sexta (8h às 18h)
+              Segunda à sexta (8h às 18h)
             </Text>
             <Text
               appearance="p4"
@@ -119,19 +84,35 @@ export default function Contato() {
           <div className="text-center">
             <Link href="tel:+556130839370">
               <Title appearance="h7" color={red[1000]}>
-                Sistemas - (61) 3083-9370
+                (61) 3083-9370
               </Title>
             </Link>
-            <Link href="mailto:contato@suporteasistemas.com.br">
+            <Link href="mailto:contato@suportesistemas.com.br">
               <Title appearance="h7" color={red[1000]}>
-                contato@suporteasistemas.com.br
+                contato@suportesistemas.com.br
               </Title>
             </Link>
           </div>
+        </div>
+        <div className="col-span-4 lg:col-span-3 flex flex-col items-center space-y-2">
+          <div
+            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
+            style={{
+              background: red[100]
+            }}
+          >
+            <SolidIcon icon="faHeadset" iconColor={red[700]} newClasses="h-5" />
+          </div>
+          <Title appearance="h5" color={neutralDark[500]}>
+            Suporte Certificado
+          </Title>
+          <Text appearance="p4" className="text-center" color={neutralMid[500]}>
+            Segunda à sexta (8h às 18h)
+          </Text>
           <div className="text-center">
-            <Link href="tel:+556130839370">
+            <Link href="tel:+556130839380">
               <Title appearance="h7" color={red[1000]}>
-                Certificado Digital - (61) 3083-9370
+                (61) 3083-9380
               </Title>
             </Link>
             <Link href="mailto:suporte@semprecertificado.com.br">
@@ -151,29 +132,18 @@ export default function Contato() {
             <SolidIcon icon="faPhone" iconColor={red[700]} newClasses="h-5" />
           </div>
           <Title appearance="h5" color={neutralDark[500]}>
-            Ligamos para você
+            Agende seu contato
           </Title>
-          <div className="text-center">
-            <Text
-              appearance="p4"
-              className="text-center"
-              color={neutralMid[500]}
-            >
-              De segunda à sexta (8h às 18h)
-            </Text>
-            <Text
-              appearance="p4"
-              className="text-center"
-              color={neutralMid[500]}
-            >
-              Sábado (8h às 12h)
-            </Text>
-          </div>
           <button onClick={() => setOpenModal(true)} type="button">
             <Title appearance="h7" color={red[1000]}>
               Agendar ligação
             </Title>
           </button>
+          <Link href="mailto:suporte@semprecertificado.com.br">
+            <Title appearance="h7" color={red[1000]}>
+              Email: contato@sempretecnologia.com.br
+            </Title>
+          </Link>
         </div>
       </Container>
       <Container newClasses="lg:pb-16 pt-16">
