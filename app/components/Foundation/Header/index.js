@@ -683,18 +683,19 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <button
-                className="px-8 py-3 rounded"
-                onClick={() => setOpenModal(true)}
-                style={{
-                  background: red[1000]
-                }}
-                type="button"
-              >
-                <Text appearance="p4" color={neutralLight[100]}>
-                  Fale agora
-                </Text>
-              </button>
+              <Link href="https://api.whatsapp.com/send?phone=556130839390">
+                <button
+                  className="px-8 py-3 rounded"
+                  style={{
+                    background: red[1000]
+                  }}
+                  type="button"
+                >
+                  <Text appearance="p4" color={neutralLight[100]}>
+                    Fale agora
+                  </Text>
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>

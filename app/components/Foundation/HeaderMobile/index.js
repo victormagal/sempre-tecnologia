@@ -850,18 +850,19 @@ export default function HeaderMobile() {
             >
               <Container>
                 <div className="col-span-4 p-4">
-                  <button
-                    className="py-3 rounded-md w-full"
-                    onClick={() => setOpenModal(true)}
-                    style={{
-                      background: red[1000]
-                    }}
-                    type="button"
-                  >
-                    <Title appearance="h6" color={neutralLight[100]}>
-                      Fale agora
-                    </Title>
-                  </button>
+                  <Link href="https://api.whatsapp.com/send?phone=556130839390">
+                    <button
+                      className="py-3 rounded-md w-full"
+                      style={{
+                        background: red[1000]
+                      }}
+                      type="button"
+                    >
+                      <Title appearance="h6" color={neutralLight[100]}>
+                        Fale agora
+                      </Title>
+                    </button>
+                  </Link>
                 </div>
               </Container>
             </div>
