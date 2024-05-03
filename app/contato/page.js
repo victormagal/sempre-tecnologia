@@ -110,9 +110,9 @@ export default function Contato() {
             Segunda à sexta (8h às 18h)
           </Text>
           <div className="text-center">
-            <Link href="tel:+556130839380">
+            <Link href="tel:+556130839389">
               <Title appearance="h7" color={red[1000]}>
-                (61) 3083-9380
+                (61) 3083-9389
               </Title>
             </Link>
             <Link href="mailto:suporte@semprecertificado.com.br">
