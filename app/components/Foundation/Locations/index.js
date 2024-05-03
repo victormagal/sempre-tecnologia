@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 import {
   neutralDark,
@@ -164,7 +165,7 @@ export default function Locations() {
             />
           </div>
         </div>
-        <div className="col-span-4 md:col-span-2 lg:col-span-3 lg:col-start-4 flex flex-col items-center mb-4 lg:mb-0">
+        <div className="col-span-4 flex flex-col items-center mb-4 lg:mb-0">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -180,18 +181,59 @@ export default function Locations() {
           <Title appearance="h5" color={neutralDark[500]}>
             Endereço
           </Title>
-          <Text
-            appearance="p4"
-            className="my-4 text-center"
-            color={neutralMid[500]}
-          >
-            Venha nos fazer uma visita
-          </Text>
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Venha nos fazer uma visita
+            </Text>
+            <Title appearance="h7" color={red[1000]}>
+              SIA Q 4 C Ed. SIA Center II Lojas 4, 5 e 6 - Guará,
+              <br />
+              Brasília - DF, 71200-045
+            </Title>
+          </div>
           <Title appearance="h7" className="text-center" color={red[1000]}>
             {storySelected?.endereco}
           </Title>
         </div>
-        <div className="col-span-4 md:col-span-2 lg:col-span-3 flex flex-col items-center">
+        <div className="col-span-4 flex flex-col items-center mb-4 lg:mb-0">
+          <div
+            className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
+            style={{
+              background: red[100]
+            }}
+          >
+            <SolidIcon
+              icon="faUserGroup"
+              iconColor={red[700]}
+              newClasses="h-5"
+            />
+          </div>
+          <Title appearance="h5" color={neutralDark[500]}>
+            Trabalhe conosco
+          </Title>
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Envie seu currículo por e-mail
+            </Text>
+            <Link href="mailto:dhsempre@sempretecnologia.com.br">
+              <Title appearance="h7" color={red[1000]}>
+                dhsempre@sempretecnologia.com.br
+              </Title>
+            </Link>
+          </div>
+          <Title appearance="h7" className="text-center" color={red[1000]}>
+            {storySelected?.endereco}
+          </Title>
+        </div>
+        <div className="col-span-4 flex flex-col items-center">
           <div
             className="flex h-10 items-center justify-center mb-4 rounded-full w-10"
             style={{
@@ -203,13 +245,27 @@ export default function Locations() {
           <Title appearance="h5" color={neutralDark[500]}>
             Telefone
           </Title>
-          <Text
-            appearance="p4"
-            className="my-4 text-center"
-            color={neutralMid[500]}
-          >
-            Nosso time está aqui para te ajudar
-          </Text>
+          <div className="text-center">
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Nosso time está aqui para te ajudar
+            </Text>
+            <Text
+              appearance="p4"
+              className="text-center"
+              color={neutralMid[500]}
+            >
+              Segunda à sexta (8h às 18h)
+            </Text>
+            <Link href="tel:+556130455090">
+              <Title appearance="h7" color={red[1000]}>
+                (61) 3045-5090
+              </Title>
+            </Link>
+          </div>
           <ul className="flex flex-col space-y-1 text-center">
             <li>
               <Title appearance="h7" color={red[1000]}>
