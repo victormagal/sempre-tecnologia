@@ -51,7 +51,12 @@ export default function ModalForm({ open, onClose }) {
             />
           </header>
           <Formik
-            initialValues={{ mail: '', name: '', phone: '' }}
+            initialValues={{
+              mail: '',
+              name: '',
+              phone: '',
+              segmento_empresa: ''
+            }}
             onSubmit={(values) => {
               setLoading(true);
               const config = {
@@ -66,6 +71,7 @@ export default function ModalForm({ open, onClose }) {
                 contato_email: values.mail,
                 contato_telefone: values.phone,
                 contato_origem: 'site_st',
+                segmento_empresa: values.segmento_empresa,
                 formulario_origem: window.location.href
               });
 
@@ -95,7 +101,8 @@ export default function ModalForm({ open, onClose }) {
               name: Yup.string().required('Obrigatório'),
               phone: Yup.string()
                 .required('Obrigatório')
-                .min(12, 'Telefone inválido')
+                .min(12, 'Telefone inválido'),
+              segmento_empresa: Yup.string().required('Obrigatório')
             })}
             validateOnBlur={false}
             validateOnChange={false}
@@ -166,6 +173,46 @@ export default function ModalForm({ open, onClose }) {
                     {errors.phone && (
                       <Text appearance="p4" color={red[900]}>
                         {errors.phone}
+                      </Text>
+                    )}
+                  </li>
+                  <li className="flex flex-col space-y-2">
+                    <Text appearance="p4" color={neutralDark[500]}>
+                      Segmento
+                    </Text>
+                    <Field
+                      as="select"
+                      className="appearance-none border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                      name="segmento_empresa"
+                      style={{
+                        background: neutralLight[200],
+                        borderColor: errors.segmento_empresa
+                          ? red[900]
+                          : neutralLight[400],
+                        color: neutralMid[500]
+                      }}
+                      type="text"
+                      value={values.segmento_empresa}
+                    >
+                      <option value="">Selecione...</option>
+                      <option value="Distribuição">Distribuição</option>
+                      <option value="Agro">Agro</option>
+                      <option value="Construção">Construção</option>
+                      <option value="Educacional">Educacional</option>
+                      <option value="Contabilidade">Contabilidade</option>
+                      <option value="Hotelaria">Hotelaria</option>
+                      <option value="Jurídico">Jurídico</option>
+                      <option value="Logística">Logística</option>
+                      <option value="Prestadores de serviço">
+                        Prestadores de serviço
+                      </option>
+                      <option value="Saúde">Saúde</option>
+                      <option value="Varejo">Varejo</option>
+                      <option value="Outros segmentos">Outros segmentos</option>
+                    </Field>
+                    {errors.segmento_empresa && (
+                      <Text appearance="p4" color={red[900]}>
+                        {errors.segmento_empresa}
                       </Text>
                     )}
                   </li>
