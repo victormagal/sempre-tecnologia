@@ -9,7 +9,7 @@ export default function Privacidade() {
       <Container bgColor={neutralLight[100]} newClasses="py-16">
         <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex flex-col items-center space-y-6">
           <Overline appearance="o1" className="text-center" color={red[700]}>
-            Atualizado em 10 de julho de 2023
+            Atualizado em 08 de maio de 2024
           </Overline>
           <Title
             appearance="h2"
@@ -34,24 +34,27 @@ export default function Privacidade() {
           <Text appearance="p3" color={neutralMid[500]}>
             A presente Política de Privacidade contém informações sobre coleta,
             uso, armazenamento, tratamento e proteção dos dados pessoais dos
-            usuários e visitantes do site _______________ com a finalidade de
-            demonstrar absoluta transparência quanto ao assunto e esclarecer a
-            todos interessados sobre os tipos de dados que são coletados, os
-            motivos da coleta e a forma como os usuários podem gerenciar ou
-            excluir as suas informações pessoais.
+            usuários e visitantes do site www.sempretecnologia.com.br com a
+            finalidade de demonstrar absoluta transparência quanto ao assunto e
+            esclarecer a todos interessados sobre os tipos de dados que são
+            coletados, os motivos da coleta e a forma como os usuários podem
+            gerenciar ou excluir as suas informações pessoais.
           </Text>
           <Text appearance="p3" color={neutralMid[500]}>
             Esta Política de Privacidade aplica-se a todos os usuários e
-            visitantes do site ____ e integra os Termos e Condições Gerais de
-            Uso do site da empresa ____, devidamente inscrita no CNPJ sob o nº
-            ___, situada em _____ (endereço completo), doravante nominada ____.
-            O presente documento foi elaborado em conformidade com a Lei Geral
-            de Proteção de Dados Pessoais (Lei 13.709/18), o Marco Civil da
-            Internet (Lei 12.965/14) (e o Regulamento da UE n. 2016/6790),
-            podendo ser atualizado em decorrência de eventual atualização
-            normativa, razão pela qual se convida o usuário a consultar
-            periodicamente esta seção, informando que, ao utilizar nosso site,
-            você concorda com as práticas descritas nesta política.
+            visitantes do site www.sempretecnologia.com.br e integra os Termos e
+            Condições Gerais de Uso do site da empresa Sempre Tecnologia,
+            devidamente inscrita no CNPJ sob o nº 48.833.318/0001-80, situada em
+            SIA QUADRA 4-C LOTE 51 LOJA Número 6 EDIF SIA CENTER II Bairro ZONA
+            INDUSTRIAL (GUARA) CEP 71200-045 Cidade / UF Brasilia / DF,
+            doravante nominada Sempre Sistemas e Tecnologias LTDA. O presente
+            documento foi elaborado em conformidade com a Lei Geral de Proteção
+            de Dados Pessoais (Lei 13.709/18), o Marco Civil da Internet (Lei
+            12.965/14) (e o Regulamento da UE n. 2016/6790), podendo ser
+            atualizado em decorrência de eventual atualização normativa, razão
+            pela qual se convida o usuário a consultar periodicamente esta
+            seção, informando que, ao utilizar nosso site, você concorda com as
+            práticas descritas nesta política.
           </Text>
           <article className="flex flex-col space-y-4">
             <Title appearance="h4" color={neutralDark[500]} extra>
@@ -338,8 +341,10 @@ export default function Privacidade() {
             <Text appearance="p3" color={neutralMid[500]}>
               10.3. O usuário tem direito de retirar o seu consentimento a
               qualquer tempo, para tanto deve entrar em contato através do
-              e-mail _______ ou por correio enviado ao seguinte endereço:
-              ________
+              e-mail contato@sempretecnologia.com.br ou por correio enviado ao
+              seguinte endereço: SIA QUADRA 4-C LOTE 51 LOJA Número 6 EDIF SIA
+              CENTER II Bairro ZONA INDUSTRIAL (GUARA) CEP 71200-045 Cidade / UF
+              Brasilia / DF
             </Text>
           </article>
           <article className="flex flex-col space-y-4">
@@ -395,8 +400,10 @@ export default function Privacidade() {
             <Text appearance="p3" color={neutralMid[500]}>
               14.1. Havendo dúvidas ou preocupações sobre esta Política de
               Privacidade ou sobre o processamento de seus dados pessoais, entre
-              em contato conosco através do e-mail [inserir endereço de e-mail]
-              ou pelo endereço postal [inserir endereço postal].
+              em contato conosco através do e-mail
+              contato@sempretecnologia.com.br ou pelo endereço postal SIA QUADRA
+              4-C LOTE 51 LOJA Número 6 EDIF SIA CENTER II Bairro ZONA
+              INDUSTRIAL (GUARA) CEP 71200-045 Cidade / UF Brasilia / DF.
             </Text>
           </article>
         </div>

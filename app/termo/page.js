@@ -9,7 +9,7 @@ export default function Termo() {
       <Container newClasses="py-16">
         <div className="col-span-4 lg:col-span-8 lg:col-start-3 flex flex-col items-center space-y-6">
           <Overline appearance="o1" className="text-center" color={red[700]}>
-            Atualizado em 10 de julho de 2023
+            Atualizado em 08 de maio de 2024
           </Overline>
           <Title
             appearance="h2"
@@ -175,17 +175,19 @@ export default function Termo() {
             <ul>
               <li>
                 <Text appearance="p3" color={neutralMid[500]}>
-                  Endereço: [Endereço da Empresa]
+                  Endereço: SIA QUADRA 4-C LOTE 51 LOJA Número 6 EDIF SIA CENTER
+                  II Bairro ZONA INDUSTRIAL (GUARA) CEP 71200-045 Cidade / UF
+                  Brasilia / DF
                 </Text>
               </li>
               <li>
                 <Text appearance="p3" color={neutralMid[500]}>
-                  E-mail: [E-mail de Contato]
+                  E-mail: contato@sempretecnologia.com.br
                 </Text>
               </li>
               <li>
                 <Text appearance="p3" color={neutralMid[500]}>
-                  Telefone: [Número de Telefone]
+                  Telefone: (61) 3045-5090
                 </Text>
               </li>
             </ul>
@@ -198,7 +200,7 @@ export default function Termo() {
               regularmente.
             </Text>
             <Text appearance="p3" color={neutralMid[500]}>
-              Última atualização: [inserir data da última atualização].
+              Última atualização: 08/05/2024.
             </Text>
           </article>
         </div>
