@@ -34,22 +34,23 @@ export default function Home() {
       <Container newClasses="py-14">
         <div className="col-span-4 lg:col-span-6 flex flex-col justify-center space-y-10">
           <Title
-            appearance="h2"
+            appearance="h1"
             className="text-center lg:text-left"
             color={neutralDark[500]}
             extra
           >
-            Seja bem-vindo a Sempre Tecnologia
+            Soluções com tecnologia própria e atendimento diferenciado para você
+            e sua empresa
           </Title>
           <Text
             appearance="p2"
             className="text-center lg:text-left"
             color={neutralMid[500]}
           >
-            Atuamos no desenvolvimento de Sistemas Web de Gestão com tecnologia
-            própria para diversos segmentos e contamos com o credenciamento na
-            emissão de Certificado Digital em todo o Brasil.{' '}
-            <strong>Conheça os segmentos em que atuamos.</strong>
+            Sistemas ERP para Gestão Empresarial
+            <br />
+            Autoridade de Registro: Emita ou Renove seu certificado digital com
+            segurança, agilidade e atendimento personalizado
           </Text>
           <button
             className="w-full xl:w-1/3 py-4 px-8 rounded"

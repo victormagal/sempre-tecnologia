@@ -189,15 +189,10 @@ export default function Locations() {
             >
               Venha nos fazer uma visita
             </Text>
-            <Title appearance="h7" color={red[1000]}>
-              SIA Q 4 C Ed. SIA Center II Lojas 4, 5 e 6 - Guará,
-              <br />
-              Brasília - DF, 71200-045
+            <Title appearance="h7" className="text-center" color={red[1000]}>
+              {storySelected?.endereco}
             </Title>
           </div>
-          <Title appearance="h7" className="text-center" color={red[1000]}>
-            {storySelected?.endereco}
-          </Title>
         </div>
         <div className="col-span-4 flex flex-col items-center mb-4 lg:mb-0">
           <div
@@ -229,9 +224,6 @@ export default function Locations() {
               </Title>
             </Link>
           </div>
-          <Title appearance="h7" className="text-center" color={red[1000]}>
-            {storySelected?.endereco}
-          </Title>
         </div>
         <div className="col-span-4 flex flex-col items-center">
           <div
@@ -260,11 +252,6 @@ export default function Locations() {
             >
               Segunda à sexta (8h às 18h)
             </Text>
-            <Link href="tel:+556130455090">
-              <Title appearance="h7" color={red[1000]}>
-                (61) 3045-5090
-              </Title>
-            </Link>
           </div>
           <ul className="flex flex-col space-y-1 text-center">
             <li>
