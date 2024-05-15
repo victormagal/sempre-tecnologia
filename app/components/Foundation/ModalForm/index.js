@@ -8,7 +8,7 @@ import {
   red,
   success
 } from '@/app/base/Colors';
-import { toTel } from '@/app/base/Masks';
+import { toCNPJ, toTel } from '@/app/base/Masks';
 import { Text, Title } from '@/app/base/Typography';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,6 +52,7 @@ export default function ModalForm({ open, onClose }) {
           </header>
           <Formik
             initialValues={{
+              cnpj: '',
               mail: '',
               name: '',
               phone: '',
@@ -71,6 +72,7 @@ export default function ModalForm({ open, onClose }) {
                 contato_email: values.mail,
                 contato_telefone: values.phone,
                 contato_origem: 'site_st',
+                cnpj: values.cnpj,
                 segmento_empresa: values.segmento_empresa,
                 formulario_origem: window.location.href
               });
@@ -173,6 +175,28 @@ export default function ModalForm({ open, onClose }) {
                     {errors.phone && (
                       <Text appearance="p4" color={red[900]}>
                         {errors.phone}
+                      </Text>
+                    )}
+                  </li>
+                  <li className="flex flex-col space-y-2">
+                    <Text appearance="p4" color={neutralDark[500]}>
+                      CNPJ
+                    </Text>
+                    <Field
+                      className="border p-3 placeholder:text-neutral-mid-400 rounded text-neutral-mid-400 w-full"
+                      maxLength="18"
+                      name="cnpj"
+                      style={{
+                        background: neutralLight[200],
+                        borderColor: errors.cnpj ? red[900] : neutralLight[400],
+                        color: neutralMid[500]
+                      }}
+                      type="text"
+                      value={toCNPJ(values.cnpj)}
+                    />
+                    {errors.cnpj && (
+                      <Text appearance="p4" color={red[900]}>
+                        {errors.cnpj}
                       </Text>
                     )}
                   </li>
